@@ -10,10 +10,11 @@ import UIKit
 class LoginPageVC: UIViewController {
     var loginPagePresenterObject : ViewToPresenterLoginPageProtocol?
     
-    @IBOutlet weak var tfEmail: UITextField!
+
     
     @IBOutlet weak var tfPassword: UITextField!
     
+    @IBOutlet weak var tfUserName: UITextField!
     
     
     

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		821D638928F9F941002B50CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D638828F9F941002B50CB /* Extension.swift */; };
+		8252E58428FA1FE300BE2E8F /* Register2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58328FA1FE300BE2E8F /* Register2VC.swift */; };
+		8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */; };
+		8252E58928FA23CB00BE2E8F /* fire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8252E58828FA23CB00BE2E8F /* fire.json */; };
+		8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8252E58B28FA24E200BE2E8F /* Lottie */; };
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
@@ -50,6 +54,9 @@
 
 /* Begin PBXFileReference section */
 		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		8252E58328FA1FE300BE2E8F /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
+		8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteVC.swift; sourceTree = "<group>"; };
+		8252E58828FA23CB00BE2E8F /* fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fire.json; sourceTree = "<group>"; };
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,17 +104,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8252E58728FA23BE00BE2E8F /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				8252E58828FA23CB00BE2E8F /* fire.json */,
+			);
+			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
 		8278EC0328F988BD001943BD = {
 			isa = PBXGroup;
 			children = (
-				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
-				821D638828F9F941002B50CB /* Extension.swift */,
 				8278EC0E28F988BD001943BD /* FoodLab_App */,
 				8278EC0D28F988BD001943BD /* Products */,
 			);
@@ -136,6 +150,11 @@
 				8278EC2428F98F6D001943BD /* StoryBoards */,
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
+				8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */,
+				8252E58328FA1FE300BE2E8F /* Register2VC.swift */,
+				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
+				821D638828F9F941002B50CB /* Extension.swift */,
+				8252E58728FA23BE00BE2E8F /* LottieAnimation */,
 			);
 			path = FoodLab_App;
 			sourceTree = "<group>";
@@ -462,6 +481,9 @@
 			dependencies = (
 			);
 			name = FoodLab_App;
+			packageProductDependencies = (
+				8252E58B28FA24E200BE2E8F /* Lottie */,
+			);
 			productName = FoodLab_App;
 			productReference = 8278EC0C28F988BD001943BD /* FoodLab_App.app */;
 			productType = "com.apple.product-type.application";
@@ -490,6 +512,9 @@
 				Base,
 			);
 			mainGroup = 8278EC0328F988BD001943BD;
+			packageReferences = (
+				8252E58A28FA24E200BE2E8F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8278EC0D28F988BD001943BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -507,6 +532,7 @@
 				8278EC1C28F988C0001943BD /* LaunchScreen.storyboard in Resources */,
 				8278EC1928F988C0001943BD /* Assets.xcassets in Resources */,
 				8278EC1728F988BD001943BD /* Main.storyboard in Resources */,
+				8252E58928FA23CB00BE2E8F /* fire.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +552,8 @@
 				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
 				8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
+				8252E58428FA1FE300BE2E8F /* Register2VC.swift in Sources */,
+				8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
 				8278EC7428F99B37001943BD /* DetailPageVC.swift in Sources */,
@@ -770,6 +798,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8252E58A28FA24E200BE2E8F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8252E58B28FA24E200BE2E8F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8252E58A28FA24E200BE2E8F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8278EC0428F988BD001943BD /* Project object */;
 }

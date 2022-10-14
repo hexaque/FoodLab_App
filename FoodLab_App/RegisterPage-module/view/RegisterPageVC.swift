@@ -9,12 +9,13 @@ import UIKit
 
 class RegisterPageVC: UIViewController {
     
-    @IBOutlet weak var tfName: UITextField!
+
     
     @IBOutlet weak var tfEmail: UITextField!
     
     @IBOutlet weak var tfPassword: UITextField!
     
+    @IBOutlet weak var tfUserName: UITextField!
     
     
     
