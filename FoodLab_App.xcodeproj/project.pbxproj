@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
-		8278EC1428F988BD001943BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1328F988BD001943BD /* ViewController.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
 		8278EC1928F988C0001943BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1828F988C0001943BD /* Assets.xcassets */; };
 		8278EC1C28F988C0001943BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */; };
@@ -42,13 +41,15 @@
 		8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8228F99D42001943BD /* FoodsResponse.swift */; };
 		8278EC8528F99D75001943BD /* FoodsCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8428F99D75001943BD /* FoodsCart.swift */; };
 		8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8628F99D86001943BD /* FoodsCartResponse.swift */; };
+		8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */; };
+		8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8C28F9B095001943BD /* OnboardSlides.swift */; };
+		8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8E28F9B350001943BD /* OnboardingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8278EC1328F988BD001943BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8278EC1628F988BD001943BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8278EC1828F988C0001943BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8278EC1B28F988C0001943BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +83,9 @@
 		8278EC8228F99D42001943BD /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
 		8278EC8428F99D75001943BD /* FoodsCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCart.swift; sourceTree = "<group>"; };
 		8278EC8628F99D86001943BD /* FoodsCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCartResponse.swift; sourceTree = "<group>"; };
+		8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageVC.swift; sourceTree = "<group>"; };
+		8278EC8C28F9B095001943BD /* OnboardSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlides.swift; sourceTree = "<group>"; };
+		8278EC8E28F9B350001943BD /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,15 +118,16 @@
 		8278EC0E28F988BD001943BD /* FoodLab_App */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC8928F9AC42001943BD /* OnboardingPage */,
 				8278EC7F28F99C01001943BD /* entity */,
 				8278EC2E28F9959D001943BD /* LoginPage-module */,
+				8278EC8828F9A5B1001943BD /* ForgerPasswordPage-module */,
 				8278EC3828F99878001943BD /* RegisterPage-module */,
 				8278EC2D28F9959B001943BD /* HomePage-module */,
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
 				8278EC2328F98F5F001943BD /* AppIsımVer */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
-				8278EC1328F988BD001943BD /* ViewController.swift */,
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
 			);
@@ -418,6 +423,23 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		8278EC8828F9A5B1001943BD /* ForgerPasswordPage-module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ForgerPasswordPage-module";
+			sourceTree = "<group>";
+		};
+		8278EC8928F9AC42001943BD /* OnboardingPage */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */,
+				8278EC8C28F9B095001943BD /* OnboardSlides.swift */,
+				8278EC8E28F9B350001943BD /* OnboardingCell.swift */,
+			);
+			path = OnboardingPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */,
 				8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */,
 				8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */,
 				8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */,
@@ -496,7 +519,6 @@
 				8278EC6E28F99AFF001943BD /* DetailPageRouter.swift in Sources */,
 				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
 				8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */,
-				8278EC1428F988BD001943BD /* ViewController.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
@@ -507,6 +529,7 @@
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
+				8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
 				8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */,
 				8278EC8128F99D32001943BD /* Foods.swift in Sources */,
@@ -519,6 +542,7 @@
 				8278EC7C28F99B93001943BD /* CartPagePresenter.swift in Sources */,
 				8278EC6428F99A92001943BD /* HomePageRouter.swift in Sources */,
 				8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */,
+				8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */,
 				8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */,
 				8278EC7E28F99BB8001943BD /* CartPageVC.swift in Sources */,
 			);

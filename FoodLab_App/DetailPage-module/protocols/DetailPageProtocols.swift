@@ -7,6 +7,7 @@
 
 import Foundation
 protocol ViewToPresenterDetailPageProtocol{
+    var detailPageInteractor : PresenterToInteractorDetailPageProtocol?{get set}
     
 }
 protocol PresenterToInteractorDetailPageProtocol{

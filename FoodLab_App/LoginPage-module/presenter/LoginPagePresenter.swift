@@ -6,6 +6,10 @@
 //
 
 import Foundation
-class LoginPagePresenter{
+class LoginPagePresenter:ViewToPresenterLoginPageProtocol{
+    var loginPageInteractor: PresenterToInteractorLoginPageProtocol?
+    
+    var LoginPageInteractor: PresenterToInteractorLoginPageProtocol?
+    
     
 }

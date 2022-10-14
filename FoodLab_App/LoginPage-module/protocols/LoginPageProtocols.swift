@@ -7,7 +7,7 @@
 
 import Foundation
 protocol ViewToPresenterLoginPageProtocol{
-    
+    var loginPageInteractor : PresenterToInteractorLoginPageProtocol? {get set}
 }
 protocol PresenterToInteractorLoginPageProtocol{
     

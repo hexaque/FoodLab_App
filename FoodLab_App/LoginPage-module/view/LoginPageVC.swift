@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginPageVC: UIViewController {
-
+    var loginPagePresenterObject : ViewToPresenterLoginPageProtocol?
     override func viewDidLoad() {
         super.viewDidLoad()
 

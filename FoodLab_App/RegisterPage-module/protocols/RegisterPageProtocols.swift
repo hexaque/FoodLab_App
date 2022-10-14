@@ -7,6 +7,7 @@
 
 import Foundation
 protocol ViewToPresenterRegisterPageProtocol{
+    var registerPageInteractor : PresenterToInteractorRegisterPageProtocol?{get set}
     
 }
 protocol PresenterToInteractorRegisterPageProtocol{

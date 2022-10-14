@@ -7,7 +7,7 @@
 
 import Foundation
 protocol ViewToPresenterCartPageProtocol{
-    
+    var cartPageInteractor : PresenterToInteractorCartPageProtocol?{get set}
 }
 protocol PresenterToInteractorCartPageProtocol{
     

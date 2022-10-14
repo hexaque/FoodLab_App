@@ -6,6 +6,11 @@
 //
 
 import Foundation
-class LoginPageRouter{
+class LoginPageRouter:PresenterToRouterLoginPageProtocol{
+    static func createModule(ref: LoginPageVC) {
+        ref.loginPagePresenterObject = LoginPagePresenter()
+        //ref.LoginPagePresenterObject?.LoginPageInteractor = LoginPageInteractor()
+    }
+    
     
 }
