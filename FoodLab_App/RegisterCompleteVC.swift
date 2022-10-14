@@ -17,8 +17,8 @@ class RegisterCompleteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
         
-        navigationController?.isToolbarHidden = true
     }
     
 
