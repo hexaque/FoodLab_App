@@ -6,3 +6,12 @@
 //
 
 import Foundation
+protocol ViewToPresenterDetailPageProtocol{
+    
+}
+protocol PresenterToInteractorDetailPageProtocol{
+    
+}
+protocol PresenterToRouterDetailPageProtocol{
+    static func createModule(ref: DetailPageVC)
+}

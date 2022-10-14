@@ -6,3 +6,12 @@
 //
 
 import Foundation
+protocol ViewToPresenterCartPageProtocol{
+    
+}
+protocol PresenterToInteractorCartPageProtocol{
+    
+}
+protocol PresenterToRouterCartPageProtocol{
+    static func createModule(ref: CartPageVC)
+}

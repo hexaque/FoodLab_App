@@ -6,3 +6,14 @@
 //
 
 import Foundation
+protocol ViewToPresenterLoginPageProtocol{
+    
+}
+protocol PresenterToInteractorLoginPageProtocol{
+    
+}
+
+
+protocol PresenterToRouterLoginPageProtocol{
+    static func createModule(ref: LoginPageVC)
+}

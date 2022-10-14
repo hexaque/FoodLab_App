@@ -6,3 +6,12 @@
 //
 
 import Foundation
+protocol ViewToPresenterRegisterPageProtocol{
+    
+}
+protocol PresenterToInteractorRegisterPageProtocol{
+    
+}
+protocol PresenterToRouterRegisterPageProtocol{
+    static func createModule(ref: RegisterPageVC)
+}
