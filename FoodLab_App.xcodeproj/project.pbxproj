@@ -38,6 +38,10 @@
 		8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7928F99B80001943BD /* CartPageInteractor.swift */; };
 		8278EC7C28F99B93001943BD /* CartPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7B28F99B93001943BD /* CartPagePresenter.swift */; };
 		8278EC7E28F99BB8001943BD /* CartPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7D28F99BB8001943BD /* CartPageVC.swift */; };
+		8278EC8128F99D32001943BD /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8028F99D32001943BD /* Foods.swift */; };
+		8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8228F99D42001943BD /* FoodsResponse.swift */; };
+		8278EC8528F99D75001943BD /* FoodsCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8428F99D75001943BD /* FoodsCart.swift */; };
+		8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8628F99D86001943BD /* FoodsCartResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +78,10 @@
 		8278EC7928F99B80001943BD /* CartPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageInteractor.swift; sourceTree = "<group>"; };
 		8278EC7B28F99B93001943BD /* CartPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPagePresenter.swift; sourceTree = "<group>"; };
 		8278EC7D28F99BB8001943BD /* CartPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageVC.swift; sourceTree = "<group>"; };
+		8278EC8028F99D32001943BD /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		8278EC8228F99D42001943BD /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
+		8278EC8428F99D75001943BD /* FoodsCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCart.swift; sourceTree = "<group>"; };
+		8278EC8628F99D86001943BD /* FoodsCartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCartResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,7 @@
 		8278EC0E28F988BD001943BD /* FoodLab_App */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC7F28F99C01001943BD /* entity */,
 				8278EC2E28F9959D001943BD /* LoginPage-module */,
 				8278EC3828F99878001943BD /* RegisterPage-module */,
 				8278EC2D28F9959B001943BD /* HomePage-module */,
@@ -398,6 +407,17 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		8278EC7F28F99C01001943BD /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC8028F99D32001943BD /* Foods.swift */,
+				8278EC8228F99D42001943BD /* FoodsResponse.swift */,
+				8278EC8428F99D75001943BD /* FoodsCart.swift */,
+				8278EC8628F99D86001943BD /* FoodsCartResponse.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,9 +491,11 @@
 			files = (
 				8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */,
 				8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */,
+				8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */,
 				8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */,
 				8278EC6E28F99AFF001943BD /* DetailPageRouter.swift in Sources */,
 				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
+				8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */,
 				8278EC1428F988BD001943BD /* ViewController.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
@@ -487,7 +509,9 @@
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
 				8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */,
+				8278EC8128F99D32001943BD /* Foods.swift in Sources */,
 				8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */,
+				8278EC8528F99D75001943BD /* FoodsCart.swift in Sources */,
 				8278EC6828F99AB6001943BD /* HomePagePresenter.swift in Sources */,
 				8278EC6A28F99ACE001943BD /* HomePageVC.swift in Sources */,
 				8278EC7228F99B1D001943BD /* DetailPagePresenter.swift in Sources */,
