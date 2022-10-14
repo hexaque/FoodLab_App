@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821D638928F9F941002B50CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D638828F9F941002B50CB /* Extension.swift */; };
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		8278EC0328F988BD001943BD = {
 			isa = PBXGroup;
 			children = (
+				821D638828F9F941002B50CB /* Extension.swift */,
 				8278EC0E28F988BD001943BD /* FoodLab_App */,
 				8278EC0D28F988BD001943BD /* Products */,
 			);
@@ -541,6 +544,7 @@
 				8278EC5A28F99A21001943BD /* RegisterPageRouter.swift in Sources */,
 				8278EC7C28F99B93001943BD /* CartPagePresenter.swift in Sources */,
 				8278EC6428F99A92001943BD /* HomePageRouter.swift in Sources */,
+				821D638928F9F941002B50CB /* Extension.swift in Sources */,
 				8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */,
 				8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */,
 				8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */,
