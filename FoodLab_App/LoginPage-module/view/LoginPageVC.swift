@@ -19,8 +19,14 @@ class LoginPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+            
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if let rootVC = navigationController?.viewControllers.first {
+            navigationController?.viewControllers = [rootVC, self]}
     }
     
 
