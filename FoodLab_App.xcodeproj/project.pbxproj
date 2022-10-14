@@ -13,6 +13,7 @@
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
 		8278EC1928F988C0001943BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1828F988C0001943BD /* Assets.xcassets */; };
 		8278EC1C28F988C0001943BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */; };
+		8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC3528F99707001943BD /* LoginPagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8278EC1828F988C0001943BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8278EC1B28F988C0001943BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8278EC1D28F988C0001943BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8278EC3528F99707001943BD /* LoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,162 @@
 		8278EC0E28F988BD001943BD /* FoodLab_App */ = {
 			isa = PBXGroup;
 			children = (
-				8278EC0F28F988BD001943BD /* AppDelegate.swift */,
-				8278EC1128F988BD001943BD /* SceneDelegate.swift */,
+				8278EC2E28F9959D001943BD /* LoginPage-module */,
+				8278EC2F28F995EE001943BD /* RegisterPage-module */,
+				8278EC2D28F9959B001943BD /* HomePage-module */,
+				8278EC2C28F99599001943BD /* DetailPage-module */,
+				8278EC2B28F99596001943BD /* CartPage-module */,
+				8278EC2528F99583001943BD /* New Group */,
+				8278EC2328F98F5F001943BD /* AppIsımVer */,
+				8278EC2428F98F6D001943BD /* StoryBoards */,
 				8278EC1328F988BD001943BD /* ViewController.swift */,
-				8278EC1528F988BD001943BD /* Main.storyboard */,
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
-				8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
 			);
 			path = FoodLab_App;
+			sourceTree = "<group>";
+		};
+		8278EC2328F98F5F001943BD /* AppIsımVer */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC0F28F988BD001943BD /* AppDelegate.swift */,
+				8278EC1128F988BD001943BD /* SceneDelegate.swift */,
+			);
+			path = "AppIsımVer";
+			sourceTree = "<group>";
+		};
+		8278EC2428F98F6D001943BD /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC1528F988BD001943BD /* Main.storyboard */,
+				8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		8278EC2528F99583001943BD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC2A28F99594001943BD /* New Group3 */,
+				8278EC2828F9958C001943BD /* New Group */,
+				8278EC2928F9958E001943BD /* New Group2 */,
+				8278EC2728F9958A001943BD /* New Group1 */,
+				8278EC2628F99587001943BD /* New Group */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8278EC2628F99587001943BD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		8278EC2728F9958A001943BD /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		8278EC2828F9958C001943BD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			path = "New Group1/New Group";
+			sourceTree = "<group>";
+		};
+		8278EC2928F9958E001943BD /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		8278EC2A28F99594001943BD /* New Group3 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group3";
+			sourceTree = "<group>";
+		};
+		8278EC2B28F99596001943BD /* CartPage-module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "CartPage-module";
+			sourceTree = "<group>";
+		};
+		8278EC2C28F99599001943BD /* DetailPage-module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "DetailPage-module";
+			sourceTree = "<group>";
+		};
+		8278EC2D28F9959B001943BD /* HomePage-module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "HomePage-module";
+			sourceTree = "<group>";
+		};
+		8278EC2E28F9959D001943BD /* LoginPage-module */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC3428F99684001943BD /* protocols */,
+				8278EC3328F99681001943BD /* router */,
+				8278EC3228F9963D001943BD /* interactor */,
+				8278EC3128F9963B001943BD /* presenter */,
+				8278EC3028F99635001943BD /* view */,
+			);
+			path = "LoginPage-module";
+			sourceTree = "<group>";
+		};
+		8278EC2F28F995EE001943BD /* RegisterPage-module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "RegisterPage-module";
+			path = "LoginPage-module/RegisterPage-module";
+			sourceTree = "<group>";
+		};
+		8278EC3028F99635001943BD /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8278EC3128F9963B001943BD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC3528F99707001943BD /* LoginPagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8278EC3228F9963D001943BD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8278EC3328F99681001943BD /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8278EC3428F99684001943BD /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8278EC1428F988BD001943BD /* ViewController.swift in Sources */,
+				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
 				8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
 			);
@@ -290,7 +440,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodLab_App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -317,7 +467,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodLab_App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
