@@ -14,6 +14,30 @@
 		8278EC1928F988C0001943BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1828F988C0001943BD /* Assets.xcassets */; };
 		8278EC1C28F988C0001943BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */; };
 		8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC3528F99707001943BD /* LoginPagePresenter.swift */; };
+		8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC4F28F99992001943BD /* LoginPageProtocols.swift */; };
+		8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5128F999A2001943BD /* LoginPageRouter.swift */; };
+		8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5328F999B6001943BD /* LoginPageInteractor.swift */; };
+		8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5528F999D1001943BD /* LoginPageVC.swift */; };
+		8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5728F99A03001943BD /* RegisterPageProtocols.swift */; };
+		8278EC5A28F99A21001943BD /* RegisterPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5928F99A21001943BD /* RegisterPageRouter.swift */; };
+		8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5B28F99A36001943BD /* RegisterPageInteractor.swift */; };
+		8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5D28F99A4F001943BD /* RegisterPagePresenter.swift */; };
+		8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC5F28F99A66001943BD /* RegisterPageVC.swift */; };
+		8278EC6228F99A85001943BD /* HomePageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6128F99A85001943BD /* HomePageProtocols.swift */; };
+		8278EC6428F99A92001943BD /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6328F99A92001943BD /* HomePageRouter.swift */; };
+		8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6528F99AA6001943BD /* HomePageInteractor.swift */; };
+		8278EC6828F99AB6001943BD /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6728F99AB6001943BD /* HomePagePresenter.swift */; };
+		8278EC6A28F99ACE001943BD /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6928F99ACE001943BD /* HomePageVC.swift */; };
+		8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6B28F99AF2001943BD /* DetailPageProtocols.swift */; };
+		8278EC6E28F99AFF001943BD /* DetailPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6D28F99AFF001943BD /* DetailPageRouter.swift */; };
+		8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC6F28F99B10001943BD /* DetailPageInteractor.swift */; };
+		8278EC7228F99B1D001943BD /* DetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7128F99B1D001943BD /* DetailPagePresenter.swift */; };
+		8278EC7428F99B37001943BD /* DetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7328F99B37001943BD /* DetailPageVC.swift */; };
+		8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7528F99B5F001943BD /* CartPageProtocols.swift */; };
+		8278EC7828F99B6A001943BD /* CartPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7728F99B6A001943BD /* CartPageRouter.swift */; };
+		8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7928F99B80001943BD /* CartPageInteractor.swift */; };
+		8278EC7C28F99B93001943BD /* CartPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7B28F99B93001943BD /* CartPagePresenter.swift */; };
+		8278EC7E28F99BB8001943BD /* CartPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC7D28F99BB8001943BD /* CartPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +50,30 @@
 		8278EC1B28F988C0001943BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8278EC1D28F988C0001943BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8278EC3528F99707001943BD /* LoginPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPagePresenter.swift; sourceTree = "<group>"; };
+		8278EC4F28F99992001943BD /* LoginPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageProtocols.swift; sourceTree = "<group>"; };
+		8278EC5128F999A2001943BD /* LoginPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageRouter.swift; sourceTree = "<group>"; };
+		8278EC5328F999B6001943BD /* LoginPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageInteractor.swift; sourceTree = "<group>"; };
+		8278EC5528F999D1001943BD /* LoginPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageVC.swift; sourceTree = "<group>"; };
+		8278EC5728F99A03001943BD /* RegisterPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageProtocols.swift; sourceTree = "<group>"; };
+		8278EC5928F99A21001943BD /* RegisterPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageRouter.swift; sourceTree = "<group>"; };
+		8278EC5B28F99A36001943BD /* RegisterPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageInteractor.swift; sourceTree = "<group>"; };
+		8278EC5D28F99A4F001943BD /* RegisterPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPagePresenter.swift; sourceTree = "<group>"; };
+		8278EC5F28F99A66001943BD /* RegisterPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageVC.swift; sourceTree = "<group>"; };
+		8278EC6128F99A85001943BD /* HomePageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocols.swift; sourceTree = "<group>"; };
+		8278EC6328F99A92001943BD /* HomePageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRouter.swift; sourceTree = "<group>"; };
+		8278EC6528F99AA6001943BD /* HomePageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageInteractor.swift; sourceTree = "<group>"; };
+		8278EC6728F99AB6001943BD /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
+		8278EC6928F99ACE001943BD /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		8278EC6B28F99AF2001943BD /* DetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageProtocols.swift; sourceTree = "<group>"; };
+		8278EC6D28F99AFF001943BD /* DetailPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageRouter.swift; sourceTree = "<group>"; };
+		8278EC6F28F99B10001943BD /* DetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageInteractor.swift; sourceTree = "<group>"; };
+		8278EC7128F99B1D001943BD /* DetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPagePresenter.swift; sourceTree = "<group>"; };
+		8278EC7328F99B37001943BD /* DetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageVC.swift; sourceTree = "<group>"; };
+		8278EC7528F99B5F001943BD /* CartPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageProtocols.swift; sourceTree = "<group>"; };
+		8278EC7728F99B6A001943BD /* CartPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageRouter.swift; sourceTree = "<group>"; };
+		8278EC7928F99B80001943BD /* CartPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageInteractor.swift; sourceTree = "<group>"; };
+		8278EC7B28F99B93001943BD /* CartPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPagePresenter.swift; sourceTree = "<group>"; };
+		8278EC7D28F99BB8001943BD /* CartPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				8278EC2E28F9959D001943BD /* LoginPage-module */,
-				8278EC2F28F995EE001943BD /* RegisterPage-module */,
+				8278EC3828F99878001943BD /* RegisterPage-module */,
 				8278EC2D28F9959B001943BD /* HomePage-module */,
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
-				8278EC2528F99583001943BD /* New Group */,
 				8278EC2328F98F5F001943BD /* AppIsımVer */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
 				8278EC1328F988BD001943BD /* ViewController.swift */,
@@ -91,57 +138,14 @@
 			path = StoryBoards;
 			sourceTree = "<group>";
 		};
-		8278EC2528F99583001943BD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				8278EC2A28F99594001943BD /* New Group3 */,
-				8278EC2828F9958C001943BD /* New Group */,
-				8278EC2928F9958E001943BD /* New Group2 */,
-				8278EC2728F9958A001943BD /* New Group1 */,
-				8278EC2628F99587001943BD /* New Group */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		8278EC2628F99587001943BD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		8278EC2728F9958A001943BD /* New Group1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group1";
-			sourceTree = "<group>";
-		};
-		8278EC2828F9958C001943BD /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			path = "New Group1/New Group";
-			sourceTree = "<group>";
-		};
-		8278EC2928F9958E001943BD /* New Group2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group2";
-			sourceTree = "<group>";
-		};
-		8278EC2A28F99594001943BD /* New Group3 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group3";
-			sourceTree = "<group>";
-		};
 		8278EC2B28F99596001943BD /* CartPage-module */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC4E28F99935001943BD /* protocols */,
+				8278EC4D28F99933001943BD /* router */,
+				8278EC4C28F99930001943BD /* interactor */,
+				8278EC4B28F9992D001943BD /* presenter */,
+				8278EC4A28F99928001943BD /* view */,
 			);
 			path = "CartPage-module";
 			sourceTree = "<group>";
@@ -149,6 +153,11 @@
 		8278EC2C28F99599001943BD /* DetailPage-module */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC4728F99905001943BD /* protocols */,
+				8278EC4628F99904001943BD /* router */,
+				8278EC4528F99902001943BD /* interactor */,
+				8278EC4428F99900001943BD /* presenter */,
+				8278EC4328F998FE001943BD /* view */,
 			);
 			path = "DetailPage-module";
 			sourceTree = "<group>";
@@ -156,6 +165,11 @@
 		8278EC2D28F9959B001943BD /* HomePage-module */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC4228F998BF001943BD /* protocols */,
+				8278EC4128F998BD001943BD /* router */,
+				8278EC4028F998BC001943BD /* interactor */,
+				8278EC3F28F998BA001943BD /* presenter */,
+				8278EC3E28F998B8001943BD /* view */,
 			);
 			path = "HomePage-module";
 			sourceTree = "<group>";
@@ -172,17 +186,10 @@
 			path = "LoginPage-module";
 			sourceTree = "<group>";
 		};
-		8278EC2F28F995EE001943BD /* RegisterPage-module */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "RegisterPage-module";
-			path = "LoginPage-module/RegisterPage-module";
-			sourceTree = "<group>";
-		};
 		8278EC3028F99635001943BD /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC5528F999D1001943BD /* LoginPageVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 		8278EC3228F9963D001943BD /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC5328F999B6001943BD /* LoginPageInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 		8278EC3328F99681001943BD /* router */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC5128F999A2001943BD /* LoginPageRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -212,6 +221,179 @@
 		8278EC3428F99684001943BD /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				8278EC4F28F99992001943BD /* LoginPageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8278EC3828F99878001943BD /* RegisterPage-module */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC3D28F99893001943BD /* protocols */,
+				8278EC3C28F99892001943BD /* router */,
+				8278EC3B28F99890001943BD /* interactor */,
+				8278EC3A28F9988E001943BD /* presenter */,
+				8278EC3928F9988C001943BD /* view */,
+			);
+			path = "RegisterPage-module";
+			sourceTree = "<group>";
+		};
+		8278EC3928F9988C001943BD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC5F28F99A66001943BD /* RegisterPageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8278EC3A28F9988E001943BD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC5D28F99A4F001943BD /* RegisterPagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8278EC3B28F99890001943BD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC5B28F99A36001943BD /* RegisterPageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8278EC3C28F99892001943BD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC5928F99A21001943BD /* RegisterPageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8278EC3D28F99893001943BD /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC5728F99A03001943BD /* RegisterPageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8278EC3E28F998B8001943BD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6928F99ACE001943BD /* HomePageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8278EC3F28F998BA001943BD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6728F99AB6001943BD /* HomePagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8278EC4028F998BC001943BD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6528F99AA6001943BD /* HomePageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8278EC4128F998BD001943BD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6328F99A92001943BD /* HomePageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8278EC4228F998BF001943BD /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6128F99A85001943BD /* HomePageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8278EC4328F998FE001943BD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7328F99B37001943BD /* DetailPageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8278EC4428F99900001943BD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7128F99B1D001943BD /* DetailPagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8278EC4528F99902001943BD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6F28F99B10001943BD /* DetailPageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8278EC4628F99904001943BD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6D28F99AFF001943BD /* DetailPageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8278EC4728F99905001943BD /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC6B28F99AF2001943BD /* DetailPageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8278EC4A28F99928001943BD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7D28F99BB8001943BD /* CartPageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8278EC4B28F9992D001943BD /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7B28F99B93001943BD /* CartPagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8278EC4C28F99930001943BD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7928F99B80001943BD /* CartPageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8278EC4D28F99933001943BD /* router */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7728F99B6A001943BD /* CartPageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8278EC4E28F99935001943BD /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC7528F99B5F001943BD /* CartPageProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -287,10 +469,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */,
+				8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */,
+				8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */,
+				8278EC6E28F99AFF001943BD /* DetailPageRouter.swift in Sources */,
+				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
 				8278EC1428F988BD001943BD /* ViewController.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
+				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
+				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
+				8278EC7428F99B37001943BD /* DetailPageVC.swift in Sources */,
+				8278EC7828F99B6A001943BD /* CartPageRouter.swift in Sources */,
+				8278EC6228F99A85001943BD /* HomePageProtocols.swift in Sources */,
 				8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */,
+				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
+				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
+				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
+				8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */,
+				8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */,
+				8278EC6828F99AB6001943BD /* HomePagePresenter.swift in Sources */,
+				8278EC6A28F99ACE001943BD /* HomePageVC.swift in Sources */,
+				8278EC7228F99B1D001943BD /* DetailPagePresenter.swift in Sources */,
+				8278EC5A28F99A21001943BD /* RegisterPageRouter.swift in Sources */,
+				8278EC7C28F99B93001943BD /* CartPagePresenter.swift in Sources */,
+				8278EC6428F99A92001943BD /* HomePageRouter.swift in Sources */,
+				8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */,
+				8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */,
+				8278EC7E28F99BB8001943BD /* CartPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
