@@ -43,7 +43,7 @@ class OnboardingPageVC: UIViewController {
 
     @IBAction func buttonNextClicked(_ sender: UIButton) {
         if currentPage == onboardingSlides.count-1 {
-            let controller = storyboard?.instantiateViewController(withIdentifier: "LoginPage") as! UINavigationController
+            let controller = storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .coverVertical
             present(controller, animated: true, completion: nil)

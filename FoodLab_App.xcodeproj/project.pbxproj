@@ -45,6 +45,7 @@
 		8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */; };
 		8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8C28F9B095001943BD /* OnboardSlides.swift */; };
 		8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8E28F9B350001943BD /* OnboardingCell.swift */; };
+		82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageVC.swift; sourceTree = "<group>"; };
 		8278EC8C28F9B095001943BD /* OnboardSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlides.swift; sourceTree = "<group>"; };
 		8278EC8E28F9B350001943BD /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		8278EC0328F988BD001943BD = {
 			isa = PBXGroup;
 			children = (
+				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
 				821D638828F9F941002B50CB /* Extension.swift */,
 				8278EC0E28F988BD001943BD /* FoodLab_App */,
 				8278EC0D28F988BD001943BD /* Products */,
@@ -534,6 +537,7 @@
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
 				8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
+				82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */,
 				8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */,
 				8278EC8128F99D32001943BD /* Foods.swift in Sources */,
 				8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */,
