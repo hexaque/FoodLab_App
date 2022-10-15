@@ -124,6 +124,10 @@
 		8210255128FAE20A00092E4E /* ForgetPswScene1-module */ = {
 			isa = PBXGroup;
 			children = (
+				8210256928FAFBC700092E4E /* protocols */,
+				8210256828FAFBC500092E4E /* router */,
+				8210256728FAFBC300092E4E /* interactor */,
+				8210256628FAFBC100092E4E /* presenter */,
 				8210255228FAE22300092E4E /* view */,
 			);
 			path = "ForgetPswScene1-module";
@@ -140,6 +144,10 @@
 		8210255328FAE23000092E4E /* ForgetPswScene2-module */ = {
 			isa = PBXGroup;
 			children = (
+				8210256D28FAFBE600092E4E /* protocols */,
+				8210256C28FAFBE500092E4E /* router */,
+				8210256B28FAFBE300092E4E /* interactor */,
+				8210256A28FAFBE100092E4E /* presenter */,
 				8210255428FAE23A00092E4E /* view */,
 			);
 			path = "ForgetPswScene2-module";
@@ -156,6 +164,10 @@
 		8210255528FAE24300092E4E /* ForgetPswScene3-module */ = {
 			isa = PBXGroup;
 			children = (
+				8210257128FAFC0200092E4E /* protocols */,
+				8210257028FAFC0000092E4E /* router */,
+				8210256F28FAFBFD00092E4E /* interactor */,
+				8210256E28FAFBFB00092E4E /* presenter */,
 				8210255628FAE24C00092E4E /* view */,
 			);
 			path = "ForgetPswScene3-module";
@@ -188,6 +200,10 @@
 		8210255928FAE2B900092E4E /* RegisterPage2-module */ = {
 			isa = PBXGroup;
 			children = (
+				8210256528FAFB9400092E4E /* protocols */,
+				8210256428FAFB9200092E4E /* router */,
+				8210256328FAFB9000092E4E /* interactor */,
+				8210256228FAFB8E00092E4E /* presenter */,
 				8210255A28FAE2C200092E4E /* view */,
 			);
 			path = "RegisterPage2-module";
@@ -230,6 +246,10 @@
 		8210255E28FAF84700092E4E /* ForgetPswScene4-module */ = {
 			isa = PBXGroup;
 			children = (
+				8210257528FAFC1800092E4E /* protocols */,
+				8210257428FAFC1600092E4E /* router */,
+				8210257328FAFC1400092E4E /* interactor */,
+				8210257228FAFC1300092E4E /* presenter */,
 				8210255F28FAF85900092E4E /* view */,
 			);
 			path = "ForgetPswScene4-module";
@@ -241,6 +261,146 @@
 				8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		8210256228FAFB8E00092E4E /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8210256328FAFB9000092E4E /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8210256428FAFB9200092E4E /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8210256528FAFB9400092E4E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8210256628FAFBC100092E4E /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8210256728FAFBC300092E4E /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8210256828FAFBC500092E4E /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8210256928FAFBC700092E4E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8210256A28FAFBE100092E4E /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8210256B28FAFBE300092E4E /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8210256C28FAFBE500092E4E /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8210256D28FAFBE600092E4E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8210256E28FAFBFB00092E4E /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8210256F28FAFBFD00092E4E /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8210257028FAFC0000092E4E /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8210257128FAFC0200092E4E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		8210257228FAFC1300092E4E /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8210257328FAFC1400092E4E /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8210257428FAFC1600092E4E /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8210257528FAFC1800092E4E /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 		8252E58728FA23BE00BE2E8F /* LottieAnimation */ = {
@@ -284,6 +444,7 @@
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
 				821D638828F9F941002B50CB /* Extension.swift */,
+				8278EC1528F988BD001943BD /* Main.storyboard */,
 				8252E58728FA23BE00BE2E8F /* LottieAnimation */,
 			);
 			path = FoodLab_App;
@@ -301,7 +462,6 @@
 		8278EC2428F98F6D001943BD /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				8278EC1528F988BD001943BD /* Main.storyboard */,
 				8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
