@@ -6,11 +6,27 @@
 //
 
 import Foundation
+import Alamofire
 class HomePageInteractor : PresenterToInteractorHomePageProtocol{
     var homePagePresenter: InteractorToPresenterHomePageProtocol?
     
     func getAllFoodsI() {
-        
+        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .get).response{response in
+            if let data = response.data{
+                do{
+                    let answer = try JSONDecoder().decode(FoodsResponse.self, from: data)
+                    if let foods = answer.yemekler{
+                        print(answer.success!)
+                        self.homePagePresenter?.sendDataToPresenter(foods: foods)
+                    }
+                    
+                }catch{
+                    print(error.localizedDescription.description)
+                }
+            }
+        }
+                   
+
     }
     
     

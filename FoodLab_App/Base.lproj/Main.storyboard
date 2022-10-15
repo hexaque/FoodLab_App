@@ -1545,7 +1545,7 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Qvq-2c-a5a"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="foodsCollectionView" destination="Mce-Gp-A6Y" id="yX0-qG-BFr"/>
+                        <outlet property="foodsTableView" destination="Mce-Gp-A6Y" id="ujJ-S1-y7G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4P-zO-1vH" sceneMemberID="firstResponder"/>

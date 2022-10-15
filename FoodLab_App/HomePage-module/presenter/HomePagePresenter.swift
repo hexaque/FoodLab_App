@@ -8,7 +8,6 @@
 import Foundation
 class HomePagePresenter: ViewToPresenterHomePageProtocol,InteractorToPresenterHomePageProtocol{
     var homePageInteractor: PresenterToInteractorHomePageProtocol?
-    
     var homePageView: PresenterToViewHomePageProtocol?
     
     func getAllFoods() {
@@ -16,7 +15,11 @@ class HomePagePresenter: ViewToPresenterHomePageProtocol,InteractorToPresenterHo
     }
     
     func sendDataToPresenter(foods: [Foods]) {
+        print("xPresenter")
         homePageView?.sendDataToView(foods: foods)
+     
+
+        
     }
     
     
