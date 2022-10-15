@@ -256,7 +256,6 @@
 				8278EC7F28F99C01001943BD /* entity */,
 				8278EC2E28F9959D001943BD /* LoginPage-module */,
 				8210255D28FAE2EA00092E4E /* RegisterPages-modules */,
-				8278EC8828F9A5B1001943BD /* ForgerPasswordPage-module */,
 				8278EC2D28F9959B001943BD /* HomePage-module */,
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
@@ -559,13 +558,6 @@
 				8278EC8628F99D86001943BD /* FoodsCartResponse.swift */,
 			);
 			path = entity;
-			sourceTree = "<group>";
-		};
-		8278EC8828F9A5B1001943BD /* ForgerPasswordPage-module */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "ForgerPasswordPage-module";
 			sourceTree = "<group>";
 		};
 		8278EC8928F9AC42001943BD /* OnboardingPage */ = {

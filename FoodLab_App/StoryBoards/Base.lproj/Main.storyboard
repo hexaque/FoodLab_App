@@ -489,13 +489,13 @@
                                 <color key="highlightedColor" name="textColorLightBlack"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kayıt Ol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWO-j4-z2h">
-                                <rect key="frame" x="99" y="383" width="192" height="26.333333333333314"/>
+                                <rect key="frame" x="99" y="353" width="192" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" name="textColorLightBlack"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kVc-fw-2JZ">
-                                <rect key="frame" x="25" y="434.33333333333326" width="340" height="210"/>
+                                <rect key="frame" x="25" y="394.33333333333331" width="340" height="209.99999999999994"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Kullanıcı Adı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nbF-ym-j01">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
@@ -505,7 +505,7 @@
                                         </constraints>
                                         <color key="textColor" name="textColorLightBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="username"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
@@ -526,7 +526,7 @@
                                         </constraints>
                                         <color key="textColor" name="textColorLightBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
@@ -539,16 +539,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mma-2j-wzS">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suy-Xo-ttF">
                                         <rect key="frame" x="0.0" y="150.00000000000006" width="340" height="60"/>
                                         <color key="backgroundColor" name="boxBG"/>
-                                        <color key="tintColor" name="textColorLightBlack"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="zg7-JP-Mwx"/>
+                                            <constraint firstAttribute="height" constant="60" id="VXp-H3-c5i"/>
                                         </constraints>
                                         <color key="textColor" name="textColorLightBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
@@ -564,7 +563,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-fl-urh">
-                                <rect key="frame" x="50" y="684.33333333333337" width="290" height="55"/>
+                                <rect key="frame" x="50" y="644.33333333333337" width="290" height="55"/>
                                 <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="hbA-Hr-Vc4"/>
@@ -588,7 +587,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWz-Mf-Pds">
-                                <rect key="frame" x="95.333333333333329" y="749.33333333333337" width="199.66666666666669" height="34.333333333333371"/>
+                                <rect key="frame" x="95.333333333333329" y="709.33333333333337" width="199.66666666666669" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Zaten Hesabın Var Mı ?"/>
                                 <connections>
@@ -603,7 +602,7 @@
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" id="BJm-HB-rUv"/>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="YWO-j4-z2h" secondAttribute="trailing" constant="99" id="FtL-qi-6w2"/>
                             <constraint firstItem="aWz-Mf-Pds" firstAttribute="top" secondItem="fXe-fl-urh" secondAttribute="bottom" constant="10" id="G8G-2o-c11"/>
-                            <constraint firstItem="YWO-j4-z2h" firstAttribute="top" secondItem="MH4-I4-yqG" secondAttribute="bottom" constant="50" id="Ga6-di-P6B"/>
+                            <constraint firstItem="YWO-j4-z2h" firstAttribute="top" secondItem="MH4-I4-yqG" secondAttribute="bottom" constant="20" id="Ga6-di-P6B"/>
                             <constraint firstItem="tUU-ZG-Hjn" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" constant="60" id="PPA-7r-jBl"/>
                             <constraint firstItem="tUU-ZG-Hjn" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" constant="60" id="QuZ-V0-ih0"/>
                             <constraint firstItem="MH4-I4-yqG" firstAttribute="top" secondItem="tUU-ZG-Hjn" secondAttribute="bottom" constant="10" id="TUG-f6-g3D"/>
@@ -615,7 +614,7 @@
                             <constraint firstItem="fXe-fl-urh" firstAttribute="top" secondItem="kVc-fw-2JZ" secondAttribute="bottom" constant="40" id="dl2-zH-ozI"/>
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" id="eHd-bK-u0g"/>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="fXe-fl-urh" secondAttribute="trailing" constant="50" id="kAa-yi-mDV"/>
-                            <constraint firstItem="kVc-fw-2JZ" firstAttribute="top" secondItem="YWO-j4-z2h" secondAttribute="bottom" constant="25" id="li5-78-s1m"/>
+                            <constraint firstItem="kVc-fw-2JZ" firstAttribute="top" secondItem="YWO-j4-z2h" secondAttribute="bottom" constant="15" id="li5-78-s1m"/>
                             <constraint firstItem="aWz-Mf-Pds" firstAttribute="centerX" secondItem="LTD-QK-gSm" secondAttribute="centerX" id="mE2-WG-iIX"/>
                             <constraint firstItem="kVc-fw-2JZ" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" constant="25" id="obt-U9-bRl"/>
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="trailing" secondItem="V0d-gS-0gL" secondAttribute="trailing" id="ye0-UT-gXy"/>
@@ -626,7 +625,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tfEmail" destination="QgP-wS-fc9" id="GyW-rD-Xbt"/>
-                        <outlet property="tfPassword" destination="mma-2j-wzS" id="PJU-0m-cCJ"/>
+                        <outlet property="tfPassword" destination="suy-Xo-ttF" id="QBh-Em-xn1"/>
                         <outlet property="tfUserName" destination="nbF-ym-j01" id="sAk-hG-rIq"/>
                     </connections>
                 </viewController>
@@ -664,7 +663,7 @@
                                         </constraints>
                                         <color key="textColor" name="textColorLightBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
@@ -685,7 +684,7 @@
                                         </constraints>
                                         <color key="textColor" name="textColorLightBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
@@ -706,7 +705,7 @@
                                         </constraints>
                                         <color key="textColor" name="textColorLightBlack"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="25"/>
@@ -1058,7 +1057,7 @@
                                 </constraints>
                                 <color key="textColor" name="textColorLightBlack"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>

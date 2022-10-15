@@ -17,7 +17,7 @@ class ForgetPswVC3: UIViewController , UITextFieldDelegate {
         
         navigationItem.hidesBackButton = true
         labelError.isHidden = true
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround() 
     }
    
   

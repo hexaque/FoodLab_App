@@ -13,6 +13,7 @@ class RegisterPageVC: UIViewController {
     
     @IBOutlet weak var tfEmail: UITextField!
     
+  
     @IBOutlet weak var tfPassword: UITextField!
     
     @IBOutlet weak var tfUserName: UITextField!
@@ -23,6 +24,8 @@ class RegisterPageVC: UIViewController {
     
 
     override func viewDidLoad() {
+       
+        self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
         
 
