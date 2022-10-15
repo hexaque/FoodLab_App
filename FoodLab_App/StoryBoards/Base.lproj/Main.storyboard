@@ -145,7 +145,7 @@
                                 </constraints>
                                 <color key="textColor" name="textColorLightBlack"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
@@ -1170,6 +1170,9 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mn5-bg-8lJ">
@@ -1180,10 +1183,18 @@
                                     <action selector="buttonCancel:" destination="mN1-6Z-iZ8" eventType="touchUpInside" id="Fba-Sp-2xm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hatalı kod girdiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-eV-xrg">
+                                <rect key="frame" x="127" y="426" width="136" height="21"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jNK-0g-dSA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="LBe-eV-xrg" firstAttribute="centerX" secondItem="xyA-hx-QUa" secondAttribute="centerX" id="2rw-VX-xJC"/>
                             <constraint firstItem="fQm-ey-k9h" firstAttribute="top" secondItem="zgK-wf-8vC" secondAttribute="bottom" constant="160" id="5i5-WW-83i"/>
                             <constraint firstItem="jNK-0g-dSA" firstAttribute="bottom" secondItem="fQm-ey-k9h" secondAttribute="bottom" constant="184" id="7zH-hI-hn4"/>
                             <constraint firstItem="jNK-0g-dSA" firstAttribute="trailing" secondItem="zgK-wf-8vC" secondAttribute="trailing" constant="30" id="8PZ-xU-6XG"/>
@@ -1198,6 +1209,7 @@
                             <constraint firstItem="fQm-ey-k9h" firstAttribute="leading" secondItem="jNK-0g-dSA" secondAttribute="leading" constant="50" id="eMd-Jm-7yN"/>
                             <constraint firstItem="SSd-tp-0aB" firstAttribute="trailing" secondItem="jNK-0g-dSA" secondAttribute="trailing" id="ePz-7F-FgM"/>
                             <constraint firstItem="jNK-0g-dSA" firstAttribute="trailing" secondItem="lvy-8L-4wh" secondAttribute="trailing" constant="30" id="hi7-zz-0dF"/>
+                            <constraint firstItem="LBe-eV-xrg" firstAttribute="top" secondItem="zgK-wf-8vC" secondAttribute="bottom" constant="15" id="pQw-8r-ddE"/>
                             <constraint firstItem="SSd-tp-0aB" firstAttribute="leading" secondItem="jNK-0g-dSA" secondAttribute="leading" id="sdM-YE-id4"/>
                             <constraint firstItem="jNK-0g-dSA" firstAttribute="trailing" secondItem="urF-aS-wH6" secondAttribute="trailing" constant="30" id="yba-d7-RyP"/>
                             <constraint firstItem="jNK-0g-dSA" firstAttribute="trailing" secondItem="fQm-ey-k9h" secondAttribute="trailing" constant="50" id="zKX-27-P0w"/>
@@ -1208,6 +1220,7 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="NHl-GZ-CbW"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelError" destination="LBe-eV-xrg" id="90h-tJ-E35"/>
                         <outlet property="tbCode" destination="zgK-wf-8vC" id="4Db-kI-Mxa"/>
                         <segue destination="hqp-DB-Kol" kind="show" identifier="forgetPsw3ToForgetPswComp" id="HCZ-6C-eC8"/>
                     </connections>
@@ -1344,6 +1357,9 @@
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
