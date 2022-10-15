@@ -63,6 +63,12 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
         cell.labelFoodName.text = tempFood.yemek_adi
         cell.labelFoodPrice.text = "\(tempFood.yemek_fiyat!)₺"
         
+        cell.layer.shadowRadius = 10
+        cell.layer.shadowOffset = .zero
+        cell.layer.shadowOpacity = 0.2
+        cell.layer.shadowColor = UIColor.black.cgColor
+        
+        cell.layer.masksToBounds = false
 
         return cell
     }
@@ -76,7 +82,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
          
          
         let hucreGenisligi = foodsCollectionView.bounds.width
-         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 130)
+         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 100)
         
          foodsCollectionView.collectionViewLayout = tasarim
     }
