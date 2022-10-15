@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8210256128FAF86E00092E4E /* ForgetPsw4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */; };
 		821D638928F9F941002B50CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D638828F9F941002B50CB /* Extension.swift */; };
 		8252E58428FA1FE300BE2E8F /* Register2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58328FA1FE300BE2E8F /* Register2VC.swift */; };
 		8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */; };
@@ -57,6 +58,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPsw4VC.swift; sourceTree = "<group>"; };
 		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8252E58328FA1FE300BE2E8F /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
 		8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteVC.swift; sourceTree = "<group>"; };
@@ -223,6 +225,22 @@
 				8210255B28FAE2CE00092E4E /* RegisterPageComp-module */,
 			);
 			path = "RegisterPages-modules";
+			sourceTree = "<group>";
+		};
+		8210255E28FAF84700092E4E /* ForgetPswScene4-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255F28FAF85900092E4E /* view */,
+			);
+			path = "ForgetPswScene4-module";
+			sourceTree = "<group>";
+		};
+		8210255F28FAF85900092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		8252E58728FA23BE00BE2E8F /* LottieAnimation */ = {
@@ -576,6 +594,7 @@
 				8210255128FAE20A00092E4E /* ForgetPswScene1-module */,
 				8210255328FAE23000092E4E /* ForgetPswScene2-module */,
 				8210255528FAE24300092E4E /* ForgetPswScene3-module */,
+				8210255E28FAF84700092E4E /* ForgetPswScene4-module */,
 				8210255728FAE25700092E4E /* ForgetPswSceneComp-module */,
 			);
 			path = "forgetPSW-modules";
@@ -682,6 +701,7 @@
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
+				8210256128FAF86E00092E4E /* ForgetPsw4VC.swift in Sources */,
 				8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
 				82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */,

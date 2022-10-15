@@ -1221,7 +1221,7 @@
                     <connections>
                         <outlet property="labelError" destination="LBe-eV-xrg" id="90h-tJ-E35"/>
                         <outlet property="tbCode" destination="zgK-wf-8vC" id="4Db-kI-Mxa"/>
-                        <segue destination="hqp-DB-Kol" kind="show" identifier="forgetPsw3ToForgetPswComp" id="HCZ-6C-eC8"/>
+                        <segue destination="7LP-wp-CIO" kind="show" identifier="forgetPsw3ToForgetPsw4" id="bRw-ob-PuW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGq-tV-y2h" sceneMemberID="firstResponder"/>
@@ -1312,7 +1312,146 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oh4-x6-ZUF" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6012" y="495"/>
+            <point key="canvasLocation" x="6888" y="495"/>
+        </scene>
+        <!--Forget Psw4VC-->
+        <scene sceneID="at2-sC-1oV">
+            <objects>
+                <viewController id="7LP-wp-CIO" customClass="ForgetPsw4VC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MzM-Ry-zAk">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="J9l-Zg-FsF" userLabel="backGround">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" name="backgroundMask"/>
+                                <color key="tintColor" name="BGImageColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni Şifrenizi Giriniz" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDw-Tl-CNG">
+                                <rect key="frame" x="30" y="131" width="330" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" name="textColorLightBlack"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yeni şifrenizi giriniz ve doğrulayınız." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne2-6X-iW7">
+                                <rect key="frame" x="30" y="201" width="330" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <color key="textColor" name="textColorLightBlack"/>
+                                <color key="highlightedColor" name="textColorLightBlack"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMf-fj-9hD">
+                                <rect key="frame" x="50" y="557.33333333333337" width="290" height="55"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="DTh-LF-gbb"/>
+                                </constraints>
+                                <color key="tintColor" name="textColorLightWhite"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ilerle">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="backgroundMask"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonNext:" destination="7LP-wp-CIO" eventType="touchUpInside" id="mxj-UY-M1s"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="W6L-OP-7IN">
+                                <rect key="frame" x="30" y="284" width="330" height="133"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Yeni şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GA3-3g-U2U">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="55"/>
+                                        <color key="backgroundColor" name="boxBG"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="FAa-zm-K3s"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColorLightBlack"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="textColorLightBlack"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Yeni şifreyi tekrar giriniz" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MhD-QN-x94">
+                                        <rect key="frame" x="0.0" y="78" width="330" height="55"/>
+                                        <color key="backgroundColor" name="boxBG"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Qf1-0M-ldj"/>
+                                        </constraints>
+                                        <color key="textColor" name="textColorLightBlack"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="one-time-code"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" name="textColorLightBlack"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Şifreler eşleşmiyor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hZ-hO-Li4">
+                                <rect key="frame" x="125.00000000000001" y="437" width="140.33333333333337" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KEt-hJ-YwX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KEt-hJ-YwX" firstAttribute="trailing" secondItem="bDw-Tl-CNG" secondAttribute="trailing" constant="30" id="5Pp-2y-Kkv"/>
+                            <constraint firstItem="W6L-OP-7IN" firstAttribute="top" secondItem="ne2-6X-iW7" secondAttribute="bottom" constant="60" id="5dN-vT-YMP"/>
+                            <constraint firstItem="qMf-fj-9hD" firstAttribute="leading" secondItem="KEt-hJ-YwX" secondAttribute="leading" constant="50" id="5g8-Qb-vEb"/>
+                            <constraint firstItem="J9l-Zg-FsF" firstAttribute="leading" secondItem="KEt-hJ-YwX" secondAttribute="leading" id="DJl-kS-Ccr"/>
+                            <constraint firstItem="ne2-6X-iW7" firstAttribute="top" secondItem="bDw-Tl-CNG" secondAttribute="bottom" constant="40" id="G7z-2g-Ozs"/>
+                            <constraint firstAttribute="bottom" secondItem="J9l-Zg-FsF" secondAttribute="bottom" id="Kbb-bJ-uUV"/>
+                            <constraint firstItem="KEt-hJ-YwX" firstAttribute="trailing" secondItem="ne2-6X-iW7" secondAttribute="trailing" constant="30" id="NRr-Ax-gUg"/>
+                            <constraint firstItem="bDw-Tl-CNG" firstAttribute="leading" secondItem="KEt-hJ-YwX" secondAttribute="leading" constant="30" id="S4f-CR-8JE"/>
+                            <constraint firstItem="bDw-Tl-CNG" firstAttribute="top" secondItem="KEt-hJ-YwX" secondAttribute="top" constant="40" id="UTD-Ya-yNm"/>
+                            <constraint firstItem="6hZ-hO-Li4" firstAttribute="centerX" secondItem="MzM-Ry-zAk" secondAttribute="centerX" id="Y0I-hp-eEU"/>
+                            <constraint firstItem="W6L-OP-7IN" firstAttribute="leading" secondItem="KEt-hJ-YwX" secondAttribute="leading" constant="30" id="dyB-kU-lp4"/>
+                            <constraint firstItem="KEt-hJ-YwX" firstAttribute="trailing" secondItem="qMf-fj-9hD" secondAttribute="trailing" constant="50" id="fsf-iJ-lMb"/>
+                            <constraint firstItem="6hZ-hO-Li4" firstAttribute="top" secondItem="W6L-OP-7IN" secondAttribute="bottom" constant="20" id="iVE-eM-qzE"/>
+                            <constraint firstItem="ne2-6X-iW7" firstAttribute="leading" secondItem="KEt-hJ-YwX" secondAttribute="leading" constant="30" id="ifd-3x-oST"/>
+                            <constraint firstItem="J9l-Zg-FsF" firstAttribute="top" secondItem="MzM-Ry-zAk" secondAttribute="top" id="jED-p6-VZw"/>
+                            <constraint firstItem="KEt-hJ-YwX" firstAttribute="trailing" secondItem="W6L-OP-7IN" secondAttribute="trailing" constant="30" id="t6l-Wh-pNo"/>
+                            <constraint firstItem="J9l-Zg-FsF" firstAttribute="trailing" secondItem="KEt-hJ-YwX" secondAttribute="trailing" id="xjn-cx-9mw"/>
+                            <constraint firstItem="qMf-fj-9hD" firstAttribute="top" secondItem="6hZ-hO-Li4" secondAttribute="bottom" constant="100" id="zy4-Rm-Y9h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jch-Zn-Z4Y">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="vlI-Ga-TMZ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelError" destination="6hZ-hO-Li4" id="32L-tE-aV8"/>
+                        <outlet property="tfNewPsw1" destination="GA3-3g-U2U" id="w2o-HY-Bqs"/>
+                        <outlet property="tfNewPsw2" destination="MhD-QN-x94" id="73C-m1-OC0"/>
+                        <segue destination="hqp-DB-Kol" kind="show" identifier="forgetPsw4ToForgetPswComp" id="GvN-QD-IUG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmg-DV-E0R" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6003" y="510"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

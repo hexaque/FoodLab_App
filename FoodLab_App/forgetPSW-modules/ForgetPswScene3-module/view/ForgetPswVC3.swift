@@ -29,7 +29,7 @@ class ForgetPswVC3: UIViewController , UITextFieldDelegate {
         if let code = tbCode.text{
            
                 if code == verifyCode{
-                    performSegue(withIdentifier: "forgetPsw3ToForgetPswComp", sender: nil)
+                    performSegue(withIdentifier: "forgetPsw3ToForgetPsw4", sender: nil)
                 }else{
                     animationTF()
                     labelError.isHidden = false
