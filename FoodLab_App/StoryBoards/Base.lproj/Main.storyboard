@@ -263,7 +263,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonForgerPsw:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iS6-u2-gN1"/>
-                                    <segue destination="IAe-Gc-hD1" kind="show" id="oOD-0E-262"/>
+                                    <segue destination="IAe-Gc-hD1" kind="show" id="GAz-Pw-sjD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiO-Fn-pV8">
@@ -877,10 +877,10 @@
             </objects>
             <point key="canvasLocation" x="4189" y="-358"/>
         </scene>
-        <!--View Controller-->
+        <!--Forget PswVC2-->
         <scene sceneID="q5H-kH-51l">
             <objects>
-                <viewController id="Ret-ib-QFX" sceneMemberID="viewController">
+                <viewController id="Ret-ib-QFX" customClass="ForgetPswVC2" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XRq-Zg-4VM">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -935,7 +935,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="mN1-6Z-iZ8" kind="show" id="JYJ-sY-ZHf"/>
+                                            <action selector="buttonSMS:" destination="Ret-ib-QFX" eventType="touchUpInside" id="Bpe-Pd-Qtp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPo-TZ-yKs">
@@ -967,7 +967,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="mN1-6Z-iZ8" kind="show" id="wF9-QT-hfj"/>
+                                            <action selector="buttonMail:" destination="Ret-ib-QFX" eventType="touchUpInside" id="xFM-uo-E6B"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -994,15 +994,18 @@
                     <navigationItem key="navigationItem" id="KpI-wI-9Mg">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="xSh-00-cBF"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="mN1-6Z-iZ8" kind="show" identifier="forgetPsw2ToForgetPsw3" id="o8S-Gs-0xj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g7-Ai-jkK" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4254" y="495"/>
         </scene>
-        <!--View Controller-->
+        <!--Forget PswVC-->
         <scene sceneID="IAy-Nk-iaT">
             <objects>
-                <viewController id="IAe-Gc-hD1" sceneMemberID="viewController">
+                <viewController id="IAe-Gc-hD1" customClass="ForgetPswVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ALY-aa-69a">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1044,7 +1047,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Ret-ib-QFX" kind="show" id="XOR-ty-maB"/>
+                                    <action selector="buttonNext:" destination="IAe-Gc-hD1" eventType="touchUpInside" id="zXz-Wf-k0S"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Kullanıcı Adı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-7c-IK1">
@@ -1093,15 +1096,19 @@
                     <navigationItem key="navigationItem" id="RPT-8n-Pq2">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="CPg-1c-JKG"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tbUserName" destination="1Ii-7c-IK1" id="6qR-16-n9y"/>
+                        <segue destination="Ret-ib-QFX" kind="show" identifier="forgetPsw1ToForgetPsw2" id="mrD-bY-mhi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1S-Cf-95z" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3492" y="495"/>
         </scene>
-        <!--View Controller-->
+        <!--Forget PswVC3-->
         <scene sceneID="0Un-w3-9gS">
             <objects>
-                <viewController id="mN1-6Z-iZ8" sceneMemberID="viewController">
+                <viewController id="mN1-6Z-iZ8" customClass="ForgetPswVC3" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xyA-hx-QUa">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1143,7 +1150,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="hqp-DB-Kol" kind="show" id="ixo-E2-Xuh"/>
+                                    <action selector="buttonComplete:" destination="mN1-6Z-iZ8" eventType="touchUpInside" id="Wcj-s7-Pi5"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="_ _ _ _" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zgK-wf-8vC">
@@ -1165,6 +1172,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mn5-bg-8lJ">
+                                <rect key="frame" x="156.66666666666666" y="656" width="77" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="İptal Et"/>
+                                <connections>
+                                    <action selector="buttonCancel:" destination="mN1-6Z-iZ8" eventType="touchUpInside" id="Fba-Sp-2xm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jNK-0g-dSA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1176,6 +1191,8 @@
                             <constraint firstItem="lvy-8L-4wh" firstAttribute="top" secondItem="urF-aS-wH6" secondAttribute="bottom" constant="40" id="JwC-My-9Ca"/>
                             <constraint firstItem="urF-aS-wH6" firstAttribute="top" secondItem="jNK-0g-dSA" secondAttribute="top" constant="40" id="L3p-MD-dH2"/>
                             <constraint firstItem="zgK-wf-8vC" firstAttribute="leading" secondItem="jNK-0g-dSA" secondAttribute="leading" constant="30" id="LyT-fF-gu2"/>
+                            <constraint firstItem="Mn5-bg-8lJ" firstAttribute="top" secondItem="fQm-ey-k9h" secondAttribute="bottom" constant="30" id="Px3-UX-dLP"/>
+                            <constraint firstItem="Mn5-bg-8lJ" firstAttribute="centerX" secondItem="xyA-hx-QUa" secondAttribute="centerX" id="Qyl-1H-odg"/>
                             <constraint firstAttribute="bottom" secondItem="SSd-tp-0aB" secondAttribute="bottom" id="VWo-sn-u8V"/>
                             <constraint firstItem="SSd-tp-0aB" firstAttribute="top" secondItem="xyA-hx-QUa" secondAttribute="top" id="dRJ-Uz-gc3"/>
                             <constraint firstItem="fQm-ey-k9h" firstAttribute="leading" secondItem="jNK-0g-dSA" secondAttribute="leading" constant="50" id="eMd-Jm-7yN"/>
@@ -1190,15 +1207,19 @@
                     <navigationItem key="navigationItem" id="MJp-DA-1cH">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="NHl-GZ-CbW"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tbCode" destination="zgK-wf-8vC" id="4Db-kI-Mxa"/>
+                        <segue destination="hqp-DB-Kol" kind="show" identifier="forgetPsw3ToForgetPswComp" id="HCZ-6C-eC8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IGq-tV-y2h" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5026" y="495"/>
+            <point key="canvasLocation" x="5154" y="495"/>
         </scene>
-        <!--View Controller-->
+        <!--Forget Psw CompletedVC-->
         <scene sceneID="m76-jT-oaG">
             <objects>
-                <viewController id="hqp-DB-Kol" sceneMemberID="viewController">
+                <viewController id="hqp-DB-Kol" customClass="ForgetPswCompletedVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uer-YN-o4v">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1228,7 +1249,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="buttonComplete:" destination="hqp-DB-Kol" eventType="touchUpInside" id="57m-CJ-2SR"/>
+                                    <action selector="buttonToHome:" destination="hqp-DB-Kol" eventType="touchUpInside" id="YUj-hy-7lX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tebrikler, şifreniz sıfırlandı" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-Pt-OJM">
@@ -1276,9 +1297,6 @@
                     <navigationItem key="navigationItem" id="KcY-ks-egJ">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="bmm-ZU-CnA"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="animationView" destination="1f1-KS-ZTT" id="p9l-bZ-bus"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oh4-x6-ZUF" sceneMemberID="firstResponder"/>
             </objects>
@@ -1286,7 +1304,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JYJ-sY-ZHf"/>
         <segue reference="Wbs-qG-aFg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>

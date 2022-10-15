@@ -50,6 +50,10 @@
 		8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8C28F9B095001943BD /* OnboardSlides.swift */; };
 		8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8E28F9B350001943BD /* OnboardingCell.swift */; };
 		82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */; };
+		82B9EA5628FADF5100684C63 /* ForgetPswVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */; };
+		82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */; };
+		82B9EA5A28FADF8B00684C63 /* ForgetPswVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */; };
+		82B9EA5C28FADFA600684C63 /* ForgetPswCompletedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +101,10 @@
 		8278EC8C28F9B095001943BD /* OnboardSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlides.swift; sourceTree = "<group>"; };
 		8278EC8E28F9B350001943BD /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageVC.swift; sourceTree = "<group>"; };
+		82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC.swift; sourceTree = "<group>"; };
+		82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC2.swift; sourceTree = "<group>"; };
+		82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC3.swift; sourceTree = "<group>"; };
+		82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswCompletedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,112 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8210255128FAE20A00092E4E /* ForgetPswScene1-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255228FAE22300092E4E /* view */,
+			);
+			path = "ForgetPswScene1-module";
+			sourceTree = "<group>";
+		};
+		8210255228FAE22300092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8210255328FAE23000092E4E /* ForgetPswScene2-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255428FAE23A00092E4E /* view */,
+			);
+			path = "ForgetPswScene2-module";
+			sourceTree = "<group>";
+		};
+		8210255428FAE23A00092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8210255528FAE24300092E4E /* ForgetPswScene3-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255628FAE24C00092E4E /* view */,
+			);
+			path = "ForgetPswScene3-module";
+			sourceTree = "<group>";
+		};
+		8210255628FAE24C00092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8210255728FAE25700092E4E /* ForgetPswSceneComp-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255828FAE26400092E4E /* view */,
+			);
+			path = "ForgetPswSceneComp-module";
+			sourceTree = "<group>";
+		};
+		8210255828FAE26400092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8210255928FAE2B900092E4E /* RegisterPage2-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255A28FAE2C200092E4E /* view */,
+			);
+			path = "RegisterPage2-module";
+			sourceTree = "<group>";
+		};
+		8210255A28FAE2C200092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8252E58328FA1FE300BE2E8F /* Register2VC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8210255B28FAE2CE00092E4E /* RegisterPageComp-module */ = {
+			isa = PBXGroup;
+			children = (
+				8210255C28FAE2DA00092E4E /* view */,
+			);
+			path = "RegisterPageComp-module";
+			sourceTree = "<group>";
+		};
+		8210255C28FAE2DA00092E4E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8210255D28FAE2EA00092E4E /* RegisterPages-modules */ = {
+			isa = PBXGroup;
+			children = (
+				8278EC3828F99878001943BD /* RegisterPage-module */,
+				8210255928FAE2B900092E4E /* RegisterPage2-module */,
+				8210255B28FAE2CE00092E4E /* RegisterPageComp-module */,
+			);
+			path = "RegisterPages-modules";
+			sourceTree = "<group>";
+		};
 		8252E58728FA23BE00BE2E8F /* LottieAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,17 +255,16 @@
 				8278EC8928F9AC42001943BD /* OnboardingPage */,
 				8278EC7F28F99C01001943BD /* entity */,
 				8278EC2E28F9959D001943BD /* LoginPage-module */,
+				8210255D28FAE2EA00092E4E /* RegisterPages-modules */,
 				8278EC8828F9A5B1001943BD /* ForgerPasswordPage-module */,
-				8278EC3828F99878001943BD /* RegisterPage-module */,
 				8278EC2D28F9959B001943BD /* HomePage-module */,
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
-				8278EC2328F98F5F001943BD /* AppIsımVer */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
-				8278EC1828F988C0001943BD /* Assets.xcassets */,
+				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
+				8278EC2328F98F5F001943BD /* AppIsımVer */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
-				8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */,
-				8252E58328FA1FE300BE2E8F /* Register2VC.swift */,
+				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
 				821D638828F9F941002B50CB /* Extension.swift */,
 				8252E58728FA23BE00BE2E8F /* LottieAnimation */,
@@ -465,6 +578,17 @@
 			path = OnboardingPage;
 			sourceTree = "<group>";
 		};
+		82B9EA5D28FADFF200684C63 /* forgetPSW-modules */ = {
+			isa = PBXGroup;
+			children = (
+				8210255128FAE20A00092E4E /* ForgetPswScene1-module */,
+				8210255328FAE23000092E4E /* ForgetPswScene2-module */,
+				8210255528FAE24300092E4E /* ForgetPswScene3-module */,
+				8210255728FAE25700092E4E /* ForgetPswSceneComp-module */,
+			);
+			path = "forgetPSW-modules";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -545,6 +669,7 @@
 			files = (
 				8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */,
 				8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */,
+				82B9EA5C28FADFA600684C63 /* ForgetPswCompletedVC.swift in Sources */,
 				8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */,
 				8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */,
 				8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */,
@@ -560,6 +685,8 @@
 				8278EC7828F99B6A001943BD /* CartPageRouter.swift in Sources */,
 				8278EC6228F99A85001943BD /* HomePageProtocols.swift in Sources */,
 				8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */,
+				82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */,
+				82B9EA5A28FADF8B00684C63 /* ForgetPswVC3.swift in Sources */,
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
@@ -580,6 +707,7 @@
 				8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */,
 				8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */,
 				8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */,
+				82B9EA5628FADF5100684C63 /* ForgetPswVC.swift in Sources */,
 				8278EC7E28F99BB8001943BD /* CartPageVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
