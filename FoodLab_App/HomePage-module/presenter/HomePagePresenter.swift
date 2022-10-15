@@ -6,6 +6,18 @@
 //
 
 import Foundation
-class HomePagePresenter{
+class HomePagePresenter: ViewToPresenterHomePageProtocol,InteractorToPresenterHomePageProtocol{
+    var homePageInteractor: PresenterToInteractorHomePageProtocol?
+    
+    var homePageView: PresenterToViewHomePageProtocol?
+    
+    func getAllFoods() {
+        homePageInteractor?.getAllFoodsI()
+    }
+    
+    func sendDataToPresenter(foods: [Foods]) {
+        homePageView?.sendDataToView(foods: foods)
+    }
+    
     
 }

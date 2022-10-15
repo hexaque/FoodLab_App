@@ -6,6 +6,12 @@
 //
 
 import Foundation
-class HomePageInteractor{
+class HomePageInteractor : PresenterToInteractorHomePageProtocol{
+    var homePagePresenter: InteractorToPresenterHomePageProtocol?
+    
+    func getAllFoodsI() {
+        
+    }
+    
     
 }

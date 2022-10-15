@@ -6,6 +6,14 @@
 //
 
 import Foundation
-class HomePageRouter{
+class HomePageRouter:PresenterToRouterHomePageProtocol{
+    static func createModule(ref: HomePageVC) {
+        let presenter = HomePagePresenter()
+        ref.homePagePresenterObject = HomePagePresenter()
+        ref.homePagePresenterObject?.homePageInteractor = HomePageInteractor()
+        ref.homePagePresenterObject?.homePageInteractor?.homePagePresenter = presenter
+    }
+    
+    
     
 }
