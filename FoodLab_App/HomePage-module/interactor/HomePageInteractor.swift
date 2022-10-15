@@ -16,7 +16,7 @@ class HomePageInteractor : PresenterToInteractorHomePageProtocol{
                 do{
                     let answer = try JSONDecoder().decode(FoodsResponse.self, from: data)
                     if let foods = answer.yemekler{
-                        print(answer.success!)
+                        
                         self.homePagePresenter?.sendDataToPresenter(foods: foods)
                     }
                     

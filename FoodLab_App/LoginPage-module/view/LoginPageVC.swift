@@ -35,6 +35,7 @@ class LoginPageVC: UIViewController {
     }
     
     @IBAction func buttonLogin(_ sender: Any) {
+        performSegue(withIdentifier: "toMainPage", sender: nil)
     }
     
 }

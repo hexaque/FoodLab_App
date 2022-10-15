@@ -6,17 +6,18 @@
 //
 
 import UIKit
-
+import Kingfisher
 class HomePageVC: UIViewController {
-    @IBOutlet weak var foodsTableView: UITableView!
+    
+    @IBOutlet weak var foodsCollectionView: UICollectionView!
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
     override func viewDidLoad() {
-        foodsTableView.delegate = self
-        foodsTableView.dataSource = self
+        foodsCollectionView.delegate = self
+        foodsCollectionView.dataSource = self
         HomePageRouter.createModule(ref: self)
         homePagePresenterObject?.getAllFoods()
-        
+        cellDesign()
         super.viewDidLoad()
 
         
@@ -32,11 +33,9 @@ extension HomePageVC : PresenterToViewHomePageProtocol{
     func sendDataToView(foods: [Foods]) {
         print("xView")
         self.allFoods = foods
-        for i in allFoods{
-            print(i.yemek_adi!)
-        }
+        
         DispatchQueue.main.async {
-            self.foodsTableView.reloadData()
+            self.foodsCollectionView.reloadData()
         }
     }
 }
@@ -44,19 +43,41 @@ extension HomePageVC : PresenterToViewHomePageProtocol{
 
 
 
-extension HomePageVC : UITableViewDelegate,UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allFoods.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
         let tempFood = allFoods[indexPath.row]
-        let cell = foodsTableView.dequeueReusableCell(withIdentifier: "UrunlerCell", for: indexPath) as! UrunlerCell
+        let cell = foodsCollectionView.dequeueReusableCell(withReuseIdentifier: "UrunlerCollectionViewCell", for: indexPath) as! UrunlerCollectionViewCell
         
+      
+        if let url = URL(string: "\(url)\(tempFood.yemek_resim_adi!)"){
+            DispatchQueue.main.async {
+                cell.imageFood.kf.setImage(with : url)
+            }
+            
+        }
         cell.labelFoodName.text = tempFood.yemek_adi
         cell.labelFoodPrice.text = "\(tempFood.yemek_fiyat!)₺"
+        
+
         return cell
     }
-    
-    
+
+    func cellDesign(){
+        let tasarim = UICollectionViewFlowLayout()
+        
+         tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+         tasarim.minimumInteritemSpacing = 0 // yatay
+         tasarim.minimumLineSpacing = 15 // dikey
+         
+         
+        let hucreGenisligi = foodsCollectionView.bounds.width
+         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 130)
+        
+         foodsCollectionView.collectionViewLayout = tasarim
+    }
 }
