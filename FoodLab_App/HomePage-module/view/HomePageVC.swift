@@ -19,7 +19,7 @@ class HomePageVC: UIViewController {
         homePagePresenterObject?.getAllFoods()
         cellDesign()
         super.viewDidLoad()
-
+        navigationItem.hidesBackButton = true
         
     }
     
@@ -31,7 +31,7 @@ class HomePageVC: UIViewController {
 
 extension HomePageVC : PresenterToViewHomePageProtocol{
     func sendDataToView(foods: [Foods]) {
-        print("xView")
+        
         self.allFoods = foods
         
         DispatchQueue.main.async {
@@ -63,9 +63,9 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
         cell.labelFoodName.text = tempFood.yemek_adi
         cell.labelFoodPrice.text = "\(tempFood.yemek_fiyat!)₺"
         
-        cell.layer.shadowRadius = 10
+        cell.layer.shadowRadius = 5
         cell.layer.shadowOffset = .zero
-        cell.layer.shadowOpacity = 0.2
+        cell.layer.shadowOpacity = 0.1
         cell.layer.shadowColor = UIColor.black.cgColor
         
         cell.layer.masksToBounds = false

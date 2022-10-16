@@ -1454,7 +1454,7 @@
             </objects>
             <point key="canvasLocation" x="6003" y="510"/>
         </scene>
-        <!--Item-->
+        <!--Home PageVC-->
         <scene sceneID="bEL-w1-lLS">
             <objects>
                 <viewController id="cTr-cH-HfB" customClass="HomePageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -1559,7 +1559,7 @@
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="tgH-cx-4EV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="50B-g4-LZo"/>
+                    <tabBarItem key="tabBarItem" title="" image="foodIcon" id="50B-g4-LZo"/>
                     <navigationItem key="navigationItem" id="kJ2-2B-boB">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Qvq-2c-a5a"/>
                     </navigationItem>
@@ -1569,64 +1569,32 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4P-zO-1vH" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3801.5384615384614" y="1234.8341232227488"/>
+            <point key="canvasLocation" x="3997" y="1235"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SIw-4r-ujB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="59U-Ek-cAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="crw-jk-mjQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SUL-LX-N1k"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7TS-SB-wf5">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="7TS-SB-wf5">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="mainColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="cTr-cH-HfB" kind="relationship" relationship="viewControllers" id="Wza-Wc-SdB"/>
-                        <segue destination="foA-z0-afI" kind="relationship" relationship="viewControllers" id="zhi-iJ-gIw"/>
-                        <segue destination="DTu-um-IKu" kind="relationship" relationship="viewControllers" id="b45-rT-P3T"/>
+                        <segue destination="foA-z0-afI" kind="relationship" relationship="viewControllers" id="2W5-mb-zdi"/>
+                        <segue destination="cTr-cH-HfB" kind="relationship" relationship="viewControllers" id="bTy-vz-NhD"/>
+                        <segue destination="Lhp-iy-2ni" kind="relationship" relationship="viewControllers" id="ndc-DB-NKQ"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="59U-Ek-cAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2872.3076923076924" y="1234.8341232227488"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="jcS-hU-n8Q">
-            <objects>
-                <viewController id="DTu-um-IKu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6g2-eC-lmq">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="DpG-Qz-P3K" userLabel="backGround">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <color key="backgroundColor" name="backgroundMask"/>
-                                <color key="tintColor" name="BGImageColor"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="xId-Nj-vBM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DpG-Qz-P3K" firstAttribute="leading" secondItem="xId-Nj-vBM" secondAttribute="leading" id="1Cf-ZV-XyA"/>
-                            <constraint firstItem="DpG-Qz-P3K" firstAttribute="top" secondItem="6g2-eC-lmq" secondAttribute="top" id="IqW-9N-v7k"/>
-                            <constraint firstAttribute="bottom" secondItem="DpG-Qz-P3K" secondAttribute="bottom" id="X2w-9m-ULR"/>
-                            <constraint firstItem="DpG-Qz-P3K" firstAttribute="trailing" secondItem="xId-Nj-vBM" secondAttribute="trailing" id="jVx-N7-02h"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Nnq-oD-KhK"/>
-                    <navigationItem key="navigationItem" id="ZXy-cL-gLI">
-                        <barButtonItem key="backBarButtonItem" title="Geri" id="3ld-vK-hsQ"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lBq-c9-AN7" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3802" y="1983"/>
-        </scene>
-        <!--Item-->
+        <!--Cart PageVC-->
         <scene sceneID="1aZ-b9-IfL">
             <objects>
-                <viewController id="foA-z0-afI" sceneMemberID="viewController">
+                <viewController id="foA-z0-afI" customClass="CartPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iYz-cN-xQq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1646,7 +1614,7 @@
                             <constraint firstAttribute="bottom" secondItem="jLa-xY-gBX" secondAttribute="bottom" id="sle-ny-kLj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qNg-Ua-LBO"/>
+                    <tabBarItem key="tabBarItem" title="" image="favoriteIcon" id="qNg-Ua-LBO"/>
                     <navigationItem key="navigationItem" id="CuJ-jc-Ksr">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Gvn-up-0gj"/>
                     </navigationItem>
@@ -1654,6 +1622,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqe-vA-uKe" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2872" y="1983"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZdV-kR-2Ws">
+            <objects>
+                <viewController id="Lhp-iy-2ni" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gRm-Qi-CvP">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="074-fe-sJz" userLabel="backGround">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" name="backgroundMask"/>
+                                <color key="tintColor" name="BGImageColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DKA-g1-wfg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="074-fe-sJz" firstAttribute="top" secondItem="gRm-Qi-CvP" secondAttribute="top" id="XE0-D3-H03"/>
+                            <constraint firstItem="074-fe-sJz" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="ZK1-aZ-e42"/>
+                            <constraint firstItem="074-fe-sJz" firstAttribute="trailing" secondItem="DKA-g1-wfg" secondAttribute="trailing" id="qLT-rB-Uej"/>
+                            <constraint firstAttribute="bottom" secondItem="074-fe-sJz" secondAttribute="bottom" id="udj-49-pSy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="userIcon" id="dj0-HD-EDt"/>
+                    <navigationItem key="navigationItem" id="NG0-rV-Dz4">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="0hk-3L-G9Y"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhv-26-dmJ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3892" y="2004"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -1664,10 +1664,13 @@
         <image name="appLogo" width="426" height="654"/>
         <image name="completedIcon" width="980" height="954"/>
         <image name="facebookIcon" width="32" height="32"/>
+        <image name="favoriteIcon" width="32" height="32"/>
+        <image name="foodIcon" width="32" height="32"/>
         <image name="fullAppBG" width="1024" height="1440"/>
         <image name="googleIcon" width="29" height="29"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="userIcon" width="32" height="32"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
