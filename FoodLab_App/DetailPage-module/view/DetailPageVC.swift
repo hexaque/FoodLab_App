@@ -50,6 +50,9 @@ class DetailPageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func buttonBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     @IBAction func buttonAddCart(_ sender: Any) {
     }
     

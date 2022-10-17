@@ -20,25 +20,14 @@ class HomePageVC: UIViewController {
         homePagePresenterObject?.getAllFoods()
         cellDesign()
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
     }
     
 
    
-    @IBAction func buttonCikisYap(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-    do {
-      try firebaseAuth.signOut()
-        let controller = storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .coverVertical
-        present(controller, animated: true, completion: nil)
    
-    } catch let signOutError as NSError {
-      print("Error signing out: %@", signOutError)
-    }
-    }
     
 }
 

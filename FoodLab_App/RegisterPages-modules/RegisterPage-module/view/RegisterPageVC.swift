@@ -10,13 +10,13 @@ import UIKit
 class RegisterPageVC: UIViewController {
     
 
+  
     
     @IBOutlet weak var tfEmail: UITextField!
     
   
     @IBOutlet weak var tfPassword: UITextField!
     
-    @IBOutlet weak var tfUserName: UITextField!
     
     @IBOutlet weak var labelError: UILabel!
     
@@ -26,6 +26,7 @@ class RegisterPageVC: UIViewController {
 
     override func viewDidLoad() {
         labelError.isHidden = true
+     
         RegisterPageRouter.createModule(ref: self)
         self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
@@ -34,8 +35,13 @@ class RegisterPageVC: UIViewController {
     
     }
     
-
-    @IBAction func buttonRegister(_ sender: Any) {
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func buttonRegister(_ sender: UIButton) {
+        sender.preventRepeatedPresses()
+      
         if let email = tfEmail.text , let psw = tfPassword.text{
             if isValidEmail(email){
                 if psw.count<6{
@@ -52,7 +58,7 @@ class RegisterPageVC: UIViewController {
                 labelError.isHidden = false
             }
             
-           
+            
             
         }
     }

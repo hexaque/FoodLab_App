@@ -15,16 +15,10 @@ class WelcomePageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if Auth.auth().currentUser != nil{
-            isLogin = true
-            let userInfo = Auth.auth().currentUser
-              
-            let email = userInfo?.email
-            label1.text = ""
-            labelLoginOrLogout.setTitle("Çıkış yap", for: .normal)
-            labelLoginOrLogout.tintColor=UIColor.red
-            labelRegisterOrCont.setTitle("\(email!) ile devam et", for: .normal)
-        }
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        setButtonTitle()
     }
     
 
@@ -45,9 +39,28 @@ class WelcomePageVC: UIViewController {
             labelLoginOrLogout.setTitle("Üye Girişi", for: .normal)
             labelLoginOrLogout.tintColor=UIColor(named: "mainColor")
             labelRegisterOrCont.setTitle("Üye Ol", for: .normal)
+            do {
+              try Auth.auth().signOut()
+                
+            } catch let signOutError as NSError {
+              print("Error signing out: %@", signOutError)
+            }
+            
             
         }else{
             performSegue(withIdentifier: "toLogin", sender: nil)
+        }
+    }
+    func setButtonTitle(){
+        if Auth.auth().currentUser != nil{
+            isLogin = true
+            let userInfo = Auth.auth().currentUser
+              
+            let email = userInfo?.email
+            label1.text = ""
+            labelLoginOrLogout.setTitle("Çıkış yap", for: .normal)
+            labelLoginOrLogout.tintColor=UIColor.red
+            labelRegisterOrCont.setTitle("\(email!) ile devam et", for: .normal)
         }
     }
 }

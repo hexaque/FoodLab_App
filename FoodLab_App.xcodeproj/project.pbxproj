@@ -58,6 +58,8 @@
 		82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */; };
 		82B9EA5A28FADF8B00684C63 /* ForgetPswVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */; };
 		82B9EA5C28FADFA600684C63 /* ForgetPswCompletedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */; };
+		82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6611628FE13C3003D048D /* UserPageVC.swift */; };
+		82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6611A28FE1418003D048D /* FavouritePageVC.swift */; };
 		82CA4FC928FB58E90009EA9D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FC828FB58E90009EA9D /* Kingfisher */; };
 		82CA4FCC28FB59040009EA9D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FCB28FB59040009EA9D /* Alamofire */; };
 		82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */; };
@@ -114,6 +116,8 @@
 		82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC2.swift; sourceTree = "<group>"; };
 		82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC3.swift; sourceTree = "<group>"; };
 		82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswCompletedVC.swift; sourceTree = "<group>"; };
+		82C6611628FE13C3003D048D /* UserPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVC.swift; sourceTree = "<group>"; };
+		82C6611A28FE1418003D048D /* FavouritePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePageVC.swift; sourceTree = "<group>"; };
 		82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -450,6 +454,8 @@
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
+				82C6611828FE13ED003D048D /* FavouritePage-module */,
+				82C6611428FE1392003D048D /* UserPage-module */,
 				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
 				8278EC2328F98F5F001943BD /* AppIsımVer */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
@@ -774,6 +780,38 @@
 			path = "forgetPSW-modules";
 			sourceTree = "<group>";
 		};
+		82C6611428FE1392003D048D /* UserPage-module */ = {
+			isa = PBXGroup;
+			children = (
+				82C6611528FE13A5003D048D /* view */,
+			);
+			path = "UserPage-module";
+			sourceTree = "<group>";
+		};
+		82C6611528FE13A5003D048D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82C6611628FE13C3003D048D /* UserPageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		82C6611828FE13ED003D048D /* FavouritePage-module */ = {
+			isa = PBXGroup;
+			children = (
+				82C6611928FE1406003D048D /* view */,
+			);
+			path = "FavouritePage-module";
+			sourceTree = "<group>";
+		};
+		82C6611928FE1406003D048D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82C6611A28FE1418003D048D /* FavouritePageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		82CA4FC428FB4EF50009EA9D /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -888,6 +926,8 @@
 				8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */,
 				82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */,
 				82B9EA5A28FADF8B00684C63 /* ForgetPswVC3.swift in Sources */,
+				82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */,
+				82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */,
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
@@ -1062,8 +1102,9 @@
 				INFOPLIST_FILE = FoodLab_App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoodLab;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1090,8 +1131,9 @@
 				INFOPLIST_FILE = FoodLab_App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FoodLab;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

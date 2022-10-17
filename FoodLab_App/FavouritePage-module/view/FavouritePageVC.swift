@@ -1,17 +1,16 @@
 //
-//  CartPageVC.swift
+//  FavouritePageVC.swift
 //  FoodLab_App
 //
-//  Created by Que on 14.10.2022.
+//  Created by Que on 18.10.2022.
 //
 
 import UIKit
 
-class CartPageVC: UIViewController {
+class FavouritePageVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     

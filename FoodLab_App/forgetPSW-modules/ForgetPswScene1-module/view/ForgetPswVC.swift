@@ -16,7 +16,10 @@ class ForgetPswVC: UIViewController {
         self.hideKeyboardWhenTappedAround() 
     }
     
- 
+    @IBAction func buttonBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
 
     @IBAction func buttonNext(_ sender: Any) {
         performSegue(withIdentifier: "forgetPsw1ToForgetPsw2", sender: nil)
