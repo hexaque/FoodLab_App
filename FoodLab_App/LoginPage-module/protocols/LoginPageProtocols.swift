@@ -18,10 +18,11 @@ protocol PresenterToInteractorLoginPageProtocol{
 
 protocol InteractorToPresenterLoginPageProtocol{
     func isLogin(isUser:Bool)
-    
+    func sendErrorTypeToPresenter(error:NSError)
 }
 protocol PresenterToViewLoginPageProtocol{
     func isLoginV(isUser:Bool)
+    func sendErrorTypeToView(error:NSError)
 }
 
 

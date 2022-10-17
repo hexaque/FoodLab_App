@@ -145,7 +145,7 @@
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" name="textColorLightBlack"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Kullanıcı Adı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-y4-0dd">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2IV-y4-0dd">
                                 <rect key="frame" x="30" y="434.33333333333331" width="330" height="60"/>
                                 <color key="backgroundColor" name="boxBG"/>
                                 <constraints>
@@ -212,7 +212,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vds-pE-bHL">
-                                <rect key="frame" x="30" y="643" width="330" height="46"/>
+                                <rect key="frame" x="30" y="648" width="330" height="46"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-0p-mNI">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="46"/>
@@ -263,7 +263,7 @@
                                 <color key="highlightedColor" name="textColorLightBlack"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZd-JI-EX1">
-                                <rect key="frame" x="107" y="699" width="176" height="31.333333333333371"/>
+                                <rect key="frame" x="107" y="704" width="176" height="31.333333333333371"/>
                                 <color key="tintColor" name="mainColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Şifrenizi mi unuttunuz?">
@@ -275,7 +275,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GiO-Fn-pV8">
-                                <rect key="frame" x="165.33333333333334" y="584.33333333333337" width="59.666666666666657" height="32.666666666666629"/>
+                                <rect key="frame" x="165.33333333333334" y="589.33333333333337" width="59.666666666666657" height="32.666666666666629"/>
                                 <color key="tintColor" name="textColorLightBlack"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Veya">
@@ -296,7 +296,7 @@
                             <constraint firstItem="hnY-4l-n6s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Th-bC-gGi"/>
                             <constraint firstItem="2IV-y4-0dd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Ckm-wb-v5o"/>
                             <constraint firstItem="MhB-Tp-jU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CmM-fg-H6R"/>
-                            <constraint firstItem="GiO-Fn-pV8" firstAttribute="top" secondItem="rVK-hq-qLS" secondAttribute="bottom" constant="5" id="EpN-7Y-UFv"/>
+                            <constraint firstItem="GiO-Fn-pV8" firstAttribute="top" secondItem="rVK-hq-qLS" secondAttribute="bottom" constant="10" id="EpN-7Y-UFv"/>
                             <constraint firstItem="Hzm-LR-yVU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KoT-TS-bjc"/>
                             <constraint firstItem="MhB-Tp-jU6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="Qyu-pP-P9S"/>
                             <constraint firstItem="vds-pE-bHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="X0a-Gl-GdY"/>
@@ -321,8 +321,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="BN8-7A-pEC"/>
                     <connections>
+                        <outlet property="tfEmail" destination="2IV-y4-0dd" id="y9V-34-NVE"/>
                         <outlet property="tfPassword" destination="rVK-hq-qLS" id="IDI-0S-Y5Z"/>
-                        <outlet property="tfUserName" destination="2IV-y4-0dd" id="b6S-h2-NS0"/>
                         <segue destination="crw-jk-mjQ" kind="show" identifier="toMainPage" id="QCX-t6-75E"/>
                     </connections>
                 </viewController>
@@ -572,7 +572,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-fl-urh">
-                                <rect key="frame" x="50" y="644.33333333333337" width="290" height="55"/>
+                                <rect key="frame" x="50" y="664.33333333333337" width="290" height="55"/>
                                 <color key="backgroundColor" name="mainColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="hbA-Hr-Vc4"/>
@@ -595,13 +595,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWz-Mf-Pds">
-                                <rect key="frame" x="95.333333333333329" y="709.33333333333337" width="199.66666666666669" height="34.333333333333371"/>
+                                <rect key="frame" x="95.333333333333329" y="729.33333333333337" width="199.66666666666669" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Zaten Hesabın Var Mı ?"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Wbs-qG-aFg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP7-3c-UNE">
+                                <rect key="frame" x="25" y="609.33333333333337" width="340" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V0d-gS-0gL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -611,6 +617,7 @@
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="YWO-j4-z2h" secondAttribute="trailing" constant="99" id="FtL-qi-6w2"/>
                             <constraint firstItem="aWz-Mf-Pds" firstAttribute="top" secondItem="fXe-fl-urh" secondAttribute="bottom" constant="10" id="G8G-2o-c11"/>
                             <constraint firstItem="YWO-j4-z2h" firstAttribute="top" secondItem="MH4-I4-yqG" secondAttribute="bottom" constant="20" id="Ga6-di-P6B"/>
+                            <constraint firstItem="FP7-3c-UNE" firstAttribute="top" secondItem="kVc-fw-2JZ" secondAttribute="bottom" constant="5" id="JnU-Kf-2pu"/>
                             <constraint firstItem="tUU-ZG-Hjn" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" constant="60" id="PPA-7r-jBl"/>
                             <constraint firstItem="tUU-ZG-Hjn" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" constant="60" id="QuZ-V0-ih0"/>
                             <constraint firstItem="MH4-I4-yqG" firstAttribute="top" secondItem="tUU-ZG-Hjn" secondAttribute="bottom" constant="10" id="TUG-f6-g3D"/>
@@ -619,12 +626,14 @@
                             <constraint firstItem="MH4-I4-yqG" firstAttribute="centerX" secondItem="LTD-QK-gSm" secondAttribute="centerX" id="Zbq-vj-DPp"/>
                             <constraint firstAttribute="bottom" secondItem="gNk-5p-xdN" secondAttribute="bottom" id="ae7-Pb-3xC"/>
                             <constraint firstItem="YWO-j4-z2h" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" constant="99" id="axP-hF-Gka"/>
-                            <constraint firstItem="fXe-fl-urh" firstAttribute="top" secondItem="kVc-fw-2JZ" secondAttribute="bottom" constant="40" id="dl2-zH-ozI"/>
+                            <constraint firstItem="fXe-fl-urh" firstAttribute="top" secondItem="kVc-fw-2JZ" secondAttribute="bottom" constant="60" id="dl2-zH-ozI"/>
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" id="eHd-bK-u0g"/>
+                            <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="FP7-3c-UNE" secondAttribute="trailing" constant="25" id="gKt-fZ-QpU"/>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="fXe-fl-urh" secondAttribute="trailing" constant="50" id="kAa-yi-mDV"/>
                             <constraint firstItem="kVc-fw-2JZ" firstAttribute="top" secondItem="YWO-j4-z2h" secondAttribute="bottom" constant="15" id="li5-78-s1m"/>
                             <constraint firstItem="aWz-Mf-Pds" firstAttribute="centerX" secondItem="LTD-QK-gSm" secondAttribute="centerX" id="mE2-WG-iIX"/>
                             <constraint firstItem="kVc-fw-2JZ" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" constant="25" id="obt-U9-bRl"/>
+                            <constraint firstItem="FP7-3c-UNE" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" constant="25" id="rVn-U9-hhZ"/>
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="trailing" secondItem="V0d-gS-0gL" secondAttribute="trailing" id="ye0-UT-gXy"/>
                         </constraints>
                     </view>
@@ -632,6 +641,7 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="P2I-ft-ckh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="labelError" destination="FP7-3c-UNE" id="D9V-QP-bMM"/>
                         <outlet property="tfEmail" destination="QgP-wS-fc9" id="GyW-rD-Xbt"/>
                         <outlet property="tfPassword" destination="suy-Xo-ttF" id="QBh-Em-xn1"/>
                         <outlet property="tfUserName" destination="nbF-ym-j01" id="sAk-hG-rIq"/>
@@ -640,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lY0-Jl-wTZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2592" y="-242"/>
+            <point key="canvasLocation" x="2589.2307692307691" y="-242.41706161137441"/>
         </scene>
         <!--Register2VC-->
         <scene sceneID="dFl-aN-XO5">
@@ -1923,7 +1933,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wub-tS-CPC"/>
+        <segue reference="QCX-t6-75E"/>
         <segue reference="Feg-vT-fe5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>

@@ -7,6 +7,10 @@
 
 import Foundation
 class LoginPagePresenter:ViewToPresenterLoginPageProtocol, InteractorToPresenterLoginPageProtocol{
+    func sendErrorTypeToPresenter(error: NSError) {
+        loginPageView?.sendErrorTypeToView(error: error)
+    }
+    
     func isLogin(isUser: Bool) {
         loginPageView?.isLoginV(isUser: isUser)
     }
