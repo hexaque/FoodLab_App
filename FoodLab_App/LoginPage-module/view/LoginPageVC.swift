@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class LoginPageVC: UIViewController {
     var loginPagePresenterObject : ViewToPresenterLoginPageProtocol?
     
@@ -20,7 +20,8 @@ class LoginPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        LoginPageRouter.createModule(ref: self)
             
 
         // Do any additional setup after loading the view.
@@ -35,7 +36,28 @@ class LoginPageVC: UIViewController {
     }
     
     @IBAction func buttonLogin(_ sender: Any) {
-        performSegue(withIdentifier: "toMainPage", sender: nil)
+        
+        let auth = Auth.auth()
+        if let emailText = tfUserName.text,let pswText = tfPassword.text{
+            loginPagePresenterObject?.login(eMail: emailText, psw: pswText)
+            
+            }
+  
+        
+        //performSegue(withIdentifier: "toMainPage", sender: nil)
     }
+    
+}
+
+extension LoginPageVC : PresenterToViewLoginPageProtocol{
+    func isLoginV(isUser: Bool) {
+        if isUser{
+            self.performSegue(withIdentifier: "toMainPage", sender: nil)
+        }else{
+            print("başarısız giriş")
+        }
+        
+    }
+    
     
 }

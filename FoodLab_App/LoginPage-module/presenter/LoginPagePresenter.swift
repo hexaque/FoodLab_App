@@ -6,7 +6,19 @@
 //
 
 import Foundation
-class LoginPagePresenter:ViewToPresenterLoginPageProtocol{
+class LoginPagePresenter:ViewToPresenterLoginPageProtocol, InteractorToPresenterLoginPageProtocol{
+    func isLogin(isUser: Bool) {
+        loginPageView?.isLoginV(isUser: isUser)
+    }
+    
+    var loginPageView: PresenterToViewLoginPageProtocol?
+    
+    func login(eMail: String, psw: String) {
+       
+        loginPageInteractor?.loginI(eMail: eMail, psw: psw)
+        
+    }
+    
     var loginPageInteractor: PresenterToInteractorLoginPageProtocol?
     
     var LoginPageInteractor: PresenterToInteractorLoginPageProtocol?
