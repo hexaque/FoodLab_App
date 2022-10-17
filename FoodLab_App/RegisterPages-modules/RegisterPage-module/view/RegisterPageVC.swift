@@ -38,11 +38,20 @@ class RegisterPageVC: UIViewController {
     @IBAction func buttonRegister(_ sender: Any) {
         if let email = tfEmail.text , let psw = tfPassword.text{
             if isValidEmail(email){
-                registerPagePresenterObject?.register(email: email, psw: psw)
+                if psw.count<6{
+                    labelError.text = "Parola 6 haneden küçük olamaz"
+                    labelError.isHidden = false
+                    animationTF(textfield: tfPassword)
+                }else{
+                    registerPagePresenterObject?.register(email: email, psw: psw)
+                }
+                
             }else{
+                animationTF(textfield: tfEmail)
                 labelError.text = "Lütfen geçerli bir mail giriniz."
-                labelError.isHidden = true
+                labelError.isHidden = false
             }
+            
            
             
         }
@@ -74,7 +83,9 @@ extension RegisterPageVC : PresenterToViewRegisterPageProtocol{
             performSegue(withIdentifier: "toRegister2", sender: nil)
         }
         else{
-           
+            labelError.text = "Email kullanılıyor."
+            labelError.isHidden = false
+            animationTF(textfield: tfEmail)
         }
     }
 }
