@@ -36,6 +36,9 @@ class LoginPageVC: UIViewController {
         sender.preventRepeatedPresses()
     }
     
+    @IBAction func buttonBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     @IBAction func buttonLogin(_ sender: UIButton) {
         sender.preventRepeatedPresses()
         

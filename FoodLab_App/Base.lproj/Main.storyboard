@@ -139,6 +139,21 @@
                                     <constraint firstAttribute="height" constant="240" id="PkU-Wo-3Ig"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edl-VM-Ydr">
+                                <rect key="frame" x="15" y="62" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CRB-cD-XIn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="O2S-2p-7xM"/>
+                                    <constraint firstAttribute="width" constant="34" id="kKR-gK-Z1K"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="yQB-La-0uM"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backButtonIcon"/>
+                                <connections>
+                                    <action selector="backButton:" destination="6GC-Mm-iDy" eventType="touchUpInside" id="Pvf-SN-6rn"/>
+                                    <action selector="buttonBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEa-Pk-5WF"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabına Giriş Yap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c70-EP-3Lu">
                                 <rect key="frame" x="99" y="383" width="192" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -299,10 +314,12 @@
                             <constraint firstItem="GiO-Fn-pV8" firstAttribute="top" secondItem="rVK-hq-qLS" secondAttribute="bottom" constant="10" id="EpN-7Y-UFv"/>
                             <constraint firstItem="Hzm-LR-yVU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KoT-TS-bjc"/>
                             <constraint firstItem="MhB-Tp-jU6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="Qyu-pP-P9S"/>
+                            <constraint firstItem="Edl-VM-Ydr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="W2a-rn-ocO"/>
                             <constraint firstItem="vds-pE-bHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="X0a-Gl-GdY"/>
                             <constraint firstItem="MhB-Tp-jU6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="YlD-HU-5DX"/>
                             <constraint firstItem="rVK-hq-qLS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZDH-Wl-GVh"/>
                             <constraint firstAttribute="bottom" secondItem="hnY-4l-n6s" secondAttribute="bottom" id="c3I-BF-KMy"/>
+                            <constraint firstItem="Edl-VM-Ydr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="d6s-Fl-bcd"/>
                             <constraint firstItem="vds-pE-bHL" firstAttribute="top" secondItem="GiO-Fn-pV8" secondAttribute="bottom" constant="26" id="ewp-uj-Mox"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vds-pE-bHL" secondAttribute="trailing" constant="30" id="fPd-iG-2ze"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FIc-gY-vQI" secondAttribute="trailing" constant="115" id="fqB-Jo-ZLD"/>
