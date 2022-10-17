@@ -10,6 +10,7 @@ import Kingfisher
 class DetailPageVC: UIViewController {
     
     
+    @IBOutlet weak var buttonFav: UIButton!
     
     
     @IBOutlet weak var imageFood: UIImageView!
@@ -27,7 +28,7 @@ class DetailPageVC: UIViewController {
     
     var detailPagePresenterObject : ViewToPresenterDetailPageProtocol?
     let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
-    
+    var fav = false
     
     override func viewDidLoad() {
         DetailPageRouter.createModule(ref: self)
@@ -79,6 +80,21 @@ class DetailPageVC: UIViewController {
                 }
                 
             }}
+    }
+    
+    
+    @IBAction func buttonFavAction(_ sender: Any) {
+        if fav{
+            fav=false
+            let image = UIImage(named: "favEmptyIcon")
+            buttonFav.setImage(image, for: .normal)
+        }else{
+            fav=true
+            let image = UIImage(named: "favoriteIcon")
+            buttonFav.setImage(image, for: .normal)
+            
+            
+        }
     }
 }
 

@@ -1702,8 +1702,8 @@
                                 <rect key="frame" x="0.0" y="357" width="390" height="487"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jo-us-nKm">
-                                        <rect key="frame" x="100" y="72" width="190" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <rect key="frame" x="100" y="72" width="190" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1867,26 +1867,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXB-MT-QHm">
-                                <rect key="frame" x="333" y="70" width="32" height="32"/>
-                                <color key="backgroundColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="0.10048599748421978" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6t-97-ATF">
+                                <rect key="frame" x="348" y="91" width="32" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Zvq-ce-rzn"/>
-                                    <constraint firstAttribute="width" constant="32" id="cm1-Wp-s8n"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="mQi-l5-IV4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="32" id="zam-3O-4YY"/>
+                                    <constraint firstAttribute="width" constant="32" id="e3Q-4s-mlI"/>
+                                    <constraint firstAttribute="height" constant="32" id="piU-yJ-zUN"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                                <buttonConfiguration key="configuration" style="plain" image="favEmptyIcon"/>
+                                <connections>
+                                    <action selector="buttonFavAction:" destination="Hqy-gi-BzB" eventType="touchUpInside" id="X4W-pU-RSt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hYf-ma-tgJ"/>
@@ -1895,9 +1886,9 @@
                             <constraint firstItem="cbu-S4-hUg" firstAttribute="leading" secondItem="hYf-ma-tgJ" secondAttribute="leading" id="6Ws-vB-DCU"/>
                             <constraint firstItem="cbu-S4-hUg" firstAttribute="trailing" secondItem="hYf-ma-tgJ" secondAttribute="trailing" id="7bD-be-eGv"/>
                             <constraint firstItem="Evp-E0-Mma" firstAttribute="leading" secondItem="hYf-ma-tgJ" secondAttribute="leading" id="M1X-8N-uSp"/>
-                            <constraint firstItem="nXB-MT-QHm" firstAttribute="top" secondItem="hEO-DJ-5uZ" secondAttribute="top" constant="70" id="NKH-FA-3JU"/>
                             <constraint firstAttribute="bottom" secondItem="Evp-E0-Mma" secondAttribute="bottom" id="OLo-kc-4m8"/>
-                            <constraint firstItem="hYf-ma-tgJ" firstAttribute="trailing" secondItem="nXB-MT-QHm" secondAttribute="trailing" constant="25" id="Uc8-No-8UL"/>
+                            <constraint firstItem="hYf-ma-tgJ" firstAttribute="trailing" secondItem="j6t-97-ATF" secondAttribute="trailing" constant="10" id="VdQ-TM-zU5"/>
+                            <constraint firstItem="j6t-97-ATF" firstAttribute="top" secondItem="hYf-ma-tgJ" secondAttribute="top" id="aR7-pX-X3y"/>
                             <constraint firstItem="fZ7-Jq-Pwx" firstAttribute="top" secondItem="hYf-ma-tgJ" secondAttribute="top" constant="5" id="cDd-Ui-0fz"/>
                             <constraint firstAttribute="bottom" secondItem="cbu-S4-hUg" secondAttribute="bottom" id="gIr-0K-udU"/>
                             <constraint firstItem="Evp-E0-Mma" firstAttribute="trailing" secondItem="hYf-ma-tgJ" secondAttribute="trailing" id="gcE-NL-MmY"/>
@@ -1910,6 +1901,7 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="c86-np-e4u"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonFav" destination="j6t-97-ATF" id="aGf-vZ-t7p"/>
                         <outlet property="imageFood" destination="fZ7-Jq-Pwx" id="3FR-Q0-YBa"/>
                         <outlet property="labelName" destination="7jo-us-nKm" id="suc-7h-Dn2"/>
                         <outlet property="labelNumber" destination="INu-X7-Jut" id="6Eu-n5-Tvg"/>
@@ -1931,11 +1923,11 @@
         <image name="appLogo" width="426" height="654"/>
         <image name="completedIcon" width="980" height="954"/>
         <image name="facebookIcon" width="32" height="32"/>
+        <image name="favEmptyIcon" width="32" height="32"/>
         <image name="favoriteIcon" width="32" height="32"/>
         <image name="foodIcon" width="32" height="32"/>
         <image name="fullAppBG" width="1024" height="1440"/>
         <image name="googleIcon" width="29" height="29"/>
-        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="minus" catalog="system" width="128" height="26"/>
