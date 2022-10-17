@@ -6,6 +6,18 @@
 //
 
 import Foundation
-class RegisterPagePresenter{
+class RegisterPagePresenter:InteractorToPresenterRegisterPageProtocol,ViewToPresenterRegisterPageProtocol{
+    func dataToPresenter(isCreate: Bool) {
+        registerPageView?.dataToView(isCreate: isCreate)
+    }
+    
+    var registerPageInteractor: PresenterToInteractorRegisterPageProtocol?
+    
+    var registerPageView: PresenterToViewRegisterPageProtocol?
+    
+    func register(email: String, psw: String) {
+        registerPageInteractor?.registerI(email: email, psw: psw)
+    }
+    
     
 }

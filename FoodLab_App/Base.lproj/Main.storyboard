@@ -584,7 +584,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonRegister:" destination="6GC-Mm-iDy" eventType="touchUpInside" id="sho-nk-gQi"/>
-                                    <segue destination="eYV-zD-Vgh" kind="show" id="u3I-3i-Nxe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWz-Mf-Pds">
@@ -628,6 +627,7 @@
                         <outlet property="tfEmail" destination="QgP-wS-fc9" id="GyW-rD-Xbt"/>
                         <outlet property="tfPassword" destination="suy-Xo-ttF" id="QBh-Em-xn1"/>
                         <outlet property="tfUserName" destination="nbF-ym-j01" id="sAk-hG-rIq"/>
+                        <segue destination="eYV-zD-Vgh" kind="show" identifier="toRegister2" id="TMh-dn-pg0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lY0-Jl-wTZ" sceneMemberID="firstResponder"/>
@@ -1669,7 +1669,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wgZ-Sp-K5f"/>
+        <segue reference="Wbs-qG-aFg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>
     <resources>

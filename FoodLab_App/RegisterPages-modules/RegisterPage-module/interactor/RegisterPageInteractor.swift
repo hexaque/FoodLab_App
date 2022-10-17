@@ -6,6 +6,24 @@
 //
 
 import Foundation
-class RegisterPageInteractor{
+import FirebaseAuth
+class RegisterPageInteractor : PresenterToInteractorRegisterPageProtocol{
+    var registerPagePresenter: InteractorToPresenterRegisterPageProtocol?
+    
+    func registerI(email: String, psw: String) {
+        let auth = Auth.auth()
+        auth.createUser(withEmail: email, password: psw){(authresult, error) in
+            if error == nil{
+                
+                self.registerPagePresenter?.dataToPresenter(isCreate: true)
+            }
+            else{
+                print("oluşturulamadı")
+            }
+        }
+        
+        
+    }
+    
     
 }
