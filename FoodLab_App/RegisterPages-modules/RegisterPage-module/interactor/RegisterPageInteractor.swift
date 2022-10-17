@@ -16,6 +16,7 @@ class RegisterPageInteractor : PresenterToInteractorRegisterPageProtocol{
             if error == nil{
                 
                 self.registerPagePresenter?.dataToPresenter(isCreate: true)
+                
             }
             else{
                 print("oluşturulamadı")

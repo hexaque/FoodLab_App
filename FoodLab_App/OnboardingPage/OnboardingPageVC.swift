@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class OnboardingPageVC: UIViewController {
 
     
@@ -43,10 +43,21 @@ class OnboardingPageVC: UIViewController {
 
     @IBAction func buttonNextClicked(_ sender: UIButton) {
         if currentPage == onboardingSlides.count-1 {
-            let controller = storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
-            controller.modalPresentationStyle = .fullScreen
-            controller.modalTransitionStyle = .coverVertical
-            present(controller, animated: true, completion: nil)
+            if Auth.auth().currentUser != nil{
+                let controller = storyboard?.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+                
+                controller.modalPresentationStyle = .fullScreen
+                controller.modalTransitionStyle = .coverVertical
+                present(controller, animated: true, completion: nil)
+            }else{
+                let controller = storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
+                controller.modalPresentationStyle = .fullScreen
+                controller.modalTransitionStyle = .coverVertical
+                present(controller, animated: true, completion: nil)
+                print( "kullanıcı yok \(Auth.auth().currentUser)")
+            }
+            
+            
         }else{
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)

@@ -145,7 +145,7 @@
                                 </constraints>
                                 <color key="textColor" name="textColorLightBlack"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next" textContentType="username"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
@@ -1550,16 +1550,26 @@
                                     <action selector="buttonCikisYap:" destination="cTr-cH-HfB" eventType="touchUpInside" id="j1e-48-Dq2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlv-Wu-W0h">
+                                <rect key="frame" x="299" y="143" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="Hqy-gi-BzB" kind="show" id="BAq-uZ-Fob"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JLh-y3-eKU" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="2ca-of-Tcx"/>
+                            <constraint firstItem="hlv-Wu-W0h" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" constant="52" id="4fT-vr-V3b"/>
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="top" secondItem="JLh-y3-eKU" secondAttribute="bottom" id="5IG-BC-iRI"/>
                             <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="nCf-eR-6zC" secondAttribute="trailing" constant="157" id="7To-Bz-tCx"/>
                             <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="JLh-y3-eKU" secondAttribute="trailing" id="AIG-JU-Gt9"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="CB4-iK-Unw"/>
                             <constraint firstAttribute="bottom" secondItem="wPL-sb-3kA" secondAttribute="bottom" id="DTb-Hu-VL0"/>
+                            <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="hlv-Wu-W0h" secondAttribute="trailing" constant="16" id="PbZ-AC-UD3"/>
                             <constraint firstItem="V15-qK-WcR" firstAttribute="bottom" secondItem="ot3-4f-ewd" secondAttribute="bottom" id="QtQ-WK-N9z"/>
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="R7o-m3-ocg"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="top" secondItem="ogq-uM-ek4" secondAttribute="top" id="aJv-0c-1Sh"/>
@@ -1576,16 +1586,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="foodsCollectionView" destination="ot3-4f-ewd" id="T8v-eF-te8"/>
+                        <segue destination="Hqy-gi-BzB" kind="show" identifier="toDetail" id="bWY-Vs-EG8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4P-zO-1vH" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3997" y="1235"/>
+            <point key="canvasLocation" x="4565" y="1235"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SIw-4r-ujB">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="crw-jk-mjQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainPage" automaticallyAdjustsScrollViewInsets="NO" id="crw-jk-mjQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SUL-LX-N1k"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="7TS-SB-wf5">
@@ -1667,9 +1678,62 @@
             </objects>
             <point key="canvasLocation" x="3892" y="2004"/>
         </scene>
+        <!--Ürün detayı-->
+        <scene sceneID="XIc-pR-xqz">
+            <objects>
+                <viewController id="Hqy-gi-BzB" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hEO-DJ-5uZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="Evp-E0-Mma" userLabel="backGround">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" name="backgroundMask"/>
+                                <color key="tintColor" name="BGImageColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="silinecekTest" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-Jq-Pwx">
+                                <rect key="frame" x="16" y="139" width="358" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cbu-S4-hUg">
+                                <rect key="frame" x="0.0" y="357" width="390" height="487"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="textColorLightBlack"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hYf-ma-tgJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Evp-E0-Mma" firstAttribute="leading" secondItem="hYf-ma-tgJ" secondAttribute="leading" id="M1X-8N-uSp"/>
+                            <constraint firstAttribute="bottom" secondItem="Evp-E0-Mma" secondAttribute="bottom" id="OLo-kc-4m8"/>
+                            <constraint firstItem="Evp-E0-Mma" firstAttribute="trailing" secondItem="hYf-ma-tgJ" secondAttribute="trailing" id="gcE-NL-MmY"/>
+                            <constraint firstItem="Evp-E0-Mma" firstAttribute="top" secondItem="hEO-DJ-5uZ" secondAttribute="top" id="xht-XN-6Mz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="userIcon" id="yxX-6O-Zhr"/>
+                    <navigationItem key="navigationItem" title="Ürün detayı" id="yxl-eq-qlC">
+                        <barButtonItem key="backBarButtonItem" title="Geri" id="c86-np-e4u"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hds-GG-uuM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5660" y="1234.8341232227488"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wbs-qG-aFg"/>
+        <segue reference="bWY-Vs-EG8"/>
+        <segue reference="wgZ-Sp-K5f"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>
     <resources>
@@ -1682,6 +1746,7 @@
         <image name="googleIcon" width="29" height="29"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="silinecekTest" width="800" height="533"/>
         <image name="userIcon" width="32" height="32"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
