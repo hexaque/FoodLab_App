@@ -39,8 +39,8 @@ class LoginPageInteractor:PresenterToInteractorLoginPageProtocol{
               
             let userInfo = Auth.auth().currentUser
               
-            let email = userInfo?.email!
-              print(email)
+            let email = userInfo?.email
+              print(email!)
               //userInfo?.displayName = "berkeName"
              // print(userInfo?.displayName)
           }

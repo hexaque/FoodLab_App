@@ -43,19 +43,14 @@ class OnboardingPageVC: UIViewController {
 
     @IBAction func buttonNextClicked(_ sender: UIButton) {
         if currentPage == onboardingSlides.count-1 {
-            if Auth.auth().currentUser != nil{
-                let controller = storyboard?.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
-                
-                controller.modalPresentationStyle = .fullScreen
-                controller.modalTransitionStyle = .coverVertical
-                present(controller, animated: true, completion: nil)
-            }else{
+          
+             
                 let controller = storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
                 controller.modalPresentationStyle = .fullScreen
                 controller.modalTransitionStyle = .coverVertical
                 present(controller, animated: true, completion: nil)
-                print( "kullanıcı yok \(Auth.auth().currentUser)")
-            }
+               
+            
             
             
         }else{

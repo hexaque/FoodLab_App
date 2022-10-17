@@ -56,7 +56,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="6GC-Mm-iDy" kind="show" id="cla-9W-uML"/>
+                                    <action selector="buttonRegisterOrCont:" destination="3qX-nf-F7f" eventType="touchUpInside" id="LEu-PX-Kl6"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="Vy5-Gq-gj3">
@@ -75,7 +75,7 @@
                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="wgZ-Sp-K5f"/>
+                                            <action selector="buttonLoginOrLogout:" destination="3qX-nf-F7f" eventType="touchUpInside" id="lo8-cH-rTj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -106,6 +106,14 @@
                     <navigationItem key="navigationItem" id="RdZ-fh-ZsG">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Vd7-Fn-MSA"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="label1" destination="A1G-Wy-Bui" id="Wm7-C3-uWA"/>
+                        <outlet property="labelLoginOrLogout" destination="m5s-m6-6mc" id="jDJ-Fk-een"/>
+                        <outlet property="labelRegisterOrCont" destination="RSs-Eg-7c9" id="He0-Dd-K6l"/>
+                        <segue destination="6GC-Mm-iDy" kind="show" identifier="toRegisterPage" id="X4B-yU-ydZ"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLogin" id="Feg-vT-fe5"/>
+                        <segue destination="crw-jk-mjQ" kind="show" identifier="toMainPage" id="Wub-tS-CPC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFc-po-wMO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1457,7 +1465,7 @@
         <!--Home PageVC-->
         <scene sceneID="bEL-w1-lLS">
             <objects>
-                <viewController id="cTr-cH-HfB" customClass="HomePageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="cTr-cH-HfB" customClass="HomePageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ogq-uM-ek4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1554,9 +1562,6 @@
                                 <rect key="frame" x="299" y="143" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <segue destination="Hqy-gi-BzB" kind="show" id="BAq-uZ-Fob"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
@@ -1596,13 +1601,14 @@
         <!--Tab Bar Controller-->
         <scene sceneID="SIw-4r-ujB">
             <objects>
-                <tabBarController storyboardIdentifier="mainPage" automaticallyAdjustsScrollViewInsets="NO" id="crw-jk-mjQ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainPage" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="crw-jk-mjQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="SUL-LX-N1k"/>
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="7TS-SB-wf5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="selectedImageTintColor" name="mainColor"/>
+                        <tabBarAppearance key="standardAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="foA-z0-afI" kind="relationship" relationship="viewControllers" id="2W5-mb-zdi"/>
@@ -1836,7 +1842,6 @@
                                     <constraint firstAttribute="bottom" secondItem="1IS-cQ-73k" secondAttribute="bottom" constant="30" id="C94-9b-2VJ"/>
                                     <constraint firstItem="KYX-JP-taG" firstAttribute="top" secondItem="dyi-4g-Zsb" secondAttribute="bottom" constant="30" id="CN6-2F-i6R"/>
                                     <constraint firstItem="sRy-et-5og" firstAttribute="leading" secondItem="cbu-S4-hUg" secondAttribute="leading" constant="20" id="KRR-XX-w4J"/>
-                                    <constraint firstAttribute="width" constant="390" id="LeJ-bm-04s"/>
                                     <constraint firstItem="sRy-et-5og" firstAttribute="top" secondItem="W76-FB-Xcg" secondAttribute="bottom" constant="90" id="T6l-Ep-46l"/>
                                     <constraint firstItem="W76-FB-Xcg" firstAttribute="centerX" secondItem="cbu-S4-hUg" secondAttribute="centerX" id="Vxg-54-9o0"/>
                                     <constraint firstItem="7Ve-sn-lRW" firstAttribute="top" secondItem="sRy-et-5og" secondAttribute="bottom" constant="5" id="aEu-Ps-cbz"/>
@@ -1868,13 +1873,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6t-97-ATF">
-                                <rect key="frame" x="348" y="91" width="32" height="32"/>
+                                <rect key="frame" x="316" y="91" width="64" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="e3Q-4s-mlI"/>
-                                    <constraint firstAttribute="height" constant="32" id="piU-yJ-zUN"/>
+                                    <constraint firstAttribute="width" constant="64" id="e3Q-4s-mlI"/>
+                                    <constraint firstAttribute="height" constant="64" id="piU-yJ-zUN"/>
                                 </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="favEmptyIcon"/>
+                                <buttonConfiguration key="configuration" style="plain" image="empty" subtitle="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonFavAction:" destination="Hqy-gi-BzB" eventType="touchUpInside" id="X4W-pU-RSt"/>
                                 </connections>
@@ -1915,15 +1923,15 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bWY-Vs-EG8"/>
-        <segue reference="wgZ-Sp-K5f"/>
+        <segue reference="Wub-tS-CPC"/>
+        <segue reference="Feg-vT-fe5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>
     <resources>
         <image name="appLogo" width="426" height="654"/>
         <image name="completedIcon" width="980" height="954"/>
+        <image name="empty" width="64" height="64"/>
         <image name="facebookIcon" width="32" height="32"/>
-        <image name="favEmptyIcon" width="32" height="32"/>
         <image name="favoriteIcon" width="32" height="32"/>
         <image name="foodIcon" width="32" height="32"/>
         <image name="fullAppBG" width="1024" height="1440"/>

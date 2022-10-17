@@ -31,6 +31,7 @@ class DetailPageVC: UIViewController {
     var fav = false
     
     override func viewDidLoad() {
+        
         DetailPageRouter.createModule(ref: self)
         if let f = food{
             if let url = URL(string: "\(url)\(f.yemek_resim_adi!)"){
@@ -86,11 +87,11 @@ class DetailPageVC: UIViewController {
     @IBAction func buttonFavAction(_ sender: Any) {
         if fav{
             fav=false
-            let image = UIImage(named: "favEmptyIcon")
+            let image = UIImage(named: "empty")//favEmptyIcon
             buttonFav.setImage(image, for: .normal)
         }else{
             fav=true
-            let image = UIImage(named: "favoriteIcon")
+            let image = UIImage(named: "ful")//favoriteIcon
             buttonFav.setImage(image, for: .normal)
             
             

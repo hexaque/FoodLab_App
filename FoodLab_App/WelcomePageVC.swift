@@ -6,24 +6,48 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 class WelcomePageVC: UIViewController {
-
+    var isLogin = false
+    @IBOutlet weak var labelRegisterOrCont: UIButton!
+    @IBOutlet weak var labelLoginOrLogout: UIButton!
+    @IBOutlet weak var label1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if Auth.auth().currentUser != nil{
+            isLogin = true
+            let userInfo = Auth.auth().currentUser
+              
+            let email = userInfo?.email
+            label1.text = ""
+            labelLoginOrLogout.setTitle("Çıkış yap", for: .normal)
+            labelLoginOrLogout.tintColor=UIColor.red
+            labelRegisterOrCont.setTitle("\(email!) ile devam et", for: .normal)
+        }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonRegisterOrCont(_ sender: Any) {
+        if isLogin{
+            performSegue(withIdentifier: "toMainPage", sender: nil)
+        }
+        else{
+            performSegue(withIdentifier: "toRegisterPage", sender: nil)
+        }
     }
-    */
+    
 
+    @IBAction func buttonLoginOrLogout(_ sender: Any) {
+        if isLogin{
+            isLogin = false
+            label1.text = "Hesabın var mı ?"
+            labelLoginOrLogout.setTitle("Üye Girişi", for: .normal)
+            labelLoginOrLogout.tintColor=UIColor(named: "mainColor")
+            labelRegisterOrCont.setTitle("Üye Ol", for: .normal)
+            
+        }else{
+            performSegue(withIdentifier: "toLogin", sender: nil)
+        }
+    }
 }
