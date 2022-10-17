@@ -37,14 +37,12 @@ class LoginPageVC: UIViewController {
     
     @IBAction func buttonLogin(_ sender: Any) {
         
-        let auth = Auth.auth()
+        
         if let emailText = tfUserName.text,let pswText = tfPassword.text{
             loginPagePresenterObject?.login(eMail: emailText, psw: pswText)
             
             }
-  
-        
-        //performSegue(withIdentifier: "toMainPage", sender: nil)
+
     }
     
 }

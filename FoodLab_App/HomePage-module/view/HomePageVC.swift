@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAuth
 class HomePageVC: UIViewController {
     
     @IBOutlet weak var foodsCollectionView: UICollectionView!
@@ -25,7 +26,15 @@ class HomePageVC: UIViewController {
     
 
    
-
+    @IBAction func buttonCikisYap(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+    do {
+      try firebaseAuth.signOut()
+    } catch let signOutError as NSError {
+      print("Error signing out: %@", signOutError)
+    }
+    }
+    
 }
 
 

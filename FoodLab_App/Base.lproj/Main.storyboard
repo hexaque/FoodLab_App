@@ -1542,12 +1542,21 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCf-eR-6zC">
+                                <rect key="frame" x="158" y="143" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="geçici çıkış yap"/>
+                                <connections>
+                                    <action selector="buttonCikisYap:" destination="cTr-cH-HfB" eventType="touchUpInside" id="j1e-48-Dq2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JLh-y3-eKU" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="2ca-of-Tcx"/>
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="top" secondItem="JLh-y3-eKU" secondAttribute="bottom" id="5IG-BC-iRI"/>
+                            <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="nCf-eR-6zC" secondAttribute="trailing" constant="157" id="7To-Bz-tCx"/>
                             <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="JLh-y3-eKU" secondAttribute="trailing" id="AIG-JU-Gt9"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="CB4-iK-Unw"/>
                             <constraint firstAttribute="bottom" secondItem="wPL-sb-3kA" secondAttribute="bottom" id="DTb-Hu-VL0"/>
@@ -1555,7 +1564,9 @@
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="R7o-m3-ocg"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="top" secondItem="ogq-uM-ek4" secondAttribute="top" id="aJv-0c-1Sh"/>
                             <constraint firstItem="JLh-y3-eKU" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" constant="140" id="gBe-fI-9cL"/>
+                            <constraint firstItem="nCf-eR-6zC" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" constant="158" id="grI-Kx-cDD"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="mxV-uC-Qf4"/>
+                            <constraint firstItem="nCf-eR-6zC" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" constant="52" id="nZ4-QF-Ode"/>
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="tgH-cx-4EV"/>
                         </constraints>
                     </view>
