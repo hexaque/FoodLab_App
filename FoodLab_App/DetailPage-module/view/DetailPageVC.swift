@@ -38,9 +38,9 @@ class DetailPageVC: UIViewController {
                 }
                 
             }
-            labelPrice.text = f.yemek_fiyat
+            labelPrice.text = "\(f.yemek_fiyat!)₺"
             labelName.text = f.yemek_adi
-            labelTotalPrice.text = f.yemek_fiyat
+            labelTotalPrice.text = "\(f.yemek_fiyat!)₺"
             
         }
         super.viewDidLoad()
@@ -88,7 +88,7 @@ extension DetailPageVC :PresenterToViewDetailPageProtocol {
     }
     
     func totalPriceDataToView(number: Int) {
-        labelTotalPrice.text = String(number)
+        labelTotalPrice.text = "\(String(number))₺"
     }
     
    

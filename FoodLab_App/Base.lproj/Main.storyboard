@@ -1692,10 +1692,9 @@
                                 <color key="tintColor" name="mainColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="silinecekTest" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-Jq-Pwx">
-                                <rect key="frame" x="20" y="131" width="350" height="200"/>
-                                <color key="backgroundColor" name="backgroundMask"/>
+                                <rect key="frame" x="20" y="96" width="350" height="260"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="cSv-y4-pAM"/>
+                                    <constraint firstAttribute="height" constant="260" id="cSv-y4-pAM"/>
                                     <constraint firstAttribute="width" constant="350" id="pD7-BH-noT"/>
                                 </constraints>
                             </imageView>
@@ -1899,7 +1898,7 @@
                             <constraint firstItem="nXB-MT-QHm" firstAttribute="top" secondItem="hEO-DJ-5uZ" secondAttribute="top" constant="70" id="NKH-FA-3JU"/>
                             <constraint firstAttribute="bottom" secondItem="Evp-E0-Mma" secondAttribute="bottom" id="OLo-kc-4m8"/>
                             <constraint firstItem="hYf-ma-tgJ" firstAttribute="trailing" secondItem="nXB-MT-QHm" secondAttribute="trailing" constant="25" id="Uc8-No-8UL"/>
-                            <constraint firstItem="fZ7-Jq-Pwx" firstAttribute="top" secondItem="hYf-ma-tgJ" secondAttribute="top" constant="40" id="cDd-Ui-0fz"/>
+                            <constraint firstItem="fZ7-Jq-Pwx" firstAttribute="top" secondItem="hYf-ma-tgJ" secondAttribute="top" constant="5" id="cDd-Ui-0fz"/>
                             <constraint firstAttribute="bottom" secondItem="cbu-S4-hUg" secondAttribute="bottom" id="gIr-0K-udU"/>
                             <constraint firstItem="Evp-E0-Mma" firstAttribute="trailing" secondItem="hYf-ma-tgJ" secondAttribute="trailing" id="gcE-NL-MmY"/>
                             <constraint firstItem="fZ7-Jq-Pwx" firstAttribute="centerX" secondItem="hEO-DJ-5uZ" secondAttribute="centerX" id="iLf-4P-sUT"/>
