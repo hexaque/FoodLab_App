@@ -7,6 +7,10 @@
 
 import Foundation
 class HomePagePresenter: ViewToPresenterHomePageProtocol,InteractorToPresenterHomePageProtocol{
+    func filteredFoods(price: Int, sirala: String) {
+        homePageInteractor?.filteredFoodsI(price: price, sirala: sirala)
+    }
+    
     var homePageInteractor: PresenterToInteractorHomePageProtocol?
     var homePageView: PresenterToViewHomePageProtocol?
     

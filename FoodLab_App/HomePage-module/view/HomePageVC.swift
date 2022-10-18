@@ -15,8 +15,8 @@ class HomePageVC: UIViewController {
     var allFoods = [Foods]()
     var tempAllFoods = [Foods]()
     @IBOutlet weak var searchBar: UISearchBar!
-    var priceFilter = 30
-    var siralama = ""
+    var priceFilter = 100
+    var siralama = " "
     override func viewDidLoad() {
         //searchBar.delegate = self
         foodsCollectionView.delegate = self
@@ -31,33 +31,6 @@ class HomePageVC: UIViewController {
         
     }
     
-    
-    func priceFilterFunc(price:Int ,sirala:String){
-        print("b")
-        let f1 = allFoods.filter({Int($0.yemek_fiyat!)!<price})
-        allFoods = f1
-        if sirala == "Fiyata göre küçükten büyüğe sırala"{
-            self.allFoods.sort(by: { Int($0.yemek_fiyat!)! < Int($1.yemek_fiyat!)! })
-            DispatchQueue.main.async {
-                
-                self.foodsCollectionView.reloadData()
-            }
-            
-        }else if sirala == "Fiyata göre büyükten küçüğe sırala"{
-            
-            self.allFoods.sort(by: { Int($0.yemek_fiyat!)! > Int($1.yemek_fiyat!)! })
-            DispatchQueue.main.async {
-                self.foodsCollectionView.reloadData()
-            }
-        }
-        else{ DispatchQueue.main.async {
-            self.foodsCollectionView.reloadData()
-        }
-            
-        }
-       
-            
-    }
     
 
     @IBAction func buttonFilterPage(_ sender: Any) {
@@ -78,8 +51,8 @@ extension HomePageVC:FilterPageToHomePage{
     func SendSiralamaAndFilterToHomePage(filter: Int, siralama: String) {
         self.priceFilter = filter
         self.siralama = siralama
-        
-        homePagePresenterObject?.getAllFoods()
+        print("FilterPageToHomePage")
+        homePagePresenterObject?.filteredFoods(price: priceFilter, sirala: siralama)
     }
     
     
@@ -90,14 +63,22 @@ extension HomePageVC : PresenterToViewHomePageProtocol{
     func sendDataToView(foods: [Foods]) {
         
         self.allFoods = foods
-        self.tempAllFoods = foods
-        
-        priceFilterFunc(price:priceFilter ,sirala:siralama)
+
         DispatchQueue.main.async {
             self.foodsCollectionView.reloadData()
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
