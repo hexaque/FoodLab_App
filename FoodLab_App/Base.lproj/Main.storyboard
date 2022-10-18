@@ -1255,6 +1255,14 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fji-PC-rl0">
+                                <rect key="frame" x="260" y="97" width="110" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Geçici filtre"/>
+                                <connections>
+                                    <segue destination="ARy-ZP-shR" kind="presentation" modalTransitionStyle="flipHorizontal" id="aUC-4W-LCm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1264,6 +1272,8 @@
                             <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="JLh-y3-eKU" secondAttribute="trailing" id="AIG-JU-Gt9"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="CB4-iK-Unw"/>
                             <constraint firstAttribute="bottom" secondItem="wPL-sb-3kA" secondAttribute="bottom" id="DTb-Hu-VL0"/>
+                            <constraint firstItem="fji-PC-rl0" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" constant="50" id="Jr1-5z-zWR"/>
+                            <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="fji-PC-rl0" secondAttribute="trailing" constant="20" id="Oei-6g-8oK"/>
                             <constraint firstItem="V15-qK-WcR" firstAttribute="bottom" secondItem="ot3-4f-ewd" secondAttribute="bottom" id="QtQ-WK-N9z"/>
                             <constraint firstItem="ot3-4f-ewd" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="R7o-m3-ocg"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="top" secondItem="ogq-uM-ek4" secondAttribute="top" id="aJv-0c-1Sh"/>
@@ -1284,6 +1294,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4P-zO-1vH" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4565" y="1235"/>
+        </scene>
+        <!--Filter PageVC-->
+        <scene sceneID="sNy-CZ-CBl">
+            <objects>
+                <viewController id="ARy-ZP-shR" customClass="FilterPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W8G-PH-qEM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-aU-n8S">
+                                <rect key="frame" x="156.66666666666666" y="399.66666666666669" width="77" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Uygula"/>
+                                <connections>
+                                    <action selector="buttonFilter:" destination="ARy-ZP-shR" eventType="touchUpInside" id="bwW-a9-4m5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suQ-B3-BMD">
+                                <rect key="frame" x="154" y="454" width="82" height="34.333333333333314"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Temizle"/>
+                                <connections>
+                                    <action selector="buttonClear:" destination="ARy-ZP-shR" eventType="touchUpInside" id="MWR-Bd-q8K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29T-5w-ClI">
+                                <rect key="frame" x="10" y="47" width="43.666666666666664" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                                <connections>
+                                    <action selector="buttonCancel:" destination="ARy-ZP-shR" eventType="touchUpInside" id="Ip5-Rw-ZQq"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-2S-YA8">
+                                <rect key="frame" x="-54" y="111.33333333333334" width="498" height="94.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum fiyat tutarı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpg-3C-5ss">
+                                        <rect key="frame" x="0.0" y="0.0" width="498" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3cc-Uf-t7e">
+                                        <rect key="frame" x="-2" y="34.000000000000014" width="502" height="31"/>
+                                        <color key="minimumTrackTintColor" name="mainColor"/>
+                                        <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="thumbTintColor" name="mainColor"/>
+                                        <connections>
+                                            <action selector="sliderDegisim:" destination="ARy-ZP-shR" eventType="valueChanged" id="Nc8-DR-xfv"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGd-Gm-eV3">
+                                        <rect key="frame" x="0.0" y="74.000000000000014" width="498" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9tm-58-f5U">
+                                <rect key="frame" x="40" y="265.66666666666669" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dmr-3K-aBD"/>
+                        <color key="backgroundColor" name="boxBG"/>
+                        <constraints>
+                            <constraint firstItem="9tm-58-f5U" firstAttribute="leading" secondItem="dmr-3K-aBD" secondAttribute="leading" constant="40" id="4Js-jd-Esk"/>
+                            <constraint firstItem="29T-5w-ClI" firstAttribute="top" secondItem="W8G-PH-qEM" secondAttribute="topMargin" id="5fX-Xa-Nhl"/>
+                            <constraint firstItem="dmr-3K-aBD" firstAttribute="trailing" secondItem="9tm-58-f5U" secondAttribute="trailing" constant="40" id="Qud-w4-SGH"/>
+                            <constraint firstItem="suQ-B3-BMD" firstAttribute="top" secondItem="FRd-aU-n8S" secondAttribute="bottom" constant="20" id="S5W-5h-FzX"/>
+                            <constraint firstItem="Ic3-2S-YA8" firstAttribute="centerX" secondItem="W8G-PH-qEM" secondAttribute="centerX" id="aHE-KN-ZV1"/>
+                            <constraint firstItem="suQ-B3-BMD" firstAttribute="centerX" secondItem="W8G-PH-qEM" secondAttribute="centerX" id="ffb-dG-Y4m"/>
+                            <constraint firstItem="FRd-aU-n8S" firstAttribute="centerX" secondItem="W8G-PH-qEM" secondAttribute="centerX" id="lEd-lg-Caz"/>
+                            <constraint firstItem="Ic3-2S-YA8" firstAttribute="top" secondItem="29T-5w-ClI" secondAttribute="bottom" constant="30" id="o8Q-Qc-xHf"/>
+                            <constraint firstItem="29T-5w-ClI" firstAttribute="leading" secondItem="dmr-3K-aBD" secondAttribute="leading" constant="10" id="plH-CQ-1nl"/>
+                            <constraint firstItem="9tm-58-f5U" firstAttribute="top" secondItem="Ic3-2S-YA8" secondAttribute="bottom" constant="60" id="toT-40-0SV"/>
+                            <constraint firstItem="FRd-aU-n8S" firstAttribute="top" secondItem="9tm-58-f5U" secondAttribute="bottom" constant="100" id="vUm-qB-YsB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="TFSiralama" destination="9tm-58-f5U" id="5d3-Wi-Js3"/>
+                        <outlet property="sliderLabel" destination="GGd-Gm-eV3" id="6el-9J-V6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSz-yU-YKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4565" y="1944"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SIw-4r-ujB">
@@ -1668,6 +1773,7 @@
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="orderIcon" width="32" height="32"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="silinecekTest" width="538" height="534"/>
