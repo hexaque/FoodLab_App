@@ -8,4 +8,8 @@
 import Foundation
 protocol FilterPageToHomePage{
     func SendSiralamaAndFilterToHomePage(filter:Int,siralama:String)
+    
+}
+protocol DetailPageToHomePage{
+    func sendBadgeCountToHomePage(badgeCount:Int)
 }

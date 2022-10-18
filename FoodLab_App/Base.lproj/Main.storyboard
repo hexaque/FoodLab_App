@@ -1530,7 +1530,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-qW-eua">
-                                <rect key="frame" x="10" y="133" width="394" height="526"/>
+                                <rect key="frame" x="10" y="133" width="394" height="521"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartPageTableViewCell" id="H6y-h2-nG9" customClass="CartPageTableViewCell" customModule="FoodLab_App" customModuleProvider="target">
@@ -1546,7 +1546,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puf-2M-UVr">
                                                             <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Tavuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-PG-ZG9">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Tavuk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-PG-ZG9">
                                                             <rect key="frame" x="98.5" y="0.0" width="98.5" height="100"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -1593,7 +1593,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="F9r-pN-GYN">
-                                <rect key="frame" x="10" y="669" width="394" height="144"/>
+                                <rect key="frame" x="10" y="664" width="394" height="144"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-vh-Bvs">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="64.5"/>
@@ -1735,6 +1735,13 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="qN5-2a-OTU">
+                                <rect key="frame" x="10" y="426" width="394" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="mainColor"/>
+                                <color key="color" name="mainColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1id-cd-yNX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1748,7 +1755,7 @@
                             <constraint firstItem="jLa-xY-gBX" firstAttribute="top" secondItem="iYz-cN-xQq" secondAttribute="top" id="ER5-RT-TUb"/>
                             <constraint firstItem="1id-cd-yNX" firstAttribute="trailing" secondItem="F9r-pN-GYN" secondAttribute="trailing" constant="10" id="KqO-pP-PE9"/>
                             <constraint firstItem="3D0-qW-eua" firstAttribute="leading" secondItem="1id-cd-yNX" secondAttribute="leading" constant="10" id="McO-TP-lbG"/>
-                            <constraint firstItem="1id-cd-yNX" firstAttribute="bottom" secondItem="F9r-pN-GYN" secondAttribute="bottom" id="W2o-DB-lun"/>
+                            <constraint firstItem="1id-cd-yNX" firstAttribute="bottom" secondItem="F9r-pN-GYN" secondAttribute="bottom" constant="5" id="W2o-DB-lun"/>
                             <constraint firstItem="1id-cd-yNX" firstAttribute="trailing" secondItem="Bhy-ad-ewm" secondAttribute="trailing" constant="20" id="Xp9-Il-Y1k"/>
                             <constraint firstItem="3D0-qW-eua" firstAttribute="top" secondItem="Bhy-ad-ewm" secondAttribute="bottom" constant="20" id="YuE-uC-fo8"/>
                             <constraint firstItem="F9r-pN-GYN" firstAttribute="top" secondItem="3D0-qW-eua" secondAttribute="bottom" constant="10" id="f5W-zT-B8U"/>
@@ -1762,6 +1769,7 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Gvn-up-0gj"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicator" destination="qN5-2a-OTU" id="rzS-SS-71V"/>
                         <outlet property="tableView" destination="3D0-qW-eua" id="6am-2O-jil"/>
                         <outlet property="totalPrice" destination="dcS-NI-hIa" id="k8A-4V-7Qm"/>
                         <outlet property="totalPrice2" destination="PWX-3m-2vs" id="dQQ-UE-eIO"/>

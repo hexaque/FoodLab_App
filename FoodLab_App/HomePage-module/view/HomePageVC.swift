@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 import FirebaseAuth
 class HomePageVC: UIViewController {
-    
+    var badgeForCart = 0
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
@@ -30,7 +30,7 @@ class HomePageVC: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         
     }
-    
+   
     
 
     @IBAction func buttonFilterPage(_ sender: Any) {
@@ -124,6 +124,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
             if let food = sender as? Foods {
                 let gidilecekVC = segue.destination as! DetailPageVC
                 gidilecekVC.food = food
+                gidilecekVC.delegate = self
             }
         }
         if segue.identifier == "toFilterPage" {
@@ -146,21 +147,32 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
          foodsCollectionView.collectionViewLayout = tasarim
     }
 }
-/*
-extension HomePageVC:UISearchBarDelegate{
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-         
 
-         if searchText.isEmpty == false {
-             allFoods = allFoods.filter({ $0.yemek_adi!.contains(searchText) })
-             
-         }else{
-             homePagePresenterObject?.getAllFoods()
-             
+
+extension HomePageVC : DetailPageToHomePage{
+    func sendBadgeCountToHomePage(badgeCount: Int) {
+        self.badgeForCart = badgeCount
+        if let tabItems = tabBarController?.tabBar.items{
+            print("******************")
+            let cartItem = tabItems[0]
             
-         }
-        self.foodsCollectionView.reloadData()
-        
-        
+            if let temp = cartItem.badgeValue{
+                if var tempInt = Int(temp){
+                    tempInt += badgeForCart
+                    cartItem.badgeValue = String(temp)
+                }
+            }else{
+                cartItem.badgeValue = String(badgeForCart)
+                
+            }
+            
+            
+            
+            
+            
+           
+        }
     }
-}*/
+    
+    
+}

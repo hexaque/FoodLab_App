@@ -9,6 +9,8 @@ import UIKit
 import Kingfisher
 class CartPageVC: UIViewController {
     
+    
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var totalPrice2: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalPrice: UILabel!
@@ -16,6 +18,10 @@ class CartPageVC: UIViewController {
    
     var allFoodsCart = [FoodsCart]()
     override func viewDidLoad() {
+       
+        
+    
+        
         CartPageRouter.createModule(ref: self)
         tableView.dataSource = self
         tableView.delegate = self
@@ -27,15 +33,20 @@ class CartPageVC: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
+       
         cartPagePresenterObject?.getCartFood()
+        
     }
 
   
 
     @IBAction func buttonDeleteAll(_ sender: Any) {
+        indicator.startAnimating()
         for i in allFoodsCart{
             cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
         }
+     
         
     }
     
@@ -44,7 +55,7 @@ class CartPageVC: UIViewController {
     
     
     @IBAction func buttonOnay(_ sender: Any) {
-        print("seepet onaylandı Gif eklenecek.")
+        print("sepet onaylandı Gif eklenecek.")
     }
     
     
@@ -62,11 +73,28 @@ class CartPageVC: UIViewController {
 
 extension CartPageVC : PresenterToViewCartPageProtocol{
     func sendDataToView(foodsCart: [FoodsCart], totalPrice: Int) {
+        indicator.startAnimating()
         self.allFoodsCart = foodsCart
+       
         self.totalPrice.text = "\(String(totalPrice))₺"
         self.totalPrice2.text = "\(String(totalPrice))₺"
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+      
+        indicator.stopAnimating()
+        
+        
+        if let tabItems = tabBarController?.tabBar.items{
+            let cartItem = tabItems[0]
+            let temp = self.allFoodsCart.count
+            if temp > 0{
+                cartItem.badgeValue = String(temp)
+            }else{
+                cartItem.badgeValue = nil
+            }
+           
+            
         }
     }
   
@@ -122,6 +150,7 @@ extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
             
             let yesAction = UIAlertAction(title: "Evet", style: .destructive){ action in
                 self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: food.kullanici_adi!)
+              
             }
             alert.addAction(yesAction)
             

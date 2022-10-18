@@ -22,7 +22,7 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
                 if let data = response.data {
                     do{
                         let cevap = try JSONSerialization.jsonObject(with: data)
-                        print(cevap)
+                        
                     }catch{
                         print(error.localizedDescription)
                     }

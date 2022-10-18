@@ -47,7 +47,6 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
                         
                     } catch  {
                         self.cartPagePresenter?.sendDataToPresenter(foodsCart: emptyAnswerArray, totalPrice: 0)
-                        print(error.localizedDescription)
                     }
                 }
             }}
@@ -63,7 +62,7 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
                 if let data = response.data {
                     do{
                         let answer = try JSONSerialization.jsonObject(with: data)
-                        print(answer)
+                        
                         self.getCartFoodI()
                     }catch{
                         print(error.localizedDescription)

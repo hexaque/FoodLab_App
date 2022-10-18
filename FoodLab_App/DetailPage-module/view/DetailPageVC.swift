@@ -25,11 +25,11 @@ class DetailPageVC: UIViewController {
     
     
     var food : Foods?
-    
+    var delegate : DetailPageToHomePage?
     var detailPagePresenterObject : ViewToPresenterDetailPageProtocol?
     let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
     var fav = false
-    
+    var badgeForCart = 0
     override func viewDidLoad() {
         
         DetailPageRouter.createModule(ref: self)
@@ -50,11 +50,17 @@ class DetailPageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate?.sendBadgeCountToHomePage(badgeCount: badgeForCart)
+        badgeForCart = 0
+    }
+   
+    
     @IBAction func buttonBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func buttonAddCart(_ sender: Any) {
-        print("eklendi")
+        badgeForCart += 1
         detailPagePresenterObject?.addToCart(food: food!, adet: labelNumber.text!)
        
     }
