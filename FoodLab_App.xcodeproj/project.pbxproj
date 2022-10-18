@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820DB25528FF03BE00229C1A /* CartPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820DB25428FF03BE00229C1A /* CartPageCollectionViewCell.swift */; };
 		8215476528FD6100001F50D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8215476428FD6100001F50D6 /* GoogleService-Info.plist */; };
 		8215476828FD61D1001F50D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476728FD61D1001F50D6 /* FirebaseAuth */; };
 		8215476A28FD61D1001F50D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476928FD61D1001F50D6 /* FirebaseDatabase */; };
@@ -68,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		820DB25428FF03BE00229C1A /* CartPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8215476428FD6100001F50D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8252E58328FA1FE300BE2E8F /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820DB25328FF039300229C1A /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				820DB25428FF03BE00229C1A /* CartPageCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		8210255128FAE20A00092E4E /* ForgetPswScene1-module */ = {
 			isa = PBXGroup;
 			children = (
@@ -386,6 +396,7 @@
 		8278EC2B28F99596001943BD /* CartPage-module */ = {
 			isa = PBXGroup;
 			children = (
+				820DB25328FF039300229C1A /* CollectionViewCell */,
 				8278EC4E28F99935001943BD /* protocols */,
 				8278EC4D28F99933001943BD /* router */,
 				8278EC4C28F99930001943BD /* interactor */,
@@ -803,6 +814,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820DB25528FF03BE00229C1A /* CartPageCollectionViewCell.swift in Sources */,
 				8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */,
 				8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */,
 				8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */,

@@ -7,15 +7,16 @@
 
 import Foundation
 class DetailPagePresenter:ViewToPresenterDetailPageProtocol,InteractorToPresenterDetailPageProtocol{
+    func addToCart(food: Foods, adet: String) {
+        detailPageInteractor?.addToCartI(food: food, adet: adet)
+    }
+    
    
     
     var detailPageInteractor: PresenterToInteractorDetailPageProtocol?
     
     var detailPageView: PresenterToViewDetailPageProtocol?
-    
-    func addCart(food: Foods) {
-        detailPageInteractor?.addCartI(food: food)
-    }
+
     
     func minus() {
         detailPageInteractor?.minusI()

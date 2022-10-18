@@ -9,17 +9,18 @@ import Foundation
 protocol ViewToPresenterDetailPageProtocol{
     var detailPageInteractor : PresenterToInteractorDetailPageProtocol?{get set}
     var detailPageView : PresenterToViewDetailPageProtocol?{get set}
-    func addCart(food:Foods)
     func minus()
     func plus()
     func setTotalPrice(price:Int)
+    func addToCart(food:Foods,adet:String)
 }
 protocol PresenterToInteractorDetailPageProtocol{
     var detailPagePresenter : InteractorToPresenterDetailPageProtocol?{get set}
-    func addCartI(food:Foods)
+
     func minusI()
     func plusI()
     func setTotalPriceI(price:Int)
+    func addToCartI(food:Foods,adet:String)
 }
 
 protocol InteractorToPresenterDetailPageProtocol{

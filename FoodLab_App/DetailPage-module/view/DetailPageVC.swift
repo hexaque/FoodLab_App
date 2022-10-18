@@ -54,6 +54,9 @@ class DetailPageVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func buttonAddCart(_ sender: Any) {
+        print("eklendi")
+        detailPagePresenterObject?.addToCart(food: food!, adet: labelNumber.text!)
+       
     }
     
     @IBAction func buttonPlus(_ sender: Any) {
@@ -76,7 +79,7 @@ class DetailPageVC: UIViewController {
     @IBAction func buttonMinus(_ sender: Any) {
         if let a = labelNumber.text{
             if let a = Int(a){
-                if a > 0 {
+                if a > 1 {
                     detailPagePresenterObject?.minus()
                     if let price = food?.yemek_fiyat{
                         detailPagePresenterObject?.setTotalPrice(price: Int(price)!)
