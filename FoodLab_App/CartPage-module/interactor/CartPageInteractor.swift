@@ -26,7 +26,7 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
         let userEmail = Auth.auth().currentUser?.email
         var totalPrice = 0
         var foodTotalPrice = 0
-        var emptyAnswerArray : [FoodsCart] = []
+        let emptyAnswerArray : [FoodsCart] = []
         if let email = userEmail{
             
             
@@ -61,7 +61,7 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
             AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response { response in
                 if let data = response.data {
                     do{
-                        let answer = try JSONSerialization.jsonObject(with: data)
+                       // let answer = try JSONSerialization.jsonObject(with: data)
                         
                         self.getCartFoodI()
                     }catch{
