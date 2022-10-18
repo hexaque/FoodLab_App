@@ -9,14 +9,16 @@ import UIKit
 import Kingfisher
 class CartPageVC: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalPrice: UILabel!
     var cartPagePresenterObject : ViewToPresenterCartPageProtocol?
-    @IBOutlet weak var collectionView: UICollectionView!
+   
     var allFoodsCart = [FoodsCart]()
     override func viewDidLoad() {
         CartPageRouter.createModule(ref: self)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        cellDesign()
+        tableView.dataSource = self
+        tableView.delegate = self
+        
         super.viewDidLoad()
 
         
@@ -36,14 +38,14 @@ class CartPageVC: UIViewController {
 
 
 extension CartPageVC : PresenterToViewCartPageProtocol{
-    func sendDataToView(foodsCart: [FoodsCart]) {
+    func sendDataToView(foodsCart: [FoodsCart], totalPrice: Int) {
         self.allFoodsCart = foodsCart
-        
+        self.totalPrice.text = String(totalPrice)
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            self.tableView.reloadData()
         }
     }
-    
+  
     
 }
 
@@ -51,18 +53,18 @@ extension CartPageVC : PresenterToViewCartPageProtocol{
 
 
 
-
-
-extension CartPageVC : UICollectionViewDelegate, UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allFoodsCart.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
         let tempFood = allFoodsCart[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartPageCollectionViewCell", for: indexPath) as! CartPageCollectionViewCell
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CartPageTableViewCell") as! CartPageTableViewCell
         
+       
       
         if let url = URL(string: "\(url)\(tempFood.yemek_resim_adi!)"){
             DispatchQueue.main.async {
@@ -79,29 +81,34 @@ extension CartPageVC : UICollectionViewDelegate, UICollectionViewDataSource{
         cell.labelPrice.text = "\(totalFoodPrice)₺"
             cell.labelAdet.text = "\(tempFood.yemek_siparis_adet!) adet"
         }
-        cell.layer.shadowRadius = 5
-        cell.layer.shadowOffset = .zero
-        cell.layer.shadowOpacity = 0.1
-        cell.layer.shadowColor = UIColor.black.cgColor
         
-        cell.layer.masksToBounds = false
+        cell.selectionStyle = .none
 
         return cell
     }
-  
     
-    func cellDesign(){
-        let tasarim = UICollectionViewFlowLayout()
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil"){(contextualAction,view,bool) in
+            let food = self.allFoodsCart[indexPath.row]
+            
+            let alert = UIAlertController(title: "Silme İşlemi", message: "\(food.yemek_adi!) silinsin mi?", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+            alert.addAction(cancelAction)
+            
+            let yesAction = UIAlertAction(title: "Evet", style: .destructive){ action in
+                self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: food.kullanici_adi!)
+            }
+            alert.addAction(yesAction)
+            
+            self.present(alert, animated: true)
+        }
         
-         tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-         tasarim.minimumInteritemSpacing = 0 // yatay
-         tasarim.minimumLineSpacing = 15 // dikey
-         
-         
-        let hucreGenisligi = collectionView.bounds.width
-         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 100)
-        
-         collectionView.collectionViewLayout = tasarim
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
     }
     
-}
+    
+
+
+

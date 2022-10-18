@@ -8,6 +8,7 @@
 import Foundation
 class CartPagePresenter:ViewToPresenterCartPageProtocol,InteractorToPresenterCartPageProtocol{
    
+   
     var cartPageInteractor: PresenterToInteractorCartPageProtocol?
     
     var cartPageView: PresenterToViewCartPageProtocol?
@@ -17,12 +18,13 @@ class CartPagePresenter:ViewToPresenterCartPageProtocol,InteractorToPresenterCar
         cartPageInteractor?.getCartFoodI()
     }
     
-    func deleteCartFood(sepet_yemek_id: Int, kullanici_adi: String) {
+    func deleteCartFood(sepet_yemek_id: String, kullanici_adi: String) {
         cartPageInteractor?.deleteCartFoodI(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
     }
     
-    func sendDataToPresenter(foodsCart: [FoodsCart]) {
-        cartPageView?.sendDataToView(foodsCart: foodsCart)
+    func sendDataToPresenter(foodsCart: [FoodsCart], totalPrice: Int) {
+        cartPageView?.sendDataToView(foodsCart: foodsCart,totalPrice: totalPrice)
     }
+    
     
 }

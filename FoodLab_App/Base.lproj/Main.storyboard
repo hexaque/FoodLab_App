@@ -1510,67 +1510,6 @@
                                 <color key="backgroundColor" name="backgroundMask"/>
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vU5-Mo-79s">
-                                <rect key="frame" x="0.0" y="268.5" width="414" height="354"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5wm-TO-tKO">
-                                    <size key="itemSize" width="414" height="82"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CartPageCollectionViewCell" id="tuc-io-Iie" customClass="CartPageCollectionViewCell" customModule="FoodLab_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="71w-Va-zBK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="KOD-rL-Xr6">
-                                                    <rect key="frame" x="5" y="5" width="404" height="72"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eVv-Lo-cjS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="74.5" height="72"/>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Tavuk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cx-XF-NDr">
-                                                            <rect key="frame" x="104.5" y="21" width="138" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 Adet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GF-Tc-THE">
-                                                            <rect key="frame" x="272.5" y="26" width="50.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="995₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HZ-Qm-qeW">
-                                                            <rect key="frame" x="353" y="23.5" width="51" height="25.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="KOD-rL-Xr6" secondAttribute="bottom" constant="5" id="DHX-3A-A16"/>
-                                                <constraint firstItem="KOD-rL-Xr6" firstAttribute="top" secondItem="71w-Va-zBK" secondAttribute="top" constant="5" id="SRy-9G-pBl"/>
-                                                <constraint firstAttribute="trailing" secondItem="KOD-rL-Xr6" secondAttribute="trailing" constant="5" id="g9q-ux-03H"/>
-                                                <constraint firstItem="KOD-rL-Xr6" firstAttribute="leading" secondItem="71w-Va-zBK" secondAttribute="leading" constant="5" id="ocZ-ul-nLY"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="82"/>
-                                        <connections>
-                                            <outlet property="imageFood" destination="eVv-Lo-cjS" id="iU8-89-3ae"/>
-                                            <outlet property="labelAdet" destination="2GF-Tc-THE" id="hKb-hV-Gzj"/>
-                                            <outlet property="labelName" destination="5cx-XF-NDr" id="vta-b8-sM8"/>
-                                            <outlet property="labelPrice" destination="1HZ-Qm-qeW" id="nwa-aD-u8l"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2Q-LK-s4q">
                                 <rect key="frame" x="10" y="622.5" width="394" height="20.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1585,24 +1524,94 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toplam Fiyat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYV-Zv-nbl">
+                                <rect key="frame" x="159" y="742.5" width="96" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcS-NI-hIa">
+                                <rect key="frame" x="186.5" y="783" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-qW-eua">
+                                <rect key="frame" x="10" y="218.5" width="394" height="404"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartPageTableViewCell" id="H6y-h2-nG9" customClass="CartPageTableViewCell" customModule="FoodLab_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="394" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H6y-h2-nG9" id="AOk-td-3eR">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-0n-2yw">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puf-2M-UVr">
+                                                            <rect key="frame" x="0.0" y="0.0" width="98.5" height="100"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Tavuk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-PG-ZG9">
+                                                            <rect key="frame" x="98.5" y="0.0" width="98.5" height="100"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Adet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-yu-Efe">
+                                                            <rect key="frame" x="197" y="0.0" width="98.5" height="100"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900₺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-YN-IVd">
+                                                            <rect key="frame" x="295.5" y="0.0" width="98.5" height="100"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3c8-0n-2yw" firstAttribute="leading" secondItem="AOk-td-3eR" secondAttribute="leading" id="4Tk-zs-2IR"/>
+                                                <constraint firstAttribute="trailing" secondItem="3c8-0n-2yw" secondAttribute="trailing" id="Pv4-ne-Q1v"/>
+                                                <constraint firstAttribute="bottom" secondItem="3c8-0n-2yw" secondAttribute="bottom" id="TDs-9V-LTl"/>
+                                                <constraint firstItem="3c8-0n-2yw" firstAttribute="top" secondItem="AOk-td-3eR" secondAttribute="top" id="hAZ-gt-8eG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageFood" destination="puf-2M-UVr" id="m0b-F5-v1D"/>
+                                            <outlet property="labelAdet" destination="DIx-yu-Efe" id="ibn-Ut-aTw"/>
+                                            <outlet property="labelName" destination="YjS-PG-ZG9" id="Gzn-li-EvW"/>
+                                            <outlet property="labelPrice" destination="K2y-YN-IVd" id="5cH-0v-iJX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1id-cd-yNX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="o2Q-LK-s4q" firstAttribute="top" secondItem="vU5-Mo-79s" secondAttribute="bottom" id="9Qt-ao-PKn"/>
-                            <constraint firstItem="vU5-Mo-79s" firstAttribute="trailing" secondItem="1id-cd-yNX" secondAttribute="trailing" id="9Xw-F1-aKz"/>
+                            <constraint firstItem="o2Q-LK-s4q" firstAttribute="top" secondItem="3D0-qW-eua" secondAttribute="bottom" id="1MC-RK-G3w"/>
+                            <constraint firstItem="3D0-qW-eua" firstAttribute="top" secondItem="R9U-lC-391" secondAttribute="bottom" id="50T-Zx-5FG"/>
                             <constraint firstItem="1id-cd-yNX" firstAttribute="trailing" secondItem="R9U-lC-391" secondAttribute="trailing" constant="10" id="9vD-jN-9nF"/>
                             <constraint firstItem="jLa-xY-gBX" firstAttribute="leading" secondItem="1id-cd-yNX" secondAttribute="leading" id="AJr-sy-GpL"/>
                             <constraint firstItem="1id-cd-yNX" firstAttribute="bottom" secondItem="o2Q-LK-s4q" secondAttribute="bottom" constant="170" id="BkS-nM-ZMl"/>
                             <constraint firstItem="jLa-xY-gBX" firstAttribute="top" secondItem="iYz-cN-xQq" secondAttribute="top" id="ER5-RT-TUb"/>
+                            <constraint firstItem="1id-cd-yNX" firstAttribute="trailing" secondItem="3D0-qW-eua" secondAttribute="trailing" constant="10" id="GUM-B4-wc1"/>
                             <constraint firstItem="R9U-lC-391" firstAttribute="top" secondItem="1id-cd-yNX" secondAttribute="top" constant="150" id="MT4-j7-Yhj"/>
                             <constraint firstItem="o2Q-LK-s4q" firstAttribute="leading" secondItem="1id-cd-yNX" secondAttribute="leading" constant="10" id="PSx-0r-EGm"/>
-                            <constraint firstItem="vU5-Mo-79s" firstAttribute="top" secondItem="R9U-lC-391" secondAttribute="bottom" constant="50" id="c5O-Yd-n0F"/>
+                            <constraint firstItem="3D0-qW-eua" firstAttribute="leading" secondItem="1id-cd-yNX" secondAttribute="leading" constant="10" id="VkE-pE-s0L"/>
+                            <constraint firstItem="DYV-Zv-nbl" firstAttribute="centerX" secondItem="iYz-cN-xQq" secondAttribute="centerX" id="YrY-Kh-0kg"/>
+                            <constraint firstItem="dcS-NI-hIa" firstAttribute="top" secondItem="DYV-Zv-nbl" secondAttribute="bottom" constant="20" id="ZTw-Vq-2My"/>
+                            <constraint firstItem="dcS-NI-hIa" firstAttribute="centerX" secondItem="iYz-cN-xQq" secondAttribute="centerX" id="fek-uD-BeF"/>
                             <constraint firstItem="1id-cd-yNX" firstAttribute="trailing" secondItem="o2Q-LK-s4q" secondAttribute="trailing" constant="10" id="kQM-Up-z5L"/>
-                            <constraint firstItem="vU5-Mo-79s" firstAttribute="leading" secondItem="1id-cd-yNX" secondAttribute="leading" id="lNh-LX-S3d"/>
                             <constraint firstItem="R9U-lC-391" firstAttribute="leading" secondItem="1id-cd-yNX" secondAttribute="leading" constant="10" id="pPJ-C1-3Tr"/>
                             <constraint firstItem="jLa-xY-gBX" firstAttribute="trailing" secondItem="1id-cd-yNX" secondAttribute="trailing" id="qEu-F1-ECc"/>
                             <constraint firstAttribute="bottom" secondItem="jLa-xY-gBX" secondAttribute="bottom" id="sle-ny-kLj"/>
+                            <constraint firstItem="1id-cd-yNX" firstAttribute="bottom" secondItem="DYV-Zv-nbl" secondAttribute="bottom" constant="50" id="w58-yE-LQo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="cartIcon" id="qNg-Ua-LBO"/>
@@ -1610,7 +1619,8 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Gvn-up-0gj"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="vU5-Mo-79s" id="hrZ-i1-oew"/>
+                        <outlet property="tableView" destination="3D0-qW-eua" id="6am-2O-jil"/>
+                        <outlet property="totalPrice" destination="dcS-NI-hIa" id="Eys-k6-eFx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqe-vA-uKe" sceneMemberID="firstResponder"/>

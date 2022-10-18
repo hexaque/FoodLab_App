@@ -46,7 +46,7 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
     }
     
     func setTotalPriceI(price:Int) {
-        var totalPrice = price * adet
+        let totalPrice = price * adet
         detailPagePresenter?.totalPriceDataToPresenter(number: totalPrice)
         
     }
