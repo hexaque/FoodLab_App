@@ -623,12 +623,17 @@
                                     <action selector="backButton:" destination="6GC-Mm-iDy" eventType="touchUpInside" id="EPF-Hq-OFo"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cBS-jp-41L">
+                                <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                                <color key="color" name="mainColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V0d-gS-0gL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="kVc-fw-2JZ" secondAttribute="trailing" constant="25" id="2Sd-Gz-rrF"/>
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" id="BJm-HB-rUv"/>
+                            <constraint firstItem="cBS-jp-41L" firstAttribute="centerY" secondItem="LTD-QK-gSm" secondAttribute="centerY" id="CST-WL-oKd"/>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="YWO-j4-z2h" secondAttribute="trailing" constant="99" id="FtL-qi-6w2"/>
                             <constraint firstItem="aWz-Mf-Pds" firstAttribute="top" secondItem="fXe-fl-urh" secondAttribute="bottom" constant="10" id="G8G-2o-c11"/>
                             <constraint firstItem="YWO-j4-z2h" firstAttribute="top" secondItem="MH4-I4-yqG" secondAttribute="bottom" constant="20" id="Ga6-di-P6B"/>
@@ -643,6 +648,7 @@
                             <constraint firstItem="YWO-j4-z2h" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" constant="99" id="axP-hF-Gka"/>
                             <constraint firstItem="fXe-fl-urh" firstAttribute="top" secondItem="kVc-fw-2JZ" secondAttribute="bottom" constant="60" id="dl2-zH-ozI"/>
                             <constraint firstItem="gNk-5p-xdN" firstAttribute="top" secondItem="LTD-QK-gSm" secondAttribute="top" id="eHd-bK-u0g"/>
+                            <constraint firstItem="cBS-jp-41L" firstAttribute="centerX" secondItem="LTD-QK-gSm" secondAttribute="centerX" id="gJM-x5-rgP"/>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="FP7-3c-UNE" secondAttribute="trailing" constant="25" id="gKt-fZ-QpU"/>
                             <constraint firstItem="rhW-in-VQE" firstAttribute="leading" secondItem="V0d-gS-0gL" secondAttribute="leading" constant="15" id="gLr-BZ-bYN"/>
                             <constraint firstItem="V0d-gS-0gL" firstAttribute="trailing" secondItem="fXe-fl-urh" secondAttribute="trailing" constant="50" id="kAa-yi-mDV"/>
@@ -658,6 +664,7 @@
                         <barButtonItem key="backBarButtonItem" title="Geri" id="P2I-ft-ckh"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="indicator" destination="cBS-jp-41L" id="TDq-nA-7lS"/>
                         <outlet property="labelError" destination="FP7-3c-UNE" id="D9V-QP-bMM"/>
                         <outlet property="tfEmail" destination="QgP-wS-fc9" id="GyW-rD-Xbt"/>
                         <outlet property="tfPassword" destination="suy-Xo-ttF" id="QBh-Em-xn1"/>

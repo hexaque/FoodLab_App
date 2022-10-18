@@ -11,6 +11,7 @@ class RegisterPageVC: UIViewController {
     
 
   
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     @IBOutlet weak var tfEmail: UITextField!
     
@@ -30,7 +31,7 @@ class RegisterPageVC: UIViewController {
         RegisterPageRouter.createModule(ref: self)
         self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()
-        
+        indicator.stopAnimating()
 
     
     }
@@ -49,6 +50,8 @@ class RegisterPageVC: UIViewController {
                     labelError.isHidden = false
                     animationTF(textfield: tfPassword)
                 }else{
+                    self.view.isUserInteractionEnabled = false
+                    indicator.startAnimating()
                     registerPagePresenterObject?.register(email: email, psw: psw)
                 }
                 
@@ -84,11 +87,15 @@ class RegisterPageVC: UIViewController {
 extension RegisterPageVC : PresenterToViewRegisterPageProtocol{
     func dataToView(isCreate:Bool){
         if isCreate{
+            self.view.isUserInteractionEnabled = true
+            indicator.stopAnimating()
             labelError.isHidden = true
             print("ÜYE OLUŞTURULDU.")
             performSegue(withIdentifier: "toRegister2", sender: nil)
         }
         else{
+            self.view.isUserInteractionEnabled = true
+            indicator.stopAnimating()
             labelError.text = "Email kullanılıyor."
             labelError.isHidden = false
             animationTF(textfield: tfEmail)
