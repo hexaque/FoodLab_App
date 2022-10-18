@@ -157,13 +157,14 @@ extension HomePageVC : DetailPageToHomePage{
             let cartItem = tabItems[0]
             
             if let temp = cartItem.badgeValue{
-                if var tempInt = Int(temp){
-                    tempInt += badgeForCart
-                    cartItem.badgeValue = String(temp)
+                
+                if let currentBadgeValue = Int(temp){
+                    let totalBadgeValue = badgeForCart + currentBadgeValue
+                    cartItem.badgeValue = String(totalBadgeValue)
                 }
+                    
             }else{
                 cartItem.badgeValue = String(badgeForCart)
-                
             }
             
             
