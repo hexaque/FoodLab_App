@@ -9,6 +9,7 @@ import UIKit
 
 class FilterPageVC: UIViewController {
 
+    @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var sliderLabel: UILabel!
 
     @IBOutlet weak var TFSiralama: UITextField!
@@ -31,6 +32,8 @@ class FilterPageVC: UIViewController {
 
     @IBAction func buttonCancel(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func sliderDegisim(_ sender: UISlider) {
         sliderLabel.text = String(Int(sender.value))
@@ -39,6 +42,9 @@ class FilterPageVC: UIViewController {
     }
     
     @IBAction func buttonClear(_ sender: Any) {
+        TFSiralama.text = ""
+        sliderLabel.text = "100"
+        slider.setValue(100, animated: true)
     }
 }
 

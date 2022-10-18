@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1263,6 +1264,12 @@
                                     <segue destination="ARy-ZP-shR" kind="presentation" modalTransitionStyle="flipHorizontal" id="aUC-4W-LCm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-1V-rlg">
+                                <rect key="frame" x="257" y="140" width="118" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="temizle filtre"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1304,7 +1311,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRd-aU-n8S">
-                                <rect key="frame" x="156.66666666666666" y="399.66666666666669" width="77" height="34.333333333333314"/>
+                                <rect key="frame" x="70" y="441" width="250" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Uygula"/>
                                 <connections>
@@ -1312,7 +1319,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suQ-B3-BMD">
-                                <rect key="frame" x="154" y="454" width="82" height="34.333333333333314"/>
+                                <rect key="frame" x="70" y="495.33333333333331" width="250" height="34.333333333333314"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Temizle"/>
@@ -1320,25 +1327,31 @@
                                     <action selector="buttonClear:" destination="ARy-ZP-shR" eventType="touchUpInside" id="MWR-Bd-q8K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29T-5w-ClI">
-                                <rect key="frame" x="10" y="47" width="43.666666666666664" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29T-5w-ClI">
+                                <rect key="frame" x="10" y="47" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="kfx-WB-VSG"/>
+                                    <constraint firstAttribute="width" constant="60" id="vjU-wk-QLG"/>
+                                </constraints>
+                                <buttonConfiguration key="configuration" style="plain" title="" subtitle="">
+                                    <imageReference key="image" image="multiply" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="buttonCancel:" destination="ARy-ZP-shR" eventType="touchUpInside" id="Ip5-Rw-ZQq"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-2S-YA8">
-                                <rect key="frame" x="-54" y="111.33333333333334" width="498" height="94.333333333333343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ic3-2S-YA8">
+                                <rect key="frame" x="30" y="137" width="330" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimum fiyat tutarı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpg-3C-5ss">
-                                        <rect key="frame" x="0.0" y="0.0" width="498" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3cc-Uf-t7e">
-                                        <rect key="frame" x="-2" y="34.000000000000014" width="502" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3cc-Uf-t7e">
+                                        <rect key="frame" x="-2" y="40" width="334" height="31"/>
                                         <color key="minimumTrackTintColor" name="mainColor"/>
                                         <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="thumbTintColor" name="mainColor"/>
@@ -1346,32 +1359,58 @@
                                             <action selector="sliderDegisim:" destination="ARy-ZP-shR" eventType="valueChanged" id="Nc8-DR-xfv"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGd-Gm-eV3">
-                                        <rect key="frame" x="0.0" y="74.000000000000014" width="498" height="20.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGd-Gm-eV3">
+                                        <rect key="frame" x="0.0" y="80" width="330" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" name="boxBG"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9tm-58-f5U">
-                                <rect key="frame" x="40" y="265.66666666666669" width="310" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sıralama yapmak için dokunun" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9tm-58-f5U">
+                                <rect key="frame" x="40" y="307" width="310" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="textColorLightBlack"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dmr-3K-aBD"/>
-                        <color key="backgroundColor" name="boxBG"/>
+                        <color key="backgroundColor" name="backgroundMask"/>
                         <constraints>
                             <constraint firstItem="9tm-58-f5U" firstAttribute="leading" secondItem="dmr-3K-aBD" secondAttribute="leading" constant="40" id="4Js-jd-Esk"/>
                             <constraint firstItem="29T-5w-ClI" firstAttribute="top" secondItem="W8G-PH-qEM" secondAttribute="topMargin" id="5fX-Xa-Nhl"/>
+                            <constraint firstItem="FRd-aU-n8S" firstAttribute="leading" secondItem="dmr-3K-aBD" secondAttribute="leading" constant="70" id="PX8-Tf-yZX"/>
                             <constraint firstItem="dmr-3K-aBD" firstAttribute="trailing" secondItem="9tm-58-f5U" secondAttribute="trailing" constant="40" id="Qud-w4-SGH"/>
                             <constraint firstItem="suQ-B3-BMD" firstAttribute="top" secondItem="FRd-aU-n8S" secondAttribute="bottom" constant="20" id="S5W-5h-FzX"/>
-                            <constraint firstItem="Ic3-2S-YA8" firstAttribute="centerX" secondItem="W8G-PH-qEM" secondAttribute="centerX" id="aHE-KN-ZV1"/>
-                            <constraint firstItem="suQ-B3-BMD" firstAttribute="centerX" secondItem="W8G-PH-qEM" secondAttribute="centerX" id="ffb-dG-Y4m"/>
-                            <constraint firstItem="FRd-aU-n8S" firstAttribute="centerX" secondItem="W8G-PH-qEM" secondAttribute="centerX" id="lEd-lg-Caz"/>
+                            <constraint firstItem="dmr-3K-aBD" firstAttribute="trailing" secondItem="FRd-aU-n8S" secondAttribute="trailing" constant="70" id="U3O-V4-8h5"/>
+                            <constraint firstItem="Ic3-2S-YA8" firstAttribute="leading" secondItem="W8G-PH-qEM" secondAttribute="leading" constant="30" id="WNb-e5-4Fc"/>
+                            <constraint firstAttribute="trailing" secondItem="Ic3-2S-YA8" secondAttribute="trailing" constant="30" id="nz0-TK-QYt"/>
                             <constraint firstItem="Ic3-2S-YA8" firstAttribute="top" secondItem="29T-5w-ClI" secondAttribute="bottom" constant="30" id="o8Q-Qc-xHf"/>
+                            <constraint firstItem="suQ-B3-BMD" firstAttribute="leading" secondItem="dmr-3K-aBD" secondAttribute="leading" constant="70" id="oHd-KW-xcV"/>
                             <constraint firstItem="29T-5w-ClI" firstAttribute="leading" secondItem="dmr-3K-aBD" secondAttribute="leading" constant="10" id="plH-CQ-1nl"/>
+                            <constraint firstItem="dmr-3K-aBD" firstAttribute="trailing" secondItem="suQ-B3-BMD" secondAttribute="trailing" constant="70" id="pnu-sp-AUm"/>
                             <constraint firstItem="9tm-58-f5U" firstAttribute="top" secondItem="Ic3-2S-YA8" secondAttribute="bottom" constant="60" id="toT-40-0SV"/>
                             <constraint firstItem="FRd-aU-n8S" firstAttribute="top" secondItem="9tm-58-f5U" secondAttribute="bottom" constant="100" id="vUm-qB-YsB"/>
                         </constraints>
@@ -1383,6 +1422,7 @@
                     </view>
                     <connections>
                         <outlet property="TFSiralama" destination="9tm-58-f5U" id="5d3-Wi-Js3"/>
+                        <outlet property="slider" destination="3cc-Uf-t7e" id="kMd-WV-d4f"/>
                         <outlet property="sliderLabel" destination="GGd-Gm-eV3" id="6el-9J-V6c"/>
                     </connections>
                 </viewController>
