@@ -11,6 +11,7 @@ class LoginPageVC: UIViewController {
     var loginPagePresenterObject : ViewToPresenterLoginPageProtocol?
     var errorCode:NSError?
 
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     @IBOutlet weak var tfPassword: UITextField!
     
@@ -22,6 +23,7 @@ class LoginPageVC: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         LoginPageRouter.createModule(ref: self)
+        indicator.stopAnimating()
             
 
         // Do any additional setup after loading the view.
@@ -40,10 +42,13 @@ class LoginPageVC: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @IBAction func buttonLogin(_ sender: UIButton) {
+        
         sender.preventRepeatedPresses()
         
         if let emailText = tfEmail.text,let pswText = tfPassword.text{
             if isValidEmail(emailText){
+                self.view.isUserInteractionEnabled = false
+                indicator.startAnimating()
                 loginPagePresenterObject?.login(eMail: emailText, psw: pswText)
             }else{
                 animationTF(textfield: tfEmail)
@@ -83,8 +88,12 @@ extension LoginPageVC : PresenterToViewLoginPageProtocol{
     
     func isLoginV(isUser: Bool) {
         if isUser{
+            self.view.isUserInteractionEnabled = true
+            indicator.stopAnimating()
             self.performSegue(withIdentifier: "toMainPage", sender: nil)
         }else{
+            self.view.isUserInteractionEnabled = true
+            indicator.stopAnimating()
             print("başarısız")
             animationTF(textfield: tfEmail)
             animationTF(textfield: tfPassword)

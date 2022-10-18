@@ -20,9 +20,9 @@ class OnboardingPageVC: UIViewController {
             pageControl.currentPage = currentPage
             pageControl.currentPage = currentPage
             if currentPage == onboardingSlides.count - 1 {
-                buttonNext.setTitle("Get Started", for: .normal)
+                buttonNext.setTitle("Başla", for: .normal)
             } else {
-                buttonNext.setTitle("Next", for: .normal)
+                buttonNext.setTitle("Devam", for: .normal)
             }
         }}
     override func viewDidLoad() {
@@ -32,9 +32,9 @@ class OnboardingPageVC: UIViewController {
         
         onboardingSlides = [
             
-            OnboardSlides(title: "Delicious Dishes", desc: "Experience a variety of amazing dishes from different cultures around the world.", image: #imageLiteral(resourceName: "slide2")),
-            OnboardSlides(title: "World-Class Chefs", desc: "Our dishes are prepared by only the best.", image: #imageLiteral(resourceName: "slide1")),
-            OnboardSlides(title: "Instant World-Wide Delivery", desc: "Your orders will be delivered instantly irrespective of your location around the world.", image: #imageLiteral(resourceName: "slide3"))
+            OnboardSlides(title: "Kolayca Sipariş Verin", desc: "Kullanıcı dostu arayüz ile aradığınız lezzetleri bulun ve kolayca sepete ekleyin.",animation: "order" ),
+            OnboardSlides(title: "Hızlı ve Lezzetli ", desc: "Birbirinden ünlü şeflere sahip restoranlarımız sizler için özel olarak hazırlasın.", animation: "cook"),
+            OnboardSlides(title: "Günün Her Saati Kapınıza Teslim", desc: "Şeflerimiz tarafından hazırlanan ürünlerimiz kuryelerimiz ile en kısa sürede kapınızda.", animation: "motor")
                 ]
 
         

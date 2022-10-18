@@ -10,5 +10,5 @@ import UIKit
 struct OnboardSlides{
     var title : String?
     var desc : String?
-    var image: UIImage?
+    var animation: String?
 }
