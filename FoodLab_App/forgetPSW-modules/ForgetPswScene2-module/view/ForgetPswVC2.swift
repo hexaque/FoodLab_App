@@ -16,11 +16,29 @@ class ForgetPswVC2: UIViewController {
     }
     
     @IBAction func buttonSMS(_ sender: Any) {
-        performSegue(withIdentifier: "forgetPsw2ToForgetPsw3", sender: nil)
+        let alertContreller = UIAlertController(title: "Şifre sıfırlama", message: "Şifre sıfırlama mesajı sistemde (var ise) kayıtlı telefonunuza gönderildi.", preferredStyle: .alert)
+        
+        self.present(alertContreller, animated: true)
+        let tamamAction = UIAlertAction(title: "Tamam", style: .default){
+            action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+
+        alertContreller.addAction(tamamAction)
+        
+      
     }
     
     @IBAction func buttonMail(_ sender: Any) {
-        performSegue(withIdentifier: "forgetPsw2ToForgetPsw3", sender: nil)
+        let alertContreller = UIAlertController(title: "Şifre sıfırlama", message: "Şifre sıfırlama maili sistemde (var ise) kayıtlı mail adresinize gönderildi.", preferredStyle: .alert)
+        
+        self.present(alertContreller, animated: true)
+        let tamamAction = UIAlertAction(title: "Tamam", style: .default){
+            action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+
+        alertContreller.addAction(tamamAction)
     }
     
 }

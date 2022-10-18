@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8210256128FAF86E00092E4E /* ForgetPsw4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */; };
 		8215476528FD6100001F50D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8215476428FD6100001F50D6 /* GoogleService-Info.plist */; };
 		8215476828FD61D1001F50D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476728FD61D1001F50D6 /* FirebaseAuth */; };
 		8215476A28FD61D1001F50D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476928FD61D1001F50D6 /* FirebaseDatabase */; };
@@ -59,8 +58,6 @@
 		82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */; };
 		82B9EA5628FADF5100684C63 /* ForgetPswVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */; };
 		82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */; };
-		82B9EA5A28FADF8B00684C63 /* ForgetPswVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */; };
-		82B9EA5C28FADFA600684C63 /* ForgetPswCompletedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */; };
 		82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6611628FE13C3003D048D /* UserPageVC.swift */; };
 		82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6611A28FE1418003D048D /* FavouritePageVC.swift */; };
 		82CA4FC928FB58E90009EA9D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FC828FB58E90009EA9D /* Kingfisher */; };
@@ -69,7 +66,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPsw4VC.swift; sourceTree = "<group>"; };
 		8215476428FD6100001F50D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8252E58328FA1FE300BE2E8F /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
@@ -120,8 +116,6 @@
 		82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageVC.swift; sourceTree = "<group>"; };
 		82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC.swift; sourceTree = "<group>"; };
 		82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC2.swift; sourceTree = "<group>"; };
-		82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC3.swift; sourceTree = "<group>"; };
-		82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswCompletedVC.swift; sourceTree = "<group>"; };
 		82C6611628FE13C3003D048D /* UserPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVC.swift; sourceTree = "<group>"; };
 		82C6611A28FE1418003D048D /* FavouritePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePageVC.swift; sourceTree = "<group>"; };
 		82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -183,42 +177,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		8210255528FAE24300092E4E /* ForgetPswScene3-module */ = {
-			isa = PBXGroup;
-			children = (
-				8210257128FAFC0200092E4E /* protocols */,
-				8210257028FAFC0000092E4E /* router */,
-				8210256F28FAFBFD00092E4E /* interactor */,
-				8210256E28FAFBFB00092E4E /* presenter */,
-				8210255628FAE24C00092E4E /* view */,
-			);
-			path = "ForgetPswScene3-module";
-			sourceTree = "<group>";
-		};
-		8210255628FAE24C00092E4E /* view */ = {
-			isa = PBXGroup;
-			children = (
-				82B9EA5928FADF8B00684C63 /* ForgetPswVC3.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		8210255728FAE25700092E4E /* ForgetPswSceneComp-module */ = {
-			isa = PBXGroup;
-			children = (
-				8210255828FAE26400092E4E /* view */,
-			);
-			path = "ForgetPswSceneComp-module";
-			sourceTree = "<group>";
-		};
-		8210255828FAE26400092E4E /* view */ = {
-			isa = PBXGroup;
-			children = (
-				82B9EA5B28FADFA600684C63 /* ForgetPswCompletedVC.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		8210255928FAE2B900092E4E /* RegisterPage2-module */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,26 +221,6 @@
 				8210255B28FAE2CE00092E4E /* RegisterPageComp-module */,
 			);
 			path = "RegisterPages-modules";
-			sourceTree = "<group>";
-		};
-		8210255E28FAF84700092E4E /* ForgetPswScene4-module */ = {
-			isa = PBXGroup;
-			children = (
-				8210257528FAFC1800092E4E /* protocols */,
-				8210257428FAFC1600092E4E /* router */,
-				8210257328FAFC1400092E4E /* interactor */,
-				8210257228FAFC1300092E4E /* presenter */,
-				8210255F28FAF85900092E4E /* view */,
-			);
-			path = "ForgetPswScene4-module";
-			sourceTree = "<group>";
-		};
-		8210255F28FAF85900092E4E /* view */ = {
-			isa = PBXGroup;
-			children = (
-				8210256028FAF86E00092E4E /* ForgetPsw4VC.swift */,
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		8210256228FAFB8E00092E4E /* presenter */ = {
@@ -363,62 +301,6 @@
 			sourceTree = "<group>";
 		};
 		8210256D28FAFBE600092E4E /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = protocols;
-			sourceTree = "<group>";
-		};
-		8210256E28FAFBFB00092E4E /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		8210256F28FAFBFD00092E4E /* interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = interactor;
-			sourceTree = "<group>";
-		};
-		8210257028FAFC0000092E4E /* router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		8210257128FAFC0200092E4E /* protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = protocols;
-			sourceTree = "<group>";
-		};
-		8210257228FAFC1300092E4E /* presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = presenter;
-			sourceTree = "<group>";
-		};
-		8210257328FAFC1400092E4E /* interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = interactor;
-			sourceTree = "<group>";
-		};
-		8210257428FAFC1600092E4E /* router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = router;
-			sourceTree = "<group>";
-		};
-		8210257528FAFC1800092E4E /* protocols */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -782,9 +664,6 @@
 			children = (
 				8210255128FAE20A00092E4E /* ForgetPswScene1-module */,
 				8210255328FAE23000092E4E /* ForgetPswScene2-module */,
-				8210255528FAE24300092E4E /* ForgetPswScene3-module */,
-				8210255E28FAF84700092E4E /* ForgetPswScene4-module */,
-				8210255728FAE25700092E4E /* ForgetPswSceneComp-module */,
 			);
 			path = "forgetPSW-modules";
 			sourceTree = "<group>";
@@ -920,7 +799,6 @@
 			files = (
 				8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */,
 				8278EC5C28F99A36001943BD /* RegisterPageInteractor.swift in Sources */,
-				82B9EA5C28FADFA600684C63 /* ForgetPswCompletedVC.swift in Sources */,
 				8278EC6C28F99AF2001943BD /* DetailPageProtocols.swift in Sources */,
 				8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */,
 				8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */,
@@ -937,13 +815,11 @@
 				8278EC6228F99A85001943BD /* HomePageProtocols.swift in Sources */,
 				8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */,
 				82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */,
-				82B9EA5A28FADF8B00684C63 /* ForgetPswVC3.swift in Sources */,
 				82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */,
 				82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */,
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
-				8210256128FAF86E00092E4E /* ForgetPsw4VC.swift in Sources */,
 				8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
 				82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */,
