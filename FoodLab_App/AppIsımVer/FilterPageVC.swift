@@ -16,7 +16,7 @@ class FilterPageVC: UIViewController {
     var pickerView =  UIPickerView()
     var siralama = ["Fiyata göre küçükten büyüğe sırala","Fiyata göre büyükten küçüğe sırala"]
     
-    
+    var delegate : FilterPageToHomePage?
     
     
     
@@ -39,10 +39,15 @@ class FilterPageVC: UIViewController {
         sliderLabel.text = String(Int(sender.value))
     }
     @IBAction func buttonFilter(_ sender: Any) {
+        if let siralamaText = TFSiralama.text , let filterText = sliderLabel.text{
+            print("x")
+            delegate?.SendSiralamaAndFilterToHomePage(filter: Int(filterText)!, siralama: siralamaText)
+        }
+        
     }
     
     @IBAction func buttonClear(_ sender: Any) {
-        TFSiralama.text = ""
+        TFSiralama.text = " "
         sliderLabel.text = "100"
         slider.setValue(100, animated: true)
     }

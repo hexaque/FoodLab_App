@@ -13,21 +13,73 @@ class HomePageVC: UIViewController {
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
+    var tempAllFoods = [Foods]()
+    var priceFilter = 30
+    var siralama = ""
     override func viewDidLoad() {
         foodsCollectionView.delegate = self
         foodsCollectionView.dataSource = self
         HomePageRouter.createModule(ref: self)
         homePagePresenterObject?.getAllFoods()
         cellDesign()
+        
         super.viewDidLoad()
         
         self.navigationItem.setHidesBackButton(true, animated: true)
         
     }
     
+    
+    func priceFilterFunc(price:Int ,sirala:String){
+        print("b")
+        let f1 = allFoods.filter({Int($0.yemek_fiyat!)!<price})
+        allFoods = f1
+        if sirala == "Fiyata göre küçükten büyüğe sırala"{
+            self.allFoods.sort(by: { Int($0.yemek_fiyat!)! < Int($1.yemek_fiyat!)! })
+            DispatchQueue.main.async {
+                
+                self.foodsCollectionView.reloadData()
+            }
+            
+        }else if sirala == "Fiyata göre büyükten küçüğe sırala"{
+            
+            self.allFoods.sort(by: { Int($0.yemek_fiyat!)! > Int($1.yemek_fiyat!)! })
+            DispatchQueue.main.async {
+                self.foodsCollectionView.reloadData()
+            }
+        }
+        else{ DispatchQueue.main.async {
+            self.foodsCollectionView.reloadData()
+        }
+            
+        }
+       
+            
+    }
+    
 
+    @IBAction func buttonFilterPage(_ sender: Any) {
+        performSegue(withIdentifier: "toFilterPage", sender: nil)
+    }
    
-   
+    
+    @IBAction func buttonClearFilter(_ sender: Any) {
+        priceFilter = 100
+        siralama = " "
+        homePagePresenterObject?.getAllFoods()
+    }
+    
+    
+}
+
+extension HomePageVC:FilterPageToHomePage{
+    func SendSiralamaAndFilterToHomePage(filter: Int, siralama: String) {
+        self.priceFilter = filter
+        self.siralama = siralama
+        print("homepagefunc")
+        homePagePresenterObject?.getAllFoods()
+    }
+    
     
 }
 
@@ -36,7 +88,9 @@ extension HomePageVC : PresenterToViewHomePageProtocol{
     func sendDataToView(foods: [Foods]) {
         
         self.allFoods = foods
+        self.tempAllFoods = foods
         
+        priceFilterFunc(price:priceFilter ,sirala:siralama)
         DispatchQueue.main.async {
             self.foodsCollectionView.reloadData()
         }
@@ -88,6 +142,10 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
                 let gidilecekVC = segue.destination as! DetailPageVC
                 gidilecekVC.food = food
             }
+        }
+        if segue.identifier == "toFilterPage" {
+            let gidilecekVC = segue.destination as! FilterPageVC
+            gidilecekVC.delegate=self
         }
     }
 

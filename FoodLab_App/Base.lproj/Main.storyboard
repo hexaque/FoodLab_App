@@ -1261,7 +1261,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Geçici filtre"/>
                                 <connections>
-                                    <segue destination="ARy-ZP-shR" kind="presentation" modalTransitionStyle="flipHorizontal" id="aUC-4W-LCm"/>
+                                    <action selector="buttonFilterPage:" destination="cTr-cH-HfB" eventType="touchUpInside" id="WTd-kZ-F3Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-1V-rlg">
@@ -1269,6 +1269,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="temizle filtre"/>
+                                <connections>
+                                    <action selector="buttonClearFilter:" destination="cTr-cH-HfB" eventType="touchUpInside" id="Fa0-eQ-nyG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
@@ -1296,6 +1299,7 @@
                     <connections>
                         <outlet property="foodsCollectionView" destination="ot3-4f-ewd" id="T8v-eF-te8"/>
                         <segue destination="Hqy-gi-BzB" kind="show" identifier="toDetail" id="bWY-Vs-EG8"/>
+                        <segue destination="ARy-ZP-shR" kind="presentation" identifier="toFilterPage" id="Uw3-Xm-k2S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4P-zO-1vH" sceneMemberID="firstResponder"/>
