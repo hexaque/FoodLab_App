@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 class CartPageVC: UIViewController {
     
+    @IBOutlet weak var totalPrice2: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalPrice: UILabel!
     var cartPagePresenterObject : ViewToPresenterCartPageProtocol?
@@ -31,6 +32,28 @@ class CartPageVC: UIViewController {
 
   
 
+    @IBAction func buttonDeleteAll(_ sender: Any) {
+        for i in allFoodsCart{
+            cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
+        }
+        
+    }
+    
+    
+    
+    
+    
+    @IBAction func buttonOnay(_ sender: Any) {
+        print("seepet onaylandı Gif eklenecek.")
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 
 
@@ -40,7 +63,8 @@ class CartPageVC: UIViewController {
 extension CartPageVC : PresenterToViewCartPageProtocol{
     func sendDataToView(foodsCart: [FoodsCart], totalPrice: Int) {
         self.allFoodsCart = foodsCart
-        self.totalPrice.text = String(totalPrice)
+        self.totalPrice.text = "\(String(totalPrice))₺"
+        self.totalPrice2.text = "\(String(totalPrice))₺"
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
