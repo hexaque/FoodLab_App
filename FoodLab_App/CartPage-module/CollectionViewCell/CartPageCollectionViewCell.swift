@@ -12,16 +12,8 @@ class CartPageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var labelAdet: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
     @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var imageFood: UIImageView!
     
-    
-    
-    @IBAction func buttonPlus(_ sender: Any) {
-        
-    }
-    
-    @IBAction func buttonMinus(_ sender: Any) {
-        
-    }
    
     
     
