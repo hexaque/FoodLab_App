@@ -14,9 +14,11 @@ class HomePageVC: UIViewController {
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
     var tempAllFoods = [Foods]()
+    @IBOutlet weak var searchBar: UISearchBar!
     var priceFilter = 30
     var siralama = ""
     override func viewDidLoad() {
+        //searchBar.delegate = self
         foodsCollectionView.delegate = self
         foodsCollectionView.dataSource = self
         HomePageRouter.createModule(ref: self)
@@ -76,7 +78,7 @@ extension HomePageVC:FilterPageToHomePage{
     func SendSiralamaAndFilterToHomePage(filter: Int, siralama: String) {
         self.priceFilter = filter
         self.siralama = siralama
-        print("homepagefunc")
+        
         homePagePresenterObject?.getAllFoods()
     }
     
@@ -163,3 +165,21 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
          foodsCollectionView.collectionViewLayout = tasarim
     }
 }
+/*
+extension HomePageVC:UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+         
+
+         if searchText.isEmpty == false {
+             allFoods = allFoods.filter({ $0.yemek_adi!.contains(searchText) })
+             
+         }else{
+             homePagePresenterObject?.getAllFoods()
+             
+            
+         }
+        self.foodsCollectionView.reloadData()
+        
+        
+    }
+}*/
