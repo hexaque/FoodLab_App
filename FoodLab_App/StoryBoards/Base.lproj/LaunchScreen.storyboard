@@ -21,19 +21,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="motor.png" translatesAutoresizingMaskIntoConstraints="NO" id="JJ2-Kc-DYD">
-                                <rect key="frame" x="45" y="272" width="300" height="300"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="dz0-2b-ksN"/>
-                                    <constraint firstAttribute="width" constant="300" id="kDD-Za-eEi"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="JJ2-Kc-DYD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0qX-4F-FFF"/>
-                            <constraint firstItem="JJ2-Kc-DYD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="G4c-C0-Xw3"/>
                             <constraint firstItem="noo-K1-gVG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TUJ-cA-RzK"/>
                             <constraint firstItem="noo-K1-gVG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="gjH-28-GJs"/>
                         </constraints>
@@ -44,7 +35,4 @@
             <point key="canvasLocation" x="52.307692307692307" y="374.64454976303318"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="motor.png" width="2858" height="2739"/>
-    </resources>
 </document>

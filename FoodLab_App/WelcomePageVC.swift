@@ -14,7 +14,7 @@ class WelcomePageVC: UIViewController {
     @IBOutlet weak var label1: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
        
     }
     override func viewWillAppear(_ animated: Bool) {

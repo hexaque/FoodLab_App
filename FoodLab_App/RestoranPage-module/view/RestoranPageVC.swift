@@ -158,8 +158,8 @@ extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate
          tasarim.minimumLineSpacing = 10 // dikey
          
         
-        let width = collectionView.bounds.width-1
-         tasarim.itemSize = CGSize(width: width, height: 127 )
+        let width = collectionView.bounds.width-20
+         tasarim.itemSize = CGSize(width: width, height: 120 )
          collectionView.collectionViewLayout = tasarim
          
     }

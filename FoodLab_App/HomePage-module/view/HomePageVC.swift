@@ -140,7 +140,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
          tasarim.minimumLineSpacing = 15 // dikey
          
          
-        let hucreGenisligi = foodsCollectionView.bounds.width
+        let hucreGenisligi = foodsCollectionView.bounds.width-20
          tasarim.itemSize = CGSize(width: hucreGenisligi, height: 100)
         
          foodsCollectionView.collectionViewLayout = tasarim
