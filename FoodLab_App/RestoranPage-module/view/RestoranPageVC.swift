@@ -9,12 +9,15 @@ import UIKit
 
 class RestoranPageVC: UIViewController {
 
+    @IBOutlet weak var popDownButton: UIButton!
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var restArray : [Restaurant] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
+        
+        popdownButton()
         setRestArray()
         cellDesign()
         collectionView.dataSource = self
@@ -23,6 +26,31 @@ class RestoranPageVC: UIViewController {
       
         // Do any additional setup after loading the view.
     }
+    
+    func popdownButton(){
+        let optionClosure = {(action : UIAction) in
+            if action.title == "Puana göre küçükten büyüğe sırala"{
+                self.restArray.sort(by: { ($0.star!) < ($1.star!) })
+                self.collectionView.reloadData()
+            }else if action.title == "Puana göre büyükten küçüğe sırala"{
+
+                    self.restArray.sort(by: { ($0.star!) > ($1.star!) })
+                self.collectionView.reloadData()
+                }
+            else{
+                self.restArray.shuffle()
+                self.collectionView.reloadData()
+            }
+            }
+        
+        popDownButton.menu = UIMenu(children:[
+            UIAction(title: "Sırala:", state:.on, handler: optionClosure),
+            UIAction(title: "Puana göre küçükten büyüğe sırala",  handler: optionClosure),
+            UIAction(title: "Puana göre büyükten küçüğe sırala", handler: optionClosure)])
+        popDownButton.showsMenuAsPrimaryAction = true
+        popDownButton.changesSelectionAsPrimaryAction = true
+    }
+    
     
     
     

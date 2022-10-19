@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -2139,12 +2140,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-PU-yq4">
+                                <rect key="frame" x="332" y="126" width="50" height="64"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <menu key="menu" id="23A-3X-8AF">
+                                    <children>
+                                        <command title="Item 1" id="UVg-Zh-yBz"/>
+                                        <command title="Item 2" id="Rj4-OA-oYe"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" image="filterIcon">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Elf-Jl-ufF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="wAv-oO-Ovm" secondAttribute="trailing" constant="114" id="3QT-Bw-Ser"/>
                             <constraint firstItem="mqG-i6-koE" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" id="K1s-8Z-N8u"/>
+                            <constraint firstItem="kfe-PU-yq4" firstAttribute="leading" secondItem="wAv-oO-Ovm" secondAttribute="trailing" constant="32" id="NwC-3H-cjD"/>
                             <constraint firstItem="mqG-i6-koE" firstAttribute="top" secondItem="yuL-2a-jNR" secondAttribute="bottom" constant="20" id="SIP-1v-DjD"/>
                             <constraint firstAttribute="bottom" secondItem="Jcq-26-IYk" secondAttribute="bottom" id="Xr9-yN-rcb"/>
                             <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="yuL-2a-jNR" secondAttribute="trailing" constant="20" id="cAs-Bd-flt"/>
@@ -2153,6 +2170,8 @@
                             <constraint firstItem="Jcq-26-IYk" firstAttribute="top" secondItem="Xk3-Gr-e1V" secondAttribute="top" id="hvr-Dx-hOO"/>
                             <constraint firstItem="wAv-oO-Ovm" firstAttribute="top" secondItem="Elf-Jl-ufF" secondAttribute="top" constant="30" id="qcF-nK-3YA"/>
                             <constraint firstItem="Elf-Jl-ufF" firstAttribute="bottom" secondItem="mqG-i6-koE" secondAttribute="bottom" id="rl6-LP-Xgm"/>
+                            <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="kfe-PU-yq4" secondAttribute="trailing" constant="32" id="tcK-RS-Hwk"/>
+                            <constraint firstItem="kfe-PU-yq4" firstAttribute="top" secondItem="Elf-Jl-ufF" secondAttribute="top" constant="34" id="uHb-Fn-2ZW"/>
                             <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="mqG-i6-koE" secondAttribute="trailing" id="uhW-3j-f3D"/>
                             <constraint firstItem="yuL-2a-jNR" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" constant="20" id="v0K-TK-PvR"/>
                             <constraint firstItem="yuL-2a-jNR" firstAttribute="top" secondItem="wAv-oO-Ovm" secondAttribute="bottom" constant="20" id="wWL-Kc-MC5"/>
@@ -2165,6 +2184,7 @@
                     <connections>
                         <outlet property="categorySegment" destination="yuL-2a-jNR" id="QlD-ZH-62z"/>
                         <outlet property="collectionView" destination="mqG-i6-koE" id="MZk-mM-o9v"/>
+                        <outlet property="popDownButton" destination="kfe-PU-yq4" id="ZDp-8P-qk8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mug-Qy-GXM" sceneMemberID="firstResponder"/>
@@ -2206,6 +2226,7 @@
         <image name="completedIcon" width="980" height="954"/>
         <image name="empty" width="64" height="64"/>
         <image name="facebookIcon" width="32" height="32"/>
+        <image name="filterIcon" width="64" height="64"/>
         <image name="fullAppBG" width="1024" height="1440"/>
         <image name="googleIcon" width="29" height="29"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
