@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82019416290022A600ABEA12 /* RestoranPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82019415290022A600ABEA12 /* RestoranPageVC.swift */; };
+		820194192900372000ABEA12 /* RestoranCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820194182900372000ABEA12 /* RestoranCollectionViewCell.swift */; };
+		8201941B290037FD00ABEA12 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201941A290037FD00ABEA12 /* Restaurant.swift */; };
 		820DB25828FF1EF100229C1A /* CartPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820DB25728FF1EF100229C1A /* CartPageTableViewCell.swift */; };
 		8215476528FD6100001F50D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8215476428FD6100001F50D6 /* GoogleService-Info.plist */; };
 		8215476828FD61D1001F50D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476728FD61D1001F50D6 /* FirebaseAuth */; };
@@ -69,6 +72,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82019415290022A600ABEA12 /* RestoranPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPageVC.swift; sourceTree = "<group>"; };
+		820194182900372000ABEA12 /* RestoranCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranCollectionViewCell.swift; sourceTree = "<group>"; };
+		8201941A290037FD00ABEA12 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		820DB25728FF1EF100229C1A /* CartPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageTableViewCell.swift; sourceTree = "<group>"; };
 		8215476428FD6100001F50D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -143,6 +149,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		820194132900228000ABEA12 /* RestoranPage-module */ = {
+			isa = PBXGroup;
+			children = (
+				82019417290036F200ABEA12 /* CollectionViewCell */,
+				820194142900228D00ABEA12 /* view */,
+			);
+			path = "RestoranPage-module";
+			sourceTree = "<group>";
+		};
+		820194142900228D00ABEA12 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82019415290022A600ABEA12 /* RestoranPageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		82019417290036F200ABEA12 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				820194182900372000ABEA12 /* RestoranCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		820DB25628FF1ED300229C1A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +382,7 @@
 		8278EC0E28F988BD001943BD /* FoodLab_App */ = {
 			isa = PBXGroup;
 			children = (
+				820194132900228000ABEA12 /* RestoranPage-module */,
 				8278EC8928F9AC42001943BD /* OnboardingPage */,
 				8278EC7F28F99C01001943BD /* entity */,
 				8278EC2E28F9959D001943BD /* LoginPage-module */,
@@ -662,6 +694,7 @@
 				8278EC8228F99D42001943BD /* FoodsResponse.swift */,
 				8278EC8428F99D75001943BD /* FoodsCart.swift */,
 				8278EC8628F99D86001943BD /* FoodsCartResponse.swift */,
+				8201941A290037FD00ABEA12 /* Restaurant.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -835,6 +868,7 @@
 				82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */,
 				82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */,
 				82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */,
+				82019416290022A600ABEA12 /* RestoranPageVC.swift in Sources */,
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
@@ -845,8 +879,10 @@
 				8278EC8128F99D32001943BD /* Foods.swift in Sources */,
 				8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */,
 				8278EC8528F99D75001943BD /* FoodsCart.swift in Sources */,
+				820194192900372000ABEA12 /* RestoranCollectionViewCell.swift in Sources */,
 				8278EC6828F99AB6001943BD /* HomePagePresenter.swift in Sources */,
 				8278EC6A28F99ACE001943BD /* HomePageVC.swift in Sources */,
+				8201941B290037FD00ABEA12 /* Restaurant.swift in Sources */,
 				8278EC7228F99B1D001943BD /* DetailPagePresenter.swift in Sources */,
 				82B241BB28FEDA67009AD2F4 /* protocols.swift in Sources */,
 				82B241B928FECA8A009AD2F4 /* FilterPageVC.swift in Sources */,
