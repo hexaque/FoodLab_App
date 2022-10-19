@@ -147,6 +147,9 @@ extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate
         return cell
         
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "restoranToHomePage", sender: nil)
+    }
     func cellDesign(){
         let tasarim = UICollectionViewFlowLayout()
          //tasarim.scrollDirection = .horizontal

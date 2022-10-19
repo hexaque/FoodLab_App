@@ -1132,14 +1132,14 @@
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLh-y3-eKU">
-                                <rect key="frame" x="0.0" y="188" width="414" height="20.5"/>
+                                <rect key="frame" x="0.0" y="232" width="414" height="20.5"/>
                                 <color key="backgroundColor" name="textColorLightBlack"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-4f-ewd">
-                                <rect key="frame" x="0.0" y="208.5" width="414" height="653.5"/>
+                                <rect key="frame" x="0.0" y="252.5" width="414" height="609.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dLY-xQ-leb">
                                     <size key="itemSize" width="390" height="103"/>
@@ -1208,7 +1208,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuA-NQ-z9o">
-                                <rect key="frame" x="30" y="87.5" width="354" height="56"/>
+                                <rect key="frame" x="30" y="131.5" width="354" height="56"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="A5s-wB-YAj">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
@@ -1237,13 +1237,13 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürünler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-C9-qZB">
-                                <rect key="frame" x="159.5" y="48" width="95.5" height="36"/>
+                                <rect key="frame" x="159.5" y="92" width="95.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-1V-rlg">
-                                <rect key="frame" x="148.5" y="153.5" width="117.5" height="34.5"/>
+                                <rect key="frame" x="148.5" y="197.5" width="117.5" height="34.5"/>
                                 <color key="backgroundColor" name="boxBG"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="temizle filtre"/>
@@ -1794,16 +1794,16 @@
             <objects>
                 <viewController id="Hqy-gi-BzB" customClass="DetailPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEO-DJ-5uZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="Evp-E0-Mma" userLabel="backGround">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" name="backgroundMask"/>
                                 <color key="tintColor" name="mainColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6t-97-ATF">
-                                <rect key="frame" x="316" y="48" width="88" height="78"/>
+                                <rect key="frame" x="316" y="92" width="88" height="78"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="empty" subtitle="">
@@ -1814,10 +1814,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-Jq-Pwx">
-                                <rect key="frame" x="32" y="118" width="350" height="223"/>
+                                <rect key="frame" x="32" y="162" width="350" height="237"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbu-S4-hUg">
-                                <rect key="frame" x="0.0" y="351" width="414" height="487"/>
+                                <rect key="frame" x="0.0" y="409" width="414" height="487"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jo-us-nKm">
                                         <rect key="frame" x="100" y="72" width="214" height="42"/>
@@ -2178,6 +2178,7 @@
                         <outlet property="categorySegment" destination="yuL-2a-jNR" id="QlD-ZH-62z"/>
                         <outlet property="collectionView" destination="mqG-i6-koE" id="MZk-mM-o9v"/>
                         <outlet property="siralamaButton" destination="kfe-PU-yq4" id="qiJ-m5-LQG"/>
+                        <segue destination="cTr-cH-HfB" kind="show" identifier="restoranToHomePage" id="ii6-f5-Lr0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mug-Qy-GXM" sceneMemberID="firstResponder"/>
