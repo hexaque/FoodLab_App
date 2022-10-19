@@ -24,7 +24,10 @@ class WelcomePageVC: UIViewController {
 
     @IBAction func buttonRegisterOrCont(_ sender: Any) {
         if isLogin{
-            performSegue(withIdentifier: "toMainPage", sender: nil)
+            let controller = storyboard?.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .coverVertical
+            present(controller, animated: true, completion: nil)
         }
         else{
             performSegue(withIdentifier: "toRegisterPage", sender: nil)

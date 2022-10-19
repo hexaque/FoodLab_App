@@ -90,7 +90,10 @@ extension LoginPageVC : PresenterToViewLoginPageProtocol{
         if isUser{
             self.view.isUserInteractionEnabled = true
             indicator.stopAnimating()
-            self.performSegue(withIdentifier: "toMainPage", sender: nil)
+            let controller = storyboard?.instantiateViewController(withIdentifier: "mainPage") as! UITabBarController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .coverVertical
+            present(controller, animated: true, completion: nil)
         }else{
             self.view.isUserInteractionEnabled = true
             indicator.stopAnimating()
