@@ -91,8 +91,4 @@ extension OnboardingPageVC : UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     
-    
-
-    
-    
 }

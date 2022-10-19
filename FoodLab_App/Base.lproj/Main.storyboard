@@ -7,7 +7,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1296,7 +1295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4P-zO-1vH" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7568.115942028986" y="1234.8214285714284"/>
+            <point key="canvasLocation" x="6178" y="1235"/>
         </scene>
         <!--Filter PageVC-->
         <scene sceneID="sNy-CZ-CBl">
@@ -2140,15 +2139,9 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-PU-yq4">
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-PU-yq4" userLabel="button">
                                 <rect key="frame" x="332" y="126" width="50" height="64"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <menu key="menu" id="23A-3X-8AF">
-                                    <children>
-                                        <command title="Item 1" id="UVg-Zh-yBz"/>
-                                        <command title="Item 2" id="Rj4-OA-oYe"/>
-                                    </children>
-                                </menu>
                                 <state key="normal" image="filterIcon">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
@@ -2184,7 +2177,7 @@
                     <connections>
                         <outlet property="categorySegment" destination="yuL-2a-jNR" id="QlD-ZH-62z"/>
                         <outlet property="collectionView" destination="mqG-i6-koE" id="MZk-mM-o9v"/>
-                        <outlet property="popDownButton" destination="kfe-PU-yq4" id="ZDp-8P-qk8"/>
+                        <outlet property="siralamaButton" destination="kfe-PU-yq4" id="qiJ-m5-LQG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mug-Qy-GXM" sceneMemberID="firstResponder"/>
