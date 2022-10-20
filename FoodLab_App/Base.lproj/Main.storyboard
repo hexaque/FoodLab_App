@@ -1414,8 +1414,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="foA-z0-afI" kind="relationship" relationship="viewControllers" id="2W5-mb-zdi"/>
-                        <segue destination="kfv-H7-4nZ" kind="relationship" relationship="viewControllers" id="ndc-DB-NKQ"/>
                         <segue destination="tWn-iF-tPy" kind="relationship" relationship="viewControllers" id="4W9-JM-hES"/>
+                        <segue destination="kfv-H7-4nZ" kind="relationship" relationship="viewControllers" id="Tfq-nt-bC6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59U-Ek-cAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1465,26 +1465,51 @@
                                             <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-0n-2yw">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-0n-2yw">
                                                     <rect key="frame" x="10" y="5" width="374" height="90"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puf-2M-UVr">
-                                                            <rect key="frame" x="0.0" y="0.0" width="93.5" height="90"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="92" height="90"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Tavuk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjS-PG-ZG9">
-                                                            <rect key="frame" x="93.5" y="0.0" width="93.5" height="90"/>
+                                                            <rect key="frame" x="94" y="24.5" width="92" height="41"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Adet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-yu-Efe">
-                                                            <rect key="frame" x="187" y="0.0" width="93.5" height="90"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900₺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-YN-IVd">
-                                                            <rect key="frame" x="280.5" y="0.0" width="93.5" height="90"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wzs-Aw-bH7">
+                                                            <rect key="frame" x="188" y="28" width="92" height="34"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2j-sp-zwP">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="28.5" height="34"/>
+                                                                    <color key="backgroundColor" name="BGImageColor"/>
+                                                                    <color key="tintColor" name="textColorLightWhite"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="buttonMinus:" destination="Hqy-gi-BzB" eventType="touchUpInside" id="nLt-gR-qVI"/>
+                                                                    </connections>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-yu-Efe">
+                                                                    <rect key="frame" x="31.5" y="0.0" width="29" height="34"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzC-eL-VWm">
+                                                                    <rect key="frame" x="63.5" y="0.0" width="28.5" height="34"/>
+                                                                    <color key="backgroundColor" name="BGImageColor"/>
+                                                                    <color key="tintColor" name="textColorLightWhite"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="buttonPlus:" destination="Hqy-gi-BzB" eventType="touchUpInside" id="Zhm-xw-aZA"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900₺" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-YN-IVd">
+                                                            <rect key="frame" x="282" y="35" width="92" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -2178,11 +2203,11 @@
             </objects>
             <point key="canvasLocation" x="3161" y="2000"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="hoK-Th-541">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWn-iF-tPy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="foodIcon" id="Kid-wv-Xbg"/>
+                    <tabBarItem key="tabBarItem" title="" image="foodIcon" id="Kid-wv-Xbg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rjK-Sb-fWv">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>

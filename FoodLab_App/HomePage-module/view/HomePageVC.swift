@@ -157,18 +157,11 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource{
 extension HomePageVC : DetailPageToHomePage{
     func sendBadgeCountToHomePage(badgeCount: Int) {
         self.badgeForCart = badgeCount
+        
         if let tabItems = tabBarController?.tabBar.items{
-            print("******************")
-            let cartItem = tabItems[0]
             
-            if let temp = cartItem.badgeValue{
-                
-                if let currentBadgeValue = Int(temp){
-                    let totalBadgeValue = badgeForCart + currentBadgeValue
-                    cartItem.badgeValue = String(totalBadgeValue)
-                }
-                    
-            }else{
+            let cartItem = tabItems[0]
+            if badgeForCart > 0{
                 cartItem.badgeValue = String(badgeForCart)
             }
             

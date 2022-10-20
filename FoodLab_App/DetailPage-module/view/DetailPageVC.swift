@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAuth
 class DetailPageVC: UIViewController {
     
     
@@ -23,15 +24,17 @@ class DetailPageVC: UIViewController {
     
     @IBOutlet weak var labelTotalPrice: UILabel!
     
-    
+    var cartFoods: [FoodsCart] = []
     var food : Foods?
     var delegate : DetailPageToHomePage?
     var detailPagePresenterObject : ViewToPresenterDetailPageProtocol?
     let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
     var fav = false
     var badgeForCart = 0
+    var userEmail : String?
     override func viewDidLoad() {
-        
+        let userInfo = Auth.auth().currentUser
+         userEmail = userInfo?.email
         DetailPageRouter.createModule(ref: self)
         if let f = food{
             if let url = URL(string: "\(url)\(f.yemek_resim_adi!)"){
@@ -50,20 +53,57 @@ class DetailPageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        delegate?.sendBadgeCountToHomePage(badgeCount: badgeForCart)
-        badgeForCart = 0
+    override func viewWillAppear(_ animated: Bool) {
+        detailPagePresenterObject?.getCartInfo()
+        
+         
     }
    
     
     @IBAction func buttonBack(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBAction func buttonAddCart(_ sender: Any) {
-        badgeForCart += 1
-        detailPagePresenterObject?.addToCart(food: food!, adet: labelNumber.text!)
+       
+        let alertContreller = UIAlertController(title: "Başarılı", message: "Sepete Eklendi", preferredStyle: .alert)
+        
+        self.present(alertContreller, animated: true)
+        let tamamAction = UIAlertAction(title: "Tamam", style: .cancel){
+            action in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alertContreller.addAction(tamamAction)
+        
+        var toplamAdetString = labelNumber.text!
+        
+        if let existCart = cartFoods.first(where: {$0.yemek_adi! == food?.yemek_adi!}){
+            self.detailPagePresenterObject?.deleteFromCart(sepet_yemek_id: existCart.sepet_yemek_id!, kullanici_adi: userEmail!)
+           
+            let toplamAdet = Int(existCart.yemek_siparis_adet!)! + Int(labelNumber.text!)!
+            toplamAdetString = String(toplamAdet)
+            badgeForCart = cartFoods.count
+        }else{
+            badgeForCart = cartFoods.count+1
+            
+        }
+        
+        delegate?.sendBadgeCountToHomePage(badgeCount: badgeForCart)
+        detailPagePresenterObject?.addToCart(food: food!, adet: toplamAdetString)
+
        
     }
+    
+
+    
     
     @IBAction func buttonPlus(_ sender: Any) {
         if let a = labelNumber.text{
@@ -112,6 +152,10 @@ class DetailPageVC: UIViewController {
 }
 
 extension DetailPageVC :PresenterToViewDetailPageProtocol {
+    func cartInfoToView(cartFood: [FoodsCart]) {
+        self.cartFoods = cartFood
+    }
+    
     func adetDataToView(number: Int) {
         labelNumber.text = String(number)
     }

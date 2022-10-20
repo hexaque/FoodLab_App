@@ -61,8 +61,8 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
             AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response { response in
                 if let data = response.data {
                     do{
-                       // let answer = try JSONSerialization.jsonObject(with: data)
-                        
+                       let answer = try JSONSerialization.jsonObject(with: data)
+                        print(answer)
                         self.getCartFoodI()
                     }catch{
                         print(error.localizedDescription)
