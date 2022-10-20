@@ -1131,15 +1131,8 @@
                                 <color key="backgroundColor" name="backgroundMask"/>
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLh-y3-eKU">
-                                <rect key="frame" x="0.0" y="232" width="414" height="20.5"/>
-                                <color key="backgroundColor" name="textColorLightBlack"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ot3-4f-ewd">
-                                <rect key="frame" x="0.0" y="252.5" width="414" height="560.5"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="485"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dLY-xQ-leb">
                                     <size key="itemSize" width="390" height="103"/>
@@ -1207,80 +1200,62 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iuA-NQ-z9o">
-                                <rect key="frame" x="30" y="131.5" width="354" height="56"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="A5s-wB-YAj">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="cTr-cH-HfB" id="6uc-wT-PAb"/>
-                                        </connections>
-                                    </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fji-PC-rl0">
-                                        <rect key="frame" x="150" y="0.0" width="204" height="56"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Geçici filtre"/>
-                                        <connections>
-                                            <action selector="buttonFilterPage:" destination="cTr-cH-HfB" eventType="touchUpInside" id="WTd-kZ-F3Q"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" name="boxBG"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.25"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ürünler" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdO-C9-qZB">
-                                <rect key="frame" x="159.5" y="92" width="95.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7o-1V-rlg">
-                                <rect key="frame" x="148.5" y="197.5" width="117.5" height="34.5"/>
-                                <color key="backgroundColor" name="boxBG"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="temizle filtre"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starbucks" translatesAutoresizingMaskIntoConstraints="NO" id="Xls-au-NOx">
+                                <rect key="frame" x="132" y="107" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="hQ4-0T-do7"/>
+                                    <constraint firstAttribute="height" constant="150" id="jJ6-pe-cAj"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="A5s-wB-YAj">
+                                <rect key="frame" x="0.0" y="272" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="buttonClearFilter:" destination="cTr-cH-HfB" eventType="touchUpInside" id="Fa0-eQ-nyG"/>
+                                    <outlet property="delegate" destination="cTr-cH-HfB" id="6uc-wT-PAb"/>
+                                </connections>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ji2-z5-efW">
+                                <rect key="frame" x="306" y="179" width="88" height="78"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="filterIcon"/>
+                                <connections>
+                                    <action selector="buttonFilterPage:" destination="cTr-cH-HfB" eventType="touchUpInside" id="aL5-gy-SaP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-uH-TOM">
+                                <rect key="frame" x="20" y="202.5" width="86" height="54.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Filtreleri temizle"/>
+                                <connections>
+                                    <action selector="buttonClearFilter:" destination="cTr-cH-HfB" eventType="touchUpInside" id="otd-N6-cmg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V15-qK-WcR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JLh-y3-eKU" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="2ca-of-Tcx"/>
-                            <constraint firstItem="ot3-4f-ewd" firstAttribute="top" secondItem="JLh-y3-eKU" secondAttribute="bottom" id="5IG-BC-iRI"/>
-                            <constraint firstItem="iuA-NQ-z9o" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" constant="30" id="76I-aA-QeU"/>
-                            <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="JLh-y3-eKU" secondAttribute="trailing" id="AIG-JU-Gt9"/>
+                            <constraint firstItem="Xls-au-NOx" firstAttribute="leading" secondItem="hQL-uH-TOM" secondAttribute="trailing" constant="26" id="A5l-Or-XWo"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="CB4-iK-Unw"/>
+                            <constraint firstItem="Xls-au-NOx" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" constant="15" id="CqA-g4-6re"/>
                             <constraint firstAttribute="bottom" secondItem="wPL-sb-3kA" secondAttribute="bottom" id="DTb-Hu-VL0"/>
-                            <constraint firstItem="PdO-C9-qZB" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" id="NPr-h7-URR"/>
-                            <constraint firstItem="g7o-1V-rlg" firstAttribute="top" secondItem="iuA-NQ-z9o" secondAttribute="bottom" constant="10" id="Nvh-H5-wK5"/>
-                            <constraint firstItem="V15-qK-WcR" firstAttribute="bottom" secondItem="ot3-4f-ewd" secondAttribute="bottom" id="QtQ-WK-N9z"/>
-                            <constraint firstItem="ot3-4f-ewd" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="R7o-m3-ocg"/>
-                            <constraint firstItem="PdO-C9-qZB" firstAttribute="centerX" secondItem="ogq-uM-ek4" secondAttribute="centerX" id="UPK-gR-zpQ"/>
+                            <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="Ji2-z5-efW" secondAttribute="trailing" constant="20" id="Eic-KS-0DK"/>
+                            <constraint firstItem="Ji2-z5-efW" firstAttribute="leading" secondItem="Xls-au-NOx" secondAttribute="trailing" constant="24" id="ILr-RV-5KC"/>
+                            <constraint firstItem="ot3-4f-ewd" firstAttribute="top" secondItem="A5s-wB-YAj" secondAttribute="bottom" id="JCy-It-Uhb"/>
+                            <constraint firstItem="hQL-uH-TOM" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" constant="20" id="RqB-Lx-gbP"/>
+                            <constraint firstItem="A5s-wB-YAj" firstAttribute="top" secondItem="Ji2-z5-efW" secondAttribute="bottom" constant="15" id="VFw-jn-CKY"/>
+                            <constraint firstItem="A5s-wB-YAj" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="Z7r-N1-3sO"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="top" secondItem="ogq-uM-ek4" secondAttribute="top" id="aJv-0c-1Sh"/>
-                            <constraint firstItem="JLh-y3-eKU" firstAttribute="top" secondItem="g7o-1V-rlg" secondAttribute="bottom" id="bIO-CL-Tpx"/>
-                            <constraint firstItem="V15-qK-WcR" firstAttribute="trailing" secondItem="iuA-NQ-z9o" secondAttribute="trailing" constant="30" id="ekT-gP-Lba"/>
-                            <constraint firstItem="JLh-y3-eKU" firstAttribute="top" secondItem="V15-qK-WcR" secondAttribute="top" constant="140" id="gBe-fI-9cL"/>
+                            <constraint firstItem="ot3-4f-ewd" firstAttribute="bottom" secondItem="V15-qK-WcR" secondAttribute="bottom" id="cNA-Eh-gXV"/>
+                            <constraint firstItem="A5s-wB-YAj" firstAttribute="top" secondItem="Xls-au-NOx" secondAttribute="bottom" constant="15" id="cu4-Nu-zQ7"/>
+                            <constraint firstItem="A5s-wB-YAj" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="hdy-TV-fda"/>
+                            <constraint firstItem="A5s-wB-YAj" firstAttribute="top" secondItem="hQL-uH-TOM" secondAttribute="bottom" constant="15" id="jT2-Hr-Z1w"/>
+                            <constraint firstItem="ot3-4f-ewd" firstAttribute="top" secondItem="A5s-wB-YAj" secondAttribute="bottom" id="mfe-lr-xIu"/>
+                            <constraint firstItem="Xls-au-NOx" firstAttribute="centerX" secondItem="ogq-uM-ek4" secondAttribute="centerX" id="mpf-D5-16R"/>
                             <constraint firstItem="wPL-sb-3kA" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="mxV-uC-Qf4"/>
-                            <constraint firstItem="ot3-4f-ewd" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="tgH-cx-4EV"/>
-                            <constraint firstItem="g7o-1V-rlg" firstAttribute="centerX" secondItem="ogq-uM-ek4" secondAttribute="centerX" id="wlO-er-mam"/>
+                            <constraint firstItem="ot3-4f-ewd" firstAttribute="leading" secondItem="V15-qK-WcR" secondAttribute="leading" id="pFr-tY-2MI"/>
+                            <constraint firstItem="ot3-4f-ewd" firstAttribute="trailing" secondItem="V15-qK-WcR" secondAttribute="trailing" id="xLN-1f-a6D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kJ2-2B-boB">
@@ -1288,6 +1263,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="foodsCollectionView" destination="ot3-4f-ewd" id="T8v-eF-te8"/>
+                        <outlet property="imageRestaurant" destination="Xls-au-NOx" id="KAb-ez-hWl"/>
                         <outlet property="searchBar" destination="A5s-wB-YAj" id="FPS-H2-YMo"/>
                         <segue destination="Hqy-gi-BzB" kind="show" identifier="toDetail" id="bWY-Vs-EG8"/>
                         <segue destination="ARy-ZP-shR" kind="presentation" identifier="toFilterPage" id="Uw3-Xm-k2S"/>
@@ -2248,6 +2224,7 @@
         <image name="pizza" width="32" height="32"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="starbucks" width="1080" height="1080"/>
         <image name="trash.circle" catalog="system" width="128" height="123"/>
         <image name="userIcon" width="32" height="32"/>
         <namedColor name="BGImageColor">

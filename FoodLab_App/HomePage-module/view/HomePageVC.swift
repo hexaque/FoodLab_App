@@ -10,13 +10,16 @@ import Kingfisher
 import FirebaseAuth
 class HomePageVC: UIViewController {
     var badgeForCart = 0
+    @IBOutlet weak var imageRestaurant: UIImageView!
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
-    var tempAllFoods = [Foods]()
+    //var tempAllFoods = [Foods]()
     @IBOutlet weak var searchBar: UISearchBar!
     var priceFilter = 100
     var siralama = " "
+    var restoranName:String?
+    var restoranImage:String?
     override func viewDidLoad() {
         //searchBar.delegate = self
         foodsCollectionView.delegate = self
@@ -24,6 +27,9 @@ class HomePageVC: UIViewController {
         HomePageRouter.createModule(ref: self)
         homePagePresenterObject?.getAllFoods()
         cellDesign()
+ 
+        navigationItem.title = restoranName!
+        imageRestaurant.image = UIImage(named: restoranImage!)
         
         super.viewDidLoad()
         

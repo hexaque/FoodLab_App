@@ -148,11 +148,29 @@ extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "restoranToHomePage", sender: nil)
+        let restoran = restArray[indexPath.row]
+        performSegue(withIdentifier: "restoranToHomePage",sender: restoran )
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "restoranToHomePage" {
+            if let restoran = sender as? Restaurant {
+                let gidilecekVC = segue.destination as! HomePageVC
+                gidilecekVC.restoranName = restoran.name!
+                gidilecekVC.restoranImage = restoran.image!
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
     func cellDesign(){
         let tasarim = UICollectionViewFlowLayout()
-         //tasarim.scrollDirection = .horizontal
+         
          tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
          
          tasarim.minimumLineSpacing = 10 // dikey
