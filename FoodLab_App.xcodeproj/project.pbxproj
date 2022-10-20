@@ -57,6 +57,7 @@
 		8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */; };
 		8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8C28F9B095001943BD /* OnboardSlides.swift */; };
 		8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8E28F9B350001943BD /* OnboardingCell.swift */; };
+		829424CF2901F777005FE55A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 829424CE2901F777005FE55A /* FirebaseStorage */; };
 		82B241B328FEB74F009AD2F4 /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = 82B241AF28FEB74F009AD2F4 /* order.json */; };
 		82B241B528FEB74F009AD2F4 /* cook.json in Resources */ = {isa = PBXBuildFile; fileRef = 82B241B128FEB74F009AD2F4 /* cook.json */; };
 		82B241B728FEBF30009AD2F4 /* motor.json in Resources */ = {isa = PBXBuildFile; fileRef = 82B241B628FEBF30009AD2F4 /* motor.json */; };
@@ -145,6 +146,7 @@
 				82CA4FC928FB58E90009EA9D /* Kingfisher in Frameworks */,
 				8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */,
 				8215476828FD61D1001F50D6 /* FirebaseAuth in Frameworks */,
+				829424CF2901F777005FE55A /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +372,7 @@
 			children = (
 				8278EC0E28F988BD001943BD /* FoodLab_App */,
 				8278EC0D28F988BD001943BD /* Products */,
+				829424CD2901F776005FE55A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -712,6 +715,13 @@
 			path = OnboardingPage;
 			sourceTree = "<group>";
 		};
+		829424CD2901F776005FE55A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82B9EA5D28FADFF200684C63 /* forgetPSW-modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +793,7 @@
 				82CA4FCB28FB59040009EA9D /* Alamofire */,
 				8215476728FD61D1001F50D6 /* FirebaseAuth */,
 				8215476928FD61D1001F50D6 /* FirebaseDatabase */,
+				829424CE2901F777005FE55A /* FirebaseStorage */,
 			);
 			productName = FoodLab_App;
 			productReference = 8278EC0C28F988BD001943BD /* FoodLab_App.app */;
@@ -1170,6 +1181,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8252E58A28FA24E200BE2E8F /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		829424CE2901F777005FE55A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8215476628FD61D1001F50D6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 		82CA4FC828FB58E90009EA9D /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
