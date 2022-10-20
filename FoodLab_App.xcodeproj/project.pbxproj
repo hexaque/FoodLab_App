@@ -19,6 +19,7 @@
 		8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */; };
 		8252E58928FA23CB00BE2E8F /* fire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8252E58828FA23CB00BE2E8F /* fire.json */; };
 		8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8252E58B28FA24E200BE2E8F /* Lottie */; };
+		825917C22901958F00B22724 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825917C12901958F00B22724 /* Users.swift */; };
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		8252E58328FA1FE300BE2E8F /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
 		8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteVC.swift; sourceTree = "<group>"; };
 		8252E58828FA23CB00BE2E8F /* fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fire.json; sourceTree = "<group>"; };
+		825917C12901958F00B22724 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 				8278EC8428F99D75001943BD /* FoodsCart.swift */,
 				8278EC8628F99D86001943BD /* FoodsCartResponse.swift */,
 				8201941A290037FD00ABEA12 /* Restaurant.swift */,
+				825917C12901958F00B22724 /* Users.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -859,6 +862,7 @@
 				8252E58428FA1FE300BE2E8F /* Register2VC.swift in Sources */,
 				8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
+				825917C22901958F00B22724 /* Users.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
 				820DB25828FF1EF100229C1A /* CartPageTableViewCell.swift in Sources */,
 				8278EC7428F99B37001943BD /* DetailPageVC.swift in Sources */,

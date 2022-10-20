@@ -131,7 +131,7 @@ extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
    
         let totalFoodPrice = foodPrice * foodAdetInt
         cell.labelPrice.text = "\(totalFoodPrice)₺"
-            cell.labelAdet.text = "\(tempFood.yemek_siparis_adet!)"
+            cell.labelAdet.text = "\(tempFood.yemek_siparis_adet!) adet"
         }
         
         cell.selectionStyle = .none

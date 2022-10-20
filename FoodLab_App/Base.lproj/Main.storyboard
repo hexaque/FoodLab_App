@@ -748,6 +748,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="buttonNext:" destination="eYV-zD-Vgh" eventType="touchUpInside" id="azx-Zh-AFS"/>
                                     <segue destination="XFS-yJ-sYS" kind="show" id="tnc-MR-zEY"/>
                                 </connections>
                             </button>
@@ -790,6 +791,11 @@
                     <navigationItem key="navigationItem" id="D3O-Px-QPo">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="0mp-yH-0fs"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tfName" destination="PC2-n4-fJG" id="OhG-5B-99B"/>
+                        <outlet property="tfPhone" destination="g8K-wD-PI7" id="2tT-cr-HOu"/>
+                        <outlet property="tfSurname" destination="5Os-hg-YvF" id="zeh-dw-QaO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSD-O0-cIh" sceneMemberID="firstResponder"/>
             </objects>
@@ -1477,37 +1483,12 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="wzs-Aw-bH7">
-                                                            <rect key="frame" x="188" y="28" width="92" height="34"/>
-                                                            <subviews>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2j-sp-zwP">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="28.5" height="34"/>
-                                                                    <color key="backgroundColor" name="BGImageColor"/>
-                                                                    <color key="tintColor" name="textColorLightWhite"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" image="minus" catalog="system"/>
-                                                                    <connections>
-                                                                        <action selector="buttonMinus:" destination="Hqy-gi-BzB" eventType="touchUpInside" id="nLt-gR-qVI"/>
-                                                                    </connections>
-                                                                </button>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-yu-Efe">
-                                                                    <rect key="frame" x="31.5" y="0.0" width="29" height="34"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzC-eL-VWm">
-                                                                    <rect key="frame" x="63.5" y="0.0" width="28.5" height="34"/>
-                                                                    <color key="backgroundColor" name="BGImageColor"/>
-                                                                    <color key="tintColor" name="textColorLightWhite"/>
-                                                                    <state key="normal" title="Button"/>
-                                                                    <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                                                                    <connections>
-                                                                        <action selector="buttonPlus:" destination="Hqy-gi-BzB" eventType="touchUpInside" id="Zhm-xw-aZA"/>
-                                                                    </connections>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Adet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DIx-yu-Efe">
+                                                            <rect key="frame" x="188" y="35" width="92" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900₺" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2y-YN-IVd">
                                                             <rect key="frame" x="282" y="35" width="92" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1744,6 +1725,12 @@
                                 <color key="backgroundColor" name="backgroundMask"/>
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soyisim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uT7-Jk-Z8Z">
+                                <rect key="frame" x="140" y="308" width="134" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiX-kU-yop">
                                 <rect key="frame" x="10" y="703" width="394" height="60"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -1767,6 +1754,18 @@
                                     <action selector="buttonLogout:" destination="Lhp-iy-2ni" eventType="touchUpInside" id="5X4-Ft-O7o"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İsim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wik-KL-bqy">
+                                <rect key="frame" x="172.5" y="211" width="69.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9IK-Jc-VHX">
+                                <rect key="frame" x="145.5" y="424" width="123" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DKA-g1-wfg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1774,8 +1773,14 @@
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="RiX-kU-yop" secondAttribute="trailing" constant="10" id="6YR-I8-F3D"/>
                             <constraint firstItem="RiX-kU-yop" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" constant="10" id="Jiz-6f-hEt"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="bottom" secondItem="RiX-kU-yop" secondAttribute="bottom" constant="50" id="Udc-l2-xc9"/>
+                            <constraint firstItem="Wik-KL-bqy" firstAttribute="top" secondItem="DKA-g1-wfg" secondAttribute="top" constant="119" id="VhU-pf-cJ9"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="top" secondItem="gRm-Qi-CvP" secondAttribute="top" id="XE0-D3-H03"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="ZK1-aZ-e42"/>
+                            <constraint firstItem="uT7-Jk-Z8Z" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="aDf-2x-Qyn"/>
+                            <constraint firstItem="9IK-Jc-VHX" firstAttribute="top" secondItem="uT7-Jk-Z8Z" secondAttribute="bottom" constant="68" id="jGn-JX-B1Z"/>
+                            <constraint firstItem="Wik-KL-bqy" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="kFO-lB-sbD"/>
+                            <constraint firstItem="9IK-Jc-VHX" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="nUE-4v-u8R"/>
+                            <constraint firstItem="uT7-Jk-Z8Z" firstAttribute="top" secondItem="Wik-KL-bqy" secondAttribute="bottom" constant="49" id="p7f-Wh-ZG4"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="trailing" secondItem="DKA-g1-wfg" secondAttribute="trailing" id="qLT-rB-Uej"/>
                             <constraint firstAttribute="bottom" secondItem="074-fe-sJz" secondAttribute="bottom" id="udj-49-pSy"/>
                         </constraints>
@@ -1783,6 +1788,11 @@
                     <navigationItem key="navigationItem" id="NG0-rV-Dz4">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="0hk-3L-G9Y"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="labelName" destination="Wik-KL-bqy" id="zh7-fY-RuL"/>
+                        <outlet property="labelPhone" destination="9IK-Jc-VHX" id="h8U-i2-dWJ"/>
+                        <outlet property="labelSurname" destination="uT7-Jk-Z8Z" id="Nee-7t-nmk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhv-26-dmJ" sceneMemberID="firstResponder"/>
             </objects>

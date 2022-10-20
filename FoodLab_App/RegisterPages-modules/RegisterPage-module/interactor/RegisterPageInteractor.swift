@@ -14,12 +14,12 @@ class RegisterPageInteractor : PresenterToInteractorRegisterPageProtocol{
         let auth = Auth.auth()
         auth.createUser(withEmail: email, password: psw){(authresult, error) in
             if error == nil{
-                
+           /*
             do {
               try auth.signOut()
             } catch {
                 print(error.localizedDescription)
-            }
+            }*/
                 
                 self.registerPagePresenter?.dataToPresenter(isCreate: true)
                 

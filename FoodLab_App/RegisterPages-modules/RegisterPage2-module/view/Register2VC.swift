@@ -6,24 +6,39 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class Register2VC: UIViewController {
 
+    @IBOutlet weak var tfPhone: UITextField!
+    @IBOutlet weak var tfSurname: UITextField!
+    @IBOutlet weak var tfName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.hideKeyboardWhenTappedAround() 
     }
     
+    
+    
+   
 
-    /*
-    // MARK: - Navigation
+           
+        
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonNext(_ sender: Any) {
+       
+        
+        
+        let currentUser=Auth.auth().currentUser
+        let user_uid = currentUser?.uid
+        if let uN = tfName.text, let uS = tfSurname.text, let uP = tfPhone.text{
+            let user = ["user_Uid":user_uid,"user_Name":uN,"user_Surname":uS,"user_Phone":uP ]
+            Database.database().reference().child("users").child(Auth.auth().currentUser!.uid).setValue(user)
+        
+        }
+       
     }
-    */
-
+    
 }
