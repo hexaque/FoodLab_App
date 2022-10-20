@@ -17,6 +17,7 @@ class UserPageVC: UIViewController {
     @IBOutlet weak var avatarImageView: UIImageView!
     
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     var avatarImageName = ""
     
@@ -25,6 +26,11 @@ class UserPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
+        avatarImageView.clipsToBounds = true
+
+        avatarImageView.layer.borderColor = UIColor.white.cgColor
+        avatarImageView.layer.borderWidth = 5.0
         getUserInfoFromFireBase()
         //let query2 = ref.queryEqual(toValue: Auth.auth().currentUser!.uid, childKey: "user_Uid")
       
@@ -39,6 +45,8 @@ class UserPageVC: UIViewController {
   
     
     func getUserInfoFromFireBase(){
+        indicator.startAnimating()
+        self.view.isUserInteractionEnabled = false
         let query = ref.queryOrdered(byChild: "user_Uid").queryEqual(toValue:Auth.auth().currentUser?.uid)
         query.observe(.value, with: { snapshot in
             
@@ -65,6 +73,8 @@ class UserPageVC: UIViewController {
                                 if let _data  = data {
                                    let myImage:UIImage! = UIImage(data: _data)
                                      self.avatarImageView.image = myImage
+                                    self.indicator.stopAnimating()
+                                    self.view.isUserInteractionEnabled = true
                                 }
                              }
                         }
