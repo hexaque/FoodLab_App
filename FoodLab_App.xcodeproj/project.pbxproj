@@ -24,6 +24,10 @@
 		82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B692902C82200F16B1D /* RegisterPage2Router.swift */; };
 		82672B6C2902C83700F16B1D /* RegisterPage2Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */; };
 		82672B6E2902C84800F16B1D /* RegisterPage2Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B6D2902C84800F16B1D /* RegisterPage2Presenter.swift */; };
+		82672B742902D68F00F16B1D /* RestoranPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B732902D68F00F16B1D /* RestoranPageRouter.swift */; };
+		82672B762902D69D00F16B1D /* RestoranPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B752902D69D00F16B1D /* RestoranPageProtocols.swift */; };
+		82672B782902D6AC00F16B1D /* RestoranPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B772902D6AC00F16B1D /* RestoranPageInteractor.swift */; };
+		82672B7A2902D6B700F16B1D /* RestoranPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B792902D6B700F16B1D /* RestoranPagePresenter.swift */; };
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
@@ -92,6 +96,10 @@
 		82672B692902C82200F16B1D /* RegisterPage2Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Router.swift; sourceTree = "<group>"; };
 		82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Interactor.swift; sourceTree = "<group>"; };
 		82672B6D2902C84800F16B1D /* RegisterPage2Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Presenter.swift; sourceTree = "<group>"; };
+		82672B732902D68F00F16B1D /* RestoranPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPageRouter.swift; sourceTree = "<group>"; };
+		82672B752902D69D00F16B1D /* RestoranPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPageProtocols.swift; sourceTree = "<group>"; };
+		82672B772902D6AC00F16B1D /* RestoranPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPageInteractor.swift; sourceTree = "<group>"; };
+		82672B792902D6B700F16B1D /* RestoranPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPagePresenter.swift; sourceTree = "<group>"; };
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +173,10 @@
 			isa = PBXGroup;
 			children = (
 				82019417290036F200ABEA12 /* CollectionViewCell */,
+				82672B712902D66300F16B1D /* protocols */,
+				82672B702902D66100F16B1D /* router */,
+				82672B6F2902D65F00F16B1D /* interactor */,
+				82672B722902D67400F16B1D /* presenter */,
 				820194142900228D00ABEA12 /* view */,
 			);
 			path = "RestoranPage-module";
@@ -377,6 +389,38 @@
 				82B241B628FEBF30009AD2F4 /* motor.json */,
 			);
 			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
+		82672B6F2902D65F00F16B1D /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				82672B772902D6AC00F16B1D /* RestoranPageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		82672B702902D66100F16B1D /* router */ = {
+			isa = PBXGroup;
+			children = (
+				82672B732902D68F00F16B1D /* RestoranPageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		82672B712902D66300F16B1D /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				82672B752902D69D00F16B1D /* RestoranPageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		82672B722902D67400F16B1D /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				82672B792902D6B700F16B1D /* RestoranPagePresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 		8278EC0328F988BD001943BD = {
@@ -879,6 +923,7 @@
 				8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */,
 				8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */,
 				8278EC6E28F99AFF001943BD /* DetailPageRouter.swift in Sources */,
+				82672B762902D69D00F16B1D /* RestoranPageProtocols.swift in Sources */,
 				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
 				8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
@@ -888,6 +933,7 @@
 				825917C22901958F00B22724 /* Users.swift in Sources */,
 				82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
+				82672B782902D6AC00F16B1D /* RestoranPageInteractor.swift in Sources */,
 				820DB25828FF1EF100229C1A /* CartPageTableViewCell.swift in Sources */,
 				8278EC7428F99B37001943BD /* DetailPageVC.swift in Sources */,
 				8278EC7828F99B6A001943BD /* CartPageRouter.swift in Sources */,
@@ -905,6 +951,7 @@
 				82672B682902C7FB00F16B1D /* RegisterPage2Protocols.swift in Sources */,
 				82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */,
 				8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */,
+				82672B742902D68F00F16B1D /* RestoranPageRouter.swift in Sources */,
 				8278EC8128F99D32001943BD /* Foods.swift in Sources */,
 				8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */,
 				8278EC8528F99D75001943BD /* FoodsCart.swift in Sources */,
@@ -923,6 +970,7 @@
 				82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */,
 				8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */,
 				82672B6E2902C84800F16B1D /* RegisterPage2Presenter.swift in Sources */,
+				82672B7A2902D6B700F16B1D /* RestoranPagePresenter.swift in Sources */,
 				8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */,
 				8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */,
 				82B9EA5628FADF5100684C63 /* ForgetPswVC.swift in Sources */,

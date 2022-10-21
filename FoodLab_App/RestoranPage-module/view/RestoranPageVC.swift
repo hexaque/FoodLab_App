@@ -8,7 +8,7 @@
 import UIKit
 
 class RestoranPageVC: UIViewController {
-
+    var restoranPagePresenterObject:ViewToPresenterRestoranPageProtocol?
     @IBOutlet weak var siralamaButton: UIButton!
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var restArray : [Restaurant] = []
@@ -17,8 +17,8 @@ class RestoranPageVC: UIViewController {
     
     override func viewDidLoad() {
 
-        
-        setRestArray()
+        RestoranPageRouter.createModule(ref: self)
+        restoranPagePresenterObject?.getAllRest()
         cellDesign()
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -56,78 +56,13 @@ class RestoranPageVC: UIViewController {
     
     
     @IBAction func categorySegmentDegisim(_ sender: UISegmentedControl) {
-        let index = sender.selectedSegmentIndex
-        setRestArray()
+        let indexSegment = sender.selectedSegmentIndex
+        restoranPagePresenterObject?.filterRest(segmentIndex: indexSegment)
        
-        switch index{
-        case 0:
-            print("0")
-            setRestArray()
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
-            break
-        case 1:
-            print("1")
-            let f1 = restArray.filter({($0.category!)=="Kahve"})
-            restArray = f1
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
-            break
-        case 2:
-            print("2")
-            let f1 = restArray.filter({($0.category!)=="Pizza"})
-            restArray = f1
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
-            break
-        case 3:
-            print("3")
-            let f1 = restArray.filter({($0.category!)=="Burger"})
-            restArray = f1
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
-            break
-        case 4:
-            let f1 = restArray.filter({($0.category!)=="Tavuk"})
-            restArray = f1
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-            
-            break
-        default:
-            break
-        }
+       
     
     }
     
-    
-    
-    
-
-    func setRestArray(){
-        restArray = [
-         Restaurant(name: "Dominos", category: "Pizza", image: "dominos", star:3.5),
-         Restaurant(name: "Burger King", category: "Burger", image: "burgerking", star:3.8),
-         Restaurant(name: "Starbucks", category: "Kahve", image: "starbucks", star:3.9),
-         Restaurant(name: "McDonalds", category: "Burger", image: "mcdonalds", star:3.6),
-         Restaurant(name: "Popeyes", category: "Tavuk", image: "popeyes", star:3.3),
-         Restaurant(name: "Pizza Locale", category: "Pizza", image: "pizzalocale", star:3.9),
-         Restaurant(name: "Kahve Dünyası", category: "Kahve", image: "kahvedunyasi", star:3.1)]
-
-        
-        
-    }
-    
-   
 
 }
 
@@ -182,6 +117,24 @@ extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate
          
     }
     
+    
+    
+}
+
+extension RestoranPageVC:PresenterToViewRestoranPageProtocol{
+    func filterDataToView(data: [Restaurant]) {
+        self.restArray = data
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func dataToView(data: [Restaurant]) {
+        self.restArray = data
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
     
     
 }

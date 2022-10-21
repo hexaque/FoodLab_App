@@ -6,9 +6,7 @@
 //
 
 import UIKit
-import FirebaseAuth
-import Firebase
-import FirebaseStorage
+
 
 /*
  
@@ -122,14 +120,7 @@ class RegisterPage2VC: UIViewController, UINavigationControllerDelegate,UIImageP
         
         
        
-        
-   /*    else{
-            let alertContreller = UIAlertController(title: "Bilgileri girin veya Atla butonuna basın.", message: "Lütfen bilgilerinizi eksiksiz girin. Güvenliğiniz açısından bilgilerinizi doğru girmeniz önemli.", preferredStyle: .alert)
-            self.present(alertContreller, animated: true)
-            let okeyAction = UIAlertAction(title: "Tamam", style: .default)
-            alertContreller.addAction(okeyAction)
-        }
-        */
+
       
        
     }
