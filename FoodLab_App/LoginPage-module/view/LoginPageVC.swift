@@ -21,6 +21,7 @@ class LoginPageVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.hideKeyboardWhenTappedAround()
         LoginPageRouter.createModule(ref: self)
         indicator.stopAnimating()
