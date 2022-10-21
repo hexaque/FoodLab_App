@@ -641,10 +641,10 @@
             </objects>
             <point key="canvasLocation" x="2589.2307692307691" y="-242.41706161137441"/>
         </scene>
-        <!--Register2VC-->
+        <!--Register Page2VC-->
         <scene sceneID="dFl-aN-XO5">
             <objects>
-                <viewController id="eYV-zD-Vgh" customClass="Register2VC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eYV-zD-Vgh" customClass="RegisterPage2VC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sV3-bf-cTO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -750,7 +750,6 @@
                                 <connections>
                                     <action selector="avatarImage:" destination="2qP-P4-Kgn" eventType="touchUpInside" id="SoB-w6-xtg"/>
                                     <action selector="buttonNext:" destination="eYV-zD-Vgh" eventType="touchUpInside" id="azx-Zh-AFS"/>
-                                    <segue destination="XFS-yJ-sYS" kind="show" id="tnc-MR-zEY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bu bilgiler profil güvenliğiniz amacıyla saklanacaktır." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UoC-nY-J9j">
@@ -851,6 +850,7 @@
                         <outlet property="tfName" destination="PC2-n4-fJG" id="OhG-5B-99B"/>
                         <outlet property="tfPhone" destination="g8K-wD-PI7" id="2tT-cr-HOu"/>
                         <outlet property="tfSurname" destination="5Os-hg-YvF" id="zeh-dw-QaO"/>
+                        <segue destination="XFS-yJ-sYS" kind="show" identifier="register2ToComp" id="y0q-3l-3Au"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSD-O0-cIh" sceneMemberID="firstResponder"/>
@@ -1478,7 +1478,7 @@
                     <connections>
                         <segue destination="foA-z0-afI" kind="relationship" relationship="viewControllers" id="2W5-mb-zdi"/>
                         <segue destination="tWn-iF-tPy" kind="relationship" relationship="viewControllers" id="4W9-JM-hES"/>
-                        <segue destination="kfv-H7-4nZ" kind="relationship" relationship="viewControllers" id="Tfq-nt-bC6"/>
+                        <segue destination="Lhp-iy-2ni" kind="relationship" relationship="viewControllers" id="9Rk-Eq-5XT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59U-Ek-cAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1814,13 +1814,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil Bilgileri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-oR-qul">
-                                <rect key="frame" x="85.5" y="97" width="243.5" height="48"/>
+                                <rect key="frame" x="85.5" y="53" width="243.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0Oc-yQ-lu3">
-                                <rect key="frame" x="70" y="150" width="274" height="301.5"/>
+                                <rect key="frame" x="70" y="106" width="274" height="301.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İsim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGa-da-A1I">
                                         <rect key="frame" x="121.5" y="0.0" width="31" height="20.5"/>
@@ -1949,6 +1949,7 @@
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="rRD-SJ-iG4" secondAttribute="trailing" constant="87" id="yqS-3q-Iyy"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="userIcon" id="fAE-hg-cDq"/>
                     <navigationItem key="navigationItem" id="NG0-rV-Dz4">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="0hk-3L-G9Y"/>
                     </navigationItem>
@@ -1963,7 +1964,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhv-26-dmJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4078.2608695652175" y="1953.3482142857142"/>
+            <point key="canvasLocation" x="3801" y="2036"/>
         </scene>
         <!--Ürün detayı-->
         <scene sceneID="XIc-pR-xqz">
@@ -2362,25 +2363,6 @@
             <point key="canvasLocation" x="5113" y="1282"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="hUw-k6-bhG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kfv-H7-4nZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="userIcon" id="dj0-HD-EDt"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R2A-Xo-zB2">
-                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Lhp-iy-2ni" kind="relationship" relationship="rootViewController" id="WGI-Hr-MdW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CnB-66-7Bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3161" y="2000"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="hoK-Th-541">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWn-iF-tPy" sceneMemberID="viewController">
@@ -2401,7 +2383,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aOQ-ft-cgK"/>
+        <segue reference="y0q-3l-3Au"/>
         <segue reference="Feg-vT-fe5"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>

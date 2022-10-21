@@ -15,11 +15,15 @@
 		8215476828FD61D1001F50D6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476728FD61D1001F50D6 /* FirebaseAuth */; };
 		8215476A28FD61D1001F50D6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8215476928FD61D1001F50D6 /* FirebaseDatabase */; };
 		821D638928F9F941002B50CB /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821D638828F9F941002B50CB /* Extension.swift */; };
-		8252E58428FA1FE300BE2E8F /* Register2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58328FA1FE300BE2E8F /* Register2VC.swift */; };
+		8252E58428FA1FE300BE2E8F /* RegisterPage2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58328FA1FE300BE2E8F /* RegisterPage2VC.swift */; };
 		8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */; };
 		8252E58928FA23CB00BE2E8F /* fire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8252E58828FA23CB00BE2E8F /* fire.json */; };
 		8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8252E58B28FA24E200BE2E8F /* Lottie */; };
 		825917C22901958F00B22724 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825917C12901958F00B22724 /* Users.swift */; };
+		82672B682902C7FB00F16B1D /* RegisterPage2Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B672902C7FB00F16B1D /* RegisterPage2Protocols.swift */; };
+		82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B692902C82200F16B1D /* RegisterPage2Router.swift */; };
+		82672B6C2902C83700F16B1D /* RegisterPage2Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */; };
+		82672B6E2902C84800F16B1D /* RegisterPage2Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B6D2902C84800F16B1D /* RegisterPage2Presenter.swift */; };
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
@@ -80,10 +84,14 @@
 		820DB25728FF1EF100229C1A /* CartPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageTableViewCell.swift; sourceTree = "<group>"; };
 		8215476428FD6100001F50D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		821D638828F9F941002B50CB /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		8252E58328FA1FE300BE2E8F /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
+		8252E58328FA1FE300BE2E8F /* RegisterPage2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2VC.swift; sourceTree = "<group>"; };
 		8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteVC.swift; sourceTree = "<group>"; };
 		8252E58828FA23CB00BE2E8F /* fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fire.json; sourceTree = "<group>"; };
 		825917C12901958F00B22724 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		82672B672902C7FB00F16B1D /* RegisterPage2Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Protocols.swift; sourceTree = "<group>"; };
+		82672B692902C82200F16B1D /* RegisterPage2Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Router.swift; sourceTree = "<group>"; };
+		82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Interactor.swift; sourceTree = "<group>"; };
+		82672B6D2902C84800F16B1D /* RegisterPage2Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Presenter.swift; sourceTree = "<group>"; };
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -241,7 +249,7 @@
 		8210255A28FAE2C200092E4E /* view */ = {
 			isa = PBXGroup;
 			children = (
-				8252E58328FA1FE300BE2E8F /* Register2VC.swift */,
+				8252E58328FA1FE300BE2E8F /* RegisterPage2VC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 		8210256228FAFB8E00092E4E /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				82672B6D2902C84800F16B1D /* RegisterPage2Presenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -282,6 +291,7 @@
 		8210256328FAFB9000092E4E /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -289,6 +299,7 @@
 		8210256428FAFB9200092E4E /* router */ = {
 			isa = PBXGroup;
 			children = (
+				82672B692902C82200F16B1D /* RegisterPage2Router.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 		8210256528FAFB9400092E4E /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				82672B672902C7FB00F16B1D /* RegisterPage2Protocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -870,10 +882,11 @@
 				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
 				8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
-				8252E58428FA1FE300BE2E8F /* Register2VC.swift in Sources */,
+				8252E58428FA1FE300BE2E8F /* RegisterPage2VC.swift in Sources */,
 				8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
 				825917C22901958F00B22724 /* Users.swift in Sources */,
+				82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
 				820DB25828FF1EF100229C1A /* CartPageTableViewCell.swift in Sources */,
 				8278EC7428F99B37001943BD /* DetailPageVC.swift in Sources */,
@@ -889,6 +902,7 @@
 				8278EC7628F99B5F001943BD /* CartPageProtocols.swift in Sources */,
 				8278EC8B28F9AC62001943BD /* OnboardingPageVC.swift in Sources */,
 				8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */,
+				82672B682902C7FB00F16B1D /* RegisterPage2Protocols.swift in Sources */,
 				82B916EE28FA0E4C00EC239C /* WelcomePageVC.swift in Sources */,
 				8278EC5428F999B6001943BD /* LoginPageInteractor.swift in Sources */,
 				8278EC8128F99D32001943BD /* Foods.swift in Sources */,
@@ -900,6 +914,7 @@
 				8201941B290037FD00ABEA12 /* Restaurant.swift in Sources */,
 				8278EC7228F99B1D001943BD /* DetailPagePresenter.swift in Sources */,
 				82B241BB28FEDA67009AD2F4 /* protocols.swift in Sources */,
+				82672B6C2902C83700F16B1D /* RegisterPage2Interactor.swift in Sources */,
 				82B241B928FECA8A009AD2F4 /* FilterPageVC.swift in Sources */,
 				8278EC5A28F99A21001943BD /* RegisterPageRouter.swift in Sources */,
 				8278EC7C28F99B93001943BD /* CartPagePresenter.swift in Sources */,
@@ -907,6 +922,7 @@
 				821D638928F9F941002B50CB /* Extension.swift in Sources */,
 				82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */,
 				8278EC5228F999A2001943BD /* LoginPageRouter.swift in Sources */,
+				82672B6E2902C84800F16B1D /* RegisterPage2Presenter.swift in Sources */,
 				8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */,
 				8278EC7A28F99B80001943BD /* CartPageInteractor.swift in Sources */,
 				82B9EA5628FADF5100684C63 /* ForgetPswVC.swift in Sources */,

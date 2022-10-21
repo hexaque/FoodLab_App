@@ -10,9 +10,12 @@ import FirebaseAuth
 import Firebase
 import FirebaseStorage
 
+/*
+ 
 
-class Register2VC: UIViewController, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
-
+ */
+class RegisterPage2VC: UIViewController, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
+    var registerPage2PresenterObject : ViewToPresenterRegisterPage2Protocol?
     @IBOutlet weak var buttonYukle: UIButton!
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
@@ -24,6 +27,7 @@ class Register2VC: UIViewController, UINavigationControllerDelegate,UIImagePicke
     var isUpload = false
     var isPhotoSelected = false
     override func viewDidLoad() {
+        RegisterPage2Router.createModule(ref: self)
         indicator.stopAnimating()
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
@@ -59,30 +63,15 @@ class Register2VC: UIViewController, UINavigationControllerDelegate,UIImagePicke
         if isPhotoSelected{
             indicator.startAnimating()
             self.view.isUserInteractionEnabled = false
-            let store = Storage.storage()
-            let storeRef = store.reference()
-            let uuid = UUID().uuidString
-            let mediaFolder = storeRef.child("images")
-            if let data = imageView.image?.jpegData(compressionQuality: 0.5){
-                let imageRefferance = mediaFolder.child("\(uuid).jpeg")
-                imageRefferance.putData(data, metadata: nil){metadata, error in
-                    if error != nil{
-                        print(error?.localizedDescription ?? "error")
-                    }else{
-                        imageRefferance.downloadURL{url, error in
-                            if error == nil{
+            registerPage2PresenterObject?.savePhoto(image: imageView.image!)
                                 
-                                self.avatarImageName = uuid
-                                
-                                self.indicator.stopAnimating()
-                                self.view.isUserInteractionEnabled = true
-                                self.isUpload = true
-                            }
-                        }
-                    }
+                              
+                            
+                        
                     
-                }
-            }
+                    
+                
+            
             
         }else{
             let alertContreller = UIAlertController(title: "Lütfen İlk Olarak Profil Fotoğrafı Seçin ", message:"", preferredStyle: .alert)
@@ -97,15 +86,28 @@ class Register2VC: UIViewController, UINavigationControllerDelegate,UIImagePicke
 
     @IBAction func buttonNext(_ sender: Any) {
    
-        if tfName.text!.count>2 && tfSurname.text!.count > 1 && isValidPhone(phone: tfPhone.text!){
+        if tfName.text!.count<2{
+            animationTF(textfield: tfName)
+        }
+            
+        else if tfSurname.text!.count < 1{
+            animationTF(textfield: tfSurname)
+            }
+        else if !isValidPhone(phone: tfPhone.text!) {
+                animationTF(textfield: tfPhone)
+            }
+        else{
+            
+            
+            
+            
+            
+            
+            
             if isUpload{
-                let currentUser=Auth.auth().currentUser
-                let user_uid = currentUser?.uid
-               
                 if let uN = tfName.text, let uS = tfSurname.text, let uP = tfPhone.text{
-                    let user = ["user_Uid":user_uid,"user_Name":uN,"user_Surname":uS,"user_Phone":uP,"user_ImageName":avatarImageName! ]
-                    Database.database().reference().child("users").child(user_uid!).setValue(user)
-                   
+                    registerPage2PresenterObject?.registerInfo(userName: uN, userSurname: uS, userPhone: uP)
+                    performSegue(withIdentifier: "register2ToComp", sender: nil)
                 }
             }
             else {
@@ -116,18 +118,18 @@ class Register2VC: UIViewController, UINavigationControllerDelegate,UIImagePicke
                 
             }
             
-            }
+        }
         
         
        
         
-       else{
+   /*    else{
             let alertContreller = UIAlertController(title: "Bilgileri girin veya Atla butonuna basın.", message: "Lütfen bilgilerinizi eksiksiz girin. Güvenliğiniz açısından bilgilerinizi doğru girmeniz önemli.", preferredStyle: .alert)
             self.present(alertContreller, animated: true)
             let okeyAction = UIAlertAction(title: "Tamam", style: .default)
             alertContreller.addAction(okeyAction)
         }
-        
+        */
       
        
     }
@@ -136,5 +138,28 @@ class Register2VC: UIViewController, UINavigationControllerDelegate,UIImagePicke
             let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
             return phoneTest.evaluate(with: phone)
         }
+    func animationTF(textfield:UITextField){
+        let animation = CABasicAnimation(keyPath: "position")
+        animation.duration = 0.07
+        animation.repeatCount = 3
+        animation.autoreverses = true
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: textfield.center.x - 10, y: textfield.center.y))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: textfield.center.x + 10, y: textfield.center.y))
+
+        textfield.layer.add(animation, forKey: "position")
+    }
+ 
 }
 
+extension RegisterPage2VC:PresenterToViewRegisterPage2Protocol{
+    func dataToView(isUpload: Bool) {
+        self.isUpload = isUpload
+        if isUpload{
+            self.indicator.stopAnimating()
+            self.view.isUserInteractionEnabled = true
+            
+            
+        }
+    }
+    
+}
