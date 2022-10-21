@@ -7,11 +7,6 @@
 
 import UIKit
 
-
-/*
- 
-
- */
 class RegisterPage2VC: UIViewController, UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     var registerPage2PresenterObject : ViewToPresenterRegisterPage2Protocol?
     @IBOutlet weak var buttonYukle: UIButton!
@@ -25,6 +20,7 @@ class RegisterPage2VC: UIViewController, UINavigationControllerDelegate,UIImageP
     var isUpload = false
     var isPhotoSelected = false
     override func viewDidLoad() {
+        navigationItem.hidesBackButton = true
         RegisterPage2Router.createModule(ref: self)
         indicator.stopAnimating()
         super.viewDidLoad()

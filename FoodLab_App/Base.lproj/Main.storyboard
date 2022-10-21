@@ -1218,14 +1218,14 @@
                                                         <constraint firstAttribute="height" constant="90" id="vfU-Hm-QKB"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27Z-ur-NGx">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27Z-ur-NGx">
                                                     <rect key="frame" x="130" y="35" width="147" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-eq-cM2">
-                                                    <rect key="frame" x="333.5" y="39.5" width="41.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8j-eq-cM2">
+                                                    <rect key="frame" x="333.66666666666674" y="39.5" width="41.333333333333314" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1462,7 +1462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OSz-yU-YKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6657.971014492754" y="1952.6785714285713"/>
+            <point key="canvasLocation" x="7568.115942028986" y="1952.6785714285713"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="SIw-4r-ujB">
@@ -1476,14 +1476,49 @@
                         <color key="selectedImageTintColor" name="mainColor"/>
                     </tabBar>
                     <connections>
-                        <segue destination="foA-z0-afI" kind="relationship" relationship="viewControllers" id="2W5-mb-zdi"/>
+                        <segue destination="G5Y-8g-ABX" kind="relationship" relationship="viewControllers" id="2W5-mb-zdi"/>
                         <segue destination="tWn-iF-tPy" kind="relationship" relationship="viewControllers" id="4W9-JM-hES"/>
                         <segue destination="Lhp-iy-2ni" kind="relationship" relationship="viewControllers" id="9Rk-Eq-5XT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59U-Ek-cAe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2832" y="1311"/>
+            <point key="canvasLocation" x="3742.0289855072465" y="1310.4910714285713"/>
+        </scene>
+        <!--Payment PageVC-->
+        <scene sceneID="bLW-wV-iZx">
+            <objects>
+                <viewController id="56c-Ot-yrG" customClass="PaymentPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yXS-OF-YIx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cxi-0f-RvO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iTM-v8-EhV"/>
+                    <connections>
+                        <segue destination="TUy-Xe-5Ex" kind="show" id="d0i-w4-Cnh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYk-yu-G2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="2833"/>
+        </scene>
+        <!--Order Tracking PageVC-->
+        <scene sceneID="EE4-NP-8Om">
+            <objects>
+                <viewController id="TUy-Xe-5Ex" customClass="OrderTrackingPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U3t-Fu-ajC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0V3-f5-oey"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c3h-PT-Yua"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1q-jO-otv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3612" y="2833"/>
         </scene>
         <!--Cart PageVC-->
         <scene sceneID="1aZ-b9-IfL">
@@ -1499,13 +1534,13 @@
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepetim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d3-lL-6r1">
-                                <rect key="frame" x="130" y="58" width="154.5" height="48"/>
+                                <rect key="frame" x="130" y="102" width="154.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" name="textColorLightBlack"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhy-ad-ewm">
-                                <rect key="frame" x="308.5" y="51.5" width="85.5" height="61.5"/>
+                                <rect key="frame" x="308.5" y="95.5" width="85.5" height="61.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="trash.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
@@ -1518,7 +1553,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-qW-eua">
-                                <rect key="frame" x="10" y="133" width="394" height="467"/>
+                                <rect key="frame" x="10" y="177" width="394" height="423"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartPageTableViewCell" id="H6y-h2-nG9" customClass="CartPageTableViewCell" customModule="FoodLab_App" customModuleProvider="target">
@@ -1754,7 +1789,6 @@
                             <constraint firstItem="qN5-2a-OTU" firstAttribute="centerY" secondItem="jLa-xY-gBX" secondAttribute="centerY" id="xkn-Fr-N4o"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="cartIcon" id="qNg-Ua-LBO"/>
                     <navigationItem key="navigationItem" id="CuJ-jc-Ksr">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="Gvn-up-0gj"/>
                     </navigationItem>
@@ -1763,11 +1797,12 @@
                         <outlet property="tableView" destination="3D0-qW-eua" id="6am-2O-jil"/>
                         <outlet property="totalPrice" destination="dcS-NI-hIa" id="k8A-4V-7Qm"/>
                         <outlet property="totalPrice2" destination="PWX-3m-2vs" id="dQQ-UE-eIO"/>
+                        <segue destination="56c-Ot-yrG" kind="show" id="Zjk-vh-M6k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqe-vA-uKe" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2224.6376811594205" y="1953.3482142857142"/>
+            <point key="canvasLocation" x="3107" y="2056"/>
         </scene>
         <!--User PageVC-->
         <scene sceneID="ZdV-kR-2Ws">
@@ -1963,7 +1998,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhv-26-dmJ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3801" y="2036"/>
+            <point key="canvasLocation" x="4710.144927536232" y="2035.7142857142856"/>
         </scene>
         <!--Ürün detayı-->
         <scene sceneID="XIc-pR-xqz">
@@ -2346,7 +2381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mug-Qy-GXM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5113" y="1282"/>
+            <point key="canvasLocation" x="5464" y="1277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hoK-Th-541">
@@ -2365,7 +2400,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UFe-XL-f8x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3964" y="1310"/>
+            <point key="canvasLocation" x="4591" y="1310"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aPd-Hj-li7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G5Y-8g-ABX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="cartIcon" id="qNg-Ua-LBO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4n3-6y-Xja">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="foA-z0-afI" kind="relationship" relationship="rootViewController" id="19e-K8-7dO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDz-09-JSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2224.6376811594205" y="1953.3482142857142"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
