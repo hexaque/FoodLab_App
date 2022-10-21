@@ -33,6 +33,7 @@ class DetailPageVC: UIViewController {
     var badgeForCart = 0
     var userEmail : String?
     override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
         let userInfo = Auth.auth().currentUser
          userEmail = userInfo?.email
         DetailPageRouter.createModule(ref: self)

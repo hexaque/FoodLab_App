@@ -14,14 +14,15 @@ class HomePageVC: UIViewController {
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
-    //var tempAllFoods = [Foods]()
+    
     @IBOutlet weak var searchBar: UISearchBar!
     var priceFilter = 100
     var siralama = " "
     var restoranName:String?
     var restoranImage:String?
     override func viewDidLoad() {
-        //searchBar.delegate = self
+        self.hideKeyboardWhenTappedAround()
+        searchBar.delegate = self
         foodsCollectionView.delegate = self
         foodsCollectionView.dataSource = self
         HomePageRouter.createModule(ref: self)
@@ -35,7 +36,7 @@ class HomePageVC: UIViewController {
         
        
     }
-   
+  
     
 
     @IBAction func buttonFilterPage(_ sender: Any) {
@@ -68,7 +69,7 @@ extension HomePageVC : PresenterToViewHomePageProtocol{
     func sendDataToView(foods: [Foods]) {
         
         self.allFoods = foods
-
+      
         DispatchQueue.main.async {
             self.foodsCollectionView.reloadData()
         }
@@ -175,3 +176,13 @@ extension HomePageVC : DetailPageToHomePage{
     
     
 }
+extension HomePageVC : UISearchBarDelegate
+   {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            homePagePresenterObject?.getAllFoods()
+        }else{
+            homePagePresenterObject?.searchFoods(searchText: searchText)
+        }
+    }
+   }

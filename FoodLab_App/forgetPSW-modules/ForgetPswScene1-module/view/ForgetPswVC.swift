@@ -14,7 +14,8 @@ class ForgetPswVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         labelError.isHidden = true
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        
     }
     
     @IBAction func buttonBack(_ sender: Any) {

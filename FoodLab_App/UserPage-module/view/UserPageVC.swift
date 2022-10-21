@@ -28,6 +28,7 @@ class UserPageVC: UIViewController {
  
     
     override func viewDidLoad() {
+        self.hideKeyboardWhenTappedAround()
         indicator.stopAnimating()
         TFName.isEnabled = false
         TFSurname.isUserInteractionEnabled = false

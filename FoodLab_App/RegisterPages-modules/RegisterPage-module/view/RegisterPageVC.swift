@@ -27,7 +27,7 @@ class RegisterPageVC: UIViewController {
 
     override func viewDidLoad() {
         labelError.isHidden = true
-     
+        
         RegisterPageRouter.createModule(ref: self)
         self.hideKeyboardWhenTappedAround()
         super.viewDidLoad()

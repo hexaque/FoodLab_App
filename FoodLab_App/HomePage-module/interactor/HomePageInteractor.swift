@@ -10,6 +10,20 @@ import Alamofire
 class HomePageInteractor : PresenterToInteractorHomePageProtocol{
     var homePagePresenter: InteractorToPresenterHomePageProtocol?
     var allFoods = [Foods]()
+    
+    
+    func searchFoodsI(searchText: String) {
+        var searchFoods = [Foods]()
+        for food in allFoods{
+            if food.yemek_adi!.lowercased().contains(searchText.lowercased()) {
+                searchFoods.append(food)
+                
+            }
+        }
+        self.homePagePresenter?.sendDataToPresenter(foods: searchFoods)
+    }
+    
+  
     func getAllFoodsI() {
         AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method: .get).response{response in
             if let data = response.data{
@@ -28,6 +42,7 @@ class HomePageInteractor : PresenterToInteractorHomePageProtocol{
                    
 
     }
+    
     
     func filteredFoodsI(price:Int ,sirala:String){
         let f1 = allFoods.filter({Int($0.yemek_fiyat!)!<price})
