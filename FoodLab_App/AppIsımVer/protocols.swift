@@ -13,3 +13,7 @@ protocol FilterPageToHomePage{
 protocol DetailPageToHomePage{
     func sendBadgeCountToHomePage(badgeCount:Int)
 }
+
+protocol OrderDetailToCartPage{
+    func deleteCart()
+}

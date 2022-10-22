@@ -1489,13 +1489,13 @@
         <!--Sipariş Detayları-->
         <scene sceneID="bLW-wV-iZx">
             <objects>
-                <viewController id="56c-Ot-yrG" customClass="OrderDetailVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="56c-Ot-yrG" customClass="OrderDetailVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yXS-OF-YIx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYz-1U-HyR">
-                                <rect key="frame" x="10" y="637" width="394" height="166"/>
+                                <rect key="frame" x="10" y="686" width="394" height="166"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBGYatay" translatesAutoresizingMaskIntoConstraints="NO" id="oxF-Cq-mZI">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="166"/>
@@ -1572,8 +1572,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="buttonNext:" destination="56c-Ot-yrG" eventType="touchUpInside" id="avN-kO-7To"/>
                                             <action selector="buttonOnay:" destination="foA-z0-afI" eventType="touchUpInside" id="zZL-u1-PWA"/>
-                                            <segue destination="TUy-Xe-5Ex" kind="show" id="P81-me-5eH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1608,10 +1608,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="kQD-5q-XCe">
-                                <rect key="frame" x="20" y="182.5" width="374" height="304.5"/>
+                                <rect key="frame" x="20" y="182.5" width="374" height="353.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8cP-fn-bIP">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="137.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="162"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş Adresi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeH-Yp-NpN">
                                                 <rect key="frame" x="10" y="5" width="104" height="20.5"/>
@@ -1657,7 +1657,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Xh-P8-Cvb">
-                                        <rect key="frame" x="0.0" y="167.5" width="374" height="137"/>
+                                        <rect key="frame" x="0.0" y="192" width="374" height="161.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ödeme Yöntemi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBm-Uq-Dxu">
                                                 <rect key="frame" x="10" y="5" width="121.5" height="20.5"/>
@@ -1723,7 +1723,7 @@
                         <outlet property="labelCardInfo" destination="Fhj-Qo-IyL" id="r1r-Ks-IIU"/>
                         <outlet property="labelTotalPrice" destination="cAF-Az-nIx" id="D77-3t-DAF"/>
                         <outlet property="labelTotalPrice2" destination="UDh-TC-paq" id="S5M-tx-uWH"/>
-                        <segue destination="TUy-Xe-5Ex" kind="show" id="d0i-w4-Cnh"/>
+                        <segue destination="TUy-Xe-5Ex" kind="show" identifier="toOrderTrackingPage" id="Uh9-c4-Phv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYk-yu-G2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1739,11 +1739,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjH-Fq-hHi">
-                                <rect key="frame" x="0.0" y="152.5" width="414" height="709.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STm-W4-zd9">
-                                <rect key="frame" x="30" y="614" width="354" height="218"/>
+                                <rect key="frame" x="30" y="634" width="354" height="218"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş Takibi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-Oq-1Tm">
                                         <rect key="frame" x="15" y="15" width="105.5" height="20.5"/>
@@ -1752,35 +1752,35 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-72-36W">
-                                        <rect key="frame" x="20" y="55.5" width="314" height="83"/>
+                                        <rect key="frame" x="20" y="55.5" width="314" height="82.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kuryePho" translatesAutoresizingMaskIntoConstraints="NO" id="d0y-3g-FHX">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="83"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kuryePho" translatesAutoresizingMaskIntoConstraints="NO" id="d0y-3g-FHX">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="82.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="62" id="54s-Jj-Gs7"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="25"/>
+                                                        <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.10000000000000001"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="XXb-cK-9Ay">
-                                                <rect key="frame" x="82" y="0.0" width="232" height="83"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XXb-cK-9Ay">
+                                                <rect key="frame" x="82" y="0.0" width="232" height="82.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet R." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU0-tZ-jpX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="41.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 dakika uzaklıkta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsZ-HN-bxo">
-                                                        <rect key="frame" x="0.0" y="47" width="232" height="36"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="0.0" y="41.5" width="232" height="41"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1797,16 +1797,17 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-SY-MhB">
-                                        <rect key="frame" x="20" y="163.5" width="243" height="34.5"/>
+                                        <rect key="frame" x="20" y="148" width="243" height="50"/>
                                         <color key="backgroundColor" name="boxBG"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="R5n-hw-N1H"/>
                                             <constraint firstAttribute="width" constant="243" id="srf-dv-MDr"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Ara"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="0.10000000000000001"/>
@@ -1814,14 +1815,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-mh-XrW">
-                                        <rect key="frame" x="268" y="163.5" width="66" height="34.5"/>
+                                        <rect key="frame" x="268" y="148" width="66" height="50"/>
                                         <color key="backgroundColor" name="BGImageColor"/>
                                         <color key="tintColor" name="boxBG"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="message.fill" catalog="system"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="25"/>
+                                                <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="0.10000000000000001"/>
@@ -1840,8 +1841,8 @@
                                     <constraint firstAttribute="trailing" secondItem="oLN-72-36W" secondAttribute="trailing" constant="20" id="YU2-fb-W8j"/>
                                     <constraint firstItem="oLN-72-36W" firstAttribute="top" secondItem="lcB-Oq-1Tm" secondAttribute="bottom" constant="20" id="an6-hH-y98"/>
                                     <constraint firstItem="lcB-Oq-1Tm" firstAttribute="top" secondItem="STm-W4-zd9" secondAttribute="top" constant="15" id="bB7-Hc-RM6"/>
-                                    <constraint firstItem="MV5-mh-XrW" firstAttribute="top" secondItem="oLN-72-36W" secondAttribute="bottom" constant="25" id="bdq-VV-vxC"/>
-                                    <constraint firstItem="Rga-SY-MhB" firstAttribute="top" secondItem="oLN-72-36W" secondAttribute="bottom" constant="25" id="lQa-L9-r3R"/>
+                                    <constraint firstItem="MV5-mh-XrW" firstAttribute="top" secondItem="oLN-72-36W" secondAttribute="bottom" constant="10" id="bdq-VV-vxC"/>
+                                    <constraint firstItem="Rga-SY-MhB" firstAttribute="top" secondItem="oLN-72-36W" secondAttribute="bottom" constant="10" id="lQa-L9-r3R"/>
                                     <constraint firstAttribute="trailing" secondItem="MV5-mh-XrW" secondAttribute="trailing" constant="20" id="nnQ-kC-hOC"/>
                                     <constraint firstAttribute="height" constant="218" id="xge-Ez-c6D"/>
                                 </constraints>
@@ -1858,16 +1859,35 @@
                         <viewLayoutGuide key="safeArea" id="0V3-f5-oey"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0V3-f5-oey" firstAttribute="bottom" secondItem="STm-W4-zd9" secondAttribute="bottom" constant="30" id="CLE-Sz-EqB"/>
-                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="leading" secondItem="0V3-f5-oey" secondAttribute="leading" id="CpT-56-nXY"/>
+                            <constraint firstAttribute="bottom" secondItem="vjH-Fq-hHi" secondAttribute="bottom" id="8bU-Uu-eZ6"/>
+                            <constraint firstItem="0V3-f5-oey" firstAttribute="bottom" secondItem="STm-W4-zd9" secondAttribute="bottom" constant="10" id="CLE-Sz-EqB"/>
+                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="leading" secondItem="0V3-f5-oey" secondAttribute="leading" id="DZ0-mi-Jm6"/>
                             <constraint firstItem="0V3-f5-oey" firstAttribute="trailing" secondItem="STm-W4-zd9" secondAttribute="trailing" constant="30" id="Nnu-QY-jz0"/>
-                            <constraint firstItem="0V3-f5-oey" firstAttribute="bottom" secondItem="vjH-Fq-hHi" secondAttribute="bottom" id="XZx-6K-sN8"/>
+                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="top" secondItem="U3t-Fu-ajC" secondAttribute="top" id="SDJ-qy-q9s"/>
+                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="trailing" secondItem="0V3-f5-oey" secondAttribute="trailing" id="T5R-sK-VEq"/>
                             <constraint firstItem="STm-W4-zd9" firstAttribute="leading" secondItem="0V3-f5-oey" secondAttribute="leading" constant="30" id="aOs-nz-7xo"/>
-                            <constraint firstItem="0V3-f5-oey" firstAttribute="trailing" secondItem="vjH-Fq-hHi" secondAttribute="trailing" id="lOw-o6-HP4"/>
-                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="top" secondItem="0V3-f5-oey" secondAttribute="top" id="xjk-CO-ee0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="c3h-PT-Yua"/>
+                    <navigationItem key="navigationItem" id="c3h-PT-Yua">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="xKa-yQ-0wu">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Y5x-fm-zLZ">
+                                <rect key="frame" x="302" y="4.5" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="boxBG"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonExit:" destination="TUy-Xe-5Ex" eventType="touchUpInside" id="d2Y-aQ-JDm"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="map" destination="vjH-Fq-hHi" id="KH6-ng-NKb"/>
                     </connections>
@@ -2740,7 +2760,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d0i-w4-Cnh"/>
         <segue reference="y0q-3l-3Au"/>
         <segue reference="Feg-vT-fe5"/>
     </inferredMetricsTieBreakers>

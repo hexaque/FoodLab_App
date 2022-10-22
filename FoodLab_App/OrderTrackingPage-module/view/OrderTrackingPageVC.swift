@@ -11,6 +11,7 @@ import CoreLocation
 
 class OrderTrackingPageVC: UIViewController {
     @IBOutlet weak var map: MKMapView!
+
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +19,14 @@ class OrderTrackingPageVC: UIViewController {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
-        
-        // Do any additional setup after loading the view.
+       navigationItem.hidesBackButton = true
+       
     }
     
-
+    @IBAction func buttonExit(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
 
 }
 
@@ -30,16 +34,16 @@ class OrderTrackingPageVC: UIViewController {
 // home  38.424325, 27.138866
 extension OrderTrackingPageVC: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let sonKonum = locations[locations.count-1]
-        let enlem = sonKonum.coordinate.latitude
-        let boylam = sonKonum.coordinate.longitude
-        let hiz = sonKonum.speed
+        let lastLocation = locations[locations.count-1]
+        let latitude = lastLocation.coordinate.latitude
+        let longitude = lastLocation.coordinate.longitude
+   
        
         
-        let konum = CLLocationCoordinate2D(latitude: enlem, longitude: boylam)
-        let zoom = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)// ne kadar küçülürse o kadar zoom yapılır
-        let bolge = MKCoordinateRegion(center: konum, span: zoom)
-        map.setRegion(bolge, animated: true)
+        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let zoom = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let area = MKCoordinateRegion(center: location, span: zoom)
+        map.setRegion(area, animated: true)
         
         map.showsUserLocation = true
         

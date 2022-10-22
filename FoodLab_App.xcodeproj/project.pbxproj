@@ -81,6 +81,7 @@
 		82CA4FCC28FB59040009EA9D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FCB28FB59040009EA9D /* Alamofire */; };
 		82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */; };
 		82CEC49D2904257E00F8A8B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */; };
+		82CEC4A32904391500F8A8B2 /* OrderDetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC4A22904391500F8A8B2 /* OrderDetailPageProtocols.swift */; };
 		82F973592902E96D004AD45A /* OrderTrackingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F973582902E96D004AD45A /* OrderTrackingPageVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +156,7 @@
 		82C6611A28FE1418003D048D /* FavouritePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePageVC.swift; sourceTree = "<group>"; };
 		82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerCollectionViewCell.swift; sourceTree = "<group>"; };
 		82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		82CEC4A22904391500F8A8B2 /* OrderDetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageProtocols.swift; sourceTree = "<group>"; };
 		82F973582902E96D004AD45A /* OrderTrackingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -433,6 +435,10 @@
 		82672B7B2902E85D00F16B1D /* OrderDetailPage-module */ = {
 			isa = PBXGroup;
 			children = (
+				82CEC4A1290438E200F8A8B2 /* protocols */,
+				82CEC4A0290438E000F8A8B2 /* router */,
+				82CEC49F290438DE00F8A8B2 /* interactor */,
+				82CEC49E290438DC00F8A8B2 /* presenter */,
 				82672B7D2902E8C600F16B1D /* view */,
 			);
 			path = "OrderDetailPage-module";
@@ -869,6 +875,35 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		82CEC49E290438DC00F8A8B2 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		82CEC49F290438DE00F8A8B2 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		82CEC4A0290438E000F8A8B2 /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		82CEC4A1290438E200F8A8B2 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				82CEC4A22904391500F8A8B2 /* OrderDetailPageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -973,6 +1008,7 @@
 				8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
 				825917C22901958F00B22724 /* Users.swift in Sources */,
+				82CEC4A32904391500F8A8B2 /* OrderDetailPageProtocols.swift in Sources */,
 				82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,
 				82672B782902D6AC00F16B1D /* RestoranPageInteractor.swift in Sources */,

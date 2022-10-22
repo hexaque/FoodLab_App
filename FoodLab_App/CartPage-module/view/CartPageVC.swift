@@ -78,6 +78,7 @@ class CartPageVC: UIViewController {
             if let price = sender as? String{
                 let gidilecekVC = segue.destination as! OrderDetailVC
                 gidilecekVC.price = price
+                gidilecekVC.delegate = self
             
             }
         }
@@ -187,3 +188,12 @@ extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
 
 
 
+extension CartPageVC:OrderDetailToCartPage{
+    func deleteCart() {
+        for i in allFoodsCart{
+            cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
+        }
+    }
+    
+    
+}
