@@ -40,6 +40,7 @@ class HomePageVC: UIViewController {
     
 
     @IBAction func buttonFilterPage(_ sender: Any) {
+        homePagePresenterObject?.getAllFoods()
         performSegue(withIdentifier: "toFilterPage", sender: nil)
     }
    

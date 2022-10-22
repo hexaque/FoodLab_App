@@ -42,6 +42,9 @@ class FilterPageVC: UIViewController {
         if let siralamaText = TFSiralama.text , let filterText = sliderLabel.text{
             print("x")
             delegate?.SendSiralamaAndFilterToHomePage(filter: Int(filterText)!, siralama: siralamaText)
+            navigationController?.popViewController(animated: true)
+
+            dismiss(animated: true, completion: nil)
         }
         
     }
