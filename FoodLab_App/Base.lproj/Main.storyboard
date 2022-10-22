@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1572,6 +1573,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonOnay:" destination="foA-z0-afI" eventType="touchUpInside" id="zZL-u1-PWA"/>
+                                            <segue destination="TUy-Xe-5Ex" kind="show" id="P81-me-5eH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1731,18 +1733,148 @@
         <!--Order Tracking PageVC-->
         <scene sceneID="EE4-NP-8Om">
             <objects>
-                <viewController id="TUy-Xe-5Ex" customClass="OrderTrackingPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="TUy-Xe-5Ex" customClass="OrderTrackingPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U3t-Fu-ajC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjH-Fq-hHi">
+                                <rect key="frame" x="0.0" y="152.5" width="414" height="709.5"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="STm-W4-zd9">
+                                <rect key="frame" x="30" y="614" width="354" height="218"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sipariş Takibi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcB-Oq-1Tm">
+                                        <rect key="frame" x="15" y="15" width="105.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-72-36W">
+                                        <rect key="frame" x="20" y="55.5" width="314" height="83"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kuryePho" translatesAutoresizingMaskIntoConstraints="NO" id="d0y-3g-FHX">
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="83"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="62" id="54s-Jj-Gs7"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.10000000000000001"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="XXb-cK-9Ay">
+                                                <rect key="frame" x="82" y="0.0" width="232" height="83"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ahmet R." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EU0-tZ-jpX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 dakika uzaklıkta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DsZ-HN-bxo">
+                                                        <rect key="frame" x="0.0" y="47" width="232" height="36"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="boxBG"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-SY-MhB">
+                                        <rect key="frame" x="20" y="163.5" width="243" height="34.5"/>
+                                        <color key="backgroundColor" name="boxBG"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="243" id="srf-dv-MDr"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ara"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-mh-XrW">
+                                        <rect key="frame" x="268" y="163.5" width="66" height="34.5"/>
+                                        <color key="backgroundColor" name="BGImageColor"/>
+                                        <color key="tintColor" name="boxBG"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="message.fill" catalog="system"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.10000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="backgroundMask"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Rga-SY-MhB" secondAttribute="bottom" constant="20" id="BvV-Jo-a2V"/>
+                                    <constraint firstItem="lcB-Oq-1Tm" firstAttribute="leading" secondItem="STm-W4-zd9" secondAttribute="leading" constant="15" id="CMf-jH-7Ci"/>
+                                    <constraint firstAttribute="bottom" secondItem="MV5-mh-XrW" secondAttribute="bottom" constant="20" id="JXf-jp-5dS"/>
+                                    <constraint firstItem="MV5-mh-XrW" firstAttribute="leading" secondItem="Rga-SY-MhB" secondAttribute="trailing" constant="5" id="NJr-r5-HKO"/>
+                                    <constraint firstItem="Rga-SY-MhB" firstAttribute="leading" secondItem="STm-W4-zd9" secondAttribute="leading" constant="20" id="Nui-wO-901"/>
+                                    <constraint firstItem="oLN-72-36W" firstAttribute="leading" secondItem="STm-W4-zd9" secondAttribute="leading" constant="20" id="UcD-SQ-LBm"/>
+                                    <constraint firstAttribute="trailing" secondItem="oLN-72-36W" secondAttribute="trailing" constant="20" id="YU2-fb-W8j"/>
+                                    <constraint firstItem="oLN-72-36W" firstAttribute="top" secondItem="lcB-Oq-1Tm" secondAttribute="bottom" constant="20" id="an6-hH-y98"/>
+                                    <constraint firstItem="lcB-Oq-1Tm" firstAttribute="top" secondItem="STm-W4-zd9" secondAttribute="top" constant="15" id="bB7-Hc-RM6"/>
+                                    <constraint firstItem="MV5-mh-XrW" firstAttribute="top" secondItem="oLN-72-36W" secondAttribute="bottom" constant="25" id="bdq-VV-vxC"/>
+                                    <constraint firstItem="Rga-SY-MhB" firstAttribute="top" secondItem="oLN-72-36W" secondAttribute="bottom" constant="25" id="lQa-L9-r3R"/>
+                                    <constraint firstAttribute="trailing" secondItem="MV5-mh-XrW" secondAttribute="trailing" constant="20" id="nnQ-kC-hOC"/>
+                                    <constraint firstAttribute="height" constant="218" id="xge-Ez-c6D"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0V3-f5-oey"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0V3-f5-oey" firstAttribute="bottom" secondItem="STm-W4-zd9" secondAttribute="bottom" constant="30" id="CLE-Sz-EqB"/>
+                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="leading" secondItem="0V3-f5-oey" secondAttribute="leading" id="CpT-56-nXY"/>
+                            <constraint firstItem="0V3-f5-oey" firstAttribute="trailing" secondItem="STm-W4-zd9" secondAttribute="trailing" constant="30" id="Nnu-QY-jz0"/>
+                            <constraint firstItem="0V3-f5-oey" firstAttribute="bottom" secondItem="vjH-Fq-hHi" secondAttribute="bottom" id="XZx-6K-sN8"/>
+                            <constraint firstItem="STm-W4-zd9" firstAttribute="leading" secondItem="0V3-f5-oey" secondAttribute="leading" constant="30" id="aOs-nz-7xo"/>
+                            <constraint firstItem="0V3-f5-oey" firstAttribute="trailing" secondItem="vjH-Fq-hHi" secondAttribute="trailing" id="lOw-o6-HP4"/>
+                            <constraint firstItem="vjH-Fq-hHi" firstAttribute="top" secondItem="0V3-f5-oey" secondAttribute="top" id="xjk-CO-ee0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c3h-PT-Yua"/>
+                    <connections>
+                        <outlet property="map" destination="vjH-Fq-hHi" id="KH6-ng-NKb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1q-jO-otv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="2833"/>
+            <point key="canvasLocation" x="3611.594202898551" y="2832.5892857142858"/>
         </scene>
         <!--Sepetim-->
         <scene sceneID="1aZ-b9-IfL">
@@ -1758,7 +1890,7 @@
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-qW-eua">
-                                <rect key="frame" x="10" y="162.5" width="394" height="454.5"/>
+                                <rect key="frame" x="10" y="154" width="394" height="463"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartPageTableViewCell" id="H6y-h2-nG9" customClass="CartPageTableViewCell" customModule="FoodLab_App" customModuleProvider="target">
@@ -2608,6 +2740,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="d0i-w4-Cnh"/>
         <segue reference="y0q-3l-3Au"/>
         <segue reference="Feg-vT-fe5"/>
     </inferredMetricsTieBreakers>
@@ -2627,6 +2760,7 @@
         <image name="fullAppBG" width="1024" height="1440"/>
         <image name="fullAppBGYatay" width="1440" height="1024"/>
         <image name="googleIcon" width="29" height="29"/>
+        <image name="kuryePho" width="800" height="800"/>
         <image name="locationIcon" width="64" height="64"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="mastercardIcon.svg" width="64" height="50"/>

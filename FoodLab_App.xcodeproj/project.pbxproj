@@ -80,6 +80,7 @@
 		82CA4FC928FB58E90009EA9D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FC828FB58E90009EA9D /* Kingfisher */; };
 		82CA4FCC28FB59040009EA9D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FCB28FB59040009EA9D /* Alamofire */; };
 		82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */; };
+		82CEC49D2904257E00F8A8B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */; };
 		82F973592902E96D004AD45A /* OrderTrackingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F973582902E96D004AD45A /* OrderTrackingPageVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		82C6611628FE13C3003D048D /* UserPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVC.swift; sourceTree = "<group>"; };
 		82C6611A28FE1418003D048D /* FavouritePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePageVC.swift; sourceTree = "<group>"; };
 		82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerCollectionViewCell.swift; sourceTree = "<group>"; };
+		82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		82F973582902E96D004AD45A /* OrderTrackingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +167,7 @@
 				82CA4FCC28FB59040009EA9D /* Alamofire in Frameworks */,
 				82CA4FC928FB58E90009EA9D /* Kingfisher in Frameworks */,
 				8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */,
+				82CEC49D2904257E00F8A8B2 /* CoreLocation.framework in Frameworks */,
 				8215476828FD61D1001F50D6 /* FirebaseAuth in Frameworks */,
 				829424CF2901F777005FE55A /* FirebaseStorage in Frameworks */,
 			);
@@ -812,6 +815,7 @@
 		829424CD2901F776005FE55A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
