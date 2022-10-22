@@ -15,6 +15,7 @@ class CartPageVC: UIViewController {
     @IBOutlet weak var totalPrice2: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalPrice: UILabel!
+    var totalCartPrice = 0
     var cartPagePresenterObject : ViewToPresenterCartPageProtocol?
    
     var allFoodsCart = [FoodsCart]()
@@ -56,12 +57,31 @@ class CartPageVC: UIViewController {
     
     
     @IBAction func buttonOnay(_ sender: Any) {
-        print("sepet onaylandı Gif eklenecek.")
+    
+        if totalCartPrice > 0 {
+            let stringPrice = String(totalCartPrice)
+                performSegue(withIdentifier: "toOrderDetailPage", sender: stringPrice)
+            }
+        
+        
+        
+        
+        
+        
+        //toOrderDetailPage
     }
     
     
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toOrderDetailPage"{
+            if let price = sender as? String{
+                let gidilecekVC = segue.destination as! OrderDetailVC
+                gidilecekVC.price = price
+            
+            }
+        }
+    }
     
     
     
@@ -76,7 +96,7 @@ extension CartPageVC : PresenterToViewCartPageProtocol{
     func sendDataToView(foodsCart: [FoodsCart], totalPrice: Int) {
         indicator.startAnimating()
         self.allFoodsCart = foodsCart
-       
+        self.totalCartPrice = totalPrice
        self.totalPrice.text = "\(String(totalPrice))₺"
         self.totalPrice2.text = "\(String(totalPrice))₺"
         DispatchQueue.main.async {
@@ -131,6 +151,7 @@ extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
         if let foodPrice = Int(tempFood.yemek_fiyat!) , let foodAdetInt = Int(tempFood.yemek_siparis_adet!){
    
         let totalFoodPrice = foodPrice * foodAdetInt
+            
         cell.labelPrice.text = "\(totalFoodPrice)₺"
             cell.labelAdet.text = "\(tempFood.yemek_siparis_adet!) adet"
         }

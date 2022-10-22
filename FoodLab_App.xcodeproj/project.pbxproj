@@ -28,7 +28,7 @@
 		82672B762902D69D00F16B1D /* RestoranPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B752902D69D00F16B1D /* RestoranPageProtocols.swift */; };
 		82672B782902D6AC00F16B1D /* RestoranPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B772902D6AC00F16B1D /* RestoranPageInteractor.swift */; };
 		82672B7A2902D6B700F16B1D /* RestoranPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B792902D6B700F16B1D /* RestoranPagePresenter.swift */; };
-		82672B7F2902E8E500F16B1D /* PaymentPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B7E2902E8E500F16B1D /* PaymentPageVC.swift */; };
+		82672B7F2902E8E500F16B1D /* OrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B7E2902E8E500F16B1D /* OrderDetailVC.swift */; };
 		8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC0F28F988BD001943BD /* AppDelegate.swift */; };
 		8278EC1228F988BD001943BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC1128F988BD001943BD /* SceneDelegate.swift */; };
 		8278EC1728F988BD001943BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8278EC1528F988BD001943BD /* Main.storyboard */; };
@@ -102,7 +102,7 @@
 		82672B752902D69D00F16B1D /* RestoranPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPageProtocols.swift; sourceTree = "<group>"; };
 		82672B772902D6AC00F16B1D /* RestoranPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPageInteractor.swift; sourceTree = "<group>"; };
 		82672B792902D6B700F16B1D /* RestoranPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestoranPagePresenter.swift; sourceTree = "<group>"; };
-		82672B7E2902E8E500F16B1D /* PaymentPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPageVC.swift; sourceTree = "<group>"; };
+		82672B7E2902E8E500F16B1D /* OrderDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailVC.swift; sourceTree = "<group>"; };
 		8278EC0C28F988BD001943BD /* FoodLab_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLab_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8278EC0F28F988BD001943BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8278EC1128F988BD001943BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -427,12 +427,12 @@
 			path = presenter;
 			sourceTree = "<group>";
 		};
-		82672B7B2902E85D00F16B1D /* PaymentPage-module */ = {
+		82672B7B2902E85D00F16B1D /* OrderDetailPage-module */ = {
 			isa = PBXGroup;
 			children = (
 				82672B7D2902E8C600F16B1D /* view */,
 			);
-			path = "PaymentPage-module";
+			path = "OrderDetailPage-module";
 			sourceTree = "<group>";
 		};
 		82672B7C2902E8AE00F16B1D /* OrderTrackingPage-module */ = {
@@ -446,7 +446,7 @@
 		82672B7D2902E8C600F16B1D /* view */ = {
 			isa = PBXGroup;
 			children = (
-				82672B7E2902E8E500F16B1D /* PaymentPageVC.swift */,
+				82672B7E2902E8E500F16B1D /* OrderDetailVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -480,7 +480,7 @@
 			isa = PBXGroup;
 			children = (
 				82672B7C2902E8AE00F16B1D /* OrderTrackingPage-module */,
-				82672B7B2902E85D00F16B1D /* PaymentPage-module */,
+				82672B7B2902E85D00F16B1D /* OrderDetailPage-module */,
 				820194132900228000ABEA12 /* RestoranPage-module */,
 				8278EC8928F9AC42001943BD /* OnboardingPage */,
 				8278EC7F28F99C01001943BD /* entity */,
@@ -978,7 +978,7 @@
 				8278EC6228F99A85001943BD /* HomePageProtocols.swift in Sources */,
 				8278EC1028F988BD001943BD /* AppDelegate.swift in Sources */,
 				82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */,
-				82672B7F2902E8E500F16B1D /* PaymentPageVC.swift in Sources */,
+				82672B7F2902E8E500F16B1D /* OrderDetailVC.swift in Sources */,
 				82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */,
 				82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */,
 				82019416290022A600ABEA12 /* RestoranPageVC.swift in Sources */,
