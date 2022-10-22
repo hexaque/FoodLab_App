@@ -10,6 +10,7 @@ import Kingfisher
 class CartPageVC: UIViewController {
     
     
+    @IBOutlet weak var buttonDeleteAll: UIButton!
     @IBOutlet weak var cartView: UIView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var totalPrice2: UILabel!
@@ -36,7 +37,7 @@ class CartPageVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-       
+        
         cartPagePresenterObject?.getCartFood()
         
     }
@@ -67,20 +68,27 @@ class CartPageVC: UIViewController {
     
     
     @IBAction func buttonOnay(_ sender: Any) {
-    
+        
         if totalCartPrice > 0 {
             let stringPrice = String(totalCartPrice)
-                performSegue(withIdentifier: "toOrderDetailPage", sender: stringPrice)
-            }
-        
-        
-        
-        
-        
-        
-        //toOrderDetailPage
+            performSegue(withIdentifier: "toOrderDetailPage", sender: stringPrice)
+        }else{
+            let alert = UIAlertController(title: "Sepetiniz boş", message: "Sepetinize ürün ekleyip devam edebilirsiniz.", preferredStyle: .alert)
+            
+            let okeyAction = UIAlertAction(title: "Tamam", style: .default)
+                
+            
+            alert.addAction(okeyAction)
+            
+            self.present(alert, animated: true)
+            
+            
+            
+            
+            
+            //toOrderDetailPage
+        }
     }
-    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,6 +114,7 @@ class CartPageVC: UIViewController {
 extension CartPageVC : PresenterToViewCartPageProtocol{
     func sendDataToView(foodsCart: [FoodsCart], totalPrice: Int) {
         indicator.startAnimating()
+        
         self.allFoodsCart = foodsCart
         self.totalCartPrice = totalPrice
        self.totalPrice.text = "\(String(totalPrice))₺"
@@ -113,7 +122,12 @@ extension CartPageVC : PresenterToViewCartPageProtocol{
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-      
+        if allFoodsCart.isEmpty{
+            buttonDeleteAll.isEnabled = false
+        }
+        else{
+            buttonDeleteAll.isEnabled = true
+        }
         indicator.stopAnimating()
         
         
@@ -251,13 +265,13 @@ extension CartPageVC:CartPlusOrMinus{
         cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!,sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: adet!)
         }
         else if adetInt == 1{
-            let alert = UIAlertController(title: "Ürün silinece", message: "Sepetinizde \(cartFood.yemek_adi!) 1 adet var. Silmek istediğinize Emin misiniz ? ", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Ürün silinecek", message: "Sepetinizde \(cartFood.yemek_adi!) 1 adet var. Silmek istediğinize Emin misiniz ? ", preferredStyle: .alert)
             
-            let okeyAction = UIAlertAction(title: "Tamam", style: .default){action in
+            let okeyAction = UIAlertAction(title: "Tamam", style: .cancel){action in
                 self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: cartFood.sepet_yemek_id!, kullanici_adi: cartFood.kullanici_adi!)
                 
             }
-            let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+            let cancelAction = UIAlertAction(title: "İptal", style: .default)
             alert.addAction(okeyAction)
             alert.addAction(cancelAction)
             self.present(alert, animated: true)

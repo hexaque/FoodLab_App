@@ -12,7 +12,7 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
  
     
     
-    func getCartInfoI() {
+   func getCartInfoI() {
         let userInfo = Auth.auth().currentUser
         let userEmail = userInfo?.email
 

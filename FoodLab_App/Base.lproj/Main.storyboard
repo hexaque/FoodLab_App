@@ -2161,6 +2161,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonDeleteAll" destination="Bhy-ad-ewm" id="Ehr-ic-zQZ"/>
                         <outlet property="cartView" destination="r25-3M-EcR" id="BNe-hw-T16"/>
                         <outlet property="indicator" destination="qN5-2a-OTU" id="rzS-SS-71V"/>
                         <outlet property="tableView" destination="3D0-qW-eua" id="6am-2O-jil"/>
