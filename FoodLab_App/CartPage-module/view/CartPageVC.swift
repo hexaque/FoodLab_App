@@ -45,9 +45,19 @@ class CartPageVC: UIViewController {
 
     @IBAction func buttonDeleteAll(_ sender: Any) {
         indicator.startAnimating()
-        for i in allFoodsCart{
-            cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
+        let alert = UIAlertController(title: "Sepeti boşalt", message: "Sepetinizdeki tüm ürünler silinecek emin misiniz ? ", preferredStyle: .alert)
+        
+        let okeyAction = UIAlertAction(title: "Tamam", style: .cancel){action in
+            for i in self.allFoodsCart{
+                self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
+            }
         }
+        let cancelAction = UIAlertAction(title: "İptal", style: .default)
+        indicator.stopAnimating()
+        alert.addAction(okeyAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+        
      
         
     }
@@ -155,7 +165,7 @@ extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
         let totalFoodPrice = foodPrice * foodAdetInt
             
         cell.labelPrice.text = "\(totalFoodPrice)₺"
-            cell.labelAdet.text = "\(tempFood.yemek_siparis_adet!) adet"
+            cell.labelAdet.text = "\(tempFood.yemek_siparis_adet!)"
         }
         
         cell.selectionStyle = .none
@@ -216,7 +226,11 @@ extension CartPageVC:CartPlusOrMinus{
             cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!,sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: adet!)
         }
         else{
-            print("20'den büyük")
+            let alert = UIAlertController(title: "En fazla 20 adet Sipariş verebilirsiniz.", message: "", preferredStyle: .alert)
+            
+            let okeyAction = UIAlertAction(title: "Tamam", style: .cancel)
+            alert.addAction(okeyAction)
+            self.present(alert, animated: true)
             indicator.stopAnimating()
         }
         
@@ -237,8 +251,17 @@ extension CartPageVC:CartPlusOrMinus{
         cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!,sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: adet!)
         }
         else if adetInt == 1{
+            let alert = UIAlertController(title: "Ürün silinece", message: "Sepetinizde \(cartFood.yemek_adi!) 1 adet var. Silmek istediğinize Emin misiniz ? ", preferredStyle: .alert)
             
-            self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: cartFood.sepet_yemek_id!, kullanici_adi: cartFood.kullanici_adi!)
+            let okeyAction = UIAlertAction(title: "Tamam", style: .default){action in
+                self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: cartFood.sepet_yemek_id!, kullanici_adi: cartFood.kullanici_adi!)
+                
+            }
+            let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+            alert.addAction(okeyAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
+            indicator.stopAnimating()
         }
         else {
             print("Hata")
