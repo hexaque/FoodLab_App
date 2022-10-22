@@ -10,6 +10,7 @@ import Kingfisher
 class CartPageVC: UIViewController {
     
     
+    @IBOutlet weak var cartView: UIView!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var totalPrice2: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -20,7 +21,7 @@ class CartPageVC: UIViewController {
     override func viewDidLoad() {
        
         
-    
+       
         
         CartPageRouter.createModule(ref: self)
         tableView.dataSource = self
@@ -76,7 +77,7 @@ extension CartPageVC : PresenterToViewCartPageProtocol{
         indicator.startAnimating()
         self.allFoodsCart = foodsCart
        
-        self.totalPrice.text = "\(String(totalPrice))₺"
+       self.totalPrice.text = "\(String(totalPrice))₺"
         self.totalPrice2.text = "\(String(totalPrice))₺"
         DispatchQueue.main.async {
             self.tableView.reloadData()
