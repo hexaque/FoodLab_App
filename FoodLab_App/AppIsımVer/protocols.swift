@@ -17,3 +17,8 @@ protocol DetailPageToHomePage{
 protocol OrderDetailToCartPage{
     func deleteCart()
 }
+
+protocol CartPlusOrMinus{
+    func cartPlus(indexPath: IndexPath)
+    func cartMinus(indexPath: IndexPath)
+}

@@ -14,9 +14,37 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
     
     
     
+    func changeCartFoodCountI(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:String,sepet_yemek_id:String ,yeniAdet:String){
+        let userInfo = Auth.auth().currentUser
+        let email = userInfo?.email
+        
+        deleteCartFoodI(sepet_yemek_id:sepet_yemek_id , kullanici_adi: email!)
+        
+        addToCartI(yemek_adi: yemek_adi, yemek_resim_adi: yemek_resim_adi, yemek_fiyat: yemek_fiyat, yemek_siparis_adet: yeniAdet)
+        getCartFoodI()
+        
+    }
     
-    
-    
+    func addToCartI(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:String,yemek_siparis_adet:String) {
+        let userInfo = Auth.auth().currentUser
+        let email = userInfo?.email
+
+            if let intAdet = Int(yemek_siparis_adet), let intFiyat = Int(yemek_fiyat){
+
+            let params:Parameters = ["yemek_adi":yemek_adi,"yemek_resim_adi":yemek_resim_adi,"yemek_fiyat":intFiyat ,"yemek_siparis_adet": intAdet,"kullanici_adi":email!]
+            
+            AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php",method: .post,parameters: params).response { response in
+                if let data = response.data {
+                    do{
+                        let cevap = try JSONSerialization.jsonObject(with: data)
+                        print(cevap)
+                    }catch{
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+            
+            } }
     
     
     

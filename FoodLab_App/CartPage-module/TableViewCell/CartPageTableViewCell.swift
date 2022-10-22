@@ -13,14 +13,20 @@ class CartPageTableViewCell: UITableViewCell {
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var imageFood: UIImageView!
     
+    var delegate:CartPlusOrMinus?
+    var indexPath : IndexPath?
     
     
+    @IBAction func buttonMinus(_ sender: UIButton) {
+        sender.preventRepeatedPresses()
+        delegate?.cartMinus(indexPath: indexPath!)
+    }
     
+    @IBAction func buttonPlus(_ sender: UIButton) {
+        sender.preventRepeatedPresses()
+        delegate?.cartPlus(indexPath: indexPath!)
+    }
     
-    
-    
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

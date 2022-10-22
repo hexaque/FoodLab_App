@@ -138,7 +138,8 @@ extension CartPageVC : UITableViewDelegate, UITableViewDataSource{
     
         let cell = tableView.dequeueReusableCell(withIdentifier: "CartPageTableViewCell") as! CartPageTableViewCell
         
-       
+        cell.delegate = self
+        cell.indexPath = indexPath
       
         if let url = URL(string: "\(url)\(tempFood.yemek_resim_adi!)"){
             DispatchQueue.main.async {
@@ -193,7 +194,58 @@ extension CartPageVC:OrderDetailToCartPage{
         for i in allFoodsCart{
             cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
         }
+        self.cartPagePresenterObject?.getCartFood()
     }
     
     
+}
+
+
+extension CartPageVC:CartPlusOrMinus{
+    
+    func cartPlus(indexPath: IndexPath ) {
+        
+        indicator.startAnimating()
+        let cartFood = allFoodsCart[indexPath.row]
+        var adet = cartFood.yemek_siparis_adet
+         
+        var adetInt = Int(adet!)!
+        if adetInt < 20 {
+            adetInt += 1
+            adet = String(adetInt)
+            cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!,sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: adet!)
+        }
+        else{
+            print("20'den büyük")
+            indicator.stopAnimating()
+        }
+        
+      
+       
+       
+        
+    }
+    func cartMinus(indexPath: IndexPath) {
+        
+        indicator.startAnimating()
+        let cartFood = allFoodsCart[indexPath.row]
+        var adet = cartFood.yemek_siparis_adet
+        var adetInt = Int(adet!)!
+        if adetInt > 1{
+            adetInt -= 1
+        adet = String(adetInt)
+        cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!,sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: adet!)
+        }
+        else if adetInt == 1{
+            
+            self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: cartFood.sepet_yemek_id!, kullanici_adi: cartFood.kullanici_adi!)
+        }
+        else {
+            print("Hata")
+            indicator.stopAnimating()
+        }
+          
+       
+      
+    }
 }
