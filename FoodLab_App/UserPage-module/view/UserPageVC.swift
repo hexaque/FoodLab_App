@@ -24,7 +24,7 @@ class UserPageVC: UIViewController {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     var isEditinInfo = false
-    var avatarImageName = ""
+   
     
  
     
@@ -64,9 +64,9 @@ class UserPageVC: UIViewController {
         if isEditinInfo{
             let image = UIImage(named: "burger")
             buttonDuzenle.setImage(image, for: .normal)
-            TFName.backgroundColor = UIColor.darkGray
-            TFSurname.backgroundColor = UIColor.darkGray
-            TFPhone.backgroundColor = UIColor.darkGray
+            TFName.backgroundColor = UIColor.white
+            TFSurname.backgroundColor = UIColor.white
+            TFPhone.backgroundColor = UIColor.white
             
             TFName.isEnabled = true
             TFSurname.isEnabled = true
@@ -83,9 +83,9 @@ class UserPageVC: UIViewController {
             
         }else {
             //save et
-            TFName.backgroundColor = UIColor.white
-            TFSurname.backgroundColor = UIColor.white
-            TFPhone.backgroundColor = UIColor.white
+            TFName.backgroundColor = UIColor(named: "Gray5")
+            TFSurname.backgroundColor = UIColor(named: "Gray5")
+            TFPhone.backgroundColor = UIColor(named: "Gray5")
             let image = UIImage(named: "pizza")
             buttonDuzenle.setImage(image, for: .normal)
             TFName.isEnabled = false

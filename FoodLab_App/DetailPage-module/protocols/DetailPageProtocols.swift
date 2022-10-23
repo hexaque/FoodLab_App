@@ -15,7 +15,9 @@ protocol ViewToPresenterDetailPageProtocol{
     func plus()
     func setTotalPrice(price:Int)
     func addToCart(food:Foods,adet:String)
-    
+    func addFav(food:Foods)
+    func deleteFav(food:Foods)
+    func isFaved(food:Foods)
 }
 protocol PresenterToInteractorDetailPageProtocol{
     var detailPagePresenter : InteractorToPresenterDetailPageProtocol?{get set}
@@ -25,18 +27,23 @@ protocol PresenterToInteractorDetailPageProtocol{
     func plusI()
     func setTotalPriceI(price:Int)
     func addToCartI(food:Foods,adet:String)
+    func addFavI(food:Foods)
+    func deleteFavI(food:Foods)
+    func isFavedI(food:Foods)
 }
 
 protocol InteractorToPresenterDetailPageProtocol{
     func cartInfoToPresenter(cartFood:[FoodsCart])
     func adetDataToPresenter(number:Int)
     func totalPriceDataToPresenter(number:Int)
+    func isFavedToPresenter(isFaved:Bool)
 }
 
 protocol PresenterToViewDetailPageProtocol{
     func cartInfoToView(cartFood:[FoodsCart])
     func adetDataToView(number:Int)
     func totalPriceDataToView(number:Int)
+    func isFavedToView(isFaved:Bool)
 }
 
 

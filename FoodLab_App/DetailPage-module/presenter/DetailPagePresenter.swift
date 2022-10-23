@@ -7,6 +7,20 @@
 
 import Foundation
 class DetailPagePresenter:ViewToPresenterDetailPageProtocol,InteractorToPresenterDetailPageProtocol{
+    var detailPageInteractor: PresenterToInteractorDetailPageProtocol?
+    
+    var detailPageView: PresenterToViewDetailPageProtocol?
+    
+    func isFaved(food:Foods){
+        detailPageInteractor?.isFavedI(food:food)
+    }
+    func addFav(food:Foods){
+        detailPageInteractor?.addFavI(food:food)
+    }
+    
+    func deleteFav(food:Foods){
+        detailPageInteractor?.deleteFavI(food: food)
+    }
     func deleteFromCart(sepet_yemek_id: String, kullanici_adi: String) {
         detailPageInteractor?.deleteFromCartI(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
     }
@@ -26,9 +40,7 @@ class DetailPagePresenter:ViewToPresenterDetailPageProtocol,InteractorToPresente
     }
    
     
-    var detailPageInteractor: PresenterToInteractorDetailPageProtocol?
-    
-    var detailPageView: PresenterToViewDetailPageProtocol?
+   
 
     
     func minus() {
@@ -53,6 +65,9 @@ class DetailPagePresenter:ViewToPresenterDetailPageProtocol,InteractorToPresente
     func totalPriceDataToPresenter(number: Int) {
         detailPageView?.totalPriceDataToView(number: number)
        
+    }
+    func isFavedToPresenter(isFaved: Bool) {
+        detailPageView?.isFavedToView(isFaved: isFaved)
     }
     
     

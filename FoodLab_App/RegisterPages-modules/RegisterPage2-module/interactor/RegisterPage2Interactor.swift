@@ -19,7 +19,7 @@ class RegisterPage2Interactor : PresenterToInteractorRegisterPage2Protocol{
         let storeRef = store.reference()
         let uuid = UUID().uuidString
         let mediaFolder = storeRef.child("images")
-        if let data = image.jpegData(compressionQuality: 0.5){
+        if let data = image.jpegData(compressionQuality: 0.2){
             let imageRefferance = mediaFolder.child("\(uuid).jpeg")
             imageRefferance.putData(data, metadata: nil){metadata, error in
                 if error != nil{

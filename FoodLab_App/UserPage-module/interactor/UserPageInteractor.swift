@@ -18,10 +18,7 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     var avatarImage:UIImage?
     var user_ImageName = "defaultImage"
     
-   /*
-   
-    
-    */
+
     func updateUserInfoI(user_Name:String,user_Surname:String,user_Phone:String){
         let uid = Auth.auth().currentUser?.uid
         

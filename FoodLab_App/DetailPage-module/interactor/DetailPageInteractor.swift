@@ -8,9 +8,51 @@
 import Foundation
 import FirebaseAuth
 import Alamofire
+import Firebase
 class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
- 
+    var detailPagePresenter: InteractorToPresenterDetailPageProtocol?
+    var adet = 1
     
+    
+    func isFavedI(food:Foods){
+        let uid = Auth.auth().currentUser?.uid
+        let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
+        ref.observeSingleEvent(of: .value, with: { (snapshot) in
+
+            if snapshot.hasChild(food.yemek_id!){
+
+                self.detailPagePresenter?.isFavedToPresenter(isFaved: true)
+
+                }else{
+
+                    self.detailPagePresenter?.isFavedToPresenter(isFaved: false)
+                }
+
+
+            })
+        
+        
+    }
+      
+    func addFavI(food:Foods){
+        let uid = Auth.auth().currentUser?.uid
+        let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
+       
+        
+        let favFood = ["foodName":food.yemek_adi, "foodPrice": food.yemek_fiyat,"foodImageName": food.yemek_resim_adi,"foodID":food.yemek_id]
+        ref.child(food.yemek_id!).setValue(favFood)
+        
+        
+        
+        
+        
+    }
+    func deleteFavI(food:Foods){
+        let uid = Auth.auth().currentUser?.uid
+        let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
+        ref.child(food.yemek_id!).removeValue()
+        
+    }
     
    func getCartInfoI() {
         let userInfo = Auth.auth().currentUser
@@ -89,9 +131,7 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
             
             }} }
     
-    var detailPagePresenter: InteractorToPresenterDetailPageProtocol?
-    var adet = 1
-    
+  
     func minusI() {
         adet -= 1
         detailPagePresenter?.adetDataToPresenter(number: adet)

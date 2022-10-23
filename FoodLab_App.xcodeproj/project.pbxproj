@@ -512,7 +512,7 @@
 				82C6611828FE13ED003D048D /* FavouritePage-module */,
 				82C6611428FE1392003D048D /* UserPage-module */,
 				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
-				8278EC2328F98F5F001943BD /* AppIsımVer */,
+				8278EC2328F98F5F001943BD /* Core */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
@@ -524,7 +524,7 @@
 			path = FoodLab_App;
 			sourceTree = "<group>";
 		};
-		8278EC2328F98F5F001943BD /* AppIsımVer */ = {
+		8278EC2328F98F5F001943BD /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				8278EC0F28F988BD001943BD /* AppDelegate.swift */,
@@ -532,7 +532,7 @@
 				82B241B828FECA8A009AD2F4 /* FilterPageVC.swift */,
 				82B241BA28FEDA67009AD2F4 /* protocols.swift */,
 			);
-			path = "AppIsımVer";
+			path = Core;
 			sourceTree = "<group>";
 		};
 		8278EC2428F98F6D001943BD /* StoryBoards */ = {

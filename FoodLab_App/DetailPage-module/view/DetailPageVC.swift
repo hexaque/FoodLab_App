@@ -29,7 +29,7 @@ class DetailPageVC: UIViewController {
     var delegate : DetailPageToHomePage?
     var detailPagePresenterObject : ViewToPresenterDetailPageProtocol?
     let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
-    var fav = false
+    var isFaved:Bool?
     var badgeForCart = 0
     var userEmail : String?
     override func viewDidLoad() {
@@ -37,7 +37,9 @@ class DetailPageVC: UIViewController {
         let userInfo = Auth.auth().currentUser
          userEmail = userInfo?.email
         DetailPageRouter.createModule(ref: self)
+        
         if let f = food{
+            detailPagePresenterObject?.isFaved(food: f)
             if let url = URL(string: "\(url)\(f.yemek_resim_adi!)"){
                 DispatchQueue.main.async {
                     self.imageFood.kf.setImage(with : url)
@@ -137,15 +139,15 @@ class DetailPageVC: UIViewController {
     }
     
     
-    @IBAction func buttonFavAction(_ sender: Any) {
-        if fav{
-            fav=false
-            let image = UIImage(named: "empty")//favEmptyIcon
-            buttonFav.setImage(image, for: .normal)
+    @IBAction func buttonFavAction(_ sender: UIButton) {
+        sender.preventRepeatedPresses()
+        if isFaved!{
+            
+            detailPagePresenterObject?.deleteFav(food: self.food!)
+            detailPagePresenterObject?.isFaved(food: self.food!)
         }else{
-            fav=true
-            let image = UIImage(named: "ful")//favoriteIcon
-            buttonFav.setImage(image, for: .normal)
+            detailPagePresenterObject?.addFav(food: self.food!)
+            detailPagePresenterObject?.isFaved(food: self.food!)
             
             
         }
@@ -153,6 +155,20 @@ class DetailPageVC: UIViewController {
 }
 
 extension DetailPageVC :PresenterToViewDetailPageProtocol {
+    func isFavedToView(isFaved: Bool) {
+        self.isFaved = isFaved
+        
+        if isFaved{
+            let image = UIImage(named: "ful")//favoriteIcon
+            buttonFav.setImage(image, for: .normal)
+        }else{
+            let image = UIImage(named: "empty")//favEmptyIcon
+            buttonFav.setImage(image, for: .normal)
+            detailPagePresenterObject?.deleteFav(food: self.food!)
+           
+        }
+    }
+    
     func cartInfoToView(cartFood: [FoodsCart]) {
         self.cartFoods = cartFood
     }
