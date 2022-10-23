@@ -13,7 +13,7 @@ import Kingfisher
 class UserPageVC: UIViewController {
     var ref =  Database.database().reference().child("users")
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var favFoodsCollectionView: UICollectionView!
     @IBOutlet weak var TFName: UITextField!
     
     @IBOutlet weak var buttonDuzenle: UIButton!
@@ -24,14 +24,16 @@ class UserPageVC: UIViewController {
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     var isEditinInfo = false
-   
+    var favFoodsList = [Foods]()
     
  
     
     override func viewDidLoad() {
         UserPageRouter.createModule(ref: self)
-        
-        
+        favFoodsCollectionView.delegate = self
+        favFoodsCollectionView.dataSource = self
+        cellDesign()
+        userPagePresenterObject?.getFavFoodList()
         indicator.stopAnimating()
         self.hideKeyboardWhenTappedAround()
         //indicator.stopAnimating()
@@ -127,6 +129,13 @@ class UserPageVC: UIViewController {
 }
 
 extension UserPageVC : PresenterToViewUserPageProtocol{
+    func favListToView(favFoodList: [Foods]) {
+        self.favFoodsList = favFoodList
+        DispatchQueue.main.async {
+            self.favFoodsCollectionView.reloadData()
+        }
+    }
+    
   
     
     func imageToView(user_Image: UIImage) {
@@ -144,4 +153,48 @@ extension UserPageVC : PresenterToViewUserPageProtocol{
     }
     
    
+}
+
+extension UserPageVC:UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return favFoodsList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let url = "http://kasimadalan.pe.hu/yemekler/resimler/"
+        let favFood = favFoodsList[indexPath.row]
+        let cell = favFoodsCollectionView.dequeueReusableCell(withReuseIdentifier: "UserPageCollectionViewCell", for: indexPath) as! UserPageCollectionViewCell
+        
+        if let url = URL(string: "\(url)\(favFood.yemek_resim_adi!)"){
+            DispatchQueue.main.async {
+                cell.imageFood.kf.setImage(with : url)
+            }
+            
+        }
+        cell.labelFoodName.text = favFood.yemek_adi
+        
+        
+        cell.layer.shadowRadius = 5
+        cell.layer.shadowOffset = .zero
+        cell.layer.shadowOpacity = 0.1
+        cell.layer.shadowColor = UIColor.black.cgColor
+        
+        cell.layer.masksToBounds = false
+
+        return cell
+    }
+    
+    func cellDesign(){
+        let tasarim = UICollectionViewFlowLayout()
+        
+         tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+         tasarim.minimumInteritemSpacing = 0 // yatay
+         tasarim.minimumLineSpacing = 15 // dikey
+         
+         
+        let hucreGenisligi = favFoodsCollectionView.bounds.width-20
+         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 100)
+        
+        favFoodsCollectionView.collectionViewLayout = tasarim
+    }
 }

@@ -2398,7 +2398,7 @@
                         <outlet property="TFSurname" destination="ECk-Ld-JVq" id="7D8-2l-XJD"/>
                         <outlet property="avatarImageView" destination="rRD-SJ-iG4" id="Tgi-Ce-XK8"/>
                         <outlet property="buttonDuzenle" destination="mVR-cr-XSK" id="qe9-U0-myr"/>
-                        <outlet property="collectionView" destination="nNr-ba-o9S" id="ugi-kA-uH5"/>
+                        <outlet property="favFoodsCollectionView" destination="nNr-ba-o9S" id="3MM-zi-nJH"/>
                         <outlet property="indicator" destination="EKr-ww-UgG" id="CU5-rU-ZcX"/>
                     </connections>
                 </viewController>

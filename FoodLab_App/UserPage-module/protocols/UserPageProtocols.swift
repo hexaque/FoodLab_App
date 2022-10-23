@@ -13,6 +13,7 @@ protocol ViewToPresenterUserPageProtocol{
     func getUserInfoFromFireBase()
     func getUserImageFromFireBase()
     func updateUserInfo(user_Name:String,user_Surname:String,user_Phone:String)
+    func getFavFoodList()
 }
 
 protocol PresenterToInteractorUserPageProtocol{
@@ -20,6 +21,7 @@ protocol PresenterToInteractorUserPageProtocol{
     func getUserInfoFromFireBaseI()
     func getUserImageFromFireBaseI()
     func updateUserInfoI(user_Name:String,user_Surname:String,user_Phone:String)
+    func getFavFoodListI()
 }
 
 
@@ -28,11 +30,13 @@ protocol PresenterToInteractorUserPageProtocol{
 protocol InteractorToPresenterUserPageProtocol{
     func dataToPresenter(user_Name:String,user_Surname:String,user_Phone:String)
     func imageToPresenter(user_Image:UIImage)
+    func favListToPresenter(favFoodList:[Foods])
 }
 
 protocol PresenterToViewUserPageProtocol{
     func dataToView(user_Name:String,user_Surname:String,user_Phone:String)
     func imageToView(user_Image:UIImage)
+    func favListToView(favFoodList:[Foods])
 }
 
 protocol PresenterToRouterUserPageProtocol{

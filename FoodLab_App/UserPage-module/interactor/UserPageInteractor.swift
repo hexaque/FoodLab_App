@@ -18,7 +18,37 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     var avatarImage:UIImage?
     var user_ImageName = "defaultImage"
     
+    
+    func getFavFoodListI(){
+        let uid = Auth.auth().currentUser?.uid
+        ref.child(uid!).child("favorites").observe(.value, with: { snapshot in
+            var favFoodList = [Foods]()
+            
+            if let gelenVeri = snapshot.value as? [String:AnyObject] {
+                for satir in gelenVeri {
+                    if let d = satir.value as? NSDictionary {
+                        let foodID = d["foodID"] as? String ?? ""
+                        let foodImageName = d["foodImageName"] as? String ?? ""
+                        let foodName = d["foodName"] as? String ?? ""
+                        let foodPrice = d["foodPrice"] as? String ?? ""
+                        let tempFavFood = Foods(yemek_id: foodID, yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice)
+                        favFoodList.append(tempFavFood)
+                    }
+                }
+            }
+            
+            self.userPagePresenter?.favListToPresenter(favFoodList: favFoodList)
+        })
+    }
 
+    
+    
+    
+    
+    
+    
+    
+    
     func updateUserInfoI(user_Name:String,user_Surname:String,user_Phone:String){
         let uid = Auth.auth().currentUser?.uid
         

@@ -8,9 +8,20 @@
 import Foundation
 import UIKit
 class UserPagePresenter:ViewToPresenterUserPageProtocol, InteractorToPresenterUserPageProtocol{
+    
+    
     var userPageInteractor: PresenterToInteractorUserPageProtocol?
     
     var userPageView: PresenterToViewUserPageProtocol?
+    
+    func getFavFoodList() {
+        userPageInteractor?.getFavFoodListI()
+    }
+    
+    func favListToPresenter(favFoodList: [Foods]) {
+        userPageView?.favListToView(favFoodList: favFoodList)
+    }
+    
     
     func updateUserInfo(user_Name: String, user_Surname: String, user_Phone: String) {
         userPageInteractor?.updateUserInfoI(user_Name: user_Name, user_Surname: user_Surname, user_Phone: user_Phone)
