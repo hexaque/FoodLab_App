@@ -2187,6 +2187,77 @@
                                 <color key="backgroundColor" name="backgroundMask"/>
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nNr-ba-o9S">
+                                <rect key="frame" x="0.0" y="405" width="414" height="328"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Fl-dy-bpD">
+                                    <size key="itemSize" width="390" height="103"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserPageCollectionViewCell" id="U9j-Zj-xTy" customClass="UserPageCollectionViewCell" customModule="FoodLab_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bLD-El-sgv">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-Me-2Bk">
+                                                    <rect key="frame" x="10" y="5" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="GbL-6T-N4U"/>
+                                                        <constraint firstAttribute="height" constant="90" id="jKq-0n-Myl"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-7M-pfr">
+                                                    <rect key="frame" x="110" y="35" width="147" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24x-OS-FfW">
+                                                    <rect key="frame" x="297" y="5" width="88" height="90"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="empty" subtitle="">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" name="boxBG"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="24x-OS-FfW" secondAttribute="trailing" constant="5" id="037-7l-oIo"/>
+                                                <constraint firstItem="t5G-Me-2Bk" firstAttribute="centerY" secondItem="bLD-El-sgv" secondAttribute="centerY" id="Ki4-uQ-w5I"/>
+                                                <constraint firstAttribute="bottom" secondItem="24x-OS-FfW" secondAttribute="bottom" constant="5" id="O1z-6v-Nwp"/>
+                                                <constraint firstItem="ffE-7M-pfr" firstAttribute="centerY" secondItem="bLD-El-sgv" secondAttribute="centerY" id="VQn-vH-GAf"/>
+                                                <constraint firstItem="ffE-7M-pfr" firstAttribute="leading" secondItem="t5G-Me-2Bk" secondAttribute="trailing" constant="10" id="csS-kr-xlf"/>
+                                                <constraint firstItem="24x-OS-FfW" firstAttribute="top" secondItem="bLD-El-sgv" secondAttribute="top" constant="5" id="ok3-GN-oDM"/>
+                                                <constraint firstItem="t5G-Me-2Bk" firstAttribute="leading" secondItem="bLD-El-sgv" secondAttribute="leading" constant="10" id="wsb-u8-MgZ"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="390" height="100"/>
+                                        <connections>
+                                            <outlet property="buttonFav" destination="24x-OS-FfW" id="1Yo-ZG-eGY"/>
+                                            <outlet property="imageFood" destination="t5G-Me-2Bk" id="m3e-zX-SSu"/>
+                                            <outlet property="labelFoodName" destination="ffE-7M-pfr" id="UPu-Rm-gqe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiX-kU-yop">
                                 <rect key="frame" x="10" y="733" width="394" height="60"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -2271,22 +2342,42 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVR-cr-XSK">
+                                <rect key="frame" x="344" y="48" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="jVz-O2-dte"/>
+                                    <constraint firstAttribute="height" constant="50" id="nAN-3C-9cv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonDuzenle:" destination="Lhp-iy-2ni" eventType="touchUpInside" id="AH7-Bz-x44"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DKA-g1-wfg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rRD-SJ-iG4" firstAttribute="top" secondItem="DKA-g1-wfg" secondAttribute="top" id="4Gl-rB-cLB"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="RiX-kU-yop" secondAttribute="trailing" constant="10" id="6YR-I8-F3D"/>
+                            <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="mVR-cr-XSK" secondAttribute="trailing" constant="20" id="AfP-hg-vJW"/>
                             <constraint firstItem="0Oc-yQ-lu3" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" constant="30" id="Bya-Ti-QgO"/>
                             <constraint firstItem="RiX-kU-yop" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" constant="10" id="Jiz-6f-hEt"/>
                             <constraint firstItem="0Oc-yQ-lu3" firstAttribute="top" secondItem="rRD-SJ-iG4" secondAttribute="bottom" constant="10" id="Lkc-0z-MeT"/>
+                            <constraint firstItem="nNr-ba-o9S" firstAttribute="trailing" secondItem="DKA-g1-wfg" secondAttribute="trailing" id="Om7-0F-rhr"/>
+                            <constraint firstItem="mVR-cr-XSK" firstAttribute="top" secondItem="DKA-g1-wfg" secondAttribute="top" id="TlG-md-DBP"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="0Oc-yQ-lu3" secondAttribute="trailing" constant="30" id="UKg-JW-ogC"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="bottom" secondItem="RiX-kU-yop" secondAttribute="bottom" constant="20" id="Udc-l2-xc9"/>
+                            <constraint firstItem="nNr-ba-o9S" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="VfL-1V-tTy"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="top" secondItem="gRm-Qi-CvP" secondAttribute="top" id="XE0-D3-H03"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="ZK1-aZ-e42"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="trailing" secondItem="DKA-g1-wfg" secondAttribute="trailing" id="qLT-rB-Uej"/>
                             <constraint firstItem="rRD-SJ-iG4" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="rgG-cH-8B2"/>
                             <constraint firstAttribute="bottom" secondItem="074-fe-sJz" secondAttribute="bottom" id="udj-49-pSy"/>
+                            <constraint firstItem="nNr-ba-o9S" firstAttribute="top" secondItem="0Oc-yQ-lu3" secondAttribute="bottom" constant="5" id="yur-7n-3Qf"/>
+                            <constraint firstItem="RiX-kU-yop" firstAttribute="top" secondItem="nNr-ba-o9S" secondAttribute="bottom" id="za8-q0-187"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="userIcon" id="fAE-hg-cDq"/>
@@ -2298,6 +2389,8 @@
                         <outlet property="TFPhone" destination="QMI-22-tCx" id="jQd-Tb-BgB"/>
                         <outlet property="TFSurname" destination="ECk-Ld-JVq" id="7D8-2l-XJD"/>
                         <outlet property="avatarImageView" destination="rRD-SJ-iG4" id="Tgi-Ce-XK8"/>
+                        <outlet property="buttonDuzenle" destination="mVR-cr-XSK" id="qe9-U0-myr"/>
+                        <outlet property="collectionView" destination="nNr-ba-o9S" id="ugi-kA-uH5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uhv-26-dmJ" sceneMemberID="firstResponder"/>
@@ -2713,7 +2806,7 @@
                     <tabBarItem key="tabBarItem" title="" image="cartIcon" id="qNg-Ua-LBO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4n3-6y-Xja">
-                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2754,6 +2847,7 @@
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <image name="orderIcon" width="32" height="32"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pizza" width="32" height="32"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="profilePhotoIcon" width="45.532001495361328" height="45.532001495361328"/>

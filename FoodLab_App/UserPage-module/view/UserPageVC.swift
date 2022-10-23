@@ -13,6 +13,7 @@ import Kingfisher
 class UserPageVC: UIViewController {
     var ref =  Database.database().reference().child("users")
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var TFName: UITextField!
     
     @IBOutlet weak var buttonDuzenle: UIButton!
@@ -21,7 +22,7 @@ class UserPageVC: UIViewController {
     @IBOutlet weak var avatarImageView: UIImageView!
     
     
-    @IBOutlet weak var indicator: UIActivityIndicatorView!
+   // @IBOutlet weak var indicator: UIActivityIndicatorView!
     var isEditinInfo = false
     var avatarImageName = ""
     
@@ -29,10 +30,10 @@ class UserPageVC: UIViewController {
     
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround()
-        indicator.stopAnimating()
+        //indicator.stopAnimating()
         TFName.isEnabled = false
-        TFSurname.isUserInteractionEnabled = false
-        TFPhone.isUserInteractionEnabled = false
+        TFSurname.isEnabled = false
+        TFPhone.isEnabled = false
         super.viewDidLoad()
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
         avatarImageView.clipsToBounds = true
@@ -99,26 +100,36 @@ class UserPageVC: UIViewController {
     
     
     @IBAction func buttonDuzenle(_ sender: Any) {
+        isEditinInfo = !isEditinInfo
         if isEditinInfo{
-            if TFName.text!.count > 3 && TFName.text!.count < 10 && TFSurname.text!.count > 1 && TFSurname.text!.count < 10 && TFPhone.text!.count>10 {
-                buttonDuzenle.setTitle("Bilgileri Düzenle", for: .normal)
-                isEditing = false
-                TFName.isEnabled = false
-                TFSurname.isEnabled = false
-                TFSurname.isEnabled = false
-            }else{
-                let alertContreller = UIAlertController(title: "Lütfen Bilgileriniz Doğru Girin ", message:"", preferredStyle: .alert)
+            let image = UIImage(named: "burger")
+            buttonDuzenle.setImage(image, for: .normal)
+            TFName.backgroundColor = UIColor.darkGray
+            TFSurname.backgroundColor = UIColor.darkGray
+            TFPhone.backgroundColor = UIColor.darkGray
+            
+            TFName.isEnabled = true
+            TFSurname.isEnabled = true
+            TFPhone.isEnabled = true
+                
+         
+           
+                /*let alertContreller = UIAlertController(title: "Lütfen Bilgileriniz Doğru Girin ", message:"", preferredStyle: .alert)
                 self.present(alertContreller, animated: true)
                 let okeyAction = UIAlertAction(title: "Tamam", style: .default)
-                alertContreller.addAction(okeyAction)
-            }
+                alertContreller.addAction(okeyAction)*/
+            
            
             //save et
         }else {
-            buttonDuzenle.setTitle("Bilgileri Onayla", for: .normal)
-            TFName.isEnabled = true
-            TFSurname.isEnabled = true
-            TFSurname.isEnabled = true
+            TFName.backgroundColor = UIColor.white
+            TFSurname.backgroundColor = UIColor.white
+            TFPhone.backgroundColor = UIColor.white
+            let image = UIImage(named: "pizza")
+            buttonDuzenle.setImage(image, for: .normal)
+            TFName.isEnabled = false
+            TFSurname.isEnabled = false
+            TFSurname.isEnabled = false
         }
     }
     
