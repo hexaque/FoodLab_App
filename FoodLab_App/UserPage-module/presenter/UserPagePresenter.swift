@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 class UserPagePresenter:ViewToPresenterUserPageProtocol, InteractorToPresenterUserPageProtocol{
+    var userPageInteractor: PresenterToInteractorUserPageProtocol?
+    
+    var userPageView: PresenterToViewUserPageProtocol?
+    
+    func updateUserInfo(user_Name: String, user_Surname: String, user_Phone: String) {
+        userPageInteractor?.updateUserInfoI(user_Name: user_Name, user_Surname: user_Surname, user_Phone: user_Phone)
+    }
+    
+    
     func getUserImageFromFireBase() {
         userPageInteractor?.getUserImageFromFireBaseI()
     }
@@ -26,9 +35,7 @@ class UserPagePresenter:ViewToPresenterUserPageProtocol, InteractorToPresenterUs
         userPageInteractor?.getUserInfoFromFireBaseI()
     }
     
-    var userPageInteractor: PresenterToInteractorUserPageProtocol?
-    
-    var userPageView: PresenterToViewUserPageProtocol?
+   
     
     
 }

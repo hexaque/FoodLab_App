@@ -12,14 +12,14 @@ protocol ViewToPresenterUserPageProtocol{
     var userPageView : PresenterToViewUserPageProtocol?{get set}
     func getUserInfoFromFireBase()
     func getUserImageFromFireBase()
-
+    func updateUserInfo(user_Name:String,user_Surname:String,user_Phone:String)
 }
 
 protocol PresenterToInteractorUserPageProtocol{
     var userPagePresenter : InteractorToPresenterUserPageProtocol?{get set}
     func getUserInfoFromFireBaseI()
     func getUserImageFromFireBaseI()
-    
+    func updateUserInfoI(user_Name:String,user_Surname:String,user_Phone:String)
 }
 
 

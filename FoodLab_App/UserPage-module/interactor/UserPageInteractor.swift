@@ -18,6 +18,17 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     var avatarImage:UIImage?
     var user_ImageName = "defaultImage"
     
+   /*
+   
+    
+    */
+    func updateUserInfoI(user_Name:String,user_Surname:String,user_Phone:String){
+        let uid = Auth.auth().currentUser?.uid
+        
+        let userUpdate = ["user_ImageName":self.user_ImageName, "user_Name": user_Name,"user_Phone": user_Phone,"user_Surname":user_Surname,"user_Uid":uid ]
+            ref.child(uid!).setValue(userUpdate)
+    }
+    
     
     func getUserImageFromFireBaseI() {
         let reference = Storage.storage().reference(withPath: "images/\(user_ImageName).jpeg")

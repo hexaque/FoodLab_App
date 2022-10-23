@@ -71,7 +71,7 @@ class UserPageVC: UIViewController {
             TFName.isEnabled = true
             TFSurname.isEnabled = true
             TFPhone.isEnabled = true
-                
+            
          
            
                 /*let alertContreller = UIAlertController(title: "Lütfen Bilgileriniz Doğru Girin ", message:"", preferredStyle: .alert)
@@ -91,6 +91,14 @@ class UserPageVC: UIViewController {
             TFName.isEnabled = false
             TFSurname.isEnabled = false
             TFSurname.isEnabled = false
+            if let name = TFName.text , let surname = TFSurname.text , let phone = TFPhone.text{
+                userPagePresenterObject?.updateUserInfo(user_Name: name, user_Surname: surname, user_Phone: phone)
+            }
+            
+            
+            
+            
+           
         }
     }
     
