@@ -20,15 +20,19 @@ class UserPageVC: UIViewController {
     @IBOutlet weak var TFPhone: UITextField!
     @IBOutlet weak var TFSurname: UITextField!
     @IBOutlet weak var avatarImageView: UIImageView!
+    var userPagePresenterObject : ViewToPresenterUserPageProtocol?
     
-    
-   // @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     var isEditinInfo = false
     var avatarImageName = ""
     
  
     
     override func viewDidLoad() {
+        UserPageRouter.createModule(ref: self)
+        
+        
+        indicator.stopAnimating()
         self.hideKeyboardWhenTappedAround()
         //indicator.stopAnimating()
         TFName.isEnabled = false
@@ -40,10 +44,11 @@ class UserPageVC: UIViewController {
 
         avatarImageView.layer.borderColor = UIColor.white.cgColor
         avatarImageView.layer.borderWidth = 5.0
-        getUserInfoFromFireBase()
+        userPagePresenterObject?.getUserInfoFromFireBase()
+        
         //let query2 = ref.queryEqual(toValue: Auth.auth().currentUser!.uid, childKey: "user_Uid")
       
-        
+       
         
         navigationItem.hidesBackButton = true 
     
@@ -52,51 +57,6 @@ class UserPageVC: UIViewController {
         
     }
   
-    
-    func getUserInfoFromFireBase(){
-
-        let query = ref.queryOrdered(byChild: "user_Uid").queryEqual(toValue:Auth.auth().currentUser?.uid)
-        query.observe(.value, with: { snapshot in
-            
-
-
-            if let gelenVeri = snapshot.value as? [String:AnyObject] {
-                for satir in gelenVeri {
-                    if let d = satir.value as? NSDictionary {
-                        let user_Name = d["user_Name"] as? String ?? ""
-                        let user_Surname = d["user_Surname"] as? String ?? ""
-                        let user_Phone = d["user_Phone"] as? String ?? ""
-                        let user_ImageName = d["user_ImageName"] as? String ?? ""
-                        self.TFName.text = user_Name
-                        self.TFSurname.text = user_Surname
-                        self.TFPhone.text = user_Phone
-                        self.avatarImageName = user_ImageName
-                        
-                        print("-----------------------   \(self.avatarImageName)")
-                        let reference = Storage.storage().reference(withPath: "images/\(self.avatarImageName).jpeg")
-                              reference.getData(maxSize: (1 * 1024 * 1024)) { (data, error) in
-                                if let _error = error{
-                                   print(_error)
-                              } else {
-                                if let _data  = data {
-                                   let myImage:UIImage! = UIImage(data: _data)
-                                     self.avatarImageView.image = myImage
-                                
-                                }
-                             }
-                        }
-                    
-                    }}}
-
-
-            })
-       
-    
-        }
-    
-        
-    
-   
     
     
     @IBAction func buttonDuzenle(_ sender: Any) {
@@ -120,8 +80,9 @@ class UserPageVC: UIViewController {
                 alertContreller.addAction(okeyAction)*/
             
            
-            //save et
+            
         }else {
+            //save et
             TFName.backgroundColor = UIColor.white
             TFSurname.backgroundColor = UIColor.white
             TFPhone.backgroundColor = UIColor.white
@@ -155,4 +116,24 @@ class UserPageVC: UIViewController {
     
  
 
+}
+
+extension UserPageVC : PresenterToViewUserPageProtocol{
+  
+    
+    func imageToView(user_Image: UIImage) {
+        
+        self.avatarImageView.image = user_Image
+        
+    }
+    
+    func dataToView(user_Name: String, user_Surname: String, user_Phone: String) {
+        self.TFName.text = user_Name
+        self.TFSurname.text = user_Surname
+        self.TFPhone.text = user_Phone
+        userPagePresenterObject?.getUserImageFromFireBase()
+      
+    }
+    
+   
 }

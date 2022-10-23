@@ -67,6 +67,10 @@
 		8278EC8D28F9B095001943BD /* OnboardSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8C28F9B095001943BD /* OnboardSlides.swift */; };
 		8278EC8F28F9B350001943BD /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8278EC8E28F9B350001943BD /* OnboardingCell.swift */; };
 		8284021C2905695B00261F41 /* UserPageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284021B2905695B00261F41 /* UserPageCollectionViewCell.swift */; };
+		8284022229056D3900261F41 /* UserPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284022129056D3900261F41 /* UserPageProtocols.swift */; };
+		8284022429056D4700261F41 /* UserPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284022329056D4700261F41 /* UserPageRouter.swift */; };
+		8284022629056D5800261F41 /* UserPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284022529056D5800261F41 /* UserPageInteractor.swift */; };
+		8284022829056D7600261F41 /* UserPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8284022729056D7600261F41 /* UserPagePresenter.swift */; };
 		829424CF2901F777005FE55A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 829424CE2901F777005FE55A /* FirebaseStorage */; };
 		82B241B328FEB74F009AD2F4 /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = 82B241AF28FEB74F009AD2F4 /* order.json */; };
 		82B241B528FEB74F009AD2F4 /* cook.json in Resources */ = {isa = PBXBuildFile; fileRef = 82B241B128FEB74F009AD2F4 /* cook.json */; };
@@ -146,6 +150,10 @@
 		8278EC8C28F9B095001943BD /* OnboardSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSlides.swift; sourceTree = "<group>"; };
 		8278EC8E28F9B350001943BD /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		8284021B2905695B00261F41 /* UserPageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8284022129056D3900261F41 /* UserPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageProtocols.swift; sourceTree = "<group>"; };
+		8284022329056D4700261F41 /* UserPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageRouter.swift; sourceTree = "<group>"; };
+		8284022529056D5800261F41 /* UserPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageInteractor.swift; sourceTree = "<group>"; };
+		8284022729056D7600261F41 /* UserPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPagePresenter.swift; sourceTree = "<group>"; };
 		82B241AF28FEB74F009AD2F4 /* order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
 		82B241B128FEB74F009AD2F4 /* cook.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cook.json; sourceTree = "<group>"; };
 		82B241B628FEBF30009AD2F4 /* motor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = motor.json; sourceTree = "<group>"; };
@@ -828,6 +836,38 @@
 			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
+		8284021D29056CE700261F41 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8284022729056D7600261F41 /* UserPagePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		8284021E29056CE900261F41 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8284022529056D5800261F41 /* UserPageInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		8284021F29056CEB00261F41 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				8284022329056D4700261F41 /* UserPageRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		8284022029056CEE00261F41 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8284022129056D3900261F41 /* UserPageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
 		829424CD2901F776005FE55A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,6 +889,10 @@
 			isa = PBXGroup;
 			children = (
 				8284021A2905693800261F41 /* CollectionViewCell */,
+				8284022029056CEE00261F41 /* protocols */,
+				8284021F29056CEB00261F41 /* router */,
+				8284021E29056CE900261F41 /* interactor */,
+				8284021D29056CE700261F41 /* presenter */,
 				82C6611528FE13A5003D048D /* view */,
 			);
 			path = "UserPage-module";
@@ -1011,12 +1055,15 @@
 				8278EC8328F99D42001943BD /* FoodsResponse.swift in Sources */,
 				8278EC7028F99B10001943BD /* DetailPageInteractor.swift in Sources */,
 				8278EC6E28F99AFF001943BD /* DetailPageRouter.swift in Sources */,
+				8284022829056D7600261F41 /* UserPagePresenter.swift in Sources */,
 				8284021C2905695B00261F41 /* UserPageCollectionViewCell.swift in Sources */,
 				82672B762902D69D00F16B1D /* RestoranPageProtocols.swift in Sources */,
+				8284022629056D5800261F41 /* UserPageInteractor.swift in Sources */,
 				8278EC5828F99A03001943BD /* RegisterPageProtocols.swift in Sources */,
 				8278EC8728F99D86001943BD /* FoodsCartResponse.swift in Sources */,
 				8278EC3628F99707001943BD /* LoginPagePresenter.swift in Sources */,
 				8252E58428FA1FE300BE2E8F /* RegisterPage2VC.swift in Sources */,
+				8284022429056D4700261F41 /* UserPageRouter.swift in Sources */,
 				8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
 				825917C22901958F00B22724 /* Users.swift in Sources */,
@@ -1052,6 +1099,7 @@
 				8278EC6A28F99ACE001943BD /* HomePageVC.swift in Sources */,
 				8201941B290037FD00ABEA12 /* Restaurant.swift in Sources */,
 				8278EC7228F99B1D001943BD /* DetailPagePresenter.swift in Sources */,
+				8284022229056D3900261F41 /* UserPageProtocols.swift in Sources */,
 				82B241BB28FEDA67009AD2F4 /* protocols.swift in Sources */,
 				82672B6C2902C83700F16B1D /* RegisterPage2Interactor.swift in Sources */,
 				82B241B928FECA8A009AD2F4 /* FilterPageVC.swift in Sources */,
