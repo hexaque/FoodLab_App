@@ -15,18 +15,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodLab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noo-K1-gVG">
-                                <rect key="frame" x="33.333333333333343" y="187" width="323.66666666666663" height="123.66666666666669"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="80"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="emA-Fg-cYB">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="tintColor" red="0.42399999500000002" green="0.82700002189999999" blue="0.53700000049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oKG-LW-p3I">
+                                <rect key="frame" x="50" y="97" width="290" height="663"/>
+                                <color key="tintColor" red="0.42399999500000002" green="0.82700002189999999" blue="0.53700000049999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="noo-K1-gVG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TUJ-cA-RzK"/>
-                            <constraint firstItem="noo-K1-gVG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="gjH-28-GJs"/>
+                            <constraint firstItem="oKG-LW-p3I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="JTs-s6-UlI"/>
+                            <constraint firstAttribute="bottom" secondItem="emA-Fg-cYB" secondAttribute="bottom" id="Q8x-1E-sUz"/>
+                            <constraint firstItem="oKG-LW-p3I" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="USb-s7-t77"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oKG-LW-p3I" secondAttribute="bottom" constant="50" id="WJO-XZ-oTJ"/>
+                            <constraint firstAttribute="trailing" secondItem="oKG-LW-p3I" secondAttribute="trailing" constant="50" id="Xbs-dP-t0U"/>
+                            <constraint firstItem="emA-Fg-cYB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zrk-zU-Sbv"/>
+                            <constraint firstItem="emA-Fg-cYB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pwz-fd-ddJ"/>
+                            <constraint firstItem="emA-Fg-cYB" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ugW-GB-jjc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,4 +43,8 @@
             <point key="canvasLocation" x="52.307692307692307" y="374.64454976303318"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appLogo" width="426" height="654"/>
+        <image name="fullAppBG" width="1024" height="1440"/>
+    </resources>
 </document>
