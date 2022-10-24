@@ -13,9 +13,11 @@ import Kingfisher
 class UserPageVC: UIViewController {
     var ref =  Database.database().reference().child("users")
     
+    @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var favFoodsCollectionView: UICollectionView!
     @IBOutlet weak var TFName: UITextField!
     
+    @IBOutlet weak var labelEmail: UILabel!
     @IBOutlet weak var buttonDuzenle: UIButton!
     @IBOutlet weak var TFPhone: UITextField!
     @IBOutlet weak var TFSurname: UITextField!
@@ -25,15 +27,15 @@ class UserPageVC: UIViewController {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     var isEditinInfo = false
     var favFoodsList = [Foods]()
+    var email = Auth.auth().currentUser?.email
     
- 
     
     override func viewDidLoad() {
         UserPageRouter.createModule(ref: self)
         favFoodsCollectionView.delegate = self
         favFoodsCollectionView.dataSource = self
         cellDesign()
-        
+        labelEmail.text = "  \(email!)  "
         indicator.stopAnimating()
         self.hideKeyboardWhenTappedAround()
         //indicator.stopAnimating()
@@ -43,31 +45,32 @@ class UserPageVC: UIViewController {
         super.viewDidLoad()
         avatarImageView.layer.cornerRadius = avatarImageView.frame.size.width/2
         avatarImageView.clipsToBounds = true
-
+        
         avatarImageView.layer.borderColor = UIColor.white.cgColor
         avatarImageView.layer.borderWidth = 5.0
         userPagePresenterObject?.getUserInfoFromFireBase()
         userPagePresenterObject?.getFavFoodList()
-       
-      
-       
         
-        navigationItem.hidesBackButton = true 
-    
         
-     
+        
+        
+        navigationItem.hidesBackButton = true
+        
+        
+        
         
     }
     override func viewDidAppear(_ animated: Bool) {
         //
     }
-  
+    
     
     
     @IBAction func buttonDuzenle(_ sender: Any) {
         isEditinInfo = !isEditinInfo
         if isEditinInfo{
-            let image = UIImage(named: "burger")
+            logoutButton.isEnabled = false
+            let image = UIImage(named: "saveIcon")
             buttonDuzenle.setImage(image, for: .normal)
             TFName.backgroundColor = UIColor.white
             TFSurname.backgroundColor = UIColor.white
@@ -77,39 +80,65 @@ class UserPageVC: UIViewController {
             TFSurname.isEnabled = true
             TFPhone.isEnabled = true
             
-         
-           
-                /*let alertContreller = UIAlertController(title: "Lütfen Bilgileriniz Doğru Girin ", message:"", preferredStyle: .alert)
-                self.present(alertContreller, animated: true)
-                let okeyAction = UIAlertAction(title: "Tamam", style: .default)
-                alertContreller.addAction(okeyAction)*/
-            
-           
             
         }else {
+            
             //save et
-            TFName.backgroundColor = UIColor(named: "Gray5")
-            TFSurname.backgroundColor = UIColor(named: "Gray5")
-            TFPhone.backgroundColor = UIColor(named: "Gray5")
-            let image = UIImage(named: "pizza")
-            buttonDuzenle.setImage(image, for: .normal)
-            TFName.isEnabled = false
-            TFSurname.isEnabled = false
-            TFSurname.isEnabled = false
-            if let name = TFName.text , let surname = TFSurname.text , let phone = TFPhone.text{
-                userPagePresenterObject?.updateUserInfo(user_Name: name, user_Surname: surname, user_Phone: phone)
+            if TFName.text!.count<2{
+                animationTF(textfield: TFName)
+            }
+            
+            else if TFSurname.text!.count < 1{
+                animationTF(textfield: TFSurname)
+            }
+            else if !isValidPhone(phone: TFPhone.text!) {
+                animationTF(textfield: TFPhone)
+            }
+            else{
+                
+                
+                
+                
+                logoutButton.isEnabled = true
+                TFName.backgroundColor = UIColor(named: "Gray5")
+                TFSurname.backgroundColor = UIColor(named: "Gray5")
+                TFPhone.backgroundColor = UIColor(named: "Gray5")
+                let image = UIImage(named: "editIcon")
+                buttonDuzenle.setImage(image, for: .normal)
+                TFName.isEnabled = false
+                TFSurname.isEnabled = false
+                TFSurname.isEnabled = false
+                if let name = TFName.text , let surname = TFSurname.text , let phone = TFPhone.text{
+                    userPagePresenterObject?.updateUserInfo(user_Name: name, user_Surname: surname, user_Phone: phone)
+                }
+                
             }
             
             
             
-            
-           
         }
     }
     
     
     
+        func isValidPhone(phone: String) -> Bool {
+                let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
+                let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+                return phoneTest.evaluate(with: phone)
+            }
+        func animationTF(textfield:UITextField){
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.duration = 0.07
+            animation.repeatCount = 3
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: textfield.center.x - 10, y: textfield.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: textfield.center.x + 10, y: textfield.center.y))
+
+            textfield.layer.add(animation, forKey: "position")
+        }
+     
     
+
     
     
     
