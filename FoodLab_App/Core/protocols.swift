@@ -22,3 +22,8 @@ protocol CartPlusOrMinus{
     func cartPlus(indexPath: IndexPath)
     func cartMinus(indexPath: IndexPath)
 }
+
+
+protocol FavFoodUserPage{
+    func favFood(indexPath:IndexPath)
+}

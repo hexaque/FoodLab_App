@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseStorage
 import UIKit
 class UserPageInteractor:PresenterToInteractorUserPageProtocol{
+  
  
     
     var ref =  Database.database().reference().child("users")
@@ -19,6 +20,17 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     var user_ImageName = "defaultImage"
     
     let uid = Auth.auth().currentUser?.uid
+    
+    func deleteFoodFromFavListI(yemek_adi:String){
+        
+            let uid = Auth.auth().currentUser?.uid
+            let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
+ 
+            ref.child(yemek_adi).removeValue()
+          
+    }
+    
+    
     
     func getFavFoodListI(){
         
@@ -36,13 +48,12 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
                         
                         let tempFavFood = Foods(yemek_id: foodID, yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice)
                         
-                        print(tempFavFood.yemek_id!)
+                        
                         favFoodList.append(tempFavFood)
                     }
                 }
             }
            
-            print("******")
             self.userPagePresenter?.favListToPresenter(favFoodList: favFoodList)
         })
     }

@@ -8,11 +8,15 @@
 import Foundation
 import UIKit
 class UserPagePresenter:ViewToPresenterUserPageProtocol, InteractorToPresenterUserPageProtocol{
+
     
     
     var userPageInteractor: PresenterToInteractorUserPageProtocol?
     
     var userPageView: PresenterToViewUserPageProtocol?
+    func deleteFoodFromFavList(yemek_adi: String) {
+        userPageInteractor?.deleteFoodFromFavListI(yemek_adi: yemek_adi)
+    }
     
     func getFavFoodList() {
         userPageInteractor?.getFavFoodListI()

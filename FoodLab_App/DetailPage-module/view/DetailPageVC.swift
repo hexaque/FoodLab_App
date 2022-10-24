@@ -162,10 +162,10 @@ extension DetailPageVC :PresenterToViewDetailPageProtocol {
         self.isFaved = isFaved
         
         if isFaved{
-            let image = UIImage(named: "ful")//favoriteIcon
+            let image = UIImage(systemName: "heart.fill")//favoriteIcon
             buttonFav.setImage(image, for: .normal)
         }else{
-            let image = UIImage(named: "empty")//favEmptyIcon
+            let image = UIImage(systemName: "heart")//favEmptyIcon
             buttonFav.setImage(image, for: .normal)
             detailPagePresenterObject?.deleteFav(food: self.food!)
            

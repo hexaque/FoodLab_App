@@ -176,7 +176,8 @@ extension UserPageVC:UICollectionViewDelegate,UICollectionViewDataSource{
             
         }
         cell.labelFoodName.text = favFood.yemek_adi
-        
+        cell.delegate = self
+        cell.indexPath = indexPath
         
         cell.layer.shadowRadius = 5
         cell.layer.shadowOffset = .zero
@@ -201,4 +202,12 @@ extension UserPageVC:UICollectionViewDelegate,UICollectionViewDataSource{
         
         favFoodsCollectionView.collectionViewLayout = tasarim
     }
+}
+extension UserPageVC : FavFoodUserPage{
+    func favFood(indexPath: IndexPath) {
+        userPagePresenterObject?.deleteFoodFromFavList(yemek_adi: favFoodsList[indexPath.row].yemek_adi!)
+        
+    }
+    
+    
 }
