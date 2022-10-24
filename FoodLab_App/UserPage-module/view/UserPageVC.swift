@@ -69,6 +69,7 @@ class UserPageVC: UIViewController {
     @IBAction func buttonDuzenle(_ sender: Any) {
         isEditinInfo = !isEditinInfo
         if isEditinInfo{
+            self.tabBarController?.tabBar.isUserInteractionEnabled = false
             logoutButton.isEnabled = false
             let image = UIImage(named: "saveIcon")
             buttonDuzenle.setImage(image, for: .normal)
@@ -98,7 +99,7 @@ class UserPageVC: UIViewController {
                 
                 
                 
-                
+                self.tabBarController?.tabBar.isUserInteractionEnabled = true
                 logoutButton.isEnabled = true
                 TFName.backgroundColor = UIColor(named: "Gray5")
                 TFSurname.backgroundColor = UIColor(named: "Gray5")

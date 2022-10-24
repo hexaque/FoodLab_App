@@ -28,7 +28,7 @@ class CartPageVC: UIViewController {
         CartPageRouter.createModule(ref: self)
         tableView.dataSource = self
         tableView.delegate = self
-        
+        tabBarController?.selectedIndex = 1
         super.viewDidLoad()
 
         
