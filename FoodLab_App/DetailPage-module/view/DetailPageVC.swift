@@ -141,17 +141,20 @@ class DetailPageVC: UIViewController {
     
     @IBAction func buttonFavAction(_ sender: UIButton) {
         sender.preventRepeatedPresses()
-        if isFaved!{
-            
-            detailPagePresenterObject?.deleteFav(food: self.food!)
-            detailPagePresenterObject?.isFaved(food: self.food!)
-        }else{
-            detailPagePresenterObject?.addFav(food: self.food!)
-            detailPagePresenterObject?.isFaved(food: self.food!)
-            
-            
+        if let isFavedU = isFaved{
+            if isFavedU{
+                
+                detailPagePresenterObject?.deleteFav(food: self.food!)
+                detailPagePresenterObject?.isFaved(food: self.food!)
+            }else{
+                detailPagePresenterObject?.addFav(food: self.food!)
+                detailPagePresenterObject?.isFaved(food: self.food!)
+                
+                
+            }
         }
-    }
+        }
+      
 }
 
 extension DetailPageVC :PresenterToViewDetailPageProtocol {

@@ -21,7 +21,8 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     
     func getFavFoodListI(){
         let uid = Auth.auth().currentUser?.uid
-        ref.child(uid!).child("favorites").observe(.value, with: { snapshot in
+        let refFav =  Database.database().reference().child("favorites").child(uid!)
+        refFav.observe(.value, with: { snapshot in
             var favFoodList = [Foods]()
             
             if let gelenVeri = snapshot.value as? [String:AnyObject] {
@@ -31,6 +32,7 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
                         let foodImageName = d["foodImageName"] as? String ?? ""
                         let foodName = d["foodName"] as? String ?? ""
                         let foodPrice = d["foodPrice"] as? String ?? ""
+                        
                         let tempFavFood = Foods(yemek_id: foodID, yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice)
                         favFoodList.append(tempFavFood)
                     }
@@ -59,7 +61,7 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     
     func getUserImageFromFireBaseI() {
         let reference = Storage.storage().reference(withPath: "images/\(user_ImageName).jpeg")
-        print("+++++\(user_ImageName)")
+        
               reference.getData(maxSize: (1 * 1024 * 1024)) { (data, error) in
                 if let _error = error{
                    print(_error)
@@ -90,7 +92,7 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
                         self.user_ImageName = d["user_ImageName"] as? String ?? ""
                        
                  
-                        print("---- \(self.user_ImageName)")
+                        
                         
                         
                       

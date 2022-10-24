@@ -2187,7 +2187,7 @@
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nNr-ba-o9S">
-                                <rect key="frame" x="0.0" y="405" width="414" height="328"/>
+                                <rect key="frame" x="0.0" y="430.5" width="414" height="302.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5Fl-dy-bpD">
                                     <size key="itemSize" width="390" height="103"/>
@@ -2220,7 +2220,7 @@
                                                     <rect key="frame" x="297" y="5" width="88" height="90"/>
                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="empty" subtitle="">
+                                                    <buttonConfiguration key="configuration" style="plain" image="ful" subtitle="">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
                                                     </buttonConfiguration>
                                                 </button>
@@ -2358,10 +2358,17 @@
                                     <action selector="buttonDuzenle:" destination="Lhp-iy-2ni" eventType="touchUpInside" id="AH7-Bz-x44"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-ww-UgG">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-ww-UgG">
+                                <rect key="frame" x="331" y="211" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="color" name="mainColor"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favori yemeklerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzA-O3-7Y2">
+                                <rect key="frame" x="136.5" y="410" width="141.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DKA-g1-wfg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -2370,22 +2377,22 @@
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="RiX-kU-yop" secondAttribute="trailing" constant="10" id="6YR-I8-F3D"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="mVR-cr-XSK" secondAttribute="trailing" constant="20" id="AfP-hg-vJW"/>
                             <constraint firstItem="0Oc-yQ-lu3" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" constant="30" id="Bya-Ti-QgO"/>
-                            <constraint firstItem="EKr-ww-UgG" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="J3j-sE-buq"/>
+                            <constraint firstItem="nNr-ba-o9S" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="HjR-pL-6T5"/>
+                            <constraint firstItem="UzA-O3-7Y2" firstAttribute="top" secondItem="0Oc-yQ-lu3" secondAttribute="bottom" constant="10" id="HrV-RI-qlH"/>
                             <constraint firstItem="RiX-kU-yop" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" constant="10" id="Jiz-6f-hEt"/>
+                            <constraint firstItem="UzA-O3-7Y2" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="JwT-aP-aIc"/>
                             <constraint firstItem="0Oc-yQ-lu3" firstAttribute="top" secondItem="rRD-SJ-iG4" secondAttribute="bottom" constant="10" id="Lkc-0z-MeT"/>
-                            <constraint firstItem="nNr-ba-o9S" firstAttribute="trailing" secondItem="DKA-g1-wfg" secondAttribute="trailing" id="Om7-0F-rhr"/>
+                            <constraint firstItem="nNr-ba-o9S" firstAttribute="top" secondItem="UzA-O3-7Y2" secondAttribute="bottom" id="PTS-Ru-e6i"/>
+                            <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="nNr-ba-o9S" secondAttribute="trailing" id="QMi-BC-FdY"/>
                             <constraint firstItem="mVR-cr-XSK" firstAttribute="top" secondItem="DKA-g1-wfg" secondAttribute="top" id="TlG-md-DBP"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="0Oc-yQ-lu3" secondAttribute="trailing" constant="30" id="UKg-JW-ogC"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="bottom" secondItem="RiX-kU-yop" secondAttribute="bottom" constant="20" id="Udc-l2-xc9"/>
-                            <constraint firstItem="EKr-ww-UgG" firstAttribute="centerY" secondItem="gRm-Qi-CvP" secondAttribute="centerY" id="UwH-AR-KsM"/>
-                            <constraint firstItem="nNr-ba-o9S" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="VfL-1V-tTy"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="top" secondItem="gRm-Qi-CvP" secondAttribute="top" id="XE0-D3-H03"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="ZK1-aZ-e42"/>
                             <constraint firstItem="074-fe-sJz" firstAttribute="trailing" secondItem="DKA-g1-wfg" secondAttribute="trailing" id="qLT-rB-Uej"/>
                             <constraint firstItem="rRD-SJ-iG4" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="rgG-cH-8B2"/>
                             <constraint firstAttribute="bottom" secondItem="074-fe-sJz" secondAttribute="bottom" id="udj-49-pSy"/>
-                            <constraint firstItem="nNr-ba-o9S" firstAttribute="top" secondItem="0Oc-yQ-lu3" secondAttribute="bottom" constant="5" id="yur-7n-3Qf"/>
-                            <constraint firstItem="RiX-kU-yop" firstAttribute="top" secondItem="nNr-ba-o9S" secondAttribute="bottom" id="za8-q0-187"/>
+                            <constraint firstItem="RiX-kU-yop" firstAttribute="top" secondItem="nNr-ba-o9S" secondAttribute="bottom" id="wZV-0R-rWN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="userIcon" id="fAE-hg-cDq"/>
@@ -2845,6 +2852,7 @@
         <image name="facebookIcon" width="32" height="32"/>
         <image name="filterIcon" width="64" height="64"/>
         <image name="foodIcon" width="32" height="32"/>
+        <image name="ful" width="64" height="56"/>
         <image name="fullAppBG" width="1024" height="1440"/>
         <image name="fullAppBGYatay" width="1440" height="1024"/>
         <image name="googleIcon" width="29" height="29"/>
