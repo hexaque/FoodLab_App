@@ -69,18 +69,38 @@ class UserPageVC: UIViewController {
     @IBAction func buttonDuzenle(_ sender: Any) {
         isEditinInfo = !isEditinInfo
         if isEditinInfo{
-            self.tabBarController?.tabBar.isUserInteractionEnabled = false
-            logoutButton.isEnabled = false
-            let image = UIImage(named: "saveIcon")
-            buttonDuzenle.setImage(image, for: .normal)
-            TFName.backgroundColor = UIColor.white
-            TFSurname.backgroundColor = UIColor.white
-            TFPhone.backgroundColor = UIColor.white
+            let alert = UIAlertController(title: "Bilgileri Düzenle", message: "Doğru bilgilerinizi girmeden ilerleyemeyeceksiniz. Bilgilerinizi güncellemek istediğnize emin misiniz ? ", preferredStyle: .alert)
             
-            TFName.isEnabled = true
-            TFSurname.isEnabled = true
-            TFPhone.isEnabled = true
+            let okeyAction = UIAlertAction(title: "Evet", style: .cancel){action in
+                
+                self.tabBarController?.tabBar.isUserInteractionEnabled = false
+                self.logoutButton.isEnabled = false
+                let image = UIImage(named: "saveIcon")
+                self.buttonDuzenle.setImage(image, for: .normal)
+                self.TFName.backgroundColor = UIColor.white
+                self.TFSurname.backgroundColor = UIColor.white
+                self.TFPhone.backgroundColor = UIColor.white
+                
+                self.TFName.isEnabled = true
+                self.TFSurname.isEnabled = true
+                self.TFPhone.isEnabled = true
+                
+                
+            }
+
+            let cancelAction = UIAlertAction(title: "İptal", style: .default){action in
+                return
+            }
+        
+            alert.addAction(okeyAction)
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true)
             
+         
+            
+            
+            
+           
             
         }else {
             
@@ -144,17 +164,30 @@ class UserPageVC: UIViewController {
     
     
     @IBAction func buttonLogout(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-    do {
-      try firebaseAuth.signOut()
-        let controller = storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .coverVertical
-        present(controller, animated: true, completion: nil)
-   
-    } catch let signOutError as NSError {
-      print("Error signing out: %@", signOutError)
-    }
+        
+        let alert = UIAlertController(title: "Çıkış yap", message: "Hesabınızdan çıkış yapılacak. Emin misiniz ? ", preferredStyle: .alert)
+        
+        let okeyAction = UIAlertAction(title: "Evet", style: .cancel){action in
+
+            let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+            let controller = self.storyboard?.instantiateViewController(withIdentifier: "welcomePage") as! UINavigationController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .coverVertical
+            self.present(controller, animated: true, completion: nil)
+       
+        } catch let signOutError as NSError {
+          print("Error signing out: %@", signOutError)
+        }
+        }
+        let cancelAction = UIAlertAction(title: "İptal", style: .default)
+    
+        alert.addAction(okeyAction)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+        
+     
     }
     
  
