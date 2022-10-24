@@ -16,10 +16,10 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
     
     func isFavedI(food:Foods){
         let uid = Auth.auth().currentUser?.uid
-        let ref =  Database.database().reference().child("favorites").child(uid!)
+        let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
 
-            if snapshot.hasChild(food.yemek_id!){
+            if snapshot.hasChild(food.yemek_adi!){
 
                 self.detailPagePresenter?.isFavedToPresenter(isFaved: true)
 
@@ -36,11 +36,11 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
       
     func addFavI(food:Foods){
         let uid = Auth.auth().currentUser?.uid
-        let ref =  Database.database().reference().child("favorites").child(uid!)
+        let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
        
         
         let favFood = ["foodName":food.yemek_adi, "foodPrice": food.yemek_fiyat,"foodImageName": food.yemek_resim_adi,"foodID":food.yemek_id]
-        ref.child(food.yemek_id!).setValue(favFood)
+        ref.child(food.yemek_adi!).setValue(favFood)
         
         
         
@@ -49,8 +49,12 @@ class DetailPageInteractor:PresenterToInteractorDetailPageProtocol{
     }
     func deleteFavI(food:Foods){
         let uid = Auth.auth().currentUser?.uid
-        let ref =  Database.database().reference().child("favorites").child(uid!)
-        ref.child(food.yemek_id!).removeValue()
+        let ref =  Database.database().reference().child("users").child(uid!).child("favorites")
+        
+        
+        
+        
+        ref.child(food.yemek_adi!).removeValue()
         
     }
     

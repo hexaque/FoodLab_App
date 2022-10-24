@@ -2197,43 +2197,49 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserPageCollectionViewCell" id="U9j-Zj-xTy" customClass="UserPageCollectionViewCell" customModule="FoodLab_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bLD-El-sgv">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t5G-Me-2Bk">
-                                                    <rect key="frame" x="10" y="5" width="90" height="90"/>
+                                                    <rect key="frame" x="10" y="5" width="60" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="90" id="GbL-6T-N4U"/>
-                                                        <constraint firstAttribute="height" constant="90" id="jKq-0n-Myl"/>
+                                                        <constraint firstAttribute="height" constant="60" id="OqA-0H-F3Q"/>
+                                                        <constraint firstAttribute="width" constant="60" id="yos-Ho-fW5"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Izgara Somon" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-7M-pfr">
-                                                    <rect key="frame" x="110" y="35" width="147" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <rect key="frame" x="90" y="22" width="130.5" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24x-OS-FfW">
-                                                    <rect key="frame" x="297" y="5" width="88" height="90"/>
-                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <rect key="frame" x="251" y="18" width="134" height="34.5"/>
+                                                    <color key="backgroundColor" name="BGImageColor"/>
+                                                    <color key="tintColor" name="textColorLightWhite"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="ful" subtitle="">
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
-                                                    </buttonConfiguration>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Tekrar Satın Al" subtitle=""/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" name="boxBG"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="24x-OS-FfW" secondAttribute="trailing" constant="5" id="037-7l-oIo"/>
-                                                <constraint firstItem="t5G-Me-2Bk" firstAttribute="centerY" secondItem="bLD-El-sgv" secondAttribute="centerY" id="Ki4-uQ-w5I"/>
-                                                <constraint firstAttribute="bottom" secondItem="24x-OS-FfW" secondAttribute="bottom" constant="5" id="O1z-6v-Nwp"/>
+                                                <constraint firstAttribute="trailing" secondItem="24x-OS-FfW" secondAttribute="trailing" constant="5" id="7Nk-DR-tNy"/>
+                                                <constraint firstItem="t5G-Me-2Bk" firstAttribute="leading" secondItem="bLD-El-sgv" secondAttribute="leading" constant="10" id="8TI-KY-TNw"/>
+                                                <constraint firstItem="ffE-7M-pfr" firstAttribute="leading" secondItem="t5G-Me-2Bk" secondAttribute="trailing" constant="20" id="JCk-ja-R12"/>
                                                 <constraint firstItem="ffE-7M-pfr" firstAttribute="centerY" secondItem="bLD-El-sgv" secondAttribute="centerY" id="VQn-vH-GAf"/>
-                                                <constraint firstItem="ffE-7M-pfr" firstAttribute="leading" secondItem="t5G-Me-2Bk" secondAttribute="trailing" constant="10" id="csS-kr-xlf"/>
-                                                <constraint firstItem="24x-OS-FfW" firstAttribute="top" secondItem="bLD-El-sgv" secondAttribute="top" constant="5" id="ok3-GN-oDM"/>
-                                                <constraint firstItem="t5G-Me-2Bk" firstAttribute="leading" secondItem="bLD-El-sgv" secondAttribute="leading" constant="10" id="wsb-u8-MgZ"/>
+                                                <constraint firstItem="t5G-Me-2Bk" firstAttribute="centerY" secondItem="bLD-El-sgv" secondAttribute="centerY" id="WUA-uc-8tS"/>
+                                                <constraint firstItem="24x-OS-FfW" firstAttribute="centerY" secondItem="bLD-El-sgv" secondAttribute="centerY" id="yJ1-gG-21r"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -2247,8 +2253,13 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="390" height="100"/>
+                                        <color key="backgroundColor" name="boxBG"/>
+                                        <size key="customSize" width="390" height="70"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="buttonFav" destination="24x-OS-FfW" id="1Yo-ZG-eGY"/>
                                             <outlet property="imageFood" destination="t5G-Me-2Bk" id="m3e-zX-SSu"/>
@@ -2852,7 +2863,6 @@
         <image name="facebookIcon" width="32" height="32"/>
         <image name="filterIcon" width="64" height="64"/>
         <image name="foodIcon" width="32" height="32"/>
-        <image name="ful" width="64" height="56"/>
         <image name="fullAppBG" width="1024" height="1440"/>
         <image name="fullAppBGYatay" width="1440" height="1024"/>
         <image name="googleIcon" width="29" height="29"/>

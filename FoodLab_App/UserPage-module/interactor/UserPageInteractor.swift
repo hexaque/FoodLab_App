@@ -18,10 +18,11 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     var avatarImage:UIImage?
     var user_ImageName = "defaultImage"
     
+    let uid = Auth.auth().currentUser?.uid
     
     func getFavFoodListI(){
-        let uid = Auth.auth().currentUser?.uid
-        let refFav =  Database.database().reference().child("favorites").child(uid!)
+        
+        let refFav =  Database.database().reference().child("users").child(uid!).child("favorites")
         refFav.observe(.value, with: { snapshot in
             var favFoodList = [Foods]()
             
@@ -34,11 +35,14 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
                         let foodPrice = d["foodPrice"] as? String ?? ""
                         
                         let tempFavFood = Foods(yemek_id: foodID, yemek_adi: foodName, yemek_resim_adi: foodImageName, yemek_fiyat: foodPrice)
+                        
+                        print(tempFavFood.yemek_id!)
                         favFoodList.append(tempFavFood)
                     }
                 }
             }
-            
+           
+            print("******")
             self.userPagePresenter?.favListToPresenter(favFoodList: favFoodList)
         })
     }
@@ -54,8 +58,9 @@ class UserPageInteractor:PresenterToInteractorUserPageProtocol{
     func updateUserInfoI(user_Name:String,user_Surname:String,user_Phone:String){
         let uid = Auth.auth().currentUser?.uid
         
-        let userUpdate = ["user_ImageName":self.user_ImageName, "user_Name": user_Name,"user_Phone": user_Phone,"user_Surname":user_Surname,"user_Uid":uid ]
-            ref.child(uid!).setValue(userUpdate)
+        let userUpdate = ["user_Name":user_Name,"user_Phone":user_Phone,"user_Surname":user_Surname]
+        ref.child(uid!).updateChildValues(userUpdate)
+      
     }
     
     

@@ -33,7 +33,7 @@ class UserPageVC: UIViewController {
         favFoodsCollectionView.delegate = self
         favFoodsCollectionView.dataSource = self
         cellDesign()
-        userPagePresenterObject?.getFavFoodList()
+        
         indicator.stopAnimating()
         self.hideKeyboardWhenTappedAround()
         //indicator.stopAnimating()
@@ -47,8 +47,8 @@ class UserPageVC: UIViewController {
         avatarImageView.layer.borderColor = UIColor.white.cgColor
         avatarImageView.layer.borderWidth = 5.0
         userPagePresenterObject?.getUserInfoFromFireBase()
-        
-        //let query2 = ref.queryEqual(toValue: Auth.auth().currentUser!.uid, childKey: "user_Uid")
+        userPagePresenterObject?.getFavFoodList()
+       
       
        
         
@@ -57,6 +57,9 @@ class UserPageVC: UIViewController {
         
      
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        //
     }
   
     
@@ -131,6 +134,7 @@ class UserPageVC: UIViewController {
 extension UserPageVC : PresenterToViewUserPageProtocol{
     func favListToView(favFoodList: [Foods]) {
         self.favFoodsList = favFoodList
+        
         DispatchQueue.main.async {
             self.favFoodsCollectionView.reloadData()
         }
@@ -193,7 +197,7 @@ extension UserPageVC:UICollectionViewDelegate,UICollectionViewDataSource{
          
          
         let hucreGenisligi = favFoodsCollectionView.bounds.width-20
-         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 100)
+         tasarim.itemSize = CGSize(width: hucreGenisligi, height: 70)
         
         favFoodsCollectionView.collectionViewLayout = tasarim
     }
