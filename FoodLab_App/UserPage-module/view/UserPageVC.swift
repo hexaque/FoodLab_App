@@ -69,7 +69,7 @@ class UserPageVC: UIViewController {
     @IBAction func buttonDuzenle(_ sender: Any) {
         isEditinInfo = !isEditinInfo
         if isEditinInfo{
-            let alert = UIAlertController(title: "Bilgileri Düzenle", message: "Doğru bilgilerinizi girmeden ilerleyemeyeceksiniz. Bilgilerinizi güncellemek istediğnize emin misiniz ? ", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Bilgileri Düzenle", message: "Doğru bilgilerinizi girmeden ilerleyemeyeceksiniz. Bilgilerinizi güncellemek istediğinize emin misiniz ? ", preferredStyle: .alert)
             
             let okeyAction = UIAlertAction(title: "Evet", style: .cancel){action in
                 

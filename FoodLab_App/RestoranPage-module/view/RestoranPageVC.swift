@@ -27,31 +27,7 @@ class RestoranPageVC: UIViewController {
         
     }
     
-    /*func popdownButton(){
-        let optionClosure = {(action : UIAction) in
-            if action.title == "Puana göre küçükten büyüğe sırala"{
-                self.restArray.sort(by: { ($0.star!) < ($1.star!) })
-                self.collectionView.reloadData()
-            }else if action.title == "Puana göre büyükten küçüğe sırala"{
 
-                    self.restArray.sort(by: { ($0.star!) > ($1.star!) })
-                self.collectionView.reloadData()
-                }
-            else{
-                self.restArray.shuffle()
-                self.collectionView.reloadData()
-            }
-            }
-        
-        popDownButton.menu = UIMenu(children:[
-            UIAction(title: "Sırala:", handler: optionClosure),
-            UIAction(title: "Puana göre küçükten büyüğe sırala",  handler: optionClosure),
-            UIAction(title: "Puana göre büyükten küçüğe sırala", handler: optionClosure)])
-        popDownButton.showsMenuAsPrimaryAction = true
-        popDownButton.changesSelectionAsPrimaryAction = true
-    }*/
-    
-    
     
     
     

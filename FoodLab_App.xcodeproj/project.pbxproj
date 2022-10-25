@@ -81,7 +81,6 @@
 		82B9EA5628FADF5100684C63 /* ForgetPswVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */; };
 		82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */; };
 		82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6611628FE13C3003D048D /* UserPageVC.swift */; };
-		82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C6611A28FE1418003D048D /* FavouritePageVC.swift */; };
 		82CA4FC928FB58E90009EA9D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FC828FB58E90009EA9D /* Kingfisher */; };
 		82CA4FCC28FB59040009EA9D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 82CA4FCB28FB59040009EA9D /* Alamofire */; };
 		82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */; };
@@ -163,7 +162,6 @@
 		82B9EA5528FADF5100684C63 /* ForgetPswVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC.swift; sourceTree = "<group>"; };
 		82B9EA5728FADF7400684C63 /* ForgetPswVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPswVC2.swift; sourceTree = "<group>"; };
 		82C6611628FE13C3003D048D /* UserPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPageVC.swift; sourceTree = "<group>"; };
-		82C6611A28FE1418003D048D /* FavouritePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritePageVC.swift; sourceTree = "<group>"; };
 		82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerCollectionViewCell.swift; sourceTree = "<group>"; };
 		82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		82CEC4A22904391500F8A8B2 /* OrderDetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageProtocols.swift; sourceTree = "<group>"; };
@@ -508,7 +506,6 @@
 				8278EC2D28F9959B001943BD /* HomePage-module */,
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
-				82C6611828FE13ED003D048D /* FavouritePage-module */,
 				82C6611428FE1392003D048D /* UserPage-module */,
 				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
 				8278EC2328F98F5F001943BD /* Core */,
@@ -517,7 +514,6 @@
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
 				821D638828F9F941002B50CB /* Extension.swift */,
-				8278EC1528F988BD001943BD /* Main.storyboard */,
 				8215476428FD6100001F50D6 /* GoogleService-Info.plist */,
 				8252E58728FA23BE00BE2E8F /* LottieAnimation */,
 			);
@@ -539,6 +535,7 @@
 			isa = PBXGroup;
 			children = (
 				8278EC1A28F988C0001943BD /* LaunchScreen.storyboard */,
+				8278EC1528F988BD001943BD /* Main.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -906,22 +903,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		82C6611828FE13ED003D048D /* FavouritePage-module */ = {
-			isa = PBXGroup;
-			children = (
-				82C6611928FE1406003D048D /* view */,
-			);
-			path = "FavouritePage-module";
-			sourceTree = "<group>";
-		};
-		82C6611928FE1406003D048D /* view */ = {
-			isa = PBXGroup;
-			children = (
-				82C6611A28FE1418003D048D /* FavouritePageVC.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
 		82CA4FC428FB4EF50009EA9D /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1079,7 +1060,6 @@
 				82B9EA5828FADF7400684C63 /* ForgetPswVC2.swift in Sources */,
 				82672B7F2902E8E500F16B1D /* OrderDetailVC.swift in Sources */,
 				82C6611728FE13C3003D048D /* UserPageVC.swift in Sources */,
-				82C6611B28FE1418003D048D /* FavouritePageVC.swift in Sources */,
 				82019416290022A600ABEA12 /* RestoranPageVC.swift in Sources */,
 				8278EC5628F999D1001943BD /* LoginPageVC.swift in Sources */,
 				8278EC5028F99992001943BD /* LoginPageProtocols.swift in Sources */,
