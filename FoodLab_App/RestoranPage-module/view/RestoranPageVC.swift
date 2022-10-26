@@ -9,7 +9,8 @@ import UIKit
 
 class RestoranPageVC: UIViewController {
     var restoranPagePresenterObject:ViewToPresenterRestoranPageProtocol?
- 
+    var timer: Timer?
+    var sliderIndex = 0
     
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var restArray : [Restaurant] = []
@@ -20,6 +21,7 @@ class RestoranPageVC: UIViewController {
                                    UIImage(named: "3")!]
     override func viewDidLoad() {
        cell2Design()
+        timerSetup()
         RestoranPageRouter.createModule(ref: self)
         restoranPagePresenterObject?.getAllRest()
         cellDesign()
@@ -32,7 +34,21 @@ class RestoranPageVC: UIViewController {
         
     }
     
-
+    func timerSetup() {
+           timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(sliderNextIndex), userInfo: nil, repeats: true)
+       }
+       
+       @objc func sliderNextIndex() {
+           
+           if sliderIndex < advertisingSliderPhotos.count - 1 {
+               sliderIndex += 1
+           }else {
+               sliderIndex = 0
+           }
+           
+           sliderCollectionView.scrollToItem(at: IndexPath(item: sliderIndex, section: 0), at: .centeredHorizontally, animated: true)
+           
+       }
     
     
     
