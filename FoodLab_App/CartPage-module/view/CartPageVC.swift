@@ -28,7 +28,7 @@ class CartPageVC: UIViewController {
         CartPageRouter.createModule(ref: self)
         tableView.dataSource = self
         tableView.delegate = self
-        tabBarController?.selectedIndex = 1
+        tabBarController?.selectedIndex = 0
         super.viewDidLoad()
 
         
@@ -119,9 +119,12 @@ extension CartPageVC : PresenterToViewCartPageProtocol{
         self.totalCartPrice = totalPrice
        self.totalPrice.text = "\(String(totalPrice))₺"
         self.totalPrice2.text = "\(String(totalPrice))₺"
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        
+       
         if allFoodsCart.isEmpty{
             buttonDeleteAll.isEnabled = false
         }
