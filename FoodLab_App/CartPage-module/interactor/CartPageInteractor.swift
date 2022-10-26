@@ -65,11 +65,12 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
                     do {
                         let answer = try JSONDecoder().decode(FoodsCartResponse.self, from: data)
                         
-                        if let answerArray = answer.sepet_yemekler {
+                        if var answerArray = answer.sepet_yemekler {
                             for food in answerArray{
                                 foodTotalPrice = Int(food.yemek_siparis_adet!)! * Int(food.yemek_fiyat!)!
                                 totalPrice += foodTotalPrice
                             }
+                            answerArray.sort(by: { ($0.yemek_adi!) < ($1.yemek_adi!) })
                             self.cartPagePresenter?.sendDataToPresenter(foodsCart: answerArray, totalPrice: totalPrice)
                         }
                         
