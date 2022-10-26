@@ -810,6 +810,7 @@
 			children = (
 				8278EC8028F99D32001943BD /* Foods.swift */,
 				8278EC8228F99D42001943BD /* FoodsResponse.swift */,
+				8278EC8C28F9B095001943BD /* OnboardSlides.swift */,
 				8278EC8428F99D75001943BD /* FoodsCart.swift */,
 				8278EC8628F99D86001943BD /* FoodsCartResponse.swift */,
 				8201941A290037FD00ABEA12 /* Restaurant.swift */,
@@ -822,7 +823,6 @@
 			isa = PBXGroup;
 			children = (
 				8278EC8A28F9AC62001943BD /* OnboardingPageVC.swift */,
-				8278EC8C28F9B095001943BD /* OnboardSlides.swift */,
 				8278EC8E28F9B350001943BD /* OnboardingCell.swift */,
 			);
 			path = OnboardingPage;

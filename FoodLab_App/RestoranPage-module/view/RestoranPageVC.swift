@@ -9,20 +9,24 @@ import UIKit
 
 class RestoranPageVC: UIViewController {
     var restoranPagePresenterObject:ViewToPresenterRestoranPageProtocol?
-    @IBOutlet weak var siralamaButton: UIButton!
+ 
+    
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var restArray : [Restaurant] = []
-
     @IBOutlet weak var sliderCollectionView: UICollectionView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var restoranCollectionView: UICollectionView!
+    var advertisingSliderPhotos = [UIImage(named: "1")!,
+                                   UIImage(named: "2")!,
+                                   UIImage(named: "3")!]
     override func viewDidLoad() {
-
+       cell2Design()
         RestoranPageRouter.createModule(ref: self)
         restoranPagePresenterObject?.getAllRest()
         cellDesign()
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        restoranCollectionView.dataSource = self
+        restoranCollectionView.delegate = self
+        sliderCollectionView.dataSource = self
+        sliderCollectionView.delegate = self
         super.viewDidLoad()
       
         
@@ -45,25 +49,74 @@ class RestoranPageVC: UIViewController {
 
 extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return restArray.count
-    }
+        switch collectionView {
+        case sliderCollectionView:
+            return advertisingSliderPhotos.count
+            
+      
+        default:
+            return restArray.count
+            
+       
+        }  }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let rest = restArray[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RestoranCollectionViewCell", for: indexPath) as! RestoranCollectionViewCell
-        cell.imageRestoran.image = UIImage(named: rest.image!)
-        cell.labelCatRest.text = rest.category!
-        cell.labelNameRest.text = rest.name!
-        cell.labelStarRest.text = String(rest.star!)
+        switch collectionView{
+            
+        case sliderCollectionView:
+            let advertisingImage = advertisingSliderPhotos[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SliderCollectionViewCell", for: indexPath) as! SliderCollectionViewCell
+            cell.sliderImage.image = advertisingImage
+           
+            return cell
         
-        return cell
         
-    }
+        default:
+            let rest = restArray[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RestoranCollectionViewCell", for: indexPath) as! RestoranCollectionViewCell
+            cell.imageRestoran.image = UIImage(named: rest.image!)
+            cell.labelCatRest.text = rest.category!
+            cell.labelNameRest.text = rest.name!
+            cell.labelStarRest.text = String(rest.star!)
+            
+            return cell
+        
+        
+        
+        
+        
+        
+    }}
+    
+    
+    
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let restoran = restArray[indexPath.row]
-        performSegue(withIdentifier: "restoranToHomePage",sender: restoran )
-        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        switch collectionView {
+        case sliderCollectionView:
+          break
+            
+      
+        default:
+            let restoran = restArray[indexPath.row]
+            performSegue(withIdentifier: "restoranToHomePage",sender: restoran )
+            collectionView.deselectItem(at: indexPath, animated: true)
+            
+       
+        }
+        
+        
+        
+       
     }
+    
+    
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "restoranToHomePage" {
@@ -81,6 +134,7 @@ extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate
     
     
     func cellDesign(){
+        
         let tasarim = UICollectionViewFlowLayout()
          
          tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -88,10 +142,23 @@ extension RestoranPageVC : UICollectionViewDataSource , UICollectionViewDelegate
          tasarim.minimumLineSpacing = 10 // dikey
          
         
-        let width = collectionView.bounds.width-20
+        let width = restoranCollectionView.bounds.width-20
          tasarim.itemSize = CGSize(width: width, height: 120 )
-         collectionView.collectionViewLayout = tasarim
+        restoranCollectionView.collectionViewLayout = tasarim
+    
+    }
+    func cell2Design(){
+        let tasarim = UICollectionViewFlowLayout()
          
+         
+        tasarim.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    
+        tasarim.scrollDirection = .horizontal
+        
+        let width = sliderCollectionView.bounds.width - 10
+        
+         tasarim.itemSize = CGSize(width: width, height: sliderCollectionView.bounds.height-10 )
+        sliderCollectionView.collectionViewLayout = tasarim
     }
     
     
@@ -102,14 +169,14 @@ extension RestoranPageVC:PresenterToViewRestoranPageProtocol{
     func filterDataToView(data: [Restaurant]) {
         self.restArray = data
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            self.restoranCollectionView.reloadData()
         }
     }
     
     func dataToView(data: [Restaurant]) {
         self.restArray = data
         DispatchQueue.main.async {
-            self.collectionView.reloadData()
+            self.restoranCollectionView.reloadData()
         }
     }
     
