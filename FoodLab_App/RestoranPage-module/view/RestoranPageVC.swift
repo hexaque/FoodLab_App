@@ -18,7 +18,8 @@ class RestoranPageVC: UIViewController {
     @IBOutlet weak var restoranCollectionView: UICollectionView!
     var advertisingSliderPhotos = [UIImage(named: "1")!,
                                    UIImage(named: "2")!,
-                                   UIImage(named: "3")!]
+                                   UIImage(named: "3")!,
+                                   UIImage(named: "4")!]
     override func viewDidLoad() {
        cell2Design()
         timerSetup()
