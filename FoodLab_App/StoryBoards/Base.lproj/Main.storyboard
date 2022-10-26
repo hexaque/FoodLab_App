@@ -2681,26 +2681,13 @@
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size Uygun Restoranı Bulun" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAv-oO-Ovm">
-                                <rect key="frame" x="20" y="122" width="280" height="67.5"/>
+                                <rect key="frame" x="20" y="92" width="280" height="67.5"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-2a-jNR">
-                                <rect key="frame" x="20" y="209.5" width="374" height="32"/>
-                                <segments>
-                                    <segment title="Hepsi"/>
-                                    <segment title="" image="coffee"/>
-                                    <segment title="" image="pizza"/>
-                                    <segment title="" image="burger"/>
-                                    <segment title="" image="chicken"/>
-                                </segments>
-                                <connections>
-                                    <action selector="categorySegmentDegisim:" destination="JXM-fs-zuK" eventType="valueChanged" id="9Ae-oT-ADG"/>
-                                </connections>
-                            </segmentedControl>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mqG-i6-koE">
-                                <rect key="frame" x="0.0" y="260.5" width="414" height="520.5"/>
+                                <rect key="frame" x="0.0" y="408" width="414" height="405"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hoB-c6-gk1">
                                     <size key="itemSize" width="413" height="128"/>
@@ -2783,23 +2770,80 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="92y-KY-eRj">
+                                <rect key="frame" x="0.0" y="169.5" width="414" height="192"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="8sF-tz-pJS"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="92V-21-kcA">
+                                    <size key="itemSize" width="414" height="192"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SliderCollectionViewCell" id="7S9-YE-tZY" customClass="SliderCollectionViewCell" customModule="FoodLab_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qQN-xv-Unl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jmX-CH-laU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="192"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jmX-CH-laU" firstAttribute="top" secondItem="qQN-xv-Unl" secondAttribute="top" id="2jE-Fu-8iu"/>
+                                                <constraint firstAttribute="bottom" secondItem="jmX-CH-laU" secondAttribute="bottom" id="Y0c-Xp-9gN"/>
+                                                <constraint firstAttribute="trailing" secondItem="jmX-CH-laU" secondAttribute="trailing" id="eNG-Rj-VWg"/>
+                                                <constraint firstItem="jmX-CH-laU" firstAttribute="leading" secondItem="qQN-xv-Unl" secondAttribute="leading" id="lQB-xp-216"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="sliderImage" destination="jmX-CH-laU" id="dVi-uv-6c8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="JXM-fs-zuK" id="6Vs-cd-dhc"/>
+                                    <outlet property="delegate" destination="JXM-fs-zuK" id="chJ-J3-ixf"/>
+                                </connections>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yuL-2a-jNR">
+                                <rect key="frame" x="20" y="369" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Hepsi"/>
+                                    <segment title="" image="coffee"/>
+                                    <segment title="" image="pizza"/>
+                                    <segment title="" image="burger"/>
+                                    <segment title="" image="chicken"/>
+                                </segments>
+                                <connections>
+                                    <action selector="categorySegmentDegisim:" destination="JXM-fs-zuK" eventType="valueChanged" id="9Ae-oT-ADG"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Elf-Jl-ufF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mqG-i6-koE" firstAttribute="bottom" secondItem="Elf-Jl-ufF" secondAttribute="bottom" id="2Nh-Pa-6fF"/>
+                            <constraint firstItem="92y-KY-eRj" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" id="2ki-fq-KyG"/>
                             <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="wAv-oO-Ovm" secondAttribute="trailing" constant="114" id="3QT-Bw-Ser"/>
-                            <constraint firstItem="Elf-Jl-ufF" firstAttribute="bottom" secondItem="mqG-i6-koE" secondAttribute="bottom" constant="32" id="3Uk-Qz-WHj"/>
-                            <constraint firstItem="mqG-i6-koE" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" id="K1s-8Z-N8u"/>
-                            <constraint firstItem="mqG-i6-koE" firstAttribute="top" secondItem="yuL-2a-jNR" secondAttribute="bottom" constant="20" id="SIP-1v-DjD"/>
+                            <constraint firstItem="mqG-i6-koE" firstAttribute="trailing" secondItem="Elf-Jl-ufF" secondAttribute="trailing" id="4SM-Hw-vHy"/>
+                            <constraint firstItem="yuL-2a-jNR" firstAttribute="top" secondItem="92y-KY-eRj" secondAttribute="bottom" constant="7.5" id="4qk-8w-zX2"/>
+                            <constraint firstItem="mqG-i6-koE" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" id="Ksf-ZD-Tfm"/>
+                            <constraint firstItem="mqG-i6-koE" firstAttribute="top" secondItem="yuL-2a-jNR" secondAttribute="bottom" constant="8" id="L9s-ZZ-mqd"/>
+                            <constraint firstItem="92y-KY-eRj" firstAttribute="trailing" secondItem="Elf-Jl-ufF" secondAttribute="trailing" id="O7C-7w-nme"/>
                             <constraint firstAttribute="bottom" secondItem="Jcq-26-IYk" secondAttribute="bottom" id="Xr9-yN-rcb"/>
+                            <constraint firstItem="wAv-oO-Ovm" firstAttribute="top" secondItem="Elf-Jl-ufF" secondAttribute="top" id="ba0-s5-L5M"/>
                             <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="yuL-2a-jNR" secondAttribute="trailing" constant="20" id="cAs-Bd-flt"/>
                             <constraint firstItem="Jcq-26-IYk" firstAttribute="trailing" secondItem="Elf-Jl-ufF" secondAttribute="trailing" id="d8D-RT-yGR"/>
                             <constraint firstItem="Jcq-26-IYk" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" id="ejR-fo-zTG"/>
                             <constraint firstItem="Jcq-26-IYk" firstAttribute="top" secondItem="Xk3-Gr-e1V" secondAttribute="top" id="hvr-Dx-hOO"/>
-                            <constraint firstItem="wAv-oO-Ovm" firstAttribute="top" secondItem="Elf-Jl-ufF" secondAttribute="top" constant="30" id="qcF-nK-3YA"/>
-                            <constraint firstItem="Elf-Jl-ufF" firstAttribute="trailing" secondItem="mqG-i6-koE" secondAttribute="trailing" id="uhW-3j-f3D"/>
+                            <constraint firstItem="92y-KY-eRj" firstAttribute="top" secondItem="wAv-oO-Ovm" secondAttribute="bottom" constant="10" id="sRn-et-uep"/>
                             <constraint firstItem="yuL-2a-jNR" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" constant="20" id="v0K-TK-PvR"/>
-                            <constraint firstItem="yuL-2a-jNR" firstAttribute="top" secondItem="wAv-oO-Ovm" secondAttribute="bottom" constant="20" id="wWL-Kc-MC5"/>
                             <constraint firstItem="wAv-oO-Ovm" firstAttribute="leading" secondItem="Elf-Jl-ufF" secondAttribute="leading" constant="20" id="ylN-WW-Oro"/>
                         </constraints>
                     </view>
@@ -2809,12 +2853,13 @@
                     <connections>
                         <outlet property="categorySegment" destination="yuL-2a-jNR" id="QlD-ZH-62z"/>
                         <outlet property="collectionView" destination="mqG-i6-koE" id="MZk-mM-o9v"/>
+                        <outlet property="sliderCollectionView" destination="92y-KY-eRj" id="jxC-7l-vIj"/>
                         <segue destination="cTr-cH-HfB" kind="show" identifier="restoranToHomePage" id="NUm-9A-zcc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mug-Qy-GXM" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5464" y="1277"/>
+            <point key="canvasLocation" x="5462.3188405797109" y="1275.6696428571429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hoK-Th-541">
@@ -2906,7 +2951,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="mainColor">
-            <color red="0.42399999499320984" green="0.82700002193450928" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.42352941176470588" green="0.82745098039215681" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="textColorLightBlack">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

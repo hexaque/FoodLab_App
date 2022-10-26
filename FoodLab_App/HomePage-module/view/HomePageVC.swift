@@ -11,6 +11,7 @@ import FirebaseAuth
 class HomePageVC: UIViewController {
     var badgeForCart = 0
     @IBOutlet weak var imageRestaurant: UIImageView!
+    
     @IBOutlet weak var foodsCollectionView: UICollectionView!
     var homePagePresenterObject : ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()

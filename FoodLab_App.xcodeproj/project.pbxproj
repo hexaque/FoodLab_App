@@ -86,6 +86,7 @@
 		82CA4FCE28FB73540009EA9D /* UrunlerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */; };
 		82CEC49D2904257E00F8A8B2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */; };
 		82CEC4A32904391500F8A8B2 /* OrderDetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC4A22904391500F8A8B2 /* OrderDetailPageProtocols.swift */; };
+		82D9D9F429097B9A00FEC14F /* SliderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9D9F329097B9A00FEC14F /* SliderCollectionViewCell.swift */; };
 		82F973592902E96D004AD45A /* OrderTrackingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F973582902E96D004AD45A /* OrderTrackingPageVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +166,7 @@
 		82CA4FCD28FB73540009EA9D /* UrunlerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerCollectionViewCell.swift; sourceTree = "<group>"; };
 		82CEC49C2904257E00F8A8B2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		82CEC4A22904391500F8A8B2 /* OrderDetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageProtocols.swift; sourceTree = "<group>"; };
+		82D9D9F329097B9A00FEC14F /* SliderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderCollectionViewCell.swift; sourceTree = "<group>"; };
 		82F973582902E96D004AD45A /* OrderTrackingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTrackingPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 		820194132900228000ABEA12 /* RestoranPage-module */ = {
 			isa = PBXGroup;
 			children = (
+				82D9D9F229097B7D00FEC14F /* sliderCollectionViewCell */,
 				82019417290036F200ABEA12 /* CollectionViewCell */,
 				82672B712902D66300F16B1D /* protocols */,
 				82672B702902D66100F16B1D /* router */,
@@ -940,6 +943,14 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		82D9D9F229097B7D00FEC14F /* sliderCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				82D9D9F329097B9A00FEC14F /* SliderCollectionViewCell.swift */,
+			);
+			path = sliderCollectionViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1075,6 +1086,7 @@
 				8278EC6028F99A66001943BD /* RegisterPageVC.swift in Sources */,
 				8278EC8528F99D75001943BD /* FoodsCart.swift in Sources */,
 				820194192900372000ABEA12 /* RestoranCollectionViewCell.swift in Sources */,
+				82D9D9F429097B9A00FEC14F /* SliderCollectionViewCell.swift in Sources */,
 				8278EC6828F99AB6001943BD /* HomePagePresenter.swift in Sources */,
 				8278EC6A28F99ACE001943BD /* HomePageVC.swift in Sources */,
 				8201941B290037FD00ABEA12 /* Restaurant.swift in Sources */,

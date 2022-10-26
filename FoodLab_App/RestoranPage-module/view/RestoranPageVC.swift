@@ -13,6 +13,7 @@ class RestoranPageVC: UIViewController {
     @IBOutlet weak var categorySegment: UISegmentedControl!
     var restArray : [Restaurant] = []
 
+    @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
