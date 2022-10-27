@@ -36,7 +36,7 @@ class RestoranPageVC: UIViewController {
     }
     
     func timerSetup() {
-           timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(sliderNextIndex), userInfo: nil, repeats: true)
+           timer = Timer.scheduledTimer(timeInterval: 12, target: self, selector: #selector(sliderNextIndex), userInfo: nil, repeats: true)
        }
        
        @objc func sliderNextIndex() {
