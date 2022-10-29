@@ -1908,7 +1908,7 @@
                                 <color key="tintColor" name="BGImageColor"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3D0-qW-eua">
-                                <rect key="frame" x="10" y="162.5" width="394" height="454.5"/>
+                                <rect key="frame" x="10" y="154" width="394" height="463"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CartPageTableViewCell" id="H6y-h2-nG9" customClass="CartPageTableViewCell" customModule="FoodLab_App" customModuleProvider="target">
@@ -2734,7 +2734,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burgerking" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-mL-pJZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mcdonalds" translatesAutoresizingMaskIntoConstraints="NO" id="2YD-mL-pJZ">
                                                     <rect key="frame" x="23" y="19" width="90" height="90"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="90" id="EjO-Jt-V2z"/>
@@ -2916,10 +2916,9 @@
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="mainColor"/>
     <resources>
-        <image name="1" width="1242" height="1015"/>
+        <image name="1" width="2000" height="2000"/>
         <image name="appLogo" width="426" height="654"/>
         <image name="burger" width="32" height="32"/>
-        <image name="burgerking" width="300" height="328"/>
         <image name="cartIcon" width="32" height="32"/>
         <image name="chicken" width="32" height="32"/>
         <image name="coffee" width="32" height="32"/>
@@ -2939,6 +2938,7 @@
         <image name="logoutIcon" width="32" height="32"/>
         <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="mastercardIcon.svg" width="64" height="50"/>
+        <image name="mcdonalds" width="600" height="587"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
