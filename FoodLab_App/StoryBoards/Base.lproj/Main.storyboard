@@ -2271,7 +2271,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="rRD-SJ-iG4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserImage" translatesAutoresizingMaskIntoConstraints="NO" id="rRD-SJ-iG4">
                                 <rect key="frame" x="111" y="48" width="192" height="192"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2292,9 +2292,8 @@
                                     <action selector="buttonDuzenle:" destination="Lhp-iy-2ni" eventType="touchUpInside" id="AH7-Bz-x44"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-ww-UgG">
-                                <rect key="frame" x="39" y="205" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-ww-UgG">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" name="mainColor"/>
                             </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favori yemeklerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzA-O3-7Y2">
@@ -2393,6 +2392,7 @@
                             <constraint firstItem="nNr-ba-o9S" firstAttribute="leading" secondItem="DKA-g1-wfg" secondAttribute="leading" id="0bJ-DG-QnP"/>
                             <constraint firstItem="HGU-rg-9dd" firstAttribute="top" secondItem="DKA-g1-wfg" secondAttribute="top" id="2ye-g7-OnJ"/>
                             <constraint firstItem="rRD-SJ-iG4" firstAttribute="top" secondItem="DKA-g1-wfg" secondAttribute="top" id="4Gl-rB-cLB"/>
+                            <constraint firstItem="EKr-ww-UgG" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="5no-GR-UhB"/>
                             <constraint firstItem="DKA-g1-wfg" firstAttribute="trailing" secondItem="mVR-cr-XSK" secondAttribute="trailing" constant="20" id="AfP-hg-vJW"/>
                             <constraint firstItem="AiJ-c0-fWz" firstAttribute="top" secondItem="rRD-SJ-iG4" secondAttribute="bottom" constant="5" id="Aki-2W-LMr"/>
                             <constraint firstItem="AiJ-c0-fWz" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="PXn-9f-PiK"/>
@@ -2410,6 +2410,7 @@
                             <constraint firstItem="rRD-SJ-iG4" firstAttribute="centerX" secondItem="gRm-Qi-CvP" secondAttribute="centerX" id="rgG-cH-8B2"/>
                             <constraint firstItem="0Oc-yQ-lu3" firstAttribute="top" secondItem="AiJ-c0-fWz" secondAttribute="bottom" constant="5" id="rmh-dA-jRc"/>
                             <constraint firstAttribute="bottom" secondItem="074-fe-sJz" secondAttribute="bottom" id="udj-49-pSy"/>
+                            <constraint firstItem="EKr-ww-UgG" firstAttribute="centerY" secondItem="gRm-Qi-CvP" secondAttribute="centerY" id="wJ5-tg-1W8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="userIcon" id="fAE-hg-cDq"/>
@@ -2438,16 +2439,16 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="Hqy-gi-BzB" customClass="DetailPageVC" customModule="FoodLab_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hEO-DJ-5uZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fullAppBG" translatesAutoresizingMaskIntoConstraints="NO" id="Evp-E0-Mma" userLabel="backGround">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                                 <color key="backgroundColor" name="backgroundMask"/>
                                 <color key="tintColor" name="mainColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6t-97-ATF">
-                                <rect key="frame" x="332.5" y="92" width="71.5" height="49.5"/>
+                                <rect key="frame" x="332.5" y="48" width="71.5" height="49.5"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" subtitle="">
@@ -2458,10 +2459,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZ7-Jq-Pwx">
-                                <rect key="frame" x="32" y="162" width="350" height="237"/>
+                                <rect key="frame" x="32" y="118" width="350" height="223"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbu-S4-hUg">
-                                <rect key="frame" x="0.0" y="409" width="414" height="487"/>
+                                <rect key="frame" x="0.0" y="351" width="414" height="487"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Su" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jo-us-nKm">
                                         <rect key="frame" x="100" y="72" width="214" height="42"/>
@@ -2896,7 +2897,7 @@
                     <tabBarItem key="tabBarItem" title="" image="cartIcon" id="qNg-Ua-LBO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4n3-6y-Xja">
-                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2910,7 +2911,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bWY-Vs-EG8"/>
+        <segue reference="x3H-qx-GvD"/>
         <segue reference="y0q-3l-3Au"/>
         <segue reference="Wbs-qG-aFg"/>
     </inferredMetricsTieBreakers>
@@ -2961,7 +2962,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="mainColor">
-            <color red="0.42352941176470588" green="0.82745098039215681" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.42399999499320984" green="0.82700002193450928" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="textColorLightBlack">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

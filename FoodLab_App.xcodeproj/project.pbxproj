@@ -411,6 +411,38 @@
 			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
+		825EF5CB290EC3C60037763C /* WelcomePage-module */ = {
+			isa = PBXGroup;
+			children = (
+				825EF5CC290EC3D90037763C /* view */,
+			);
+			path = "WelcomePage-module";
+			sourceTree = "<group>";
+		};
+		825EF5CC290EC3D90037763C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		825EF5CD290EC3F20037763C /* filterPage-module */ = {
+			isa = PBXGroup;
+			children = (
+				825EF5CE290EC4260037763C /* view */,
+			);
+			path = "filterPage-module";
+			sourceTree = "<group>";
+		};
+		825EF5CE290EC4260037763C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				82B241B828FECA8A009AD2F4 /* FilterPageVC.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		82672B6F2902D65F00F16B1D /* interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,12 +543,12 @@
 				8278EC2B28F99596001943BD /* CartPage-module */,
 				82C6611428FE1392003D048D /* UserPage-module */,
 				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
+				825EF5CD290EC3F20037763C /* filterPage-module */,
+				825EF5CB290EC3C60037763C /* WelcomePage-module */,
 				8278EC2328F98F5F001943BD /* Core */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
-				82B916ED28FA0E4C00EC239C /* WelcomePageVC.swift */,
-				821D638828F9F941002B50CB /* Extension.swift */,
 				8215476428FD6100001F50D6 /* GoogleService-Info.plist */,
 				8252E58728FA23BE00BE2E8F /* LottieAnimation */,
 			);
@@ -528,7 +560,7 @@
 			children = (
 				8278EC0F28F988BD001943BD /* AppDelegate.swift */,
 				8278EC1128F988BD001943BD /* SceneDelegate.swift */,
-				82B241B828FECA8A009AD2F4 /* FilterPageVC.swift */,
+				821D638828F9F941002B50CB /* Extension.swift */,
 				82B241BA28FEDA67009AD2F4 /* protocols.swift */,
 			);
 			path = Core;
