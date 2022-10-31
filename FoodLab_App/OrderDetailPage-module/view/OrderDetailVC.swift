@@ -27,7 +27,7 @@ class OrderDetailVC: UIViewController {
     
     
     @IBAction func buttonNext(_ sender: Any) {
-        let alert = UIAlertController(title: "Ödeme Alınıyor", message:"Ödeme alınıyor Lütfen bekleyiniz", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Ödeme Alınıyor", message:"Ödeme alınıyor. Lütfen bekleyiniz", preferredStyle: .alert)
         self.present(alert, animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
             

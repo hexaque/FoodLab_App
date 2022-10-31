@@ -22,10 +22,10 @@ class LoginPageInteractor:PresenterToInteractorLoginPageProtocol{
             print("User signs in successfully")
               self.loginPagePresenter?.isLogin(isUser: true)
               
-            let userInfo = Auth.auth().currentUser
+           // let userInfo = Auth.auth().currentUser
               
-            let email = userInfo?.email
-              print(email!)
+           // let email = userInfo?.email
+             // print(email!)
            
           }
         }

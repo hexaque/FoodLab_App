@@ -59,7 +59,7 @@ extension HomePageVC:FilterPageToHomePage{
     func SendSiralamaAndFilterToHomePage(filter: Int, siralama: String) {
         self.priceFilter = filter
         self.siralama = siralama
-        print("FilterPageToHomePage")
+        //print("FilterPageToHomePage")
         homePagePresenterObject?.filteredFoods(price: priceFilter, sirala: siralama)
     }
     

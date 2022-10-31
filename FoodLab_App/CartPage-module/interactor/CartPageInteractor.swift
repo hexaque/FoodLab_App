@@ -17,8 +17,7 @@ class CartPageInteractor:PresenterToInteractorCartPageProtocol{
     func changeCartFoodCountI(yemek_adi:String,yemek_resim_adi:String,yemek_fiyat:String,sepet_yemek_id:String ,yeniAdet:String){
         let userInfo = Auth.auth().currentUser
         let email = userInfo?.email
-        
-        //deleteCartFoodI(sepet_yemek_id:sepet_yemek_id , kullanici_adi: email!)
+       
         let param : Parameters = ["sepet_yemek_id":sepet_yemek_id,"kullanici_adi":email!]
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response { response in
             if let data = response.data {

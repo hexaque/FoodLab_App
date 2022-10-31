@@ -30,8 +30,6 @@ class OrderTrackingPageVC: UIViewController {
 
 }
 
-// resto 38.438699,27.1390415
-// home  38.424325, 27.138866
 extension OrderTrackingPageVC: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let lastLocation = locations[locations.count-1]

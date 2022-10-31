@@ -19,7 +19,6 @@
 		8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */; };
 		8252E58928FA23CB00BE2E8F /* fire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8252E58828FA23CB00BE2E8F /* fire.json */; };
 		8252E58C28FA24E200BE2E8F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8252E58B28FA24E200BE2E8F /* Lottie */; };
-		825917C22901958F00B22724 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825917C12901958F00B22724 /* Users.swift */; };
 		82672B682902C7FB00F16B1D /* RegisterPage2Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B672902C7FB00F16B1D /* RegisterPage2Protocols.swift */; };
 		82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B692902C82200F16B1D /* RegisterPage2Router.swift */; };
 		82672B6C2902C83700F16B1D /* RegisterPage2Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */; };
@@ -100,7 +99,6 @@
 		8252E58328FA1FE300BE2E8F /* RegisterPage2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2VC.swift; sourceTree = "<group>"; };
 		8252E58528FA1FF500BE2E8F /* RegisterCompleteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteVC.swift; sourceTree = "<group>"; };
 		8252E58828FA23CB00BE2E8F /* fire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fire.json; sourceTree = "<group>"; };
-		825917C12901958F00B22724 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		82672B672902C7FB00F16B1D /* RegisterPage2Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Protocols.swift; sourceTree = "<group>"; };
 		82672B692902C82200F16B1D /* RegisterPage2Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Router.swift; sourceTree = "<group>"; };
 		82672B6B2902C83700F16B1D /* RegisterPage2Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPage2Interactor.swift; sourceTree = "<group>"; };
@@ -531,20 +529,20 @@
 		8278EC0E28F988BD001943BD /* FoodLab_App */ = {
 			isa = PBXGroup;
 			children = (
-				82672B7C2902E8AE00F16B1D /* OrderTrackingPage-module */,
-				82672B7B2902E85D00F16B1D /* OrderDetailPage-module */,
-				820194132900228000ABEA12 /* RestoranPage-module */,
 				8278EC8928F9AC42001943BD /* OnboardingPage */,
-				8278EC7F28F99C01001943BD /* entity */,
-				8278EC2E28F9959D001943BD /* LoginPage-module */,
+				825EF5CB290EC3C60037763C /* WelcomePage-module */,
 				8210255D28FAE2EA00092E4E /* RegisterPages-modules */,
+				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
+				8278EC2E28F9959D001943BD /* LoginPage-module */,
+				820194132900228000ABEA12 /* RestoranPage-module */,
 				8278EC2D28F9959B001943BD /* HomePage-module */,
+				825EF5CD290EC3F20037763C /* filterPage-module */,
 				8278EC2C28F99599001943BD /* DetailPage-module */,
 				8278EC2B28F99596001943BD /* CartPage-module */,
 				82C6611428FE1392003D048D /* UserPage-module */,
-				82B9EA5D28FADFF200684C63 /* forgetPSW-modules */,
-				825EF5CD290EC3F20037763C /* filterPage-module */,
-				825EF5CB290EC3C60037763C /* WelcomePage-module */,
+				82672B7B2902E85D00F16B1D /* OrderDetailPage-module */,
+				82672B7C2902E8AE00F16B1D /* OrderTrackingPage-module */,
+				8278EC7F28F99C01001943BD /* entity */,
 				8278EC2328F98F5F001943BD /* Core */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
@@ -846,7 +844,6 @@
 				8278EC8428F99D75001943BD /* FoodsCart.swift */,
 				8278EC8628F99D86001943BD /* FoodsCartResponse.swift */,
 				8201941A290037FD00ABEA12 /* Restaurant.swift */,
-				825917C12901958F00B22724 /* Users.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -1090,7 +1087,6 @@
 				8284022429056D4700261F41 /* UserPageRouter.swift in Sources */,
 				8252E58628FA1FF500BE2E8F /* RegisterCompleteVC.swift in Sources */,
 				8278EC6628F99AA6001943BD /* HomePageInteractor.swift in Sources */,
-				825917C22901958F00B22724 /* Users.swift in Sources */,
 				82CEC4A32904391500F8A8B2 /* OrderDetailPageProtocols.swift in Sources */,
 				82672B6A2902C82200F16B1D /* RegisterPage2Router.swift in Sources */,
 				8278EC5E28F99A4F001943BD /* RegisterPagePresenter.swift in Sources */,

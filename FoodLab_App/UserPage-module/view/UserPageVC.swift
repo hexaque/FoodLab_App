@@ -61,7 +61,7 @@ class UserPageVC: UIViewController {
         
     }
     override func viewDidAppear(_ animated: Bool) {
-        //
+        
     }
     
     
@@ -104,7 +104,7 @@ class UserPageVC: UIViewController {
             
         }else {
             
-            //save et
+            //save
             if TFName.text!.count<2{
                 animationTF(textfield: TFName)
             }
