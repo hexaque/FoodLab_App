@@ -546,6 +546,8 @@
 				8278EC2328F98F5F001943BD /* Core */,
 				8278EC2428F98F6D001943BD /* StoryBoards */,
 				8278EC1D28F988C0001943BD /* Info.plist */,
+				82B241BA28FEDA67009AD2F4 /* protocols.swift */,
+				821D638828F9F941002B50CB /* Extension.swift */,
 				8278EC1828F988C0001943BD /* Assets.xcassets */,
 				8215476428FD6100001F50D6 /* GoogleService-Info.plist */,
 				8252E58728FA23BE00BE2E8F /* LottieAnimation */,
@@ -558,8 +560,6 @@
 			children = (
 				8278EC0F28F988BD001943BD /* AppDelegate.swift */,
 				8278EC1128F988BD001943BD /* SceneDelegate.swift */,
-				821D638828F9F941002B50CB /* Extension.swift */,
-				82B241BA28FEDA67009AD2F4 /* protocols.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
